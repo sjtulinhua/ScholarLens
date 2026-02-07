@@ -43,10 +43,10 @@
   - [x] Analysis Update: 相似题检索 (Top 3) -> Few-Shot Prompt 注入
 
 ## Phase 4: Week 3 - Advanced Features & Optimization
-- [ ] **[Priority]** 高级多源上传 (Advanced Multi-Source Upload)
-  - [ ] UI: 支持多文件/多区域上传 (Question Source + Answer Source)
-  - [ ] Backend: 升级 Service 支持 `file[]` 处理
-  - [ ] AI: 设计 Multi-Modal Prompt 关联题目与答题卡
+- [ ] **[Priority]** 通用多图上传 (Universal Multi-Image Upload)
+  - [ ] UI: 改造上传区支持多文件拖拽、预览与排序
+  - [ ] Backend: 升级 Service 支持 `FormData` 多文件数组
+  - [ ] AI: 升级 Prompt 接收 Image Set 并自动关联题干与错题
 - [x] 变式题生成 (lib/ai/variant.ts)
 - [x] 练习页面 (app/practice/page.tsx) [Gemini 3.0 Pro]
 - [x] **Debugging**: 修复 Gemini API 404 (IPv6 Leak) -> 升级至 Gemini 3.0 Pro

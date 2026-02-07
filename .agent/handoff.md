@@ -11,7 +11,8 @@
 - **Focus**: 当前重点是本地/开发环境的功能验证。
 
 ## 2. 下一步优先级 (Roadmap)
-- 🚀 **Zeabur Deployment**: 配置环境变量并上线。
+- 📸 **Universal Multi-Image Upload**: (Priority High) 支持多图/PDF上传，解决试卷+答题卡分离、正反面多页等复杂场景。
+- 🚀 **Zeabur Deployment**: 配置环境变量并上线 (待本地测试后)。
 - 📈 **Growth Charts**: (头脑风暴结论) 实现消灭进度趋势图。
 - 🚥 **KP Health**: 知识点“红黄绿灯”分级诊断系统。
 
