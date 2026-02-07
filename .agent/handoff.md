@@ -7,7 +7,8 @@
 - **Mobile**: 针对 iPhone 15 Pro Max 和 iPad Pro 11" 深度优化，布局完美。
 - **Centering**: 上传页面和指标卡文字重叠问题已修复。
 - **Build**: 本地 `npm run build` 成功，类型错误已清除。
-- **Ready for Deployment**: 数据库与代码已同步，随时可上 Zeabur。
+- **Ready for Deployment**: 已经准备就绪，但用户决定**先进行充分测试**再发布。
+- **Focus**: 当前重点是本地/开发环境的功能验证。
 
 ## 2. 下一步优先级 (Roadmap)
 - 🚀 **Zeabur Deployment**: 配置环境变量并上线。
