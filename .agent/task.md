@@ -42,7 +42,11 @@
   - [x] API `api/admin/upload-reference`: 解析真题 PDF -> 切分题目 -> 生成 Embedding
   - [x] Analysis Update: 相似题检索 (Top 3) -> Few-Shot Prompt 注入
 
-## Phase 4: Week 3 - 变式题 + 优化
+## Phase 4: Week 3 - Advanced Features & Optimization
+- [ ] **[Priority]** 高级多源上传 (Advanced Multi-Source Upload)
+  - [ ] UI: 支持多文件/多区域上传 (Question Source + Answer Source)
+  - [ ] Backend: 升级 Service 支持 `file[]` 处理
+  - [ ] AI: 设计 Multi-Modal Prompt 关联题目与答题卡
 - [x] 变式题生成 (lib/ai/variant.ts)
 - [x] 练习页面 (app/practice/page.tsx) [Gemini 3.0 Pro]
 - [x] **Debugging**: 修复 Gemini API 404 (IPv6 Leak) -> 升级至 Gemini 3.0 Pro
@@ -64,4 +68,4 @@
   - [x] 基础布局响应式优化
   - [x] 针对 iPad Pro (11-inch) 优化布局
   - [x] 针对 iPhone 15 Pro Max 优化触控体验
-- [ ] 部署到 Zeabur (待本地充分测试后执行)
+- [ ] 部署到 Zeabur
