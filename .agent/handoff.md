@@ -2,11 +2,12 @@
 
 > 从 Windows (PC) 迁移至 MacBook 的交接文档
 
-## 1. 核心状态
-- **主题**: Soft Professional / Linear Light (已完成)
-- **适配**: 已完成 iPad Pro 11" 和 iPhone 15 Pro Max 适配
-- **部署**: 正在准备 Zeabur 部署
-- **数据库**: 已升级至 3072 维向量 (OpenAI 兼容模式)，用于 RAG 相似题检索
+## 1. 核心状态 (Current Status)
+- **UI/UX**: 已经全量上线 "Soft Professional" 主题，清爽专业。
+- **Mobile**: 针对 iPhone 15 Pro Max 和 iPad Pro 11" 深度优化，布局完美。
+- **Centering**: 上传页面和指标卡文字重叠问题已修复。
+- **Build**: 本地 `npm run build` 成功，类型错误已清除。
+- **Ready for Deployment**: 数据库与代码已同步，随时可上 Zeabur。
 
 ## 2. 下一步优先级 (Roadmap)
 - 🚀 **Zeabur Deployment**: 配置环境变量并上线。
