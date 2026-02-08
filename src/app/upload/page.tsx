@@ -439,6 +439,28 @@ export default function UploadPage() {
               </Button>
             </div>
           )}
+
+          {/* Error Feedback */}
+          {state.error && (
+            <div className="px-8 pb-8 flex justify-center animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="bg-red-50 border border-red-200 text-red-600 px-6 py-3 rounded-2xl flex items-center gap-3 shadow-sm max-w-md">
+                <AlertCircle className="w-5 h-5 shrink-0" />
+                <div className="text-sm font-medium">
+                   分析失败: {state.error}
+                </div>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="h-8 w-8 text-red-400 hover:text-red-600 hover:bg-red-100/50 rounded-full ml-4"
+                  onClick={() => {
+                    // Logic to clear error if needed, or just let user re-click
+                  }}
+                >
+                  <X className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
