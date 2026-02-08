@@ -1,19 +1,16 @@
 "use client"
 
-import { useState, useRef, useActionState, useEffect } from "react"
+import { useState, useRef, useActionState, useEffect, startTransition } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Upload, FileText, X, CheckCircle2, AlertCircle, Loader2, Image as ImageIcon, ArrowRight, Maximize, Plus, Scissors, Trash2 } from 'lucide-react'
+import { Upload, X, CheckCircle2, AlertCircle, Loader2, Image as ImageIcon, Plus, Scissors, Trash2 } from 'lucide-react'
 import Image from "next/image"
 import { processMistake, type UploadState } from "./actions"
 import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { ImageCropper } from "@/components/ui/image-cropper" // Optional: Keep for manual fallback if needed
+// import { ImageCropper } from "@/components/ui/image-cropper" // Not used currently
 import { MistakeRegionSelector } from "@/components/ui/mistake-region-selector"
 import { ModelSelector } from "@/components/ui/model-selector"
-import { startTransition } from "react"
 
 const getProgressWidth = (msg: string) => {
   if (msg.includes("上传")) return "25%"
@@ -46,10 +43,24 @@ export default function UploadPage() {
   const [scanningId, setScanningId] = useState<string | null>(null)
   const [scanningImageUrl, setScanningImageUrl] = useState<string | null>(null)
   const [subject, setSubject] = useState<string>("")
+  
+  // Date State (YYYY-MM-DD)
+  const [occurredAt, setOccurredAt] = useState<string>(
+    new Date().toISOString().split('T')[0]
+  )
+
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [isDetecting, setIsDetecting] = useState(false)
   const [state, formAction, isPending] = useActionState(processMistake, initialState)
   const [progressMessage, setProgressMessage] = useState("正在上传图片...")
+
+  // helper to dry up form action logic
+  function finalFdAction(fd: FormData) {
+     fd.append("subject", subject)
+     fd.append("occurredAt", occurredAt)
+     cropTasks.forEach(c => fd.append("image", c.file))
+     formAction(fd)
+  }
 
   // Effects
   useEffect(() => {
@@ -70,8 +81,6 @@ export default function UploadPage() {
     
     const messages = ["正在上传图片...", "AI 正在识别题目...", "分析原因与逻辑...", "正在归档..."]
     let step = 0
-    // Start interval immediately or after delay?
-    // Since we init with messages[0], we can wait for the first interval to switch to messages[1]
     const interval = setInterval(() => {
       step++
       if (step < messages.length) setProgressMessage(messages[step])
@@ -111,7 +120,6 @@ export default function UploadPage() {
       const next = prev.filter(e => e.id !== id)
       return next
     })
-    // 同时也移除对应的剪裁任务？用户可能想要保留剪裁，所以暂时不自动移除关联剪裁
   }
 
   const removeCrop = (id: string) => {
@@ -191,8 +199,6 @@ export default function UploadPage() {
     handleFiles(e.dataTransfer.files)
   }
 
-  const currentSource = scanningId ? sourceEntries.find(e => e.id === scanningId) : null
-
   if (state.success) {
     return (
       <div className="min-h-screen bg-zinc-50 flex items-center justify-center p-4">
@@ -223,7 +229,7 @@ export default function UploadPage() {
           <h1 className="text-lg font-bold text-zinc-900 whitespace-nowrap">错题录入工作台</h1>
           <div className="flex items-center gap-3 flex-1 max-w-sm">
             <Select value={subject} onValueChange={(v) => { setSubject(v); localStorage.setItem("scholar_lens_last_subject", v); }}>
-              <SelectTrigger className="h-10 bg-zinc-50 border-none shadow-none focus:ring-0">
+              <SelectTrigger className="h-10 w-[140px] bg-zinc-50 border-none shadow-none focus:ring-0">
                 <SelectValue placeholder="选择科目" />
               </SelectTrigger>
               <SelectContent className="bg-white">
@@ -231,8 +237,19 @@ export default function UploadPage() {
                 <SelectItem value="physics">物理</SelectItem>
                 <SelectItem value="chemistry">化学</SelectItem>
                 <SelectItem value="english">英语</SelectItem>
+                <SelectItem value="chinese">语文</SelectItem>
               </SelectContent>
             </Select>
+
+            <div className="relative group">
+              <input
+                type="date"
+                value={occurredAt}
+                onChange={(e) => setOccurredAt(e.target.value)}
+                className="h-10 px-3 bg-zinc-50 border-none rounded-md text-sm text-zinc-600 focus:ring-0 outline-none cursor-pointer w-[135px]"
+                title="选择做题日期"
+              />
+            </div>
           </div>
         </div>
 
@@ -405,9 +422,18 @@ export default function UploadPage() {
                   </>
                 ) : (
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <span>开始深度分析</span>
-                    <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs ml-1">{cropTasks.length}</span>
+                    { !subject ? (
+                      <>
+                        <AlertCircle className="w-4 h-4 text-zinc-400" />
+                        <span className="text-zinc-400">请先选择科目以开始</span>
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle2 className="w-4 h-4 text-green-400" />
+                        <span>开始深度分析</span>
+                        <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs ml-1">{cropTasks.length}</span>
+                      </>
+                    )}
                   </div>
                 )}
               </Button>
@@ -428,15 +454,4 @@ export default function UploadPage() {
       )}
     </div>
   )
-
-  // helper to dry up form action logic
-  function finalFdAction(fd: FormData) {
-     fd.append("subject", subject)
-     cropTasks.forEach(c => fd.append("image", c.file))
-     formAction(fd)
-  }
 }
-
-// Removed manual SVG components as they are now imported from lucide-react
-
-
