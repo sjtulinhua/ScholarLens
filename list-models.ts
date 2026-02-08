@@ -1,5 +1,5 @@
 
-const apiKey = "AIzaSyAS5j8x45zV0YuV9ojt5ALMBEQJyiqKPN0";
+const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
 
 async function listModels() {
   const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
