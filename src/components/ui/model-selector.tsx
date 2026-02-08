@@ -25,6 +25,8 @@ const MODELS = [
   { value: "gemini-2.0-flash-exp", label: "Gemini 2.0 Flash (Exp)" },
   { value: "gemini-2.0-pro-exp", label: "Gemini 2.0 Pro (Exp)" },
   { value: "gemini-1.5-pro", label: "Gemini 1.5 Pro (Stable)" },
+  { value: "qwen-vl-max", label: "Qwen VL Max (China) 🇨🇳" },
+  { value: "qwen-vl-plus", label: "Qwen VL Plus (China) 🇨🇳" },
 ]
 
 export function ModelSelector() {

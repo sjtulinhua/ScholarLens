@@ -36,6 +36,20 @@ export async function analyzeMistake(
     prompt = ANALYSIS_PROMPTS.arts();
   }
 
+  if (selectedModel?.startsWith("qwen")) {
+    const { analyzeImageWithQwen } = await import("./qwen");
+    try {
+        console.log(`🚀 Routing to Qwen Service: ${selectedModel}`);
+        const result = await analyzeImageWithQwen(images, prompt);
+        return Array.isArray(result) ? result : [result];
+    } catch (e) {
+        console.error("Qwen Service Failed, falling back to Gemini...", e);
+        // Fallback to Gemini if Qwen fails? Or just throw? 
+        // For now, let's throw to let user know Qwen failed.
+        throw e;
+    }
+  }
+
   try {
     const result = await analyzeImageWithGemini(images, prompt, selectedModel);
     // Ensure result is an array
