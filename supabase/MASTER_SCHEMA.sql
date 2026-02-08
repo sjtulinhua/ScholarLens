@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS public.questions (
   error_type TEXT,
   error_analysis TEXT,
   meta_data JSONB DEFAULT '{}'::jsonb NOT NULL,
-  embedding VECTOR(1536), -- 统一 1536 维度
+  embedding VECTOR(3072), -- 统一 3072 维度 (Auto-padded)
   created_at TIMESTAMPTZ DEFAULT now() NOT NULL
 );
 
@@ -134,7 +134,7 @@ CREATE TRIGGER update_knowledge_base_modtime
 
 -- 4.1 个人查重函数
 CREATE OR REPLACE FUNCTION public.match_user_questions(
-  query_embedding vector(1536), 
+  query_embedding vector(3072), 
   match_threshold double precision, 
   match_count integer, 
   user_uuid uuid
@@ -158,7 +158,7 @@ $$;
 
 -- 4.2 基准库/题目检索函数
 CREATE OR REPLACE FUNCTION public.match_reference_questions(
-  query_embedding vector(1536), 
+  query_embedding vector(3072), 
   match_threshold double precision, 
   match_count integer, 
   filter_subject text
