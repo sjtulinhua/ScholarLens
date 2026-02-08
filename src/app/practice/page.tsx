@@ -8,13 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Loader2, ArrowRight, CheckCircle, XCircle, RefreshCw } from "lucide-react";
 import { createVariant } from "./actions";
 import { VariantResult } from "@/lib/ai/variant";
-
-// 简单的 Markdown 渲染组件 (MVP用文本替代)
-const SimpleMarkdown = ({ text }: { text: string }) => (
-  <div className="prose dark:prose-invert max-w-none whitespace-pre-wrap text-sm leading-relaxed">
-    {text}
-  </div>
-);
+import { LatexRenderer } from "@/components/ui/latex-renderer";
+import Link from "next/link";
+import { formatKnowledgePoint } from "@/lib/format";
 
 export default function PracticePage() {
   const searchParams = useSearchParams();
@@ -116,11 +112,18 @@ export default function PracticePage() {
             </CardTitle>
             <div className="flex flex-wrap gap-2 mt-2">
               {Array.isArray(originalQuestion.knowledge_points) && 
-                originalQuestion.knowledge_points.map((k: string, i: number) => (
-                  <span key={i} className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-                    {k}
-                  </span>
-                ))
+                originalQuestion.knowledge_points.map((k: string, i: number) => {
+                  const shortKp = formatKnowledgePoint(k);
+                  return (
+                    <Link 
+                      key={i} 
+                      href={`/knowledge/${encodeURIComponent(k)}`}
+                      className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full hover:bg-primary/20 transition-colors cursor-pointer"
+                    >
+                      {shortKp}
+                    </Link>
+                  );
+                })
               }
             </div>
           </CardHeader>
@@ -133,11 +136,13 @@ export default function PracticePage() {
                 className="w-full rounded-lg border mb-4"
               />
             )}
-            <SimpleMarkdown text={originalQuestion.content} />
+            <LatexRenderer content={originalQuestion.content} />
             
             <div className="mt-8 pt-4 border-t">
               <h4 className="text-sm font-semibold mb-2 text-red-500/80">你的错因：</h4>
-              <p className="text-sm text-muted-foreground">{originalQuestion.error_analysis}</p>
+              <div className="text-sm text-muted-foreground">
+                <LatexRenderer content={originalQuestion.error_analysis} />
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -169,7 +174,7 @@ export default function PracticePage() {
               </CardHeader>
               <CardContent className="pt-6 space-y-6">
                 <div className="bg-muted/30 p-4 rounded-lg border border-primary/10">
-                  <SimpleMarkdown text={variantData.variant_content} />
+                  <LatexRenderer content={variantData.variant_content} />
                 </div>
 
                 <div className="pt-4 space-y-4">
@@ -182,7 +187,7 @@ export default function PracticePage() {
                       <div className="p-4 bg-green-500/10 text-green-700 dark:text-green-400 rounded-lg border border-green-500/20 text-sm">
                         <strong>答案解析：</strong>
                         <div className="mt-2 text-foreground/80">
-                          <SimpleMarkdown text={variantData.solution} />
+                          <LatexRenderer content={variantData.solution} />
                         </div>
                       </div>
                       

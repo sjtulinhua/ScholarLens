@@ -18,8 +18,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FileText, Clock, GraduationCap, ChevronRight, BookOpen, Database, Filter, BrainCircuit } from "lucide-react";
-import { MarkdownRenderer } from "@/components/MarkdownRenderer";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel
+} from "@/components/ui/dropdown-menu";
+import { FileText, Clock, GraduationCap, ChevronRight, BookOpen, Database, Filter, BrainCircuit, X } from "lucide-react";
+import { LatexRenderer } from "@/components/ui/latex-renderer";
 
 interface ReferenceItem {
   id: string;
@@ -38,12 +46,24 @@ interface ReferenceItem {
 export function ReferenceListView({ initialItems }: { initialItems: ReferenceItem[] }) {
   const [selectedItem, setSelectedItem] = useState<ReferenceItem | null>(null);
   const [activeTab, setActiveTab] = useState("all");
+  const [minDifficulty, setMinDifficulty] = useState(0);
 
-  // 1. 按科目过滤
+  // 1. 综合过滤：科目 + 难度
   const filteredItems = useMemo(() => {
-    if (activeTab === "all") return initialItems;
-    return initialItems.filter(item => item.subject === activeTab);
-  }, [initialItems, activeTab]);
+    let res = initialItems;
+    
+    // 科目过滤
+    if (activeTab !== "all") {
+      res = res.filter(item => item.subject === activeTab);
+    }
+    
+    // 难度过滤
+    if (minDifficulty > 0) {
+      res = res.filter(item => item.difficulty >= minDifficulty);
+    }
+    
+    return res;
+  }, [initialItems, activeTab, minDifficulty]);
 
   // 2. 按“来源/年份”分组
   const groupedItems = useMemo(() => {
@@ -81,9 +101,34 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
            </p>
         </div>
         <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="text-zinc-500 hover:text-zinc-900 hover:bg-zinc-50">
-               <Filter className="w-4 h-4 mr-2" /> Filter
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className={`text-zinc-500 hover:text-zinc-900 hover:bg-zinc-50 ${minDifficulty > 0 ? "text-blue-600 bg-blue-50" : ""}`}>
+                   <Filter className="w-4 h-4 mr-2" /> 
+                   {minDifficulty > 0 ? `难度 ≥ ${minDifficulty}` : "Filter"}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 bg-white">
+                <DropdownMenuLabel>难度筛选</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => setMinDifficulty(0)}>
+                  全部难度
+                  {minDifficulty === 0 && <span className="ml-auto text-blue-500">✓</span>}
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setMinDifficulty(3)}>
+                  只看中等 (≥3)
+                  {minDifficulty === 3 && <span className="ml-auto text-blue-500">✓</span>}
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setMinDifficulty(4)}>
+                  只看困难 (≥4)
+                  {minDifficulty === 4 && <span className="ml-auto text-blue-500">✓</span>}
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setMinDifficulty(5)}>
+                  只看压轴 (5)
+                  {minDifficulty === 5 && <span className="ml-auto text-blue-500">✓</span>}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <div className="h-4 w-px bg-zinc-200" />
             <span className="text-xs font-mono text-zinc-400">
                {initialItems.length} ITEMS
@@ -164,9 +209,14 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                                   </span>
                                 )}
                              </div>
-                             <p className="text-sm font-medium text-zinc-800 line-clamp-3 leading-relaxed">
-                               {item.content}
-                             </p>
+                             <div className="text-sm font-medium text-zinc-800 h-[4.5em] overflow-hidden relative">
+                               <LatexRenderer 
+                                 content={item.content} 
+                                 className="[&_p]:m-0 [&_p]:inline pointer-events-none" // Force inline style for preview
+                               />
+                               {/* Fade overlay for truncate effect */}
+                               <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-zinc-50 to-transparent pointer-events-none" />
+                             </div>
                              {/* Knowledge Tag with new design */}
                              <div className="pt-2">
                                 {item.knowledge_points?.[0] && (
@@ -190,6 +240,7 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
 
       <Dialog open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
         <DialogContent className="max-w-4xl h-[90vh] md:h-[85vh] w-[95vw] md:w-full flex flex-col p-0 overflow-hidden bg-white border-zinc-200 shadow-2xl rounded-2xl mx-auto">
+           <DialogTitle className="sr-only">Question Detail</DialogTitle>
            {selectedItem && (
              <div className="flex flex-col md:flex-row h-full">
                 {/* Left: Content (Mobile: Order 2) */}
@@ -204,7 +255,7 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                    </div>
                    <div className="prose prose-zinc max-w-none">
                       <div className="text-lg md:text-xl font-bold text-zinc-900 mb-6 leading-relaxed">
-                        {selectedItem.content}
+                        <LatexRenderer content={selectedItem.content} />
                       </div>
 
                       {selectedItem.images && selectedItem.images.length > 0 && (
@@ -223,7 +274,11 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                            AI Analysis
                          </h4>
                          <div className="bg-zinc-50 p-4 md:p-6 rounded-xl border border-zinc-100 text-sm leading-7 text-zinc-700">
-                            {selectedItem.error_analysis || "No analysis available."}
+                            {selectedItem.error_analysis ? (
+                              <LatexRenderer content={selectedItem.error_analysis} />
+                            ) : (
+                              "No analysis available."
+                            )}
                          </div>
                       </div>
                    </div>

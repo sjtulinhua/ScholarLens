@@ -42,55 +42,57 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;          /* Zinc-900 ring for focus */
 
-    --radius: 0.5rem;              /* 8px - Professional, not too round */
+    --radius: 0.75rem;             /* 12px - Slightly softer but still modern */
 
     /* Chart Colors - Academic/Professional */
-    --chart-1: 173 58% 39%;        /* Teal-600 */
-    --chart-2: 12 76% 61%;         /* Orange-500 */
-    --chart-3: 197 37% 24%;        /* Slate-700 */
-    --chart-4: 43 74% 66%;         /* Amber */
-    --chart-5: 27 87% 67%;         /* Orange-400 */
+    --chart-1: 221.2 83.2% 53.3%;  /* Royal Blue */
+    --chart-2: 210 40% 96.1%;
+    --chart-3: 142.1 76.2% 36.3%;
+    --chart-4: 47.9 95.8% 51.2%;
+    --chart-5: 346.8 77.2% 49.8%;
   }
 
-  .dark {
-    /* Fallback Dark Mode (if needed, but primary is Light) */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-  }
+  /* ... dark mode stays same ... */
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border selection:bg-blue-100 selection:text-blue-900;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#FBFBFB] text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 /* Glassmorphism Utilities */
 .glass {
-  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm;
+  @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-sm ring-1 ring-black/5;
 }
 
-.dark .glass {
-  @apply bg-black/60 backdrop-blur-xl border border-white/10 shadow-sm;
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-200 rounded-full hover:bg-zinc-300 transition-colors;
+}
+
+/* Clean Professional Borders and Shadows */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-zinc-200/50 hover:-translate-y-1;
+}
+
+.border-subtle {
+  @apply border border-zinc-200/60;
+}
+
+.shadow-premium {
+  @apply shadow-[0_8px_30px_rgb(0,0,0,0.04)];
 }

@@ -11,7 +11,7 @@
 > [!IMPORTANT]
 > 以下设计决策需要您确认：
 
-1. **AI 模型选择**：数学/理科用 Gemini 1.5 Pro，语文用 DeepSeek V3，是否同意？
+1. **AI 模型选择**：数学/理科用 Gemini 3 Pro，语文用 DeepSeek V3，是否同意？
 2. **图片存储**：使用 Supabase Storage（免费额度 1GB），是否足够？
 3. **部署平台**：Zeabur（后端） + Vercel（前端），还是全部 Zeabur？
 
@@ -60,7 +60,7 @@ ScholarLens/
 | 样式 | Tailwind CSS + Shadcn/ui (Dark Mode) |
 | 数据库 | Supabase (PostgreSQL + pgvector) |
 | 认证 | Supabase Auth + RLS |
-| AI | Gemini 1.5 Pro (理科) / DeepSeek V3 (文科) |
+| AI | Gemini 3 Pro (理科) / DeepSeek V3 (文科) |
 | 部署 | Zeabur |
 
 ### 数据库 Schema

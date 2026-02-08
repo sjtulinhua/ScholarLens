@@ -57,6 +57,7 @@ export interface Question {
   is_reference: boolean;
   meta_data: Record<string, unknown>;
   embedding: number[] | null;
+  occurred_at: string; // 错题发生时间
   created_at: string;
 }
 

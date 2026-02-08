@@ -1,33 +1,35 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY!);
+
 /**
- * DeepSeek V3 分析服务 (通过 API 调用)
- * 注：DeepSeek 目前主推文本，对于图片可以先尝试 OCR + 文本分析，
- * 或者使用其支持 Vision 的模型（如果可用）。
- * 
- * 简化版：这里演示如何调用 DeepSeek API 处理文本分析。
+ * 文本分析服务 (已迁移至 Gemini 2.0 Flash/Pro)
+ * 原 DeepSeek 接口保留名称以兼容现有代码，但底层已切换为 Gemini
  */
-
 export async function analyzeTextWithDeepSeek(content: string, prompt: string) {
-  try {
-    const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.DEEPSEEK_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: "deepseek-chat",
-        messages: [
-          { role: "system", content: prompt },
-          { role: "user", content }
-        ],
-        response_format: { type: "json_object" }
-      })
-    });
+  const modelsToTry = ["gemini-2.0-flash-exp", "gemini-2.0-pro-exp", "gemini-1.5-pro"];
+  
+  for (const modelName of modelsToTry) {
+    try {
+        const model = genAI.getGenerativeModel({ 
+            model: modelName,
+            generationConfig: { responseMimeType: "application/json" }
+        });
+        
+        const result = await model.generateContent([
+            { text: prompt },
+            { text: content }
+        ]);
+        
+        const text = result.response.text();
+        const cleanJson = text.replace(/```json/g, "").replace(/```/g, "").trim();
+        return JSON.parse(cleanJson);
 
-    const data = await response.json();
-    return JSON.parse(data.choices[0].message.content);
-  } catch (error) {
-    console.error("DeepSeek Analysis Error:", error);
-    throw new Error("DeepSeek 分析服务由于网络或密钥原因暂时不可用");
+    } catch (e: any) {
+        console.warn(`Text analysis model ${modelName} failed:`, e.message);
+        if (modelName === modelsToTry[modelsToTry.length - 1]) {
+            throw new Error(`Text Analysis Failed. Last error: ${e.message}`);
+        }
+    }
   }
 }

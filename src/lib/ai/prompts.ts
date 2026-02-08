@@ -24,18 +24,29 @@ export const ANALYSIS_PROMPTS = {
     以下是来自数据库的${references.length}道相似真题及其官方难度，请以此为基准进行评分：
     ${examples}
     
-    请分析上传的图片，并以严格的 JSON 格式返回结果（直接返回 JSON 字符串）：
+    请分析上传的图片组（可能包含试卷原题、答题卡、手写草稿等多张图片）。请综合所有图片信息，**识别并列出图片中出现的所有错题**。
     
-    {
-      "content": "题目内容，使用 Markdown 格式，数学公式使用 LaTeX (包裹在 $ 或 $$ 中)",
-      "is_mistake": true, // 根据图片上的红叉 (X)、圈选、批改分数或明显的错误痕迹判断是否为错题
-      "knowledge_points": ["一级考点-二级考点"],
-      "error_type": "计算错误 | 概念混淆 | 审题不清 | 方法错误 | 知识断层",
-      "error_analysis": "深入浅出的错因分析",
-      "solution": "详细补救步骤，Markdown 格式",
-      "difficulty": 3, // 1-5。参考上述[参考真题]的难度标准进行打分
-      "marking_details": "描述你观察到的批改痕迹（如：红叉、半对、圈出的错误步骤）"
-    }
+    请以严格的 JSON **数组**格式返回结果（直接返回 JSON 数组，不要包裹在对象中）：
+    
+    [
+      {
+        "content": "题目内容，使用 Markdown 格式，数学公式使用 LaTeX (包裹在 $ 或 $$ 中)",
+        "is_mistake": true,
+        "knowledge_points": ["一级考点-二级考点"],
+        "error_type": "计算错误 | 概念混淆 | 审题不清 | 方法错误 | 知识断层",
+        "error_analysis": "深入浅出的错因分析",
+        "solution": "详细补救步骤，Markdown 格式",
+        "difficulty": 3,
+        "marking_details": "描述你观察到的具体批改痕迹"
+      },
+      ...
+    ]
+    
+    要求：
+    1. 原子化：每一道错题作为一个独立的数组项。如果图片中有3道错题，则数组包含3个对象。
+    2. 视觉识别：Gemini 1.5 Pro 需要特别关注图片中的红色批改痕迹。如果有红叉，则 is_mistake 必为 true。
+    3. 难度对标：严格参考提供的真题难度。
+    4. JSON 格式必须合法，不要包含 Markdown 代码块包裹。
     
     要求：
     1. 视觉识别：Gemini 1.5 Pro 需要特别关注图片中的红色批改痕迹。如果有红叉，则 is_mistake 必为 true。
@@ -48,18 +59,23 @@ export const ANALYSIS_PROMPTS = {
   arts: () => `
     你是一名厦门初中语文特级教师，精通语文中考大纲和文学鉴赏。
     
-    请分析上传的题目图片，返回 JSON 格式结果：
+    请分析上传的图片组（可能包含试卷、答题卡等多张图片），综合判断错题内容。请**识别并列出图片中出现的所有错题**，返回 JSON **数组**：
     
-    {
-      "content": "题目内容，Markdown 格式",
-      "is_mistake": true, // 根据红叉、扣分标注等视觉信息判断
-      "knowledge_points": ["考点分类"],
-      "error_type": "知识积累不足 | 理解偏差 | 表述不规范 | 审题缺失",
-      "error_analysis": "详细的错因解析",
-      "solution": "参考答案与解析",
-      "difficulty": 3,
-      "marking_details": "观察到的批改痕迹"
-    }
+    [
+      {
+        "content": "题目内容，Markdown 格式",
+        "is_mistake": true,
+        "knowledge_points": ["考点分类"],
+        "error_type": "知识积累不足 | 理解偏差 | 表述不规范 | 审题缺失",
+        "error_analysis": "详细的错因解析",
+        "solution": "参考答案与解析",
+        "difficulty": 3,
+        "marking_details": "观察到的批改痕迹（红叉、扣分等）"
+      },
+      ...
+    ]
+    
+    要求：原子化。每一道错题为一个数组项。直接返回 JSON 数组。
     
     要求：识别图片中的红色批改文字或符号，这对判断错误类型至关重要。直接返回 JSON 字符串。
   `,

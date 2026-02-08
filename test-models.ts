@@ -14,34 +14,19 @@ if (!apiKey) {
 
 const genAI = new GoogleGenerativeAI(apiKey);
 
-async function listModels() {
-  console.log("Fetching available models...");
-  
-  const modelsToTest = [
-    "gemini-1.5-flash",
-    "gemini-1.5-flash-001",
-    "gemini-1.5-flash-002",
-    "gemini-1.5-flash-8b",
-    "gemini-1.5-pro",
-    "gemini-1.5-pro-001",
-    "gemini-1.5-pro-002",
-    "gemini-2.0-flash-exp"
-  ];
+async function testEmbedding() {
+  const models = ["models/gemini-embedding-001"];
 
-  for (const modelName of modelsToTest) {
+  for (const m of models) {
+    console.log(`\n--- Testing ${m} ---`);
     try {
-      console.log(`Testing ${modelName}...`);
-      const model = genAI.getGenerativeModel({ model: modelName });
-      const result = await model.generateContent("Hello");
-      console.log(`SUCCESS: ${modelName} works! Response: ${result.response.text().slice(0, 20)}...`);
-      // Found a working one? We can stop or keep going to see all options.
+      const model = genAI.getGenerativeModel({ model: m });
+      const result = await (model as any).embedContent("Hello world");
+      console.log(`✅ SUCCESS: Dimension ${result.embedding.values.length}`);
     } catch (error: any) {
-      // Print short error
-      const msg = error.message || String(error);
-      const shortMsg = msg.split('\n')[0]; 
-      console.log(`FAILED: ${modelName} - ${shortMsg}`); 
+      console.log(`❌ FAILED: ${error.message}`);
     }
   }
 }
 
-listModels();
+testEmbedding();

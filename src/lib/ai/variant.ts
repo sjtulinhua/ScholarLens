@@ -1,12 +1,5 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { ANALYSIS_PROMPTS } from "./prompts";
-
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY!);
-const model = genAI.getGenerativeModel({ 
-  model: "gemini-3-pro-preview",
-}, {
-  baseUrl: process.env.GEMINI_API_BASE_URL
-});
+import { generateTextWithGemini } from "./gemini";
 
 export interface VariantResult {
   variant_content: string;
@@ -25,16 +18,19 @@ export async function generateVariant(
   knowledgePoints: string[]
 ): Promise<VariantResult> {
   const prompt = ANALYSIS_PROMPTS.variant(originalContent, knowledgePoints);
-
+  
   try {
-    const result = await model.generateContent(prompt);
-    const responseText = result.response.text();
+    const text = await generateTextWithGemini(prompt, "models/gemini-3-pro-preview");
     
-    // 清洗 JSON
-    const cleanJson = responseText.replace(/```json/g, "").replace(/```/g, "").trim();
-    return JSON.parse(cleanJson) as VariantResult;
+    // Robust extraction
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      return JSON.parse(jsonMatch[0]) as VariantResult;
+    }
+    throw new Error("No JSON found in AI response");
+
   } catch (error) {
-    console.error("Variant Generation Error:", error);
+    console.error(`Variant Generation Error:`, error);
     throw new Error("变式题生成失败，请稍后重试");
   }
 }
