@@ -1,6 +1,12 @@
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY!);
+const key = process.env.GOOGLE_GEMINI_API_KEY;
+if (key) {
+  console.log(`[Gemini Init] Key loaded. Length: ${key.length}, Starts with: ${key.substring(0, 4)}..., Ends with: ...${key.substring(key.length - 4)}`);
+} else {
+  console.error("[Gemini Init] Error: GOOGLE_GEMINI_API_KEY is not defined!");
+}
+const genAI = new GoogleGenerativeAI(key || "");
 
 /**
  * 使用 Gemini 分析图片
