@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Loader2, ArrowRight, CheckCircle, XCircle, RefreshCw } from "lucide-react";
+import { Loader2, ArrowRight, CheckCircle, XCircle, RefreshCw, Calendar, Clock } from "lucide-react";
 import { createVariant } from "./actions";
 import { VariantResult } from "@/lib/ai/variant";
 import { LatexRenderer } from "@/components/ui/latex-renderer";
@@ -142,6 +142,17 @@ export default function PracticePage() {
               <h4 className="text-sm font-semibold mb-2 text-red-500/80">你的错因：</h4>
               <div className="text-sm text-muted-foreground">
                 <LatexRenderer content={originalQuestion.error_analysis} />
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 pt-4 border-t text-xs text-muted-foreground">
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5" />
+                <span>做题时间: {new Date(originalQuestion.occurred_at || originalQuestion.created_at).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5" />
+                <span>收录时间: {new Date(originalQuestion.created_at).toLocaleDateString()}</span>
               </div>
             </div>
           </CardContent>

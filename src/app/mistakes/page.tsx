@@ -5,6 +5,7 @@ import { ChevronLeft, Filter, BookOpen } from "lucide-react";
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { LatexRenderer } from "@/components/ui/latex-renderer";
 
 import { MistakesFilter } from "@/components/mistakes/MistakesFilter";
@@ -27,8 +28,8 @@ export default async function MistakesPage({
   const user = data?.user;
 
   if (!user) {
-    console.error("No user found in MistakesPage");
-    return <div className="p-8 text-center">请先登录以查看错题本</div>;
+    console.log("No user found in MistakesPage, redirecting to login");
+    redirect("/login");
   }
 
   // 构建查询

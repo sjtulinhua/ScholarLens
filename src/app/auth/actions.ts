@@ -49,9 +49,11 @@ export async function login(prevState: AuthState | null, formData: FormData): Pr
     return { error: '登录失败：账号或密码错误' }
   }
 
-  // 3. 登录成功跳转
+  // 3. 登录成功
   revalidatePath('/', 'layout')
-  redirect('/')
+  // 不要在 Server Action 中做 redirect，这在某些环境下会导致 Cookie 设置失败
+  // 改为返回 success 状态，让客户端处理跳转
+  return { success: true }
 }
 
 /**

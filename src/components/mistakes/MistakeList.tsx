@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Maximize2 } from "lucide-react"
+import { BookOpen, Maximize2, Calendar } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { LatexRenderer } from "@/components/ui/latex-renderer"
@@ -91,21 +91,25 @@ export function MistakeList({ mistakes }: MistakeListProps) {
                 </div>
               </Link>
 
-              <div className="space-y-4 pt-4 border-t border-primary/5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-medium text-muted-foreground/60">
-                    {new Date(m.created_at).toLocaleDateString()} 收录
-                  </span>
-                  <span className="text-[10px] bg-muted/50 px-2 py-0.5 rounded text-muted-foreground border border-primary/5">
+                <div className="pt-4 border-t border-primary/5 flex items-center justify-between">
+                  <div className="space-y-0.5">
+                    <div className="flex items-center gap-1.5 text-[11px] font-medium text-zinc-600">
+                      <Calendar className="w-3 h-3 text-primary/40" />
+                      <span>做题: {new Date(m.question.occurred_at || m.created_at).toLocaleDateString()}</span>
+                    </div>
+                    <div className="text-[10px] text-muted-foreground/40 pl-4.5">
+                      收录: {new Date(m.created_at).toLocaleDateString()}
+                    </div>
+                  </div>
+                  <span className="text-[10px] bg-muted/50 px-2 py-0.5 rounded text-muted-foreground border border-primary/5 h-fit">
                     已向量化
                   </span>
                 </div>
-                <Link href={`/practice?id=${m.question.id}`} className="block">
-                  <Button variant="default" size="lg" className="w-full rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white shadow-md hover:shadow-xl transition-all h-12 text-sm font-bold">
-                    <BookOpen className="mr-2 h-4 w-4" /> 查看详情与强化练习
+                <Link href={`/practice?id=${m.question.id}`} className="block mt-4">
+                  <Button variant="default" size="lg" className="w-full rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white shadow-md hover:shadow-xl transition-all h-10 text-xs font-bold">
+                    <BookOpen className="mr-2 h-3.5 w-3.5" /> 查看详情与强化练习
                   </Button>
                 </Link>
-              </div>
             </CardContent>
           </Card>
         ))}

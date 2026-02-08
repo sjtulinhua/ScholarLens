@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 import { login, type AuthState } from '../actions'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,6 +12,14 @@ const initialState: AuthState = {}
 
 export default function LoginPage() {
   const [state, formAction, isPending] = useActionState(login, initialState)
+
+  // 处理登录成功，客户端跳转
+  useEffect(() => {
+    if (state.success) {
+       // 强制刷新以确保 Cookie 生效
+       window.location.href = '/'
+    }
+  }, [state.success])
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-[#FBFBFB] p-4 font-sans selection:bg-zinc-200">
