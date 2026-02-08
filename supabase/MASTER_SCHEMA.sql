@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS public.questions (
   occurred_at TIMESTAMPTZ DEFAULT now() NOT NULL,
   error_type TEXT,
   error_analysis TEXT,
+  ai_model TEXT, -- 记录分析该错题所使用的大模型名称
   meta_data JSONB DEFAULT '{}'::jsonb NOT NULL,
   embedding VECTOR(3072), -- 统一 3072 维度 (Auto-padded)
   created_at TIMESTAMPTZ DEFAULT now() NOT NULL
@@ -137,7 +138,8 @@ CREATE OR REPLACE FUNCTION public.match_user_questions(
   query_embedding vector(3072), 
   match_threshold double precision, 
   match_count integer, 
-  user_uuid uuid
+  user_uuid uuid,
+  ai_model_name text -- 传入当前使用的大模型名称
 )
 RETURNS TABLE(id uuid, content text, similarity double precision) 
 LANGUAGE plpgsql
@@ -151,6 +153,7 @@ BEGIN
   FROM questions q
   WHERE 1 - (q.embedding <=> query_embedding) > match_threshold
   AND q.user_id = user_uuid
+  AND (q.ai_model = ai_model_name OR (q.ai_model IS NULL AND ai_model_name IS NULL)) -- 同时也匹配模型
   ORDER BY q.embedding <=> query_embedding
   LIMIT match_count;
 END;

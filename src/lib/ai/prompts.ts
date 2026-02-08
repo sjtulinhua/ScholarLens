@@ -30,28 +30,30 @@ export const ANALYSIS_PROMPTS = {
     
     [
       {
-        "content": "题目内容，使用 Markdown 格式，数学公式使用 LaTeX (包裹在 $ 或 $$ 中)",
+        "content": "题目内容，Markdown 格式。强制要求：文中出现的所有数学表达式、等式、变量（如 x, y, f(x)）、LaTeX 指令（如 \\Rightarrow, \\frac）都必须严格包裹在 $ $（行内）或 $$ $$（行间）中。如果不包裹，用户将无法看到公式，只能看到原始代码，这是严重的错误。",
         "is_mistake": true,
         "knowledge_points": ["一级考点-二级考点"],
-        "error_type": "计算错误 | 概念混淆 | 审题不清 | 方法错误 | 知识断层",
-        "error_analysis": "深入浅出的错因分析",
-        "solution": "详细补救步骤，Markdown 格式",
+        "error_type": "错误原因分类",
+        "error_analysis": "错因深度解析。注意：此处的数学变量和公式也必须全部使用 $ $ 包裹。",
+        "solution": "标准答案与补救步骤。再次强调：必须确保所有数学内容被 $ $ 或 $$ $$ 包裹，不允许出现裸露的 LaTeX 指令。",
         "difficulty": 3,
         "marking_details": "描述你观察到的具体批改痕迹"
       },
       ...
     ]
     
+    【LaTeX 渲染准则 - 必读】
+    1. 严禁输出裸露的 LaTeX 指令（如 \\Rightarrow, \\triangle, \\angle）。
+    2. 所有的数学符号、变量、表达式、等式必须被 $ $ (行内) 或 $$ $$ (行间) 包裹。
+    3. 即使是单个变量（如 $x$）或简单的等式（如 $a = b$），也必须包裹。
+    4. 所有的中文文本如果出现在公式内，必须使用 \\text{...} 包裹，且整个公式依然需要在 $ $ 中。
+    5. 如果你违反此规则，用户将看到一堆乱码乱，这是无法接受的。
+
     要求：
-    1. 原子化：每一道错题作为一个独立的数组项。如果图片中有3道错题，则数组包含3个对象。
-    2. 视觉识别：Gemini 1.5 Pro 需要特别关注图片中的红色批改痕迹。如果有红叉，则 is_mistake 必为 true。
+    1. 原子化：每一道错题作为一个独立的数组项。
+    2. 视觉识别：Gemini 1.5 Pro \ Qwen-VL 等模型需要特别关注图片中的红色批改痕迹。如果有红叉，则 is_mistake 必为 true。
     3. 难度对标：严格参考提供的真题难度。
-    4. JSON 格式必须合法，不要包含 Markdown 代码块包裹。
-    
-    要求：
-    1. 视觉识别：Gemini 1.5 Pro 需要特别关注图片中的红色批改痕迹。如果有红叉，则 is_mistake 必为 true。
-    2. 难度对标：严格参考提供的真题难度。
-    3. JSON 格式必须合法，不要包含 Markdown 代码块包裹。
+    4. 禁令：不要在回答中包含任何解释性文字，只返回 JSON 数组本身。
     `;
   },
 
@@ -68,7 +70,7 @@ export const ANALYSIS_PROMPTS = {
         "knowledge_points": ["考点分类"],
         "error_type": "知识积累不足 | 理解偏差 | 表述不规范 | 审题缺失",
         "error_analysis": "详细的错因解析",
-        "solution": "参考答案与解析",
+        "solution": "包含【标准答案】与【详细解析】，Markdown 格式",
         "difficulty": 3,
         "marking_details": "观察到的批改痕迹（红叉、扣分等）"
       },

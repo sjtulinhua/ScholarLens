@@ -71,10 +71,11 @@ export async function processMistake(
     // 2. 调用 AI 分析 (并行调度)
     const analysisPromises = uploadedImages.map(async (img) => {
         try {
-            const results = await analyzeMistake([{ buffer: img.buffer, mimeType: img.mimeType }], subject, selectedModel);
+            const { mistakes, usedModel } = await analyzeMistake([{ buffer: img.buffer, mimeType: img.mimeType }], subject, selectedModel);
             return {
-              item: results[0],
-              sourceImg: img
+              item: mistakes[0],
+              sourceImg: img,
+              usedModel
             };
         } catch (e) {
             console.error("Single image analysis failed:", e);
@@ -91,7 +92,7 @@ export async function processMistake(
 
     // 3. 循环保存每道错题 (Atomic Persistence with Deduplication)
     const savePromises = analysisResults.map(async (entry) => {
-        const { item, sourceImg } = entry!;
+        const { item, sourceImg, usedModel } = entry!;
         // 3.0 语义级查重
         let questionId: string;
         const embedding = await generateEmbedding(item.content);
@@ -101,7 +102,8 @@ export async function processMistake(
             query_embedding: embedding,
             match_threshold: 0.95, // 95% 相似度视为同一道题
             match_count: 1,
-            user_uuid: user.id
+            user_uuid: user.id,
+            ai_model_name: usedModel // 增加模型维度限制
           });
 
         if (matchError) {
@@ -126,6 +128,7 @@ export async function processMistake(
               error_type: item.error_type,
               error_analysis: item.error_analysis,
               difficulty: item.difficulty,
+              ai_model: usedModel, // 保存模型名称
               meta_data: {
                 solution: item.solution,
                 recommendation: item.recommendation,

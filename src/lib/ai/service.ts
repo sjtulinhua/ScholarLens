@@ -39,9 +39,11 @@ export async function analyzeMistake(
   if (selectedModel?.startsWith("qwen")) {
     const { analyzeImageWithQwen } = await import("./qwen");
     try {
-        console.log(`🚀 Routing to Qwen Service: ${selectedModel}`);
         const result = await analyzeImageWithQwen(images, prompt);
-        return Array.isArray(result) ? result : [result];
+        return {
+          mistakes: Array.isArray(result) ? result : [result],
+          usedModel: selectedModel
+        };
     } catch (e) {
         console.error("Qwen Service Failed, falling back to Gemini...", e);
         // Fallback to Gemini if Qwen fails? Or just throw? 
@@ -51,10 +53,11 @@ export async function analyzeMistake(
   }
 
   try {
-    const result = await analyzeImageWithGemini(images, prompt, selectedModel);
-    // Ensure result is an array
-    const mistakes = Array.isArray(result) ? result : [result];
-    return mistakes;
+    const { mistakes, usedModel } = await analyzeImageWithGemini(images, prompt, selectedModel);
+    return {
+      mistakes: Array.isArray(mistakes) ? mistakes : [mistakes],
+      usedModel
+    };
   } catch (error) {
     console.error("Master Analysis Service Error:", error);
     throw error;

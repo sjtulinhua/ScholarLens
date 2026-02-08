@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Filter, BookOpen } from "lucide-react";
+import { ChevronLeft, Filter, BookOpen, Trash2, Trash } from "lucide-react";
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -41,7 +41,8 @@ export default async function MistakesPage({
       created_at,
       question:questions!inner (*) 
     `)
-    .order("created_at", { ascending: false });
+    .order("created_at", { ascending: false })
+    .is("deleted_at", null);
 
   // 1. 状态过滤 (直接在 mistakes 表)
   if (status) {
@@ -53,6 +54,11 @@ export default async function MistakesPage({
   if (subject) {
     query = query.eq("question.subject", subject);
   }
+
+  const { count: trashCount } = await supabase
+    .from("mistakes")
+    .select("id", { count: "exact", head: true })
+    .not("deleted_at", "is", null);
 
   const { data: mistakes, error } = await query;
   
@@ -75,7 +81,32 @@ export default async function MistakesPage({
           <h1 className="text-3xl font-bold tracking-tight">我的错题本</h1>
         </div>
         <Suspense fallback={<Button variant="outline" size="sm" className="rounded-full opacity-50">Loading...</Button>}>
-          <MistakesFilter />
+          <div className="flex items-center gap-2">
+            <MistakesFilter />
+            <Link href="/mistakes/trash">
+               <Button 
+                variant={(trashCount || 0) > 0 ? "secondary" : "ghost"} 
+                size="sm" 
+                className={(trashCount || 0) > 0 ? "text-red-600 bg-red-50 hover:bg-red-100" : "text-muted-foreground hover:text-zinc-900"}
+               >
+                  <div className="relative">
+                    {(trashCount || 0) > 0 ? (
+                        <>
+                            <Trash2 className="w-4 h-4 mr-1" />
+                            <span className="absolute -top-1 -right-0 flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                            </span>
+                        </>
+                    ) : (
+                        <Trash className="w-4 h-4 mr-1" />
+                    )}
+                  </div>
+                  垃圾箱
+                  {(trashCount || 0) > 0 && <span className="ml-1 text-xs">({trashCount})</span>}
+               </Button>
+            </Link>
+          </div>
         </Suspense>
       </header>
 

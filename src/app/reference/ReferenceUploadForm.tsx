@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -13,23 +13,49 @@ export default function ReferenceUploadForm() {
   const [isUploading, setIsUploading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<"idle" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [isDragging, setIsDragging] = useState(false);
+
+  const processFiles = (selectedFiles: File[]) => {
+    const validFiles = selectedFiles.filter(f => ["application/pdf", "image/jpeg", "image/png"].includes(f.type));
+    
+    if (validFiles.length !== selectedFiles.length) {
+      alert("部分文件格式不支持，已自动过滤。目前支持 PDF 和图片格式。");
+    }
+    
+    if (validFiles.length > 0) {
+      setFiles(validFiles);
+      setUploadStatus("idle");
+      setMessage("");
+    }
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      const selectedFiles = Array.from(e.target.files);
-      const validFiles = selectedFiles.filter(f => ["application/pdf", "image/jpeg", "image/png"].includes(f.type));
-      
-      if (validFiles.length !== selectedFiles.length) {
-        alert("部分文件格式不支持，已自动过滤。目前支持 PDF 和图片格式。");
-      }
-      
-      if (validFiles.length > 0) {
-        setFiles(validFiles);
-        setUploadStatus("idle");
-        setMessage("");
-      }
+      processFiles(Array.from(e.target.files));
     }
   };
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      processFiles(Array.from(e.dataTransfer.files));
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,9 +116,16 @@ export default function ReferenceUploadForm() {
         <form onSubmit={handleSubmit} className="space-y-6">
           
           <div 
-            className={`border-2 border-dashed rounded-xl p-8 text-center transition-colors ${
-              files.length > 0 ? "border-primary bg-primary/5" : "border-muted-foreground/25 hover:border-primary/50"
+            className={`border-2 border-dashed rounded-xl p-8 text-center transition-all duration-200 cursor-pointer ${
+              isDragging 
+                ? "border-primary bg-primary/10 scale-[1.02]" 
+                : files.length > 0 
+                  ? "border-primary bg-primary/5" 
+                  : "border-muted-foreground/25 hover:border-primary/50 hover:bg-muted/50"
             }`}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
           >
             <input 
               type="file" 
@@ -102,12 +135,14 @@ export default function ReferenceUploadForm() {
               multiple
               onChange={handleFileChange}
             />
-            <label htmlFor="file-upload" className="cursor-pointer block space-y-4">
-              <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <label htmlFor="file-upload" className="cursor-pointer block space-y-4 w-full h-full">
+              <div className={`mx-auto w-12 h-12 rounded-full flex items-center justify-center transition-colors ${
+                isDragging ? "bg-primary text-white" : "bg-primary/10"
+              }`}>
                 {files.length > 0 ? (
-                  <FileText className="w-6 h-6 text-primary" />
+                  <FileText className={`w-6 h-6 ${isDragging ? "text-white" : "text-primary"}`} />
                 ) : (
-                  <FileType className="w-6 h-6 text-muted-foreground" />
+                  <FileType className={`w-6 h-6 ${isDragging ? "text-white" : "text-muted-foreground"}`} />
                 )}
               </div>
               <div>
@@ -120,7 +155,9 @@ export default function ReferenceUploadForm() {
                   </div>
                 ) : (
                   <>
-                    <div className="font-medium text-foreground">点击或拖拽文件到此处</div>
+                    <div className="font-medium text-foreground">
+                      {isDragging ? "松开鼠标即可上传" : "点击或拖拽文件到此处"}
+                    </div>
                     <div className="text-xs text-muted-foreground mt-1">支持多选 PDF / PNG / JPG</div>
                   </>
                 )}

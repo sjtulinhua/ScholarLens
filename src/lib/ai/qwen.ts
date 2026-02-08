@@ -34,6 +34,7 @@ export async function analyzeImageWithQwen(
     });
   });
 
+  console.time(`⏱️ [AI Perf] Qwen-VL-Max`);
   try {
     console.log("🤖 Asking Qwen-VL-Max...");
     const response = await openai.chat.completions.create({
@@ -67,6 +68,7 @@ export async function analyzeImageWithQwen(
       throw new Error("Qwen response did not contain valid JSON");
     }
 
+    console.timeEnd(`⏱️ [AI Perf] Qwen-VL-Max`);
     return JSON.parse(jsonMatch[0]);
 
   } catch (error: any) {

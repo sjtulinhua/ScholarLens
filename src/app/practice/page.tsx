@@ -104,7 +104,7 @@ export default function PracticePage() {
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* 左侧：原题回顾 */}
-        <Card className="md:h-[calc(100vh-200px)] overflow-y-auto border-muted/50">
+        <Card className="border-muted/50 h-fit">
           <CardHeader className="bg-muted/20 pb-4">
             <CardTitle className="text-lg flex items-center gap-2">
               <span className="bg-muted px-2 py-1 rounded text-xs text-muted-foreground">原题</span>
@@ -140,10 +140,19 @@ export default function PracticePage() {
             
             <div className="mt-8 pt-4 border-t">
               <h4 className="text-sm font-semibold mb-2 text-red-500/80">你的错因：</h4>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground mb-4">
                 <LatexRenderer content={originalQuestion.error_analysis} />
               </div>
             </div>
+
+            {originalQuestion.meta_data?.solution && (
+              <div className="pt-4 border-t">
+                <h4 className="text-sm font-semibold mb-2 text-green-600">标准答案与解析：</h4>
+                <div className="text-sm text-foreground/80 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                  <LatexRenderer content={originalQuestion.meta_data.solution} />
+                </div>
+              </div>
+            )}
 
             <div className="flex items-center gap-4 pt-4 border-t text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5">

@@ -3,7 +3,7 @@
 import { useState, useRef, useActionState, useEffect, startTransition } from "react"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Upload, X, CheckCircle2, AlertCircle, Loader2, Image as ImageIcon, Plus, Scissors, Trash2 } from 'lucide-react'
+import { Upload, X, CheckCircle2, AlertCircle, Loader2, Image as ImageIcon, Plus, Scissors, Trash2, Calendar } from 'lucide-react'
 import Image from "next/image"
 import { processMistake, type UploadState } from "./actions"
 import { useRouter } from "next/navigation"
@@ -48,6 +48,7 @@ export default function UploadPage() {
   const [occurredAt, setOccurredAt] = useState<string>(
     new Date().toISOString().split('T')[0]
   )
+  const [isDateChanged, setIsDateChanged] = useState(false)
 
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [isDetecting, setIsDetecting] = useState(false)
@@ -241,14 +242,27 @@ export default function UploadPage() {
               </SelectContent>
             </Select>
 
-            <div className="relative group">
+            <div className={cn(
+              "relative px-3 py-1.5 rounded-xl border border-zinc-200 transition-all group flex items-center gap-2",
+              !isDateChanged ? "bg-orange-50 border-orange-200 animate-pulse" : "bg-zinc-50 border-transparent"
+            )}>
+              <Calendar className={cn("w-3.5 h-3.5", !isDateChanged ? "text-orange-500" : "text-zinc-400")} />
               <input
                 type="date"
                 value={occurredAt}
-                onChange={(e) => setOccurredAt(e.target.value)}
-                className="h-10 px-3 bg-zinc-50 border-none rounded-md text-sm text-zinc-600 focus:ring-0 outline-none cursor-pointer w-[135px]"
-                title="选择做题日期"
+                onChange={(e) => {
+                  setOccurredAt(e.target.value);
+                  setIsDateChanged(true);
+                }}
+                className="bg-transparent border-none rounded-md text-xs font-bold text-zinc-900 focus:ring-0 outline-none cursor-pointer w-[110px] tabular-nums"
+                title="确认做题日期"
               />
+              {!isDateChanged && (
+                <div className="absolute top-full mt-2 left-0 bg-orange-600 text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-lg animate-bounce whitespace-nowrap z-50">
+                  <div className="absolute -top-1 left-4 w-2 h-2 bg-orange-600 rotate-45" />
+                  请确认做题日期
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -406,6 +420,11 @@ export default function UploadPage() {
                 )}
                 disabled={isPending || !subject}
                 onClick={() => {
+                  if (!isDateChanged) {
+                    const confirmDate = window.confirm(`当前的“做题日期”默认是今天 (${occurredAt})。\n如果是补录之前的错题，建议修改后再分析。\n\n确定以当前日期继续吗？`)
+                    if (!confirmDate) return
+                    setIsDateChanged(true) // 标记为已确认，不再弹出
+                  }
                   const fd = new FormData()
                   startTransition(() => {
                     finalFdAction(fd)

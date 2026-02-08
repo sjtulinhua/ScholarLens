@@ -38,6 +38,7 @@ export async function analyzeImageWithGemini(
   let modelInstance;
   let usedModelName = "";
 
+  console.time(`⏱️ [AI Perf] Gemini`);
   for (const modelName of modelsToTry) {
     try {
         console.log(`🤖 Attempting analysis with model: ${modelName}`);
@@ -100,7 +101,11 @@ export async function analyzeImageWithGemini(
     }
 
     const cleanedJson = jsonMatch[0];
-    return JSON.parse(cleanedJson);
+    console.timeEnd(`⏱️ [AI Perf] Gemini`);
+    return {
+      mistakes: JSON.parse(cleanedJson),
+      usedModel: usedModelName
+    };
 
   } catch (error) {
     console.error("Gemini Analysis Parsing Error:", error);
