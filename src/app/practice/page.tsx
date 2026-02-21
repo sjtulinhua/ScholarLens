@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Loader2, ArrowRight, CheckCircle, XCircle, RefreshCw, Calendar, Clock } from "lucide-react";
-import { createVariant } from "./actions";
+import { createVariant, getQuestionAction, getPracticeRecordAction } from "./actions";
 import { VariantResult } from "@/lib/ai/variant";
 import { LatexRenderer } from "@/components/ui/latex-renderer";
 import Link from "next/link";
@@ -27,14 +26,9 @@ export default function PracticePage() {
     async function loadData() {
       if (!questionId) return;
       
-      const supabase = createClient();
-      const { data } = await supabase
-        .from("questions")
-        .select("*")
-        .eq("id", questionId)
-        .single();
+      const { data, error } = await getQuestionAction(questionId);
         
-      if (data) setOriginalQuestion(data);
+      if (data && !error) setOriginalQuestion(data);
       setLoading(false);
     }
     loadData();
@@ -51,14 +45,9 @@ export default function PracticePage() {
       const result = await createVariant(questionId);
       if (result.success && result.recordId) {
         // 重新获取刚才生成的记录（因为 actions 里我们把 JSON 存进去了）
-        const supabase = createClient();
-        const { data } = await supabase
-          .from("practice_records")
-          .select("variant_content")
-          .eq("id", result.recordId)
-          .single();
+        const { data, error } = await getPracticeRecordAction(result.recordId);
           
-        if (data?.variant_content) {
+        if (data?.variant_content && !error) {
           try {
             const parsed = JSON.parse(data.variant_content);
             setVariantData(parsed);

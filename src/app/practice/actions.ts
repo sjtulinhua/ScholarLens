@@ -74,3 +74,33 @@ export async function createVariant(questionId: string) {
     return { error: err.message };
   }
 }
+
+/**
+ * Server Action to fetch a question securely bypassing client-side RLS in local-first mode
+ */
+export async function getQuestionAction(id: string) {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("questions")
+    .select("*")
+    .eq("id", id)
+    .single();
+    
+  if (error) return { error: error.message };
+  return { data };
+}
+
+/**
+ * Server Action to fetch a practice record securely bypassing client-side RLS in local-first mode
+ */
+export async function getPracticeRecordAction(id: string) {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("practice_records")
+    .select("variant_content")
+    .eq("id", id)
+    .single();
+    
+  if (error) return { error: error.message };
+  return { data };
+}
