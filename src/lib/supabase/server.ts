@@ -35,8 +35,8 @@ export async function createClient() {
         data: { 
           session: { 
             user: mockUser, 
-            access_token: 'mock-token', 
-            refresh_token: 'mock-refresh',
+            access_token: process.env.SUPABASE_SERVICE_ROLE_KEY!, 
+            refresh_token: process.env.SUPABASE_SERVICE_ROLE_KEY!,
             expires_in: 3600,
             token_type: 'bearer'
           } 
