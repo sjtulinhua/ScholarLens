@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useOptimistic, startTransition } from "react"
+import { useState, useCallback, useOptimistic, startTransition, useEffect } from "react"
 import { MistakeViewer } from "./MistakeViewer"
 import { MistakeCard } from "./MistakeCard"
 import { MistakeListView } from "./MistakeListView"
@@ -49,6 +49,23 @@ export function MistakeList({ mistakes }: MistakeListProps) {
 
   // View Mode
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'grouped'>('grid')
+
+  // Load view mode from local storage on mount
+  useEffect(() => {
+    const savedMode = localStorage.getItem('mistake-view-mode') as 'grid' | 'list' | 'grouped' | null
+    if (savedMode && ['grid', 'list', 'grouped'].includes(savedMode)) {
+      setViewMode(savedMode)
+    }
+  }, [])
+
+  // Save view mode to local storage when it changes
+  const handleViewModeChange = (v: string) => {
+    if (v) {
+      const mode = v as 'grid' | 'list' | 'grouped'
+      setViewMode(mode)
+      localStorage.setItem('mistake-view-mode', mode)
+    }
+  }
 
   // Optimistic UI for instant feedback
   const [optimisticMistakes, dispatchOptimistic] = useOptimistic(
@@ -176,7 +193,7 @@ export function MistakeList({ mistakes }: MistakeListProps) {
         <div className="flex items-center gap-3">
             {/* View Switcher */}
             <div className="bg-zinc-100/80 p-1 rounded-lg border border-zinc-200/50 flex">
-                <ToggleGroup type="single" value={viewMode} onValueChange={(v: string) => v && setViewMode(v as 'grid' | 'list' | 'grouped')}>
+                <ToggleGroup type="single" value={viewMode} onValueChange={handleViewModeChange}>
                     <Tooltip>
                         <TooltipTrigger asChild>
                             <ToggleGroupItem value="grid" aria-label="网格视图" className="h-7 w-7 p-0 data-[state=on]:bg-white data-[state=on]:shadow-sm data-[state=on]:text-primary transition-all">
