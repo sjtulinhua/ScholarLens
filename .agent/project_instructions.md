@@ -10,18 +10,20 @@
 
 ## 2. Tech Stack Constraints
 - **Framework**: Next.js 15 (App Router).
-- **Database**: Supabase (PostgreSQL + pgvector).
-- **AI Model**: Google Gemini 3.0 Pro (`gemini-3-pro-preview` or `gemini-2.0-pro-exp-02-05`).
-- **Styling**: Tailwind CSS + Shadcn UI.
+- **Database**: Supabase (PostgreSQL + pgvector). 
+   - **Primary**: Local-First via Docker (Zero latency).
+   - **Optional**: Supabase Cloud (For shared dev/prod).
 
-## 3. Workflow Standards
-- **Migrations**: Do not create scattered migration files. Update `supabase/MASTER_SCHEMA.sql` as the single source of truth for schema changes.
-- **Smart Upload**: The upload flow is "One Image -> Auto-Crop -> N Mistakes". Do not revert to manual-only cropping.
+- **Migrations**: 
+   - **Local**: Automatically applied from `supabase/migrations/` on start. 
+   - **Cloud**: Must be manually executed in Supabase SQL Editor.
+- **Master Schema**: `supabase/MASTER_SCHEMA.sql` is the source of truth.
+- **Smart Upload**: The upload flow is "One Image -> Auto-Crop -> N Mistakes".
 
 ## 4. Environment Variables
 - `GOOGLE_GEMINI_API_KEY`: Required.
-- `NEXT_PUBLIC_SUPABASE_URL`: Required.
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Required.
+- `NEXT_PUBLIC_SUPABASE_URL`: `http://127.0.0.1:54321` (Local-First).
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Locally generated key ($ npx supabase status).
 - `MOCK_AI`: Set to 'true' to skip API calls during UI dev.
 
 ---

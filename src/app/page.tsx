@@ -62,11 +62,13 @@ export default async function Home() {
               <Plus className="mr-2 h-4 w-4" /> 分析题目
             </Button>
           </Link>
-          <form action={logout}>
-            <Button variant="outline" className="text-zinc-500 hover:text-zinc-900 border-zinc-200 hover:bg-white hover:border-zinc-300 transition-all bg-white shadow-sm h-10 rounded-lg">
-              登出
-            </Button>
-          </form>
+          {process.env.NEXT_PUBLIC_LOCAL_FIRST !== 'true' && (
+            <form action={logout}>
+              <Button variant="outline" className="text-zinc-500 hover:text-zinc-900 border-zinc-200 hover:bg-white hover:border-zinc-300 transition-all bg-white shadow-sm h-10 rounded-lg">
+                登出
+              </Button>
+            </form>
+          )}
         </div>
       </header>
 

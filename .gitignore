@@ -50,3 +50,6 @@ next-env.d.ts
 !/next.config.mjs
 
 
+
+# Personal Images
+/public/exam-images/

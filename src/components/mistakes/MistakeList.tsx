@@ -154,7 +154,7 @@ export function MistakeList({ mistakes }: MistakeListProps) {
 
   return (
     <TooltipProvider delayDuration={300}>
-      <div className="mb-6 flex flex-col md:flex-row justify-between gap-4 items-center bg-white/50 backdrop-blur-sm p-2 rounded-2xl border border-primary/5 sticky top-20 z-20 shadow-sm">
+      <div className="mb-6 flex flex-col md:flex-row justify-between gap-4 items-center bg-white p-2 rounded-2xl border border-primary/10 shadow-sm relative">
         
         {/* Left Side: Stats or Filters */}
         <div className="flex items-center gap-2 px-2">

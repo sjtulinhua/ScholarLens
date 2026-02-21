@@ -3,23 +3,21 @@
 > 从 Windows (PC) 迁移至 MacBook 的交接文档
 
 ## 1. 核心状态 (Current Status)
+- **Local-First**: 已经成功迁移至本地 Supabase (Docker)。网络延迟已消除。
 - **UI/UX**: 已经全量上线 "Soft Professional" 主题，清爽专业。
-- **Mobile**: 针对 iPhone 15 Pro Max 和 iPad Pro 11" 深度优化，布局完美。
-- **Centering**: 上传页面和指标卡文字重叠问题已修复。
-- **Build**: 本地 `npm run build` 成功，类型错误已清除。
-- **Ready for Deployment**: 已经准备就绪，但用户决定**先进行充分测试**再发布。
-- **Focus**: 当前重点是本地/开发环境的功能验证。
+- **Mobile**: 针对 iPad/iPhone 深度优化，布局完善。
+- **Vector Index**: 本地环境移除了 3072 维向量索引（受限于 2000 维上限），但不影响单用户查询速度。
 
 ## 2. 下一步优先级 (Roadmap)
-- 📸 **Universal Multi-Image Upload**: (Priority High) 支持多图/PDF上传，解决试卷+答题卡分离、正反面多页等复杂场景。
-- 🚀 **Zeabur Deployment**: 配置环境变量并上线 (待本地测试后)。
-- 📈 **Growth Charts**: (头脑风暴结论) 实现消灭进度趋势图。
+- 📸 **Universal Multi-Image Upload**: (Priority High) 支持多图/PDF上传。
+- 📈 **Growth Charts**: 实现消灭进度趋势图。
 - 🚥 **KP Health**: 知识点“红黄绿灯”分级诊断系统。
+- ☁️ **Cloud Deployment**: (Optional/Postponed) 暂缓部署到 Zeabur，优先保证本地自用体验。
 
 ## 3. 技术注意事项
 - **Env**: 注意 `GEMINI_BASE_URL` 在 Mac 下如果需要翻墙可能不同，生产环境需移除。
 - **Build**: 已经修复了 `middleware.ts` 和 `server.ts` 的隐式 any 类型错误，本地 `npm run build` 已通过。
-- **Storage**: 记得在 Supabase 后台配置 CORS。
+- **Storage**: 目前使用本地文件系统存储图片 (`public/exam-images`)。无需配置云端 CORS。
 
 ## 4. AI 续航与跨设备同步协议 (AI Sync Protocol)
 

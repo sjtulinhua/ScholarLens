@@ -117,14 +117,20 @@ export function MistakeViewer({ imageUrl, isOpen, onClose }: MistakeViewerProps)
                 transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                ref={imageRef}
-                src={imageUrl}
-                alt="Mistake Detail"
-                className="max-h-[80vh] max-w-[85vw] w-auto h-auto object-contain pointer-events-none select-none shadow-2xl"
-                draggable={false}
-              />
+              {imageUrl ? (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  ref={imageRef}
+                  src={imageUrl}
+                  alt="Mistake Detail"
+                  className="max-h-[80vh] max-w-[85vw] w-auto h-auto object-contain pointer-events-none select-none shadow-2xl"
+                  draggable={false}
+                />
+              ) : (
+                <div className="flex items-center justify-center text-white/50 bg-white/5 rounded-xl w-[300px] h-[200px] border border-white/10">
+                  暂无图片
+                </div>
+              )}
             </div>
         </div>
 

@@ -72,7 +72,7 @@ export const MistakeCard = memo(({
         )}
         onClick={() => isSelectionMode ? toggleSelection(m.id) : setSelectedImageUrl(m.question.images?.[0] || null)}
       >
-        {m.question.images?.[0] ? (
+        {m.question.images && m.question.images.length > 0 && m.question.images[0] ? (
           <Image 
             src={m.question.images[0]} 
             alt="题目图片" 

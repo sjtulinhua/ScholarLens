@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient, createAdminClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Filter, BookOpen, Trash2, Trash } from "lucide-react";
@@ -23,13 +23,20 @@ export default async function MistakesPage({
   const subject = typeof params.subject === 'string' ? params.subject : undefined;
   const status = typeof params.status === 'string' ? params.status : undefined;
 
-  const supabase = await createClient();
-  const { data } = await supabase.auth.getUser();
-  const user = data?.user;
-
-  if (!user) {
-    console.log("No user found in MistakesPage, redirecting to login");
-    redirect("/login");
+  const isLocalFirst = process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true';
+  const supabase = isLocalFirst ? createAdminClient() : await createClient();
+  
+  if (isLocalFirst) {
+    // Local-First 模式下使用默认用户
+    var user = { id: process.env.NEXT_PUBLIC_DEFAULT_USER_ID! } as any;
+  } else {
+    const { data } = await supabase.auth.getUser();
+    var user = data?.user as any;
+  
+    if (!user) {
+      console.log("No user found in MistakesPage, redirecting to login");
+      redirect("/login");
+    }
   }
 
   // 构建查询
@@ -41,8 +48,7 @@ export default async function MistakesPage({
       created_at,
       question:questions!inner (*) 
     `)
-    .order("created_at", { ascending: false })
-    .is("deleted_at", null);
+    .order("created_at", { ascending: false });
 
   // 1. 状态过滤 (直接在 mistakes 表)
   if (status) {

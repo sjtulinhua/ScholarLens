@@ -68,4 +68,5 @@
   - [x] 基础布局响应式优化
   - [x] 针对 iPad Pro (11-inch) 优化布局
   - [x] 针对 iPhone 15 Pro Max 优化触控体验
-- [ ] 部署到 Zeabur
+- [x] **[New]** Local-First Migration (Supabase via Docker)
+- [ ] 部署到 Zeabur (Postponed)

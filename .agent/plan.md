@@ -57,11 +57,11 @@ ScholarLens/
 | 层 | 技术 |
 |---|------|
 | 前端 | Next.js 15 (App Router) + TypeScript |
-| 样式 | Tailwind CSS + Shadcn/ui (Dark Mode) |
-| 数据库 | Supabase (PostgreSQL + pgvector) |
-| 认证 | Supabase Auth + RLS |
-| AI | Gemini 3 Pro (理科) / DeepSeek V3 (文科) |
-| 部署 | Zeabur |
+| 样式 | Tailwind CSS + Shadcn/ui (Linear Light) |
+| 数据库 | Supabase (Local Docker Instance) |
+| 认证 | Supabase Auth (Local) |
+| AI | Gemini 3.1 Pro / DashScope Qwen-VL-Max |
+| 部署 | Localhost (Home Laboratory) |
 
 ### 数据库 Schema
 

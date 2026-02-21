@@ -68,7 +68,7 @@ export const MistakeListView = memo(({
         className="relative w-24 h-16 bg-zinc-50 rounded-lg overflow-hidden border border-zinc-100 shrink-0 cursor-zoom-in group/image"
         onClick={() => isSelectionMode ? toggleSelection(m.id) : setSelectedImageUrl(m.question.images?.[0] || null)}
       >
-        {m.question.images?.[0] ? (
+        {m.question.images && m.question.images.length > 0 && m.question.images[0] ? (
           <>
             <Image
               src={m.question.images[0]}

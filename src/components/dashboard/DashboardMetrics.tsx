@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { createClient } from "@/lib/supabase/server";
+import { createClient, createAdminClient } from "@/lib/supabase/server";
 import { WeaknessRadar, type WeaknessData } from "@/components/dashboard/WeaknessRadar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileWarning, Database, BrainCircuit, Plus } from "lucide-react";
 import { HistoryDialog } from "@/components/dashboard/HistoryDialog";
 
 export async function DashboardMetrics() {
-  const supabase = await createClient(); // Use await for createClient in Server Component
+  // Local-First 模式下直接使用 Admin 客户端绕过 RLS
+  const isLocalFirst = process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true';
+  const supabase = isLocalFirst ? createAdminClient() : await createClient();
 
   // 1. 并发获取数据
   console.time('Dashboard Fetch');
@@ -33,8 +35,7 @@ export async function DashboardMetrics() {
 
   const mistakes = mistakesResult.data;
   const recentQuestions = recentQuestionsResult.data;
-  
-  console.log(`[Dashboard] Fetched ${mistakes?.length} mistakes, ${recentQuestions?.length} recent questions.`);
+
 
   // 2. 加工雷达图数据
   const kpMap: Record<string, { total: number; corrected: number }> = {};

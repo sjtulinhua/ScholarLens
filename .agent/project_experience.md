@@ -31,5 +31,11 @@ In the RAG (Retrieval-Augmented Generation) system for ScholarLens, we use vecto
 - **Draft-State Rendering**: For high-frequency interactions (dragging/resizing), record changes in a local "draft" state and only commit to the global application state on interaction end (`mouseUp`). This ensures 60FPS feel in the UI.
 - **Drag-and-Drop Ubiquity**: All upload-related containers (sidebars, workbenches, empty states) MUST support direct file drag-and-drop. Users expect all relevant UI areas to be active dropzones.
 
+### 4. Local-First Migration (Supabase CLI + Docker)
+- **Issue**: Deploying cloud Supabase in regions with high latency (e.g., China) makes the app frustratingly slow.
+- **Resolution**: Migrated to a **Local-First** setup using Supabase CLI and Docker.
+- **Vector Index Constraint**: Local `pgvector` has a **2000-dimension limit** for both `ivfflat` and `hnsw` indexes. Since we use `VECTOR(3072)`, we cannot create an ANN index locally.
+- **Strategy**: Drop the vector index in local migrations. For single-user local usage, a sequential scan on 3072-dim vectors is still extremely fast (< 10ms) and avoids build errors.
+
 ---
-*Created on 2026-02-07 to prevent further regression. Migrated to .agent on 2026-02-08.*
+*Last Updated: 2026-02-20*

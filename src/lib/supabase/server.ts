@@ -3,11 +3,53 @@
  * 用于 Server Components 和 Server Actions
  */
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
+
 import { cookies } from "next/headers";
 
 export async function createClient() {
-  const cookieStore = await cookies();
+  const isLocalFirst = process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true';
 
+  // Local-First 模式：使用纯 JS 客户端 + service_role key
+  // 完全绕过 cookie/JWT/RLS，直接以超级管理员身份访问数据库
+  if (isLocalFirst) {
+    // 直接复用 createAdminClient 的模式（已验证在 DashboardMetrics 中可工作）
+    const client = createAdminClient();
+
+    const defaultUserId = process.env.NEXT_PUBLIC_DEFAULT_USER_ID!;
+    const mockUser = {
+      id: defaultUserId,
+      email: 'local@scholar-lens.dev',
+      aud: 'authenticated',
+      role: 'authenticated',
+      app_metadata: {},
+      user_metadata: { display_name: 'Local User' },
+      created_at: new Date().toISOString()
+    };
+
+    client.auth.getUser = async () => {
+      return { data: { user: mockUser }, error: null } as any;
+    };
+
+    client.auth.getSession = async () => {
+      return { 
+        data: { 
+          session: { 
+            user: mockUser, 
+            access_token: 'mock-token', 
+            refresh_token: 'mock-refresh',
+            expires_in: 3600,
+            token_type: 'bearer'
+          } 
+        }, 
+        error: null 
+      } as any;
+    };
+
+    return client;
+  }
+
+  // 正常模式：使用 SSR 客户端 + cookie 管理
+  const cookieStore = await cookies();
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -23,7 +65,6 @@ export async function createClient() {
             );
           } catch {
             // 在 Server Component 中设置 cookie 会失败，这是预期行为
-            // 可以忽略，因为这是从 Server Component 调用的
           }
         },
       },

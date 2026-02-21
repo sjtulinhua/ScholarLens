@@ -2,6 +2,11 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function updateSession(request: NextRequest) {
+  // Local-First 模式：跳过所有认证检查，允许直接访问所有页面
+  if (process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true') {
+    return NextResponse.next({ request });
+  }
+
   let supabaseResponse = NextResponse.next({
     request,
   })
