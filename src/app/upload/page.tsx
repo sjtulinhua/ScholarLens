@@ -244,7 +244,8 @@ export default function UploadPage() {
               </SelectContent>
             </Select>
 
-            <div className="relative px-3 py-1.5 rounded-xl border border-zinc-200 transition-all group flex items-center gap-2 bg-zinc-50 hover:bg-white hover:border-zinc-300">
+            <div className="relative px-3 py-1.5 rounded-xl border border-zinc-200 transition-all group flex items-center gap-1.5 bg-zinc-50 hover:bg-white hover:border-zinc-300">
+              <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mr-0.5">默认</span>
               <Calendar className="w-3.5 h-3.5 text-zinc-400" />
               <input
                 type="date"
