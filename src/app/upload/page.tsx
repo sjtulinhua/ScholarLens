@@ -244,11 +244,8 @@ export default function UploadPage() {
               </SelectContent>
             </Select>
 
-            <div className={cn(
-              "relative px-3 py-1.5 rounded-xl border border-zinc-200 transition-all group flex items-center gap-2",
-              !isDateChanged ? "bg-orange-50 border-orange-200 animate-pulse" : "bg-zinc-50 border-transparent"
-            )}>
-              <Calendar className={cn("w-3.5 h-3.5", !isDateChanged ? "text-orange-500" : "text-zinc-400")} />
+            <div className="relative px-3 py-1.5 rounded-xl border border-zinc-200 transition-all group flex items-center gap-2 bg-zinc-50 hover:bg-white hover:border-zinc-300">
+              <Calendar className="w-3.5 h-3.5 text-zinc-400" />
               <input
                 type="date"
                 value={occurredAt}
@@ -256,15 +253,9 @@ export default function UploadPage() {
                   setOccurredAt(e.target.value);
                   setIsDateChanged(true);
                 }}
-                className="bg-transparent border-none rounded-md text-xs font-bold text-zinc-900 focus:ring-0 outline-none cursor-pointer w-[110px] tabular-nums"
-                title="确认做题日期"
+                className="bg-transparent border-none rounded-md text-xs font-bold text-zinc-600 focus:ring-0 outline-none cursor-pointer w-[110px] tabular-nums"
+                title="默认做题日期（新图均以此为准）"
               />
-              {!isDateChanged && (
-                <div className="absolute top-full mt-2 left-0 bg-orange-600 text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-lg animate-bounce whitespace-nowrap z-50">
-                  <div className="absolute -top-1 left-4 w-2 h-2 bg-orange-600 rotate-45" />
-                  请确认做题日期
-                </div>
-              )}
             </div>
           </div>
         </div>
