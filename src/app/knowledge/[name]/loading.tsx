@@ -27,7 +27,7 @@ export default function KnowledgeLoading() {
         </Card>
 
         <div className="space-y-6">
-          <Card className="bg-zinc-900 border-none shadow-xl">
+          <Card className="bg-white border-zinc-200/60 shadow-xl shadow-zinc-200/40">
             <CardContent className="pt-6 space-y-4">
               <Skeleton className="h-3 w-20 bg-zinc-800" />
               <Skeleton className="h-10 w-16 bg-zinc-800" />

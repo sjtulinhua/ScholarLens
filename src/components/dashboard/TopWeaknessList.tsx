@@ -40,8 +40,7 @@ export function TopWeaknessList({ data, totalGlobalMistakes }: TopWeaknessListPr
         const aRatio = a.total > 0 ? a.corrected / a.total : 0;
         const bRatio = b.total > 0 ? b.corrected / b.total : 0;
         return aRatio - bRatio;
-      })
-      .slice(0, 8); // Top 8 weaknesses
+      });
   }, [data]);
 
   if (sortedData.length === 0) {
@@ -133,7 +132,7 @@ export function TopWeaknessList({ data, totalGlobalMistakes }: TopWeaknessListPr
                 </div>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right" className="bg-zinc-900 text-zinc-50 border-zinc-800 shadow-xl ml-2">
+            <TooltipContent side="right" className="bg-white/95 backdrop-blur-md text-zinc-800 border-zinc-200/50 shadow-xl ring-1 ring-zinc-900/5 ml-2">
               <div className="flex flex-col gap-1">
                 <span className="text-xs text-zinc-400 font-medium uppercase tracking-wider">占剩余未解决错题</span>
                 <span className="text-lg font-bold text-amber-500 font-mono tracking-tighter">

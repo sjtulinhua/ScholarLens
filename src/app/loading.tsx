@@ -5,7 +5,7 @@ export default function Loading() {
     <div className="min-h-screen bg-[#FBFBFB] flex items-center justify-center font-sans">
       <div className="flex flex-col items-center space-y-6">
         <div className="relative">
-          <div className="w-16 h-16 bg-zinc-900 rounded-2xl flex items-center justify-center text-white shadow-xl animate-pulse">
+          <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-500/20 animate-pulse">
             <BrainCircuit className="w-10 h-10" />
           </div>
           <div className="absolute -inset-4 border border-zinc-200 rounded-[2rem] animate-[spin_4s_linear_infinite] pointer-events-none"></div>

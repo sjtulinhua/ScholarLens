@@ -57,5 +57,31 @@ In the RAG (Retrieval-Augmented Generation) system for ScholarLens, we use vecto
 - **Resolution**: ALWAYS use `;` instead of `&&` when chaining multiple commands in a single `run_command` call, or simply split them into separate tool calls.
 - **Example**: Use `git add -A; git commit -m "..."` instead of `git add -A && git commit ...`.
 
+### 9. Git Commit Strategy (AI Agent Behavior)
+- **Rule**: DO NOT proactively create `git commit`s after minor feature changes or bug fixes.
+- **Reasoning**: Frequent autonomous commits interrupt the workflow flow for the user and clutter the local history. 
+- **Action**: Only stage/commit files when the user explicitly requests it (e.g., "please commit this").
+
+### 10. 归因考点原则（Primary Knowledge Point Attribution）
+- **核心原则**: 学生错题的知识点分类**只以 `primary_knowledge_point` 字段（归因考点）为准**。
+- **数据来源**: `primary_knowledge_point` 由 AI 在分析错题时判定，代表"这道题做错的根本原因所考察的知识点"。它存储在 `mistakes` 表上，不在 `questions` 表。
+- **与 `questions.knowledge_points` 的区别**: `knowledge_points` 是题目涉及的所有知识点标签列表（由 AI 返回），是泛化的；`primary_knowledge_point` 是归因后的单一焦点。
+- **使用规范**:
+  - Dashboard 聚合、错题列表过滤、知识详情页计数 — **全部用 `primary_knowledge_point` 原始值**。
+  - **禁止**对 `primary_knowledge_point` 做 `split(/[-_]/).pop()` 或任何前缀剥离操作。该字段本身就是最终分类名。
+  - 前缀剥离逻辑仅适用于处理 `questions.knowledge_points` 中的层级化标签（如 `"初中数学-几何-三角形"`），不可跨字段复用。
+- **历史教训**: 两次因混淆 `knowledge_points` 和 `primary_knowledge_point` 的统计逻辑导致页面间数据不一致。此原则不可违反。
+
+### 11. 知识点标准化策略（Local Normalization Pattern）
+- **适用场景**: 每新增一个科目时都需要执行此流程。
+- **流程**：
+  1. **搜索官方考纲**：去中国教育部或省级教育考试院网站，获取该科目的中考/高考知识点大纲（如《义务教育数学课程标准2022版》）。
+  2. **建立标准词表**：在 `src/lib/knowledge_points.ts` 中新增该科目的标准知识点数组，每个条目包含 `id`、`name`、`category`、`keywords`（模糊匹配关键词）。
+  3. **本地归一化**：通过 `normalizeKnowledgePoint()` 函数在 AI 返回后、入库前进行本地匹配。**禁止将词表注入 AI prompt**——这会浪费 500+ tokens/次，长期成本极高。
+  4. **保留 AI 原始标签**：`question.knowledge_points`（AI 自由返回的细粒度标签）保留原值不做修改，可为学生提供更多细节信息。仅 `mistakes.primary_knowledge_point` 被标准化。
+  5. **历史迁移**：新增词表后，写一次性脚本（参考 `scripts/migrate_knowledge_points.mjs`）批量更新已有记录。
+- **匹配优先级**：精确匹配 > 包含匹配 > 关键词计分匹配 > 返回原值。
+- **核心原则**：AI 自由发挥 + 本地约束 = 零额外 token 成本 + 标准化输出。
+
 ---
 *Last Updated: 2026-02-22*

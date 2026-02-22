@@ -64,6 +64,10 @@
   - [ ] **[Backlog]** 首页趋势图支持科目筛选 (Dashboard Subject Filter)
   - [ ] **[Backlog]** 消灭进度趋势图 (Growth/Mastery Trend Chart)
   - [ ] **[Backlog]** 知识点“红黄绿灯”分级诊断 (KP Health Analysis)
+  - [ ] **[Backlog]** 考点大纲管理与帮助页 (KP Taxonomy Help & Management)
+    - 帮助页面：解释 AI 原始标签 vs 归因考点本地标准化的逻辑
+    - 展示当前使用的标准考点大纲（来源、版本）
+    - 一键更新大纲 + 全量重新归因功能
 - [x] 移动端适配 (Responsive)
   - [x] 基础布局响应式优化
   - [x] 针对 iPad Pro (11-inch) 优化布局

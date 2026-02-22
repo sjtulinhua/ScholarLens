@@ -3,10 +3,11 @@
 import { useState, useRef, useActionState, useEffect, startTransition } from "react"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Upload, X, CheckCircle2, AlertCircle, Loader2, Image as ImageIcon, Plus, Scissors, Trash2, Calendar } from 'lucide-react'
+import { Upload, X, CheckCircle2, AlertCircle, Loader2, Image as ImageIcon, Plus, Scissors, Trash2, Calendar, ChevronLeft } from 'lucide-react'
 import Image from "next/image"
 import { processMistake, type UploadState } from "./actions"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { ALL_SUBJECTS } from "@/lib/subjects"
 // import { ImageCropper } from "@/components/ui/image-cropper" // Not used currently
@@ -249,7 +250,12 @@ export default function UploadPage() {
     <div className="h-screen bg-zinc-50 flex flex-col overflow-hidden pt-16">
       {/* Top Config Bar */}
       <div className="fixed top-0 inset-x-0 h-16 bg-white border-b z-40 flex items-center px-6 justify-between gap-8">
-        <div className="flex items-center gap-8 flex-1">
+        <div className="flex items-center gap-4 flex-1">
+          <Link href="/">
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+          </Link>
           <h1 className="text-lg font-bold text-zinc-900 whitespace-nowrap">错题录入工作台</h1>
           <div className="flex items-center gap-3 flex-1 max-w-sm">
             <Select value={subject} onValueChange={(v) => { setSubject(v); localStorage.setItem("scholar_lens_last_subject", v); }}>
@@ -391,9 +397,9 @@ export default function UploadPage() {
              ) : (
                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                  {cropTasks.map(crop => (
-                   <div key={crop.id} className="group/crop relative aspect-square bg-white rounded-3xl border border-zinc-200/60 shadow-sm hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col">
-                      <div className="flex-1 relative bg-zinc-50/50 p-4">
-                        <Image src={crop.previewUrl} alt="Crop" fill className="object-contain p-4 group-hover/crop:scale-110 transition-transform duration-500" unoptimized />
+                   <div key={crop.id} className="group/crop relative bg-white rounded-3xl border border-zinc-200/60 shadow-sm hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col h-fit">
+                      <div className="relative bg-zinc-50/50 p-2 min-h-[140px] flex items-center justify-center">
+                        <Image src={crop.previewUrl} alt="Crop" width={400} height={200} className="w-full h-auto max-h-[220px] object-contain group-hover/crop:scale-105 transition-transform duration-500" unoptimized />
                       </div>
                       <div className="p-3 border-t border-zinc-50 flex flex-col gap-2 bg-white">
                          <div className="flex items-center justify-between">

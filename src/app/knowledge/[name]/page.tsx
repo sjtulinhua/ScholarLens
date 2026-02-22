@@ -11,14 +11,18 @@ export default async function KnowledgeDetailPage({ params }: { params: Promise<
   const name = decodeURIComponent(rawName);
   const supabase = await createClient();
 
-  // 1. Get statistics for this user
+  // 1. 获取该知识点下的错题统计 (需与 Dashboard 逻辑一致：仅统计以此为“归因考点”的错题)
   const { data: { user } } = await supabase.auth.getUser();
-  const { count } = await supabase
+  const { data: mistakes } = await supabase
     .from("mistakes")
-    .select("*, questions!inner(*)", { count: 'exact', head: true })
+    .select("primary_knowledge_point, questions!inner(knowledge_points)")
     .eq("user_id", user?.id)
-    .is("deleted_at", null)
-    .contains("questions.knowledge_points", [name]);
+    .is("deleted_at", null);
+
+  const count = mistakes?.filter((m: any) => {
+    const pkp = m.primary_knowledge_point;
+    return pkp === name;
+  }).length || 0;
 
   // 2. Fetch AI-generated definition (cached or on-the-fly)
   const analysis = await analyzeKnowledgePoint(name);
@@ -53,7 +57,7 @@ export default async function KnowledgeDetailPage({ params }: { params: Promise<
         </Card>
 
         <div className="space-y-6">
-          <Card className="bg-zinc-900 text-white shadow-xl shadow-zinc-200">
+          <Card className="bg-white text-zinc-800 border-zinc-200/60 shadow-xl shadow-zinc-200/40">
             <CardContent className="pt-6">
               <div className="text-zinc-400 text-[10px] font-mono uppercase tracking-widest">User Statistics</div>
               <div className="mt-2 flex items-baseline gap-2">

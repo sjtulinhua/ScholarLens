@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Calendar, Trash2, CheckCircle2, BrainCircuit, Star, Maximize2, Pencil, Check, X as XIcon, RefreshCw } from "lucide-react"
 import Image from "next/image"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import Link from "next/link"
 import { Checkbox } from "@/components/ui/checkbox"
 import { cn } from "@/lib/utils"
@@ -134,6 +135,22 @@ export const MistakeListView = memo(({
                 ))}
                 {(m.question.knowledge_points?.length || 0) > 2 && (
                     <span className="bg-muted/50 px-1.5 py-0.5 rounded text-[10px]">...</span>
+                )}
+                {m.primary_knowledge_point && (
+                  <TooltipProvider delayDuration={200}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span className="bg-amber-50 border border-amber-200/60 px-1.5 py-0.5 rounded text-[10px] font-bold text-amber-700 cursor-help">
+                          📌 {m.primary_knowledge_point}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom" className="max-w-[320px] z-50 bg-white/95 backdrop-blur-md text-zinc-800 border-zinc-200/50 shadow-xl ring-1 ring-zinc-900/5">
+                        <p className="text-xs leading-relaxed">
+                          <strong>归因考点</strong>是这道题做错的根本原因所考察的知识点，代表最需要突破的薄弱环节。
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 )}
             </div>
             

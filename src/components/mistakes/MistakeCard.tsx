@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Maximize2, Calendar as CalendarIcon, Pencil, Check, X as XIcon, BrainCircuit, RefreshCw, CheckCircle2, Star, MoreVertical, Trash2 } from "lucide-react"
 import Image from "next/image"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import Link from "next/link"
 import { LatexRenderer } from "@/components/ui/latex-renderer"
 import { formatKnowledgePoint } from "@/lib/format"
@@ -210,6 +211,28 @@ export const MistakeCard = memo(({
             </Link>
           ))}
         </div>
+        {m.primary_knowledge_point && (
+          <TooltipProvider delayDuration={200}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link 
+                  href={`/mistakes?knowledge_point=${encodeURIComponent(m.primary_knowledge_point)}`}
+                  className="flex items-center gap-1.5 w-fit mt-1 px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200/60 hover:bg-amber-100 transition-colors cursor-pointer"
+                >
+                  <span className="text-[10px]">📌</span>
+                  <span className="text-[10px] font-bold text-amber-700">归因考点</span>
+                  <span className="text-[10px] font-medium text-amber-600">{m.primary_knowledge_point}</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="bottom" className="max-w-[320px] z-50 bg-white/95 backdrop-blur-md text-zinc-800 border-zinc-200/50 shadow-xl ring-1 ring-zinc-900/5">
+                <p className="text-xs leading-relaxed">
+                  <strong>归因考点</strong>是这道题做错的<strong>根本原因</strong>所考察的知识点。
+                  一道题可能涉及多个知识点，但归因考点只有一个——它代表你最需要重点突破的薄弱环节。
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
       </CardHeader>
 
       <CardContent className="space-y-6 flex-1 flex flex-col justify-between">
@@ -279,7 +302,7 @@ export const MistakeCard = memo(({
             </span>
           </div>
           <Link href={`/practice?id=${m.question.id}`} className="block mt-4">
-            <Button variant="default" size="lg" className="w-full rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white shadow-md hover:shadow-xl transition-all h-10 text-xs font-bold">
+            <Button variant="default" size="lg" className="w-full rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-xl shadow-blue-500/20 transition-all h-10 text-xs font-bold">
               <BookOpen className="mr-2 h-3.5 w-3.5" /> 查看详情与强化练习
             </Button>
           </Link>

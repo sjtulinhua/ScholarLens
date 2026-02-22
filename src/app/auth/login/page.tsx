@@ -70,7 +70,7 @@ export default function LoginPage() {
             )}
           </CardContent>
           <CardFooter className="flex flex-col space-y-4 pt-2 pb-8">
-            <Button type="submit" className="w-full h-11 bg-zinc-900 text-white hover:bg-zinc-800 transition-all font-medium tracking-tight rounded-lg shadow-sm border border-zinc-900" disabled={isPending}>
+            <Button type="submit" className="w-full h-11 bg-blue-600 text-white hover:bg-blue-700 transition-all font-medium tracking-tight rounded-lg shadow-sm shadow-blue-500/20" disabled={isPending}>
               {isPending ? 'Authenticating...' : 'Sign In'}
             </Button>
             <div className="text-[10px] font-mono text-center text-zinc-500 uppercase tracking-widest">

@@ -48,15 +48,15 @@ export async function DashboardMetrics() {
       totalActiveMistakes++;
     }
 
-    if (m.question?.knowledge_points && m.question.knowledge_points.length > 0) {
-      // 绝对固定分类：优先取错误专属的主分类 (primary_knowledge_point)，老数据降级取题目本身第一项
-      let primaryKp = m.primary_knowledge_point || m.question.knowledge_points[0].split(/[-_]/).pop()?.trim();
-      
-      if (primaryKp) {
-        if (!kpMap[primaryKp]) kpMap[primaryKp] = { total: 0, corrected: 0 };
-        kpMap[primaryKp].total += 1;
-        if (m.status === "corrected") kpMap[primaryKp].corrected += 1;
-      }
+    // 严谨归类：只根据“错题主知识点”进行归类汇总
+    // 逻辑：优先取手动修正/AI判定的主考点，如果没有则降级取题目本身第一个知识点
+    let primaryKp = m.primary_knowledge_point || m.question?.knowledge_points?.[0];
+    
+    if (primaryKp) {
+      // 统一剥离前缀，确保“代数-函数”和“函数”归为一类
+      if (!kpMap[primaryKp]) kpMap[primaryKp] = { total: 0, corrected: 0 };
+      kpMap[primaryKp].total += 1;
+      if (m.status === "corrected") kpMap[primaryKp].corrected += 1;
     }
   });
 
@@ -122,7 +122,7 @@ export async function DashboardMetrics() {
                 </div>
                 <div className="h-1.5 bg-zinc-100 rounded-full overflow-hidden">
                    <div 
-                    className="h-full bg-zinc-900 rounded-full transition-all duration-1000" 
+                    className="h-full bg-blue-500 rounded-full transition-all duration-1000" 
                     style={{ width: `${overallMastery}%` }} 
                    />
                 </div>

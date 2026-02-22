@@ -281,7 +281,7 @@ export function MistakeList({ mistakes }: MistakeListProps) {
                 "rounded-lg h-9 px-4 font-bold transition-all shadow-sm text-xs",
                 isSelectionMode 
                     ? "bg-zinc-200 text-zinc-900 hover:bg-zinc-300" 
-                    : "bg-zinc-900 text-white hover:bg-zinc-800"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
             )}
             onClick={() => {
                 setIsSelectionMode(!isSelectionMode)
@@ -305,7 +305,7 @@ export function MistakeList({ mistakes }: MistakeListProps) {
                <Button 
                 variant="default" 
                 size="sm" 
-                className="rounded-lg h-9 px-4 font-bold transition-all shadow-md bg-zinc-900 text-white hover:bg-zinc-800 hover:scale-[1.02] active:scale-[0.98] text-xs flex items-center"
+                className="rounded-lg h-9 px-4 font-bold transition-all shadow-md bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] text-xs flex items-center"
                >
                  <Plus className="w-3.5 h-3.5 mr-1" />
                  错题录入
@@ -318,16 +318,16 @@ export function MistakeList({ mistakes }: MistakeListProps) {
       {/* 悬浮底部操作栏（固定在屏幕底部） */}
       {isSelectionMode && (
         <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] w-fit animate-in slide-in-from-bottom-8 fade-in duration-500 fill-mode-forwards">
-          <div className="bg-zinc-900 text-white rounded-2xl p-2 pl-6 shadow-2xl border border-white/10 flex items-center gap-6 backdrop-blur-xl">
+          <div className="bg-white/95 text-zinc-800 rounded-2xl p-2 pl-6 shadow-2xl border border-zinc-200/60 flex items-center gap-6 backdrop-blur-xl ring-1 ring-zinc-900/5">
             <div className="flex items-center gap-4">
-              <span className="text-xs font-black tracking-widest text-white/50 uppercase">
-                Selection <span className="text-blue-400 ml-1">{selectedIds.length}</span>
+              <span className="text-xs font-black tracking-widest text-zinc-500 uppercase">
+                Selection <span className="text-blue-600 ml-1">{selectedIds.length}</span>
               </span>
-              <div className="w-[1px] h-4 bg-white/10" />
+              <div className="w-[1px] h-4 bg-zinc-200" />
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="text-xs font-bold text-white/70 hover:text-white hover:bg-white/10 h-8"
+                className="text-xs font-bold text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 h-8"
                 onClick={toggleAll}
               >
                 {selectedIds.length === optimisticMistakes.length ? "取消全选" : "全选当前"}
@@ -364,7 +364,7 @@ export function MistakeList({ mistakes }: MistakeListProps) {
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="h-10 w-10 rounded-xl text-white/70 hover:text-white hover:bg-white/10"
+                className="h-10 w-10 rounded-xl text-zinc-400 hover:text-zinc-600 hover:bg-zinc-100"
                 onClick={() => {
                   setIsSelectionMode(false)
                   setSelectedIds([])

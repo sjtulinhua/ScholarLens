@@ -58,7 +58,7 @@ export default async function Home() {
         </div>
         <div className="flex gap-3 w-full md:w-auto pl-11 md:pl-0">
           <Link href="/upload" className="flex-1 md:flex-none" prefetch={true}>
-            <Button className="w-full md:w-auto rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 shadow-sm border border-zinc-900 transition-all font-medium px-5 h-10 text-sm">
+            <Button className="w-full md:w-auto rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-500/20 transition-all font-medium px-5 h-10 text-sm">
               <Plus className="mr-2 h-4 w-4" /> 错题录入
             </Button>
           </Link>

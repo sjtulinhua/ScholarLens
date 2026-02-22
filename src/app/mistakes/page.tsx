@@ -48,6 +48,7 @@ export default async function MistakesPage({
       id,
       status,
       created_at,
+      primary_knowledge_point,
       question:questions!inner (*) 
     `)
     .is("deleted_at", null)
@@ -79,17 +80,13 @@ export default async function MistakesPage({
     return <div className="p-8 text-center text-red-500">获取错题失败: {error.message}</div>;
   }
 
-  // 3. 知识点近义词/后缀过滤 (在内存中进行，以支持 "代数-反比例函数" = "反比例函数")
+  // 3. 知识点精准过滤 (仅根据“归因考点”过滤，而非题目包含的所有考点)
   if (knowledgePoint && mistakes) {
     mistakes = mistakes.filter((m: any) => {
-      const q = Array.isArray(m.question) ? m.question[0] : m.question;
-      const kps = q?.knowledge_points;
-      if (!Array.isArray(kps)) return false;
-      
-      return kps.some((kp: any) => {
-        const cleanKp = typeof kp === 'string' ? (kp.split(/[-_]/).pop()?.trim() || kp) : '';
-        return cleanKp === knowledgePoint;
-      });
+      // 这里的逻辑必须与 DashboardMetrics.tsx 统计时完全一致
+      const pkp = m.primary_knowledge_point;
+      if (!pkp) return false;
+      return pkp === knowledgePoint;
     });
   }
 

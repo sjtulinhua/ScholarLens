@@ -125,16 +125,16 @@ export function TrashMistakeList({ mistakes }: TrashMistakeListProps) {
       {/* 悬浮底部操作栏 */}
       {isSelectionMode && (
         <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] w-fit animate-in slide-in-from-bottom-8 fade-in duration-500 fill-mode-forwards">
-          <div className="bg-zinc-900 text-white rounded-2xl p-2 pl-6 shadow-2xl border border-white/10 flex items-center gap-6 backdrop-blur-xl">
+          <div className="bg-white/95 text-zinc-800 rounded-2xl p-2 pl-6 shadow-2xl border border-zinc-200/60 flex items-center gap-6 backdrop-blur-xl ring-1 ring-zinc-900/5">
             <div className="flex items-center gap-4">
-              <span className="text-xs font-black tracking-widest text-white/50 uppercase">
-                Selected <span className="text-blue-400 ml-1">{selectedIds.length}</span>
+              <span className="text-xs font-black tracking-widest text-zinc-500 uppercase">
+                Selected <span className="text-blue-600 ml-1">{selectedIds.length}</span>
               </span>
-              <div className="w-[1px] h-4 bg-white/10" />
+              <div className="w-[1px] h-4 bg-zinc-200" />
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="text-xs font-bold text-white/70 hover:text-white hover:bg-white/10 h-8"
+                className="text-xs font-bold text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 h-8"
                 onClick={toggleAll}
               >
                 {selectedIds.length === mistakes.length ? "取消" : "全选"}
@@ -173,7 +173,7 @@ export function TrashMistakeList({ mistakes }: TrashMistakeListProps) {
             <Button 
                 variant="ghost" 
                 size="icon" 
-                className="h-10 w-10 rounded-xl text-white/70 hover:text-white hover:bg-white/10 ml-2"
+                className="h-10 w-10 rounded-xl text-zinc-400 hover:text-zinc-600 hover:bg-zinc-100 ml-2"
                 onClick={() => {
                   setIsSelectionMode(false)
                   setSelectedIds([])

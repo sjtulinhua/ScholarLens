@@ -1,5 +1,7 @@
 "use server";
 
+import { normalizeKnowledgePoint } from "@/lib/knowledge_points";
+
 import { createClient } from "@/lib/supabase/server";
 import { uploadExamImage } from "@/lib/supabase/storage";
 import { analyzeMistake } from "@/lib/ai/service";
@@ -171,7 +173,7 @@ export async function processMistake(
                 user_id: user.id,
                 question_id: questionId,
                 status: "active",
-                primary_knowledge_point: item.primary_knowledge_point || (item.knowledge_points && item.knowledge_points.length > 0 ? item.knowledge_points[0].split(/[-_]/).pop()?.trim() : null)
+                primary_knowledge_point: normalizeKnowledgePoint(item.primary_knowledge_point || (item.knowledge_points && item.knowledge_points.length > 0 ? item.knowledge_points[0] : null))
               });
             if (mError) throw mError;
             return { status: 'success', id: questionId };
