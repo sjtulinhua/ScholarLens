@@ -25,6 +25,7 @@ export async function DashboardMetrics() {
           knowledge_points
         )
       `)
+      .is("deleted_at", null)
       .limit(100), // Limit increased or handled via pagination in real app
     supabase
       .from("questions")

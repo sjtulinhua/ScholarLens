@@ -38,6 +38,7 @@ export default function UploadPage() {
     file: File;
     previewUrl: string;
     sourceId: string;
+    occurredAt: string;
   }[]>([])
 
   // Modal State
@@ -59,7 +60,8 @@ export default function UploadPage() {
   // helper to dry up form action logic
   function finalFdAction(fd: FormData) {
      fd.append("subject", subject)
-     fd.append("occurredAt", occurredAt)
+     // 传递每题独立日期（JSON 数组，与 image 顺序一一对应）
+     fd.append("occurredAtList", JSON.stringify(cropTasks.map(c => c.occurredAt)))
      cropTasks.forEach(c => fd.append("image", c.file))
      formAction(fd)
   }
@@ -176,7 +178,8 @@ export default function UploadPage() {
                   id: generateId(),
                   file,
                   previewUrl: URL.createObjectURL(file),
-                  sourceId: scanningId
+                  sourceId: scanningId,
+                  occurredAt: occurredAt  // 继承当前全局日期
               })
           }
       }
@@ -378,21 +381,38 @@ export default function UploadPage() {
                       <div className="flex-1 relative bg-zinc-50/50 p-4">
                         <Image src={crop.previewUrl} alt="Crop" fill className="object-contain p-4 group-hover/crop:scale-110 transition-transform duration-500" unoptimized />
                       </div>
-                      <div className="p-4 border-t border-zinc-50 flex items-center justify-between bg-white">
-                         <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-blue-500" />
-                            <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">
-                              ORIGIN: {crop.sourceId.slice(0,4).toUpperCase()}
-                            </span>
+                      <div className="p-3 border-t border-zinc-50 flex flex-col gap-2 bg-white">
+                         <div className="flex items-center justify-between">
+                           <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 rounded-full bg-blue-500" />
+                              <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">
+                                ORIGIN: {crop.sourceId.slice(0,4).toUpperCase()}
+                              </span>
+                           </div>
+                           <Button 
+                             variant="ghost" 
+                             size="icon" 
+                             className="h-7 w-7 rounded-full text-zinc-400 hover:text-red-500 hover:bg-red-50"
+                             onClick={() => removeCrop(crop.id)}
+                           >
+                             <X className="w-3.5 h-3.5" />
+                           </Button>
                          </div>
-                         <Button 
-                           variant="ghost" 
-                           size="icon" 
-                           className="h-8 w-8 rounded-full text-zinc-400 hover:text-red-500 hover:bg-red-50"
-                           onClick={() => removeCrop(crop.id)}
-                         >
-                           <X className="w-4 h-4" />
-                         </Button>
+                         {/* 每题独立日期选择 */}
+                         <div className="flex items-center gap-1.5 px-1">
+                           <Calendar className="w-3 h-3 text-zinc-400 shrink-0" />
+                           <input
+                             type="date"
+                             value={crop.occurredAt}
+                             onChange={(e) => {
+                               setCropTasks(prev => prev.map(c =>
+                                 c.id === crop.id ? { ...c, occurredAt: e.target.value } : c
+                               ));
+                             }}
+                             className="bg-transparent border-none text-[10px] font-bold text-zinc-600 focus:ring-0 outline-none cursor-pointer w-[100px] tabular-nums p-0"
+                             title="修改此题的做题日期"
+                           />
+                         </div>
                       </div>
                       
                       {/* Hover Overlay for quick actions if needed */}

@@ -49,6 +49,7 @@ export default async function MistakesPage({
       created_at,
       question:questions!inner (*) 
     `)
+    .is("deleted_at", null)
     .order("created_at", { ascending: false });
 
   // 1. 状态过滤 (直接在 mistakes 表)

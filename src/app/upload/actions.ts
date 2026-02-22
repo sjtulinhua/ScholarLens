@@ -24,7 +24,15 @@ export async function processMistake(
 ): Promise<UploadState> {
   const files = formData.getAll("image") as File[];
   const subject = formData.get("subject") as Subject;
-  const occurredAt = formData.get("occurredAt") as string; // 获取做题日期
+  // 每题独立日期（JSON 数组，与图片顺序一一对应）
+  const occurredAtListRaw = formData.get("occurredAtList") as string;
+  let occurredAtList: string[] = [];
+  try {
+    occurredAtList = JSON.parse(occurredAtListRaw || "[]");
+  } catch {
+    // fallback: 如果解析失败，使用当前日期
+    occurredAtList = [];
+  }
 
   if (!files || files.length === 0) {
     return { error: "请至少选择一张图片" };
@@ -69,13 +77,14 @@ export async function processMistake(
     const imageUrls = uploadedImages.map(img => img.url);
 
     // 2. 调用 AI 分析 (并行调度)
-    const analysisPromises = uploadedImages.map(async (img) => {
+    const analysisPromises = uploadedImages.map(async (img, idx) => {
         try {
             const { mistakes, usedModel } = await analyzeMistake([{ buffer: img.buffer, mimeType: img.mimeType }], subject, selectedModel);
             return {
               item: mistakes[0],
               sourceImg: img,
-              usedModel
+              usedModel,
+              originalIdx: idx  // 保留原始索引，用于匹配每题日期
             };
         } catch (e) {
             console.error("Single image analysis failed:", e);
@@ -92,7 +101,7 @@ export async function processMistake(
 
     // 3. 循环保存每道错题 (Atomic Persistence with Deduplication)
     const savePromises = analysisResults.map(async (entry) => {
-        const { item, sourceImg, usedModel } = entry!;
+        const { item, sourceImg, usedModel, originalIdx } = entry!;
         // 3.0 语义级查重
         let questionId: string;
         const embedding = await generateEmbedding(item.content);
@@ -123,7 +132,7 @@ export async function processMistake(
               content: item.content,
               embedding, // 保存向量，方便下次查重
               images: [item.imageUrl || sourceImg.url], // 仅存当前图片
-              occurred_at: occurredAt ? new Date(occurredAt).toISOString() : new Date().toISOString(),
+              occurred_at: occurredAtList[originalIdx] ? new Date(occurredAtList[originalIdx]).toISOString() : new Date().toISOString(),
               knowledge_points: item.knowledge_points,
               error_type: item.error_type,
               error_analysis: item.error_analysis,

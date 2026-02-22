@@ -17,6 +17,7 @@ export default async function KnowledgeDetailPage({ params }: { params: Promise<
     .from("mistakes")
     .select("*, questions!inner(*)", { count: 'exact', head: true })
     .eq("user_id", user?.id)
+    .is("deleted_at", null)
     .contains("questions.knowledge_points", [name]);
 
   // 2. Fetch AI-generated definition (cached or on-the-fly)
