@@ -93,6 +93,15 @@ export default async function MistakesPage({
     });
   }
 
+  // 4. 按做题时间 (occurred_at) 降序排序
+  if (mistakes) {
+    mistakes.sort((a: any, b: any) => {
+      const dateA = a.question?.occurred_at || a.created_at;
+      const dateB = b.question?.occurred_at || b.created_at;
+      return new Date(dateB).getTime() - new Date(dateA).getTime();
+    });
+  }
+
   console.log(`Fetched ${mistakes?.length || 0} mistakes for user ${user.id}`);
 
   return (

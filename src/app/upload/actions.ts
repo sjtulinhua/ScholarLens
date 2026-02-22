@@ -12,7 +12,10 @@ import { cookies } from "next/headers";
 export type UploadState = {
   error?: string;
   success?: boolean;
-  count?: number; // 成功识别并保存的错题数量
+  count?: number; // 成功保存的错题数量
+  total?: number; // 提交的总数量
+  skipped?: number; // 因重复跳过的数量
+  failed?: number; // 因 AI 解析失败丢弃的数量
 };
 
 /**
@@ -170,23 +173,28 @@ export async function processMistake(
                 status: "active",
                 primary_knowledge_point: item.primary_knowledge_point || (item.knowledge_points && item.knowledge_points.length > 0 ? item.knowledge_points[0].split(/[-_]/).pop()?.trim() : null)
               });
-            
             if (mError) throw mError;
+            return { status: 'success', id: questionId };
         } else {
              console.log(`🎯 Mistake entry already exists for question: ${questionId}, skipping insert.`);
+             return { status: 'skipped', id: questionId };
         }
-        
-        return questionId;
     });
 
-    const savedQuestionIds = await Promise.all(savePromises);
+    const saveResults = await Promise.all(savePromises);
+    const successfulCount = saveResults.filter(r => r.status === 'success').length;
+    const skippedCount = saveResults.filter(r => r.status === 'skipped').length;
+    const failedCount = uploadedImages.length - analysisResults.length;
 
     revalidatePath("/");
     revalidatePath("/mistakes");
     
     return { 
       success: true, 
-      count: savedQuestionIds.length 
+      count: successfulCount,
+      total: uploadedImages.length,
+      skipped: skippedCount,
+      failed: failedCount
     };
 
   } catch (error: any) {

@@ -211,11 +211,30 @@ export default function UploadPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-4">
             <CheckCircle2 className="h-10 w-10 text-green-600" />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-4">
             <h1 className="text-3xl font-bold text-zinc-900">分析完成！</h1>
-            <p className="text-zinc-500">
-              AI 成功识别并归档了 <span className="text-blue-600 font-bold">{state.count}</span> 道错题
-            </p>
+            <div className="flex flex-col gap-2 text-sm max-w-[280px] mx-auto bg-white p-4 rounded-2xl border shadow-sm text-left">
+              <div className="flex justify-between items-center pb-2 border-b">
+                <span className="text-zinc-500 font-medium">提交总数</span>
+                <span className="font-bold tabular-nums text-zinc-900">{state.total || state.count} 题</span>
+              </div>
+              <div className="flex justify-between items-center py-1">
+                <span className="text-green-600 font-medium flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4" /> 成功录入</span>
+                <span className="font-bold tabular-nums text-green-700">+{state.count} 题</span>
+              </div>
+              {(state.skipped ?? 0) > 0 && (
+                <div className="flex justify-between items-center py-1">
+                  <span className="text-amber-500 font-medium flex items-center gap-1.5"><AlertCircle className="w-4 h-4" /> 题库重复跳过</span>
+                  <span className="font-bold tabular-nums text-amber-600">{state.skipped} 题</span>
+                </div>
+              )}
+              {(state.failed ?? 0) > 0 && (
+                <div className="flex justify-between items-center py-1">
+                  <span className="text-red-500 font-medium flex items-center gap-1.5"><X className="w-4 h-4" /> AI 未能识别</span>
+                  <span className="font-bold tabular-nums text-red-600">{state.failed} 题</span>
+                </div>
+              )}
+            </div>
           </div>
           <div className="flex flex-col items-center gap-2 pt-4">
             <Loader2 className="w-5 h-5 animate-spin text-zinc-400" />
@@ -299,7 +318,7 @@ export default function UploadPage() {
                 <p className="text-[10px] uppercase font-bold text-zinc-400">拖拽文件至此上传</p>
               </div>
             ) : (
-              sourceEntries.map(entry => (
+              sourceEntries.map((entry, index) => (
                 <div 
                   key={entry.id}
                   onClick={() => { setScanningId(entry.id); setScanningImageUrl(entry.previewUrl); }}
@@ -310,6 +329,9 @@ export default function UploadPage() {
                 >
                   <div className="relative w-full h-full rounded-md overflow-hidden bg-zinc-50">
                     <Image src={entry.previewUrl} alt="Source" fill className="object-cover" unoptimized />
+                    <div className="absolute top-1 left-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full shadow-sm">
+                      {index + 1}
+                    </div>
                     <div className="absolute top-1 right-1">
                        <Button 
                          variant="ghost" 
@@ -376,9 +398,12 @@ export default function UploadPage() {
                       <div className="p-3 border-t border-zinc-50 flex flex-col gap-2 bg-white">
                          <div className="flex items-center justify-between">
                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 rounded-full bg-blue-500" />
-                              <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">
-                                ORIGIN: {crop.sourceId.slice(0,4).toUpperCase()}
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500/80" />
+                              <span className="text-[11px] font-bold text-zinc-500 tracking-wide">
+                                {(()=>{
+                                  const idx = sourceEntries.findIndex(s => s.id === crop.sourceId);
+                                  return idx !== -1 ? `原图 ${idx + 1}` : '原图未知';
+                                })()}
                               </span>
                            </div>
                            <Button 
@@ -431,11 +456,6 @@ export default function UploadPage() {
                 )}
                 disabled={isPending || !subject}
                 onClick={() => {
-                  if (!isDateChanged) {
-                    const confirmDate = window.confirm(`当前的“做题日期”默认是今天 (${occurredAt})。\n如果是补录之前的错题，建议修改后再分析。\n\n确定以当前日期继续吗？`)
-                    if (!confirmDate) return
-                    setIsDateChanged(true) // 标记为已确认，不再弹出
-                  }
                   const fd = new FormData()
                   startTransition(() => {
                     finalFdAction(fd)
