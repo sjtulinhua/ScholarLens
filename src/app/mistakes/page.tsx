@@ -1,7 +1,7 @@
 import { createClient, createAdminClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Filter, BookOpen, Trash2, Trash } from "lucide-react";
+import { ChevronLeft, Filter, BookOpen, Trash2, Trash, Plus } from "lucide-react";
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -107,6 +107,12 @@ export default async function MistakesPage({
         </div>
         <Suspense fallback={<Button variant="outline" size="sm" className="rounded-full opacity-50">Loading...</Button>}>
           <div className="flex items-center gap-2">
+            <Link href="/upload" prefetch={true}>
+              <Button size="sm" className="rounded-full bg-zinc-900 text-white hover:bg-zinc-800 h-9 px-4">
+                <Plus className="w-4 h-4 mr-1.5" />
+                错题录入
+              </Button>
+            </Link>
             <MistakesFilter />
             <Link href="/mistakes/trash">
                <Button 
