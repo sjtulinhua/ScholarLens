@@ -52,5 +52,10 @@ In the RAG (Retrieval-Augmented Generation) system for ScholarLens, we use vecto
 - **Context Management**: As sessions grow long, Token usage spikes and AI "forgetfulness" increases.
 - **Protocol**: Mandate a "Knowledge Sync" before session end. Store structured handoffs in `.agent/knowledge/session_handoff.md` and update long-term `.agent/*.md` files. This ensures a "Cold Start" in a new session is faster and more accurate than a "Bloated Long Session".
 
+### 8. PowerShell Command Constraints (AI Agent Pitfall)
+- **Issue**: Most AI agents default to using `&&` to chain commands (e.g., `git add . && git commit`). In the local **Windows PowerShell** environment used for this project, `&&` is not a valid statement separator and causes a `ParserError`.
+- **Resolution**: ALWAYS use `;` instead of `&&` when chaining multiple commands in a single `run_command` call, or simply split them into separate tool calls.
+- **Example**: Use `git add -A; git commit -m "..."` instead of `git add -A && git commit ...`.
+
 ---
 *Last Updated: 2026-02-22*
