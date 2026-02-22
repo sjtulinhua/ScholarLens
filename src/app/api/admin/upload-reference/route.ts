@@ -152,31 +152,56 @@ export async function POST(req: NextRequest) {
       throw new Error("AI 解析结果格式错误");
     }
 
-    // 5. 遍历题目，生成向量并入库
-    let insertedCount = 0;
-    for (const q of questions) {
-      // 生成向量 (系统会自动处理 3072 维)
-      const embedding = await generateEmbedding(q.content);
-
-      // 入库
-      const { error } = await supabase.from("questions").insert({
-        user_id: userId,
-        subject: subject,
-        content: q.content,
-        difficulty: q.difficulty,
-        knowledge_points: q.knowledge_points || [],
-        is_reference: true, // 标记为基准题
-        official_year: description,
-        embedding: embedding,
-        images: [] 
-      });
-
-      if (!error) {
-        insertedCount++;
-      } else {
-        console.error("Insert error:", error);
-      }
+    // 5. 批量生成向量并准备入库
+    console.log(`Generating embeddings for ${questions.length} questions...`);
+    
+    // 我们分批处理向量生成，避免并发过高
+    const BATCH_SIZE = 5;
+    const questionsWithEmbeddings = [];
+    
+    for (let i = 0; i < questions.length; i += BATCH_SIZE) {
+      const chunk = questions.slice(i, i + BATCH_SIZE);
+      const chunkResults = await Promise.all(
+        chunk.map(async (q: any) => {
+          try {
+            const embedding = await generateEmbedding(q.content);
+            return {
+              user_id: userId,
+              subject: subject,
+              content: q.content,
+              difficulty: q.difficulty,
+              knowledge_points: q.knowledge_points || [],
+              is_reference: true,
+              official_year: description,
+              embedding: embedding,
+              images: []
+            };
+          } catch (e) {
+            console.error("Embedding failed for question:", q.content.slice(0, 50));
+            return null;
+          }
+        })
+      );
+      questionsWithEmbeddings.push(...chunkResults.filter(Boolean));
     }
+
+    if (questionsWithEmbeddings.length === 0) {
+      throw new Error("未能成功生成任何题目的向量数据");
+    }
+
+    // 6. 批量入库
+    console.log(`Inserting ${questionsWithEmbeddings.length} questions into Supabase...`);
+    const { error: insertError } = await supabase
+      .from("questions")
+      .insert(questionsWithEmbeddings);
+
+    if (insertError) {
+      console.error("Bulk insert error:", insertError);
+      throw new Error(`数据库入库失败: ${insertError.message}`);
+    }
+
+    const insertedCount = questionsWithEmbeddings.length;
+
 
     return NextResponse.json({ 
       success: true, 

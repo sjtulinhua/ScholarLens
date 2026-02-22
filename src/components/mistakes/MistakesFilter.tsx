@@ -16,6 +16,7 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
 } from "@/components/ui/dropdown-menu";
+import { ALL_SUBJECTS, SUBJECT_LABEL_MAP } from "@/lib/subjects";
 
 export function MistakesFilter() {
   const router = useRouter();
@@ -50,14 +51,14 @@ export function MistakesFilter() {
         
         <DropdownMenuSub>
           <DropdownMenuSubTrigger className="text-zinc-900 cursor-pointer hover:bg-zinc-100 data-[state=open]:bg-zinc-100">
-            <span className="font-medium">科目 ({currentSubject === "all" ? "全部" : currentSubject})</span>
+            <span className="font-medium">科目 ({currentSubject === "all" ? "全部" : (SUBJECT_LABEL_MAP[currentSubject] || currentSubject)})</span>
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent className="bg-white border-zinc-200 shadow-xl z-[100]">
             <DropdownMenuRadioGroup value={currentSubject} onValueChange={(v) => handleFilter("subject", v)}>
               <DropdownMenuRadioItem value="all" className="cursor-pointer text-zinc-900 focus:bg-zinc-100 data-[state=checked]:bg-zinc-50 data-[state=checked]:font-medium">全部科目</DropdownMenuRadioItem>
-              <DropdownMenuRadioItem value="math" className="cursor-pointer text-zinc-900 focus:bg-zinc-100 data-[state=checked]:bg-zinc-50 data-[state=checked]:font-medium">数学</DropdownMenuRadioItem>
-              <DropdownMenuRadioItem value="physics" className="cursor-pointer text-zinc-900 focus:bg-zinc-100 data-[state=checked]:bg-zinc-50 data-[state=checked]:font-medium">物理</DropdownMenuRadioItem>
-              <DropdownMenuRadioItem value="chemistry" className="cursor-pointer text-zinc-900 focus:bg-zinc-100 data-[state=checked]:bg-zinc-50 data-[state=checked]:font-medium">化学</DropdownMenuRadioItem>
+              {ALL_SUBJECTS.map(s => (
+                <DropdownMenuRadioItem key={s.value} value={s.value} className="cursor-pointer text-zinc-900 focus:bg-zinc-100 data-[state=checked]:bg-zinc-50 data-[state=checked]:font-medium">{s.label}</DropdownMenuRadioItem>
+              ))}
             </DropdownMenuRadioGroup>
           </DropdownMenuSubContent>
         </DropdownMenuSub>

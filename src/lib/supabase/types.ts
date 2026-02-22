@@ -4,7 +4,7 @@
  */
 
 // 科目枚举
-export type Subject = "math" | "chinese" | "physics" | "chemistry" | "politics" | "history";
+export type Subject = "math" | "chinese" | "english" | "physics" | "chemistry" | "politics" | "history" | "geography" | "biology";
 
 // 错误类型枚举
 export type ErrorType = 

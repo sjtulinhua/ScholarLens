@@ -37,5 +37,20 @@ In the RAG (Retrieval-Augmented Generation) system for ScholarLens, we use vecto
 - **Vector Index Constraint**: Local `pgvector` has a **2000-dimension limit** for both `ivfflat` and `hnsw` indexes. Since we use `VECTOR(3072)`, we cannot create an ANN index locally.
 - **Strategy**: Drop the vector index in local migrations. For single-user local usage, a sequential scan on 3072-dim vectors is still extremely fast (< 10ms) and avoids build errors.
 
+### 5. Backend Optimization & Throughput
+- **Issue**: Per-question sequential embedding and DB insertion caused 70s+ timeouts for exams.
+- **Resolution**: Implemented **Batch Embedding** (processing 5 questions in parallel) and **Bulk DB Insertion**.
+- **Result**: Reference exam upload time dropped from 70s to ~10s.
+
+### 6. Subject System Decoupling
+- **Evolution**: Expanded from 3 hardcoded subjects to 7, then to 9 (Math, Chinese, English, Physics, Chemistry, History, Politics, Geography, Biology).
+- **Pattern**: Centralized all subject logic into `src/lib/subjects.ts` (single source of truth).
+- **DB Strategy**: Removed hardcoded `CHECK` constraints on the database. Added subjects no longer require SQL migrations or DB resets.
+- **UI Architecture**: For high-density headers (many tabs + control buttons), a **two-row layout** is superior to horizontal scrolling. Row 1: Subject Tabs (flex-wrap). Row 2: Secondary Controls (Filters, Batch Management) aligned right.
+
+### 7. AI Session Handoff Strategy
+- **Context Management**: As sessions grow long, Token usage spikes and AI "forgetfulness" increases.
+- **Protocol**: Mandate a "Knowledge Sync" before session end. Store structured handoffs in `.agent/knowledge/session_handoff.md` and update long-term `.agent/*.md` files. This ensures a "Cold Start" in a new session is faster and more accurate than a "Bloated Long Session".
+
 ---
-*Last Updated: 2026-02-20*
+*Last Updated: 2026-02-22*

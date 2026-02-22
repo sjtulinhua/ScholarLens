@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS public.invitation_codes (
 CREATE TABLE IF NOT EXISTS public.exams (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  subject TEXT NOT NULL CHECK (subject IN ('math', 'chinese', 'physics', 'chemistry', 'politics', 'history')),
+  subject TEXT NOT NULL, -- validated at application layer (src/lib/subjects.ts)
   title TEXT,
   image_url TEXT,
   created_at TIMESTAMPTZ DEFAULT now() NOT NULL
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS public.questions (
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
   content TEXT NOT NULL,
   images JSONB DEFAULT '[]'::jsonb NOT NULL,
-  subject TEXT NOT NULL CHECK (subject IN ('math', 'chinese', 'physics', 'chemistry', 'politics', 'history')),
+  subject TEXT NOT NULL, -- validated at application layer (src/lib/subjects.ts)
   knowledge_points JSONB DEFAULT '[]'::jsonb NOT NULL,
   difficulty INTEGER DEFAULT 3 CHECK (difficulty >= 1 AND difficulty <= 5),
   is_reference BOOLEAN DEFAULT false NOT NULL,
@@ -52,6 +52,8 @@ CREATE TABLE IF NOT EXISTS public.questions (
   occurred_at TIMESTAMPTZ DEFAULT now() NOT NULL,
   error_type TEXT,
   error_analysis TEXT,
+  answer TEXT,
+  analysis TEXT,
   ai_model TEXT, -- 记录分析该错题所使用的大模型名称
   meta_data JSONB DEFAULT '{}'::jsonb NOT NULL,
   embedding VECTOR(3072), -- 统一 3072 维度 (Auto-padded)
@@ -98,7 +100,6 @@ CREATE TABLE IF NOT EXISTS public.knowledge_base (
 CREATE INDEX IF NOT EXISTS idx_exams_user_id ON public.exams(user_id);
 CREATE INDEX IF NOT EXISTS idx_questions_user_id ON public.questions(user_id);
 CREATE INDEX IF NOT EXISTS idx_questions_occurred_at ON public.questions(occurred_at DESC);
-CREATE INDEX IF NOT EXISTS idx_questions_embedding ON public.questions USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
 CREATE INDEX IF NOT EXISTS idx_mistakes_user_id ON public.mistakes(user_id);
 CREATE INDEX IF NOT EXISTS idx_mistakes_deleted_at ON public.mistakes(deleted_at);
 CREATE INDEX IF NOT EXISTS idx_knowledge_base_name ON public.knowledge_base(name);

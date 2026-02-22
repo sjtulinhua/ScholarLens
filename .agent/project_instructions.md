@@ -24,6 +24,9 @@
 - **Dropdowns/Popovers**: Always explicitly set `bg-white` (or approriate theme background) and `shadow-xl`, `z-50` to prevent transparency issues where content bleeds through.
 - **Z-Index**: Ensure floating menus are always layered above list items and dates.
 - **Theme**: Stick to the "Soft Professional / Linear Light" system (Zinc/Slate colors).
+- **Subject Expansion**: DO NOT modify the database `CHECK` constraints to add subjects. Add new subjects exclusively to `src/lib/subjects.ts` and update the `Subject` type in `types.ts`.
+- **Header Layout**: In list views, keep Filter/Management controls contextual (aligned with content tabs) rather than globally in the top page header to maintain focus.
+
 - `GOOGLE_GEMINI_API_KEY`: Required.
 - `NEXT_PUBLIC_SUPABASE_URL`: `http://127.0.0.1:54321` (Local-First).
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Locally generated key ($ npx supabase status).

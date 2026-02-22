@@ -8,6 +8,7 @@ import Image from "next/image"
 import { processMistake, type UploadState } from "./actions"
 import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { ALL_SUBJECTS } from "@/lib/subjects"
 // import { ImageCropper } from "@/components/ui/image-cropper" // Not used currently
 import { MistakeRegionSelector } from "@/components/ui/mistake-region-selector"
 import { ModelSelector } from "@/components/ui/model-selector"
@@ -234,11 +235,9 @@ export default function UploadPage() {
                 <SelectValue placeholder="选择科目" />
               </SelectTrigger>
               <SelectContent className="bg-white">
-                <SelectItem value="math">数学</SelectItem>
-                <SelectItem value="physics">物理</SelectItem>
-                <SelectItem value="chemistry">化学</SelectItem>
-                <SelectItem value="english">英语</SelectItem>
-                <SelectItem value="chinese">语文</SelectItem>
+                {ALL_SUBJECTS.map(s => (
+                  <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
 
