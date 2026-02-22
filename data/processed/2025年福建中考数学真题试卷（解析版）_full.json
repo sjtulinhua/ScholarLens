@@ -1,0 +1,526 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "下列实数中，最小的数是（ ）",
+      "options": [
+        "−1",
+        "0",
+        "$\\sqrt{2}$",
+        "2"
+      ],
+      "answer": "A",
+      "analysis": "【分析】本题考查比较实数的大小，首先确定各数的正负性，再按负数小于 0 小于正数的顺序比较大小即可．\n【详解】解：$\\because -1 < 0 < \\sqrt{2} < 2$，\n$\\therefore$ 最小的数为 $-1$；\n故选：A",
+      "knowledge_points": [
+        "实数的大小比较"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "中国古算诗词歌赋较多．古算诗词题，是反映数学数量关系的内在联系及其规律的一种文学浪漫形式．下列分别是古算诗词题“圆中方形”“方形圆径”“圆材藏壁”“勾股容圆”所描绘的图形，其中既不是轴对称图形也不是中心对称图形的是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D",
+      "analysis": "【分析】本题考查了轴对称图形，中心对称图形的识别．解题的关键在于熟练掌握：在平面内，一个图形沿一条直线折叠，直线两旁的部分能够完全重合的图形叫做轴对称图形；在平面内，把一个图形绕着某个点旋转 180 度，如果旋转后的图形能与原来的图形重合，那么这个图形叫做中心对称图形．根据中心对称和轴对称的定义，进行判断即可．\n【详解】解：A、既是轴对称图形，也是中心对称图形，不符合题意；\nB、既是轴对称图形，也是中心对称图形，不符合题意；\nC、是轴对称图形，不是中心对称图形，不符合题意；\nD、既不是轴对称图形，也不是中心对称图形，符合题意；\n故选 D．",
+      "knowledge_points": [
+        "轴对称图形",
+        "中心对称图形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.09,
+        0.51,
+        0.75,
+        0.09
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "若 $\\sqrt{x-1}$ 在实数范围内有意义，则实数 $x$ 的值可以是（ ）",
+      "options": [
+        "−2",
+        "−1",
+        "0",
+        "2"
+      ],
+      "answer": "D",
+      "analysis": "【分析】本题考查了二次根式有意义的条件．根据二次根式有意义的条件，被开方数必须非负，即 $x-1 \\ge 0$，解不等式即可确定 x 的取值范围，进而选出正确选项．\n【详解】解：要使 $\\sqrt{x-1}$ 在实数范围内有意义，\n需满足被开方数 $x-1 \\ge 0$，\n解得 $x \\ge 1$．\n$\\therefore x=2$ 符合．\n故选：D．",
+      "knowledge_points": [
+        "二次根式有意义的条件"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "福建博物院收藏着一件“镇馆之宝”——云纹青铜大绕，如图 1．云纹青铜大绕是西周乐器，鼓饰变形兽面纹，两侧饰云雷纹，浑大厚重，作风稳重古朴，代表了福建古代青铜文化曾经的历史和辉煌．图 2 为其示意图，它的主视图是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A",
+      "analysis": "【分析】本题考查了几何体的三视图，从前面看到的图形是主视图，从上面看到的图形是俯视图，从左边看到的图形是左视图．根据主视图是从前面看到的图形解答即可．\n【详解】解；A 是该几何体的主视图，B，C，D 不是该几何体的三视图．\n故选 A．",
+      "knowledge_points": [
+        "简单几何体的三视图"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.08,
+        0.47,
+        0.2,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "不等式 $\\frac{1}{2}x+1 \\le 2$ 的解集在数轴上表示正确的是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C",
+      "analysis": "【分析】本题考查求不等式的解集，在数轴上表示解集，先求出不等式的解集，定边界，定方向，表示出不等式的解集即可．\n【详解】解：$\\frac{1}{2}x+1 \\le 2$，\n$\\frac{1}{2}x \\le 1$，\n$\\therefore x \\le 2$；\n在数轴上表示如图：\n故选 C．",
+      "knowledge_points": [
+        "解一元一次不等式",
+        "在数轴上表示不等式的解集"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.08,
+        0.88,
+        0.8,
+        0.1
+      ],
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "在分别写有 −1，1，2 的三张卡片中，不放回地随机抽取两张，这两张卡片上的数恰好互为相反数的概率是（ ）",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】本题考查列表法求概率，列出表格，利用概率公式进行计算即可．\n【详解】解：由题意，列表如下：\n共有 6 种等可能的结果，其中两张卡片上的数恰好互为相反数的情况有 (−1,1) ，(1, −1) 两种，\n$\\therefore P = \\frac{2}{6} = \\frac{1}{3}$；\n故选：B．",
+      "knowledge_points": [
+        "列表法与树状图法",
+        "概率公式"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "某数学兴趣小组为探究平行线的有关性质，用一副三角尺按如图所示的方式摆放，其中点 $A, E, C, F$ 在同一条直线上，$\\angle BAC = \\angle EDF = 90^\\circ, \\angle B = 45^\\circ, \\angle DEF = 60^\\circ$．当 $AD \\parallel BC$ 时，$\\angle ADE$ 的大小为（ ）",
+      "options": [
+        "$5^\\circ$",
+        "$15^\\circ$",
+        "$25^\\circ$",
+        "$35^\\circ$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】本题考查平行线性质，三角形的外角的性质，根据平行线的性质得到 $\\angle DAE = \\angle BCA = 45^\\circ$，再根据三角形的外角的性质，进行求解即可．熟练掌握相关性质，是解题的关键．\n【详解】解：$\\because \\angle BAC = 90^\\circ, \\angle B = 45^\\circ$，\n$\\therefore \\angle ACB = 45^\\circ$，\n$\\because AD \\parallel BC$，\n$\\therefore \\angle DAE = \\angle ACB = 45^\\circ$，\n$\\because \\angle DEF = \\angle DAE + \\angle ADE = 60^\\circ$，\n$\\therefore \\angle ADE = 15^\\circ$；\n故选：B．",
+      "knowledge_points": [
+        "平行线的性质",
+        "三角形的外角性质"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.09,
+        0.26,
+        0.21,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "为加强劳动教育，增加学生实践机会，某校拟用总长为 5 米的篱笆，在两边都足够长的直角围墙的一角，围出一块 6 平方米的矩形菜地作为实践基地，如图所示．设矩形的一边长为 $x$ 米，根据题意可列方程（ ）",
+      "options": [
+        "$5x^2 = 6$",
+        "$5(1+x^2) = 6$",
+        "$x(5-x) = 6$",
+        "$5(1+x)^2 = 6$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】本题考查一元二次方程的实际应用，先用 x 表示出矩形的另一条边长，利用矩形的面积公式，列出方程即可．\n【详解】解：设矩形的一边长为 x 米，则另一边长为 $(5-x)$ 米，由题意，得：\n$x(5-x)=6$；\n故选：C．",
+      "knowledge_points": [
+        "由实际问题抽象出一元二次方程"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.08,
+        0.81,
+        0.19,
+        0.1
+      ],
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "如图，$PA$ 与 $\\odot O$ 相切于点 $A$，$PO$ 的延长线交 $\\odot O$ 于点 $C$．$AB \\parallel PC$，且交 $\\odot O$ 于点 $B$．若 $\\angle P = 30^\\circ$，则 $\\angle BCP$ 的大小为（ ）",
+      "options": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$75^\\circ$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】本题考查切线的性质，等边三角形的判定和性质，连接 $OA, OB$，切线得到 $OA \\perp AP$，求出 $\\angle POA = 90^\\circ - 30^\\circ = 60^\\circ$，平行，得到 $\\angle POA = \\angle OAB = 60^\\circ$，进而得到 $\\triangle AOB$ 为等边三角形，推出 $\\triangle BOC$ 为等边三角形，即可得出结果．\n【详解】连接 $OA, OB$，则：$OA=OB=OC$，\n$\\because PA$ 与 $\\odot O$ 相切于点 $A$，\n$\\therefore OA \\perp AP$，\n$\\because \\angle P = 30^\\circ$，\n$\\therefore \\angle POA = 90^\\circ - 30^\\circ = 60^\\circ$，\n$\\because AB \\parallel PC$，\n$\\therefore \\angle POA = \\angle OAB = 60^\\circ$，\n$\\therefore \\triangle AOB$ 为等边三角形，\n$\\therefore \\angle AOB = 60^\\circ$，\n$\\therefore \\angle BOC = 180^\\circ - \\angle POA - \\angle AOB = 60^\\circ$，\n$\\therefore \\triangle BOC$ 为等边三角形，\n$\\therefore \\angle BCP = 60^\\circ$，\n故选 C．",
+      "knowledge_points": [
+        "切线的性质",
+        "等边三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.08,
+        0.37,
+        0.27,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "已知点 $A(-2, y_1), B(1, y_2)$ 在抛物线 $y=3x^2+bx+1$ 上，若 $3 < b < 4$，则下列判断正确的是（ ）",
+      "options": [
+        "$1 < y_1 < y_2$",
+        "$y_1 < 1 < y_2$",
+        "$1 < y_2 < y_1$",
+        "$y_2 < 1 < y_1$"
+      ],
+      "answer": "A",
+      "analysis": "【分析】本题考查比较二次函数的函数值的大小，熟练掌握二次函数的图象和性质，是解题的关键，先求出对称轴的范围，再根据二次函数的增减性进行判断即可．\n【详解】解：$\\because y=3x^2+bx+1$，\n$\\therefore$ 当 $x=0$ 时，$y=1$，\n$\\therefore$ 抛物线过点 $(0,1)$，\n$\\therefore$ 抛物线的开口向上，对称轴为 $x = -\\frac{b}{2\\times 3} = -\\frac{b}{6}$，\n$\\therefore$ 抛物线上的点离对称轴越远，函数值越大，\n$\\because 3 < b < 4$，\n$\\therefore -\\frac{2}{3} < -\\frac{b}{6} < -\\frac{1}{2}$，\n$\\because \\frac{-2+1}{2} = -\\frac{1}{2} > -\\frac{b}{6}, \\frac{-2+0}{2} = -1 < -\\frac{b}{6}$，\n$\\therefore$ 点 $A(-2, y_1)$ 到对称轴的距离大于点 $(0,1)$ 到对称轴的距离，小于 $B(1, y_2)$ 到对称轴的距离，\n$\\therefore 1 < y_1 < y_2$；\n故选：A．",
+      "knowledge_points": [
+        "二次函数的图象与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "为响应“体重管理年”有关倡议，小敏对自己的体重进行了跟踪统计．为方便记录，他将体重增加 1.5kg 记作 +1.5，那么体重减少 1kg 应记作_______．",
+      "options": [],
+      "answer": "−1",
+      "analysis": "【分析】本题考查正负数的意义，根据正负数表示一对相反意义的量，增加为正，则减少为负，进行作答即可．\n【详解】解：体重增加 1.5kg 记作 +1.5，那么体重减少 1kg 应记作 -1；\n故答案为：-1．",
+      "knowledge_points": [
+        "正数和负数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "某房梁如图所示，立柱 $AD \\perp BC$，$E, F$ 分别是斜梁 $AB, AC$ 的中点．若 $AB = AC = 8\\text{m}$，则 $DE$ 的长为_______m．",
+      "options": [],
+      "answer": "4",
+      "analysis": "【分析】本题主要考查了直角三角形的性质，熟练掌握直角三角形斜边的中线等于斜边的一半，是解题的关键．根据 $AD \\perp BC$，得出 $\\triangle ABD$ 为直角三角形，根据直角三角形的性质得出 $DE = \\frac{1}{2}AB = 4\\text{m}$．\n【详解】解：$\\because AD \\perp BC$，\n$\\therefore \\triangle ABD$ 为直角三角形，\n$\\because E$ 是斜梁 $AB$ 的中点，\n$\\therefore DE = \\frac{1}{2}AB = 4\\text{m}$．\n故答案为：4．",
+      "knowledge_points": [
+        "直角三角形斜边上的中线"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        7,
+        0.08,
+        0.36,
+        0.25,
+        0.09
+      ],
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "若反比例函数 $y = \\frac{k}{x}$ 的图象过点 $(-2,1)$，则常数 $k =$ _______．",
+      "options": [],
+      "answer": "−2",
+      "analysis": "【分析】本题考查求反比例函数的解析式，待定系数法求出 k 值即可．\n【详解】解：$\\because$ 反比例函数 $y = \\frac{k}{x}$ 的图象过点 $(-2,1)$，\n$\\therefore k = -2 \\times 1 = -2$；\n故答案为：-2．",
+      "knowledge_points": [
+        "待定系数法求反比例函数解析式"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "如图，菱形 $ABCD$ 的对角线相交于点 $O$， $EF$ 过点 $O$ 且与边 $AB, CD$ 分别相交于点 $E, F$．若 $OA=2, OD=1$，则 $\\triangle AOE$ 与 $\\triangle DOF$ 的面积之和为_______．",
+      "options": [],
+      "answer": "1",
+      "analysis": "【分析】本题考查了菱形的性质，全等三角形的判定与性质，根据菱形的性质求出 $S_{\\text{菱形}ABCD} = \\frac{1}{2} AC \\cdot BD = 4$，$\\angle OAB = \\angle OCD$，然后证明 $\\triangle AOE \\cong \\triangle COF$ (ASA) 即可求解．\n【详解】解：$\\because$ 菱形 $ABCD$，$OA=2, OD=1$，\n$\\therefore AC=4, BD=2$，$OA=OC$， $AB \\parallel CD$，\n$\\therefore S_{\\text{菱形}ABCD} = \\frac{1}{2} AC \\cdot BD = 4$，$\\angle OAB = \\angle OCD$．\n$\\because \\angle AOE = \\angle COF$，\n$\\therefore \\triangle AOE \\cong \\triangle COF$ (ASA)，\n$\\therefore S_{\\triangle AOE} = S_{\\triangle COF}$，\n$\\therefore S_{\\triangle AOE} + S_{\\triangle DOF} = \\frac{1}{4} S_{\\text{菱形}ABCD} = 1$，\n故答案为：1．",
+      "knowledge_points": [
+        "菱形的性质",
+        "全等三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        8,
+        0.09,
+        0.21,
+        0.23,
+        0.11
+      ],
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "某公司为选拔英语翻译员，举行听、说、读、写综合测试，其中听、说、读、写各项成绩（百分制）按 4:3:2:1 的比例计算最终成绩．参与选拔的甲、乙两位员工的听、说、读、写各项测试成绩及最终成绩如下表：\n\n| 项目 | 听 | 说 | 读 | 写 | 最终成绩 |\n|---|---|---|---|---|---|\n| 甲 | 70 | 80 | 90 | 82 | A |\n| 乙 | 90 | 80 | 70 | 82 | B |\n\n由以上信息，可以判断 A，B 的大小关系是 A_______B．（填“>”“=”或“<”）",
+      "options": [],
+      "answer": ">",
+      "analysis": "【分析】本题考查了加权平均数的计算，能够掌握计算公式且准确计算是解决问题的关键．利用加权平均数的计算公式求解即可．\n【详解】解：$\\because A = \\frac{4\\times 70 + 3\\times 80 + 2\\times 90 + 1\\times 82}{10} = 90$，\n$\\because B = \\frac{4\\times 90 + 3\\times 80 + 2\\times 70 + 1\\times 82}{10} = 80$，\n$\\because 90 > 80$，\n$\\therefore A > B$．\n故答案为：>．",
+      "knowledge_points": [
+        "加权平均数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "弹簧秤是根据胡克定律并利用物体的重力来测量物体质量的．胡克定律为：在弹性限度内，弹簧弹力 $F$ 的大小与弹簧伸长（或压缩）的长度 $x$ 成正比，即 $F=kx$，其中 $k$ 为常数，是弹簧的劲度系数；质量为 $m$ 的物体重力为 $mg$，其中 $g$ 为常数．如图，一把弹簧秤在不挂任何物体时弹簧的长度为 6 厘米．在其弹性限度内：当所挂物体的质量为 0.5 千克时，弹簧长度为 6.5 厘米，那么，当弹簧长度为 6.8 厘米时，所挂物体的质量为_______千克．",
+      "options": [],
+      "answer": "0.8",
+      "analysis": "【分析】本题主要考查了胡克定律的应用，熟练掌握胡克定律 $F=kx$（其中 F 为弹力，k 为劲度系数，x 为弹簧伸长或压缩量）及重力与质量的关系 $G=mg$ 是解题的关键．先根据已知条件求出弹簧的劲度系数 k，再利用胡克定律求出弹簧长度为 6.8 厘米时所挂物体的质量．\n【详解】解：不挂物体时弹簧长度 $L_0 = 6$ 厘米，挂质量 $m_1 = 0.5$ 千克物体时，弹簧长度 $L_1 = 6.5$ 厘米，则弹簧伸长量 $x_1 = L_1 - L_0 = 6.5 - 6 = 0.5$ (厘米)．\n物体重力 $F_1 = m_1g$（g 为常量），根据胡克定律 $F=kx$，可得 $m_1g = kx_1$，即 $0.5g = k \\times 0.5$，解得 $k=g$．\n当弹簧长度 $L_2 = 6.8$ 厘米时，弹簧伸长量 $x_2 = L_2 - L_0 = 6.8 - 6 = 0.8$ (厘米)．\n设此时所挂物体质量为 $m_2$ 千克，则 $m_2g = kx_2$，因为 $k=g$，所以 $m_2g = g \\times 0.8$，两边同时除以 g，得 $m_2 = 0.8$．\n故答案为：0.8．",
+      "knowledge_points": [
+        "一次函数的应用"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.09,
+        0.68,
+        0.05,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "计算：$2^0 + |1-\\sqrt{2}| - \\sqrt{8}$",
+      "options": [],
+      "answer": "$-\\sqrt{2}$",
+      "analysis": "【分析】本题考查实数的混合运算，涉及二次根式的化简、零指数幂、化简绝对值等知识，是基础考点，掌握相关知识是解题关键．原式利用二次根式性质，零指数幂法则，以及绝对值的代数意义计算即可得到结果．\n【详解】解：$2^0 + |1-\\sqrt{2}| - \\sqrt{8} = 1 + \\sqrt{2} - 1 - 2\\sqrt{2} = -\\sqrt{2}$．",
+      "knowledge_points": [
+        "实数的运算"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "如图，点 $E, F$ 分别在 $AB, AD$ 的延长线上，$\\angle CBE = \\angle CDF, \\angle ACB = \\angle ACD$．求证：$AB = AD$．",
+      "options": [],
+      "answer": "见解析",
+      "analysis": "【分析】本题考查全等三角形的判定与性质、补角的性质等基础知识，考查推理能力、几何直观等．先证明 $\\angle ABC = \\angle ADC$，AAS 证明 $\\triangle ABC \\cong \\triangle ADC$，即可得出结论．\n【详解】证明：$\\because \\angle CBE = \\angle CDF, \\angle ABC + \\angle CBE = 180^\\circ, \\angle ADC + \\angle CDF = 180^\\circ$，\n$\\therefore \\angle ABC = \\angle ADC$．\n在 $\\triangle ABC$ 和 $\\triangle ADC$ 中，\n$\\begin{cases} \\angle ABC = \\angle ADC \\\\ \\angle ACB = \\angle ACD \\\\ AC = AC \\end{cases}$，\n$\\therefore \\triangle ABC \\cong \\triangle ADC$ (AAS)，\n$\\therefore AB = AD$．",
+      "knowledge_points": [
+        "全等三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        10,
+        0.08,
+        0.77,
+        0.2,
+        0.14
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "先化简，再求值：$\\left( 2+\\frac{1-a}{a} \\right) \\div \\frac{a^2+2a+1}{a}$，其中 $a = \\sqrt{5}-1$．",
+      "options": [],
+      "answer": "$\\frac{\\sqrt{5}}{5}$",
+      "analysis": "【分析】本题考查分式的混合运算、分母有理化等知识．先把括号内通分，并把除法转化为乘法，然后约分化简，再把 $a = \\sqrt{5}-1$ 代入即可即可．\n【详解】解：$\\left( 2+\\frac{1-a}{a} \\right) \\div \\frac{a^2+2a+1}{a} = \\frac{2a+1-a}{a} \\cdot \\frac{a}{(a+1)^2} = \\frac{a+1}{a} \\cdot \\frac{a}{(a+1)^2} = \\frac{1}{a+1}$．\n当 $a = \\sqrt{5}-1$ 时，\n原式 $= \\frac{1}{\\sqrt{5}-1+1} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$．",
+      "knowledge_points": [
+        "分式的化简求值"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "甲、乙两人是新华高级中学数学兴趣小组成员．以下是他们在参加高中数学联赛预备队员集训期间的测试成绩及当地近五年高中数学联赛的相关信息．\n信息一：甲、乙两人集训期间的测试成绩（单位：分）\n| 日期 | 2月10日 | 2月21日 | 3月5日 | 3月14日 | 3月25日 | 4月7日 | 4月17日 | 4月27日 | 5月8日 | 5月20日 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| 甲 | 75 | 80 | 73 | 81 | 90 | 83 | 85 | 92 | 95 | 96 |\n| 乙 | 82 | 83 | 86 | 82 | 92 | 83 | 87 | 86 | 84 | 85 |\n其中，甲、乙成绩的平均数分别是 $\\overline{x}_{甲} = 85, \\overline{x}_{乙} = 85$；方差分别是 $s^2_{甲} = 58.4, s^2_{乙} = a$．\n信息二：当地近五年高中数学联赛获奖分数线（单位：分）\n| 年份 | 2020 | 2021 | 2022 | 2023 | 2024 |\n|---|---|---|---|---|---|\n| 获奖分数线 | 90 | 89 | 90 | 89 | 90 |\n试根据以上信息及你所学的统计学知识，解决以下问题：\n（1）计算 a 的值，并根据平均数与方差对甲、乙的成绩进行评价；\n（2）计算当地近五年高中数学联赛获奖分数线的平均数，并说明：若要从中选择一人参加高中数学联赛，选谁更合适；\n（3）若要从中选择一人参加进一步的培养，从发展潜能的角度考虑，你认为选谁更合适？为什么？",
+      "options": [],
+      "answer": "（1）$a = 8.2$，甲、乙两人的整体水平相当，但乙的成绩比甲稳定；\n（2）89.6，选甲更合适；\n（3）选甲更合适，理由见解析",
+      "analysis": "【分析】本小题考查平均数、方差，正确求出乙的方差是解答本题的关键．\n（1）先求出乙的方差，然后比较即可；\n（2）先求出五年获奖的平均数，然后根据甲、乙十次测试成绩达到平均成绩的频数多少判断即可；\n（3）根据甲乙成绩的变化趋势分析即可．\n【详解】\n（1）$s^2_{乙} = \\frac{1}{10}[(82-85)^2 + (83-85)^2 + (86-85)^2 + \\dots + (85-85)^2] = \\frac{1}{10}(9+4+1+9+49+4+4+1+1+0) = \\frac{1}{10} \\times 82 = 8.2$，即 $a = 8.2$．\n因为 $\\overline{x}_{甲} = \\overline{x}_{乙}, s^2_{甲} > s^2_{乙}$，\n所以甲、乙两人的整体水平相当，但乙的成绩比甲稳定．\n（2）由已知得，获奖分数线的平均数为 $\\bar{x} = 90 + \\frac{1}{5} \\times (-2) = 89.6$，\n从信息一可知，在集训期间的十次测试成绩中，甲达到获奖分数线的平均数的频数为 4，而乙的频数为 1，\n所以甲获奖的可能性更大，故选甲参加更合适．\n（3）选甲更合适．理由：在集训期间的十次测试成绩中，甲呈上升趋势，而乙基本稳定在原有的水平，故从发展潜能的角度考虑，选甲更合适．",
+      "knowledge_points": [
+        "平均数",
+        "方差",
+        "统计量的应用"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，$\\triangle ABC$ 是等边三角形，D 是 $AB$ 的中点，$CE \\perp BC$，垂足为 C，$EF$ 是由 $CD$ 沿 $CE$ 方向平移得到的．已知 $EF$ 过点 A，$BE$ 交 $CD$ 于点 G．\n（1）求 $\\angle DCE$ 的大小；\n（2）求证：$\\triangle CEG$ 是等边三角形．",
+      "options": [],
+      "answer": "（1）$60^\\circ$；（2）见解析",
+      "analysis": "【分析】（1）等边三角形的性质推出 $\\angle DCB = 30^\\circ$，垂直，得到 $\\angle BCE = 90^\\circ$，角的和差关系求出 $\\angle DCE$ 的大小即可；\n（2）平移得到 $CD \\parallel EF$，进而得到 $\\angle EAC = \\angle DCA = 30^\\circ$，角的和差关系推出 $\\angle EAC = \\angle ECA$，进而得到 $AE = CE, \\angle AEC = 120^\\circ$，根据 $AB = CB$，推出 $BE$ 垂直平分 $AC$，进而得到 $\\angle GEC = \\frac{1}{2} \\angle AEC = 60^\\circ$，推出 $\\angle GEC = \\angle GCE = \\angle EGC$，进而得到 $\\triangle CEG$ 是等边三角形即可．\n【详解】\n（1）解：$\\because \\triangle ABC$ 是等边三角形，$\\therefore \\angle ACB = 60^\\circ$．\n$\\because D$ 是 $AB$ 的中点，$\\therefore \\angle DCB = \\frac{1}{2} \\angle ACB = 30^\\circ$．\n$\\because CE \\perp BC$，$\\therefore \\angle BCE = 90^\\circ$，\n$\\therefore \\angle DCE = \\angle BCE - \\angle DCB = 60^\\circ$．\n（2）证明：由平移可知：$CD \\parallel EF$，\n$\\therefore \\angle EAC = \\angle DCA = 30^\\circ$，\n又 $\\because \\angle ECA = \\angle BCE - \\angle ACB = 30^\\circ$，\n$\\therefore \\angle EAC = \\angle ECA$，\n$\\therefore AE = CE, \\angle AEC = 120^\\circ$，\n又 $\\because AB = CB$，$\\therefore BE$ 垂直平分 $AC$，\n$\\therefore \\angle GEC = \\frac{1}{2} \\angle AEC = 60^\\circ$，\n由（1）知，$\\angle GCE = 60^\\circ$，\n$\\therefore \\angle EGC = 60^\\circ$，\n$\\therefore \\angle GEC = \\angle GCE = \\angle EGC$，\n$\\therefore \\triangle CEG$ 是等边三角形．",
+      "knowledge_points": [
+        "等边三角形的判定与性质",
+        "平移的性质",
+        "线段垂直平分线的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        13,
+        0.08,
+        0.31,
+        0.18,
+        0.16
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "如图，矩形 $ABCD$ 中，$AB < AD$．\n（1）求作正方形 $EFGH$，使得点 E，G 分别落在边 $AD, BC$ 上，点 F，H 落在 $BD$ 上；（要求：尺规作图，不写作法，保留作图痕迹）\n（2）若 $AB=2, AD=4$，求（1）中所作的正方形的边长．",
+      "options": [],
+      "answer": "（1）见解析；（2）$\\frac{\\sqrt{10}}{2}$",
+      "analysis": "【分析】（1）作 $BD$ 的中垂线交 $AD$ 于点 $E$，交 $BC$ 于点 $G$，以 $EG$ 为直径画圆，交 $BD$ 于点 $F, H$，即可得到正方形 $EFGH$；\n（2）勾股定理求出 $BD$ 的长，进而求出 $OD$ 的长，证明 $\\triangle EOD \\sim \\triangle BAD$，求出 $OE$ 的长，再根据正方形的性质，结合勾股定理求出 $EH$ 的长即可．\n【详解】\n（1）解：如图，四边形 $EFGH$ 就是所求作的正方形．\n由作图可知，$OB=OD, EG \\perp HF$，\n$\\because$ 矩形 $ABCD$，$\\therefore AD \\parallel BC$，$\\therefore \\angle ADB = \\angle CBD, \\angle DEO = \\angle BGO$，\n$\\therefore \\triangle DOE \\cong \\triangle BOG$，$\\therefore OE=OG$，\n由作图可知，$OE=OG=OF=OH$，$\\therefore$ 四边形 $EHGF$ 为矩形，\n$\\because EG \\perp HF$，$\\therefore$ 四边形 $EHGF$ 为正方形；\n（2）解：由（1）知：$OB=OD, OE=OG$，四边形 $ABCD$ 是矩形，$\\therefore \\angle A=90^\\circ$，\n在 Rt$\\triangle ABD$ 中，$AB=2, AD=4$，$\\therefore BD = \\sqrt{AB^2+AD^2} = 2\\sqrt{5}$，$\\therefore OD = \\frac{1}{2}BD = \\sqrt{5}$．\n$\\because EG \\perp FH$，$\\therefore \\angle DOE = \\angle DAB = 90^\\circ$．\n又 $\\because \\angle ODE = \\angle ADB$，$\\therefore \\triangle EOD \\sim \\triangle BAD$，\n$\\therefore \\frac{OE}{AB} = \\frac{OD}{AD}$，即 $\\frac{OE}{2} = \\frac{\\sqrt{5}}{4}$，$\\therefore OE = \\frac{\\sqrt{5}}{2}$．\n在 Rt$\\triangle EOH$ 中，$OE=OH$，$\\therefore EH = \\sqrt{2} OE = \\frac{\\sqrt{10}}{2}$，\n$\\therefore$ 正方形 EFGH 的边长为 $\\frac{\\sqrt{10}}{2}$．",
+      "knowledge_points": [
+        "尺规作图",
+        "矩形的性质",
+        "相似三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        14,
+        0.08,
+        0.64,
+        0.2,
+        0.1
+      ],
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "在平面直角坐标系中，二次函数 $y=ax^2+bx-2$ 的图象过点 $A(1, t), B(2, t)$．\n（1）求 $\\frac{b}{a}$ 的值；\n（2）已知二次函数 $y=ax^2+bx-2$ 的最大值为 $1-\\frac{3}{4}a^2$．\n① 求该二次函数的表达式；\n② 若 $M(x_1, m), N(x_2, m)$ 为该二次函数图象上的不同两点，且 $m \\neq 0$，求证：$\\frac{(x_1-1)^2}{m} = \\frac{x_2-2}{x_1-2}$．",
+      "options": [],
+      "answer": "（1）−3；（2）① $y=-x^2+3x-2$；②见解析",
+      "analysis": "【分析】本题考查了二次函数表达式、二次函数的图象与性质、一元二次方程．\n（1）根据二次函数的对称性求解即可；\n（2）①先求出顶点坐标，然后根据最大值列方程求解即可；\n②先根据二次函数的对称性求出 $x_1+x_2=3$，然后代入证明式左边通分后化简求解．\n【详解】\n（1）解：二次函数图象的对称轴为 $x = -\\frac{b}{2a}$．\n因为点 $A(1,t), B(2,t)$ 在该函数的图象上，所以 $-\\frac{b}{2a} = \\frac{1+2}{2} = \\frac{3}{2}$，所以 $\\frac{b}{a} = -3$．\n（2）①由（1）可得，$b=-3a$，所以该函数的表达式为 $y=ax^2-3ax-2$，\n函数图象顶点坐标为 $(\\frac{3}{2}, -\\frac{9}{4}a-2)$．\n因为函数的最大值为 $1-\\frac{3}{4}a^2$，所以 $a<0$，且 $-\\frac{9}{4}a-2 = 1-\\frac{3}{4}a^2$，\n解得 $a=-1$，或 $a=4$（舍去）．\n所以该二次函数的表达式为 $y=-x^2+3x-2$．\n②因为点 $M(x_1, m)$ 在函数 $y=-x^2+3x-2$ 的图象上，所以 $m=-x_1^2+3x_1-2$．\n由①知，点 $M(x_1, m), N(x_2, m)$ 关于直线 $x=\\frac{3}{2}$ 对称，不妨设 $x_1 < x_2$，\n则 $x_2 - \\frac{3}{2} = \\frac{3}{2} - x_1$，即 $x_1+x_2=3$．\n所以 $\\frac{(x_1-1)^2}{m} - \\frac{x_2-2}{x_1-2} = \\frac{(x_1-1)^2(x_1-2) - m(x_2-2)}{m(x_1-2)}$\n$= \\frac{(x_1-1)(x_1-2)(x_1-1) - m(x_2-2)}{m(x_1-2)} = \\frac{(x_1^2-3x_1+2)(x_1-1) - m(x_2-2)}{m(x_1-2)}$\n$= \\frac{-m(x_1-1) - m(x_2-2)}{m(x_1-2)} = \\frac{-m(x_1+x_2-3)}{m(x_1-2)} = 0$，\n所以 $\\frac{(x_1-1)^2}{m} = \\frac{x_2-2}{x_1-2}$．",
+      "knowledge_points": [
+        "二次函数的对称性",
+        "求二次函数解析式",
+        "二次函数图象上点的坐标特征"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "阅读材料，回答问题．\n主题：两个正数的积与商的位数探究\n提出问题：小明是一位爱思考的小学生．一次，在完成多位数的乘法时，他根据算式 “ $46 \\times 2 = 92; 35 \\times 21 = 735; 663 \\times 11 = 7293; 186 \\times 362 = 67332$ ”，猜想：m 位的正整数与 n 位的正整数的乘积是一个 $(m+n-1)$ 位的正整数．\n分析探究：\n问题 1 小明的猜想是否正确？若正确，请给予证明；否则，请举出反例\n推广延伸：\n小明的猜想激发了初中生小华的探究热情．为了使问题的研究推广到有理数的乘法，进而迁移到对除法的研究，小华将数的“位数”与“数字”的概念进行推广，规定：如果一个正数用科学记数法表示为 $a \\times 10^n$，则称这个数的位数是 $n+1$，数字是 $a$．\n借此，小华研究了两个数乘积的位数问题，提出并证明了以下命题．\n命题：若正数 A，B，C 的位数分别为 m，n，p，数字分别为 a，b，c，且 $A \\times B = C$，则必有 $c \\ge a$ 且 $c \\ge b$，或 $c < a$ 且 $c < b$．并且，当 $c \\ge a$ 且 $c \\ge b$ 时， $p = m+n-1$；当 $c < a$ 且 $c < b$ 时， $p = m+n$．\n证明：依题意知，A，B，C 用科学记数法可分别表示为 $a \\times 10^{m-1}, b \\times 10^{n-1}, c \\times 10^{p-1}$，其中 a，b，c 均为正数．\n由 $A \\times B = C$，得 $ab \\times 10^{m+n-2} = c \\times 10^{p-1}$，即 $\\frac{ab}{c} = 10^{p-m-n+1}$．（*）\n当 $c \\ge a$ 且 $c \\ge b$ 时，“ $\\frac{a}{c} \\le 1$，所以 $\\frac{ab}{c} \\le b < 10$，又 $\\frac{ab}{c} \\ge \\frac{ab}{a} \\ge b > \\frac{1}{10}$，（此处理解可能有误，原文逻辑：$ab/c \\ge a > 1/10$? 或者是$b \\ge 1$）... 由（*）知，$\\frac{ab}{c} = 1$，所以 $p = m+n-1$；\n当 $c \\ge a$ 且 $c < b$ 时...与（*）矛盾，不合题意；\n当 $c < a$ 且 $c \\ge b$ 时，________①________；\n当 $c < a$ 且 $c < b$ 时，________②________．\n综上所述，命题成立．\n拓展迁移：\n问题 2 若正数 A，B 的位数分别为 m，n，那么 $\\frac{A}{B}$ 的位数是多少？证明你的结论．",
+      "options": [],
+      "answer": "（1）小明的猜想不正确，反例：$3 \\times 4 = 12$；\n（2）见解析；\n（3）当 A 的数字大于或等于 B 的数字时，$\\frac{A}{B}$ 的位数是 $m-n+1$；当 A 的数字小于 B 的数字时，$\\frac{A}{B}$ 的位数是 $m-n$．",
+      "analysis": "【分析】（1）举反例即可；\n（2）①当 $c < a$ 且 $c \\ge b$ 时，可得 $ab/c > b \\ge 1$，得 $1 < ab/c < 10$，不合题意；\n②当 $c < a$ 且 $c < b$ 时，可得 $ab/c > b > 1$，可得 $1 < ab/c < 100$，得 $ab/c = 10$，即得 $p=m+n$．\n（3）设 $A/B=C$，利用乘积的位数命题反推即可．\n【详解】\n（1）解：小明的猜想不正确．反例：$3 \\times 4 = 12$．\n（2）证明：① $\\begin{cases} a/c > 1 \\\\ b/c \\le 1 \\end{cases}$，所以 $\\begin{cases} ab/c > b \\ge 1 \\\\ ab/c < a < 10 \\end{cases}$，所以 $1 < ab/c < 10$，与（*）矛盾，不合题意；\n② $a/c > 1$，所以 $ab/c > b > 1$，又 $ab < 100, c \\ge 1$，所以 $1 < ab/c < 100$，\n由（*）知 $ab/c = 10$，所以 $p=m+n$．\n（3）解：当 A 的数字大于或等于 B 的数字时，$\\frac{A}{B}$ 的位数是 $m-n+1$；\n当 A 的数字小于 B 的数字时，$\\frac{A}{B}$ 的位数是 $m-n$．\n证明如下：由已知，A，B 的位数分别为 m，n，\n设 $A/B=C$，A，B，C 的数字分别为 a，b，c，C 的位数为 x，则 $B \\times C = A$．\n由小华的命题知，当 $a \\ge b$ 时，必有 $a \\ge c$，\n此时，$m=n+x-1$，所以 $x=m-n+1$；\n当 $a < b$ 时，必有 $a < c$，\n此时，$m=n+x$，所以 $x=m-n$．",
+      "knowledge_points": [
+        "科学记数法",
+        "新定义",
+        "不等式的性质"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "如图，四边形 $ABCD$ 内接于 $\\odot O$，$AD, BC$ 的延长线相交于点 $E$，$AC, BD$ 相交于点 $F$．$G$ 是 $AB$ 上一点，$GD$ 交 $AC$ 于点 $H$，且 $AB=AC, BG=DG$．\n（1）求证：$\\angle ABC = \\angle DBE + \\angle E$；\n（2）求证：$AH^2 = HF \\cdot HC$；\n（3）若 $\\tan \\angle ABC = \\sqrt{5}, AD=2DE, CD=\\sqrt{6}$，求 $\\triangle AGH$ 的周长．",
+      "options": [],
+      "answer": "（1）见解析；（2）见解析；（3）$3\\sqrt{6}$",
+      "analysis": "【分析】（1）利用 $AB=AC$ 得 $\\angle ABC = \\angle ACB$，结合同弧 $AB$ 所对圆周角 $\\angle ACB = \\angle ADB$，再根据三角形外角性质 $\\angle ADB = \\angle DBE + \\angle E$，完成证明 ．\n（2）先证 $\\triangle HDF \\sim \\triangle HCD$ 得 $HD^2 = HF \\cdot HC$，再通过角的等量代换证 $\\angle ADG = \\angle DAC$，推出 $AH=DH$，从而得 $AH^2 = HF \\cdot HC$．\n（3）利用（2）结论将 $\\triangle AGH$ 周长转化为 $AB$，通过相似三角形 $\\triangle ACD \\sim \\triangle AEC$ 及三角函数、勾股定理求出 $AB$ 的长，即 $\\triangle AGH$ 周长为 $3\\sqrt{6}$．\n【详解】\n（1）证明：$\\because AB=AC$，$\\therefore \\angle ABC = \\angle ACB$．\n$\\because \\angle ACB = \\angle ADB$，$\\therefore \\angle ABC = \\angle ADB$．\n$\\because \\angle ADB = \\angle DBE + \\angle E$，$\\therefore \\angle ABC = \\angle DBE + \\angle E$．\n（2）证明：$\\because AD=AD, \\therefore \\angle ABD = \\angle ACD$．\n$\\because BG=DG, \\therefore \\angle BDG = \\angle ABD = \\angle ACD$，\n又 $\\because \\angle DHF = \\angle CHD$，$\\therefore \\triangle HDF \\sim \\triangle HCD$，\n$\\therefore \\frac{HF}{HD} = \\frac{HD}{HC}$，$\\therefore HD^2 = HF \\cdot HC$．\n由（1）知，$\\angle ABC = \\angle DBE + \\angle E$，又 $\\angle ABC = \\angle DBE + \\angle ABD$，$\\therefore \\angle ABD = \\angle E$，$\\therefore \\angle BDG = \\angle E$．\n$\\because \\angle ADB = \\angle ADG + \\angle BDG = \\angle DBC + \\angle E$，$\\therefore \\angle ADG = \\angle DBC$．\n$\\because CD=CD, \\therefore \\angle DAC = \\angle DBC$，$\\therefore \\angle ADG = \\angle DAC$，\n$\\therefore AH = DH$，$\\therefore AH^2 = HF \\cdot HC$．\n（3）解：由（2）知，$AH=DH$，$\\therefore \\triangle AGH$ 的周长为 $AG+GH+AH = AG+GH+DH = AG+DG = AG+BG = AB$．\n设 $DE=m$，则 $AD=2DE=2m, AE=AD+DE=3m$．\n由（2）可知，$\\angle ACD = \\angle E$．又 $\\angle CAD = \\angle EAC$，\n$\\therefore \\triangle ACD \\sim \\triangle AEC$，$\\therefore \\frac{AC}{AE} = \\frac{AD}{AC} = \\frac{CD}{EC}$，\n$\\therefore AC^2 = AD \\cdot AE = 6m^2$，$\\therefore AC = \\sqrt{6}m$．\n又 $CD = \\sqrt{6}$，$\\therefore \\frac{\\sqrt{6}m}{3m} = \\frac{\\sqrt{6}}{EC}$，$\\therefore EC = 3$．\n过点 C 作 $CP \\perp AE$，垂足为 P，则 $\\angle CPD = \\angle CPE = 90^\\circ$．\n$\\because$ 四边形 $ABCD$ 是圆内接四边形，$\\therefore \\angle ADC + \\angle ABC = 180^\\circ$，\n又 $\\angle ADC + \\angle CDP = 180^\\circ$，$\\therefore \\angle CDP = \\angle ABC$，\n$\\therefore \\tan \\angle CDP = \\tan \\angle ABC = \\sqrt{5}$．\n$\\therefore$ 在 Rt$\\triangle DCP$ 中，$\\frac{PC}{PD} = \\sqrt{5}$，即 $PC = \\sqrt{5}PD$．\n$\\therefore CD = \\sqrt{PD^2+PC^2} = \\sqrt{6}PD$，$\\therefore \\sqrt{6}PD = \\sqrt{6}$，$\\therefore PD=1$，\n$\\therefore PE = DE - DP = m-1$．\n在 Rt$\\triangle CPE$ 中，$PE^2 + PC^2 = CE^2$，$\\therefore (m-1)^2 + (\\sqrt{5})^2 = 3^2$，\n解得 $m=3$，或 $m=-1$（舍去）．\n$\\therefore AB = AC = 3\\sqrt{6}$．\n$\\therefore \\triangle AGH$ 的周长为 $3\\sqrt{6}$．",
+      "knowledge_points": [
+        "圆的性质",
+        "圆周角定理",
+        "相似三角形",
+        "解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        21,
+        0.08,
+        0.22,
+        0.2,
+        0.15
+      ],
+      "images": []
+    }
+  ]
+}

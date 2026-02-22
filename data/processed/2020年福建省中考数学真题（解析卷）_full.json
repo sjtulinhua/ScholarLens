@@ -1,0 +1,526 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "有理数 $-\\frac{1}{5}$ 的相反数为（ ）",
+      "options": [
+        "5",
+        "\\frac{1}{5}",
+        "-\\frac{1}{5}",
+        "-5"
+      ],
+      "answer": "B",
+      "analysis": "【分析】根据相反数的定义：只有符号不同的两个数互为相反数即得．\n【详解】A 选项与 $-\\frac{1}{5}$ 的符号和符号后的数值均不相同，不符合题意；\nB 选项与 $-\\frac{1}{5}$ 只有符号不同，符合题意，B 选项正确；\nC 选项与 $-\\frac{1}{5}$ 完全相同，不符合题意；\nD 选项与 $-\\frac{1}{5}$ 符号相同，不符合题意．\n故选：B．",
+      "knowledge_points": [
+        "数与代数-有理数",
+        "数与代数-相反数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "如图所示的六角螺母，其俯视图是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B",
+      "analysis": "【分析】根据图示确定几何体的三视图即可得到答案．\n【详解】由几何体可知，该几何体的三视图依次为：主视图、左视图、俯视图。俯视图即从上往下看，是一个正六边形中间有一个圆。\n故选：B．",
+      "knowledge_points": [
+        "图形与几何-三视图",
+        "图形与几何-立体图形"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.605,
+        0.14,
+        0.13,
+        0.08
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "如图，面积为 1 的等边三角形 $ABC$ 中，$D, E, F$ 分别是 $AB, BC, CA$ 的中点，则 $\\triangle DEF$ 的面积是（ ）",
+      "options": [
+        "1",
+        "\\frac{1}{2}",
+        "\\frac{1}{3}",
+        "\\frac{1}{4}"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据题意可以判断四个小三角形是全等三角形,即可判断一个的面积是 $\\frac{1}{4}$．\n【详解】∵ $D, E, F$ 分别是 $AB, BC, CA$ 的中点,且 $\\triangle ABC$ 是等边三角形,\n∴ $\\triangle ADF \\cong \\triangle DBE \\cong \\triangle FEC \\cong \\triangle DFE$,\n∴ $\\triangle DEF$ 的面积是 $\\frac{1}{4}$．\n故选 D．",
+      "knowledge_points": [
+        "图形与几何-三角形的中位线",
+        "图形与几何-全等三角形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.09,
+        0.36,
+        0.18,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "下列给出的等边三角形、平行四边形、圆及扇形中，既是轴对称图形又是中心对称图形的是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据轴对称图形与中心对称图形的概念求解.\n【详解】A、是轴对称图形，不是中心对称图形，故此选项不符合题意；\nB、不是轴对称图形，是中心对称图形，故此选项不符合题意；\nC、是轴对称图形，是中心对称图形，故此选项符合题意；\nD、是轴对称图形，不是中心对称图形，故此选项不符合题意；\n故选：C.",
+      "knowledge_points": [
+        "图形与几何-轴对称图形",
+        "图形与几何-中心对称图形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.81,
+        0.09,
+        0.73,
+        0.07
+      ],
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "如图，$AD$ 是等腰三角形 $ABC$ 的顶角平分线，$BD = 5$，则 $CD$ 等于（ ）",
+      "options": [
+        "10",
+        "5",
+        "4",
+        "3"
+      ],
+      "answer": "B",
+      "analysis": "【分析】根据等腰三角形三线合一的性质即可判断 CD 的长．\n【详解】∵ $AD$ 是等腰三角形 $ABC$ 的顶角平分线\n∴ $CD=BD=5$．\n故选：B．",
+      "knowledge_points": [
+        "图形与几何-等腰三角形的性质",
+        "图形与几何-三线合一"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        3,
+        0.09,
+        0.36,
+        0.2,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "如图，数轴上两点 $M, N$ 所对应的实数分别为 $m, n$，则 $m-n$ 的结果可能是（ ）",
+      "options": [
+        "-1",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据数轴确定 $m$ 和 $n$ 的范围，再根据有理数的加减法即可做出选择．\n【详解】解：根据数轴可得 $0 < m < 1$，$-2 < n < -1$，则 $1 < m-n < 3$\n故选：C",
+      "knowledge_points": [
+        "数与代数-数轴",
+        "数与代数-有理数的运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        3,
+        0.1,
+        0.76,
+        0.28,
+        0.04
+      ],
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "下列运算正确的是（ ）",
+      "options": [
+        "3a^2 - a^2 = 3",
+        "(a+b)^2 = a^2 + b^2",
+        "(-3ab^2)^2 = -6a^2b^4",
+        "a \\cdot a^{-1} = 1 (a \\ne 0)"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据整式的加减乘除、完全平方公式、$a^{-p} = \\frac{1}{a^p} (a \\ne 0)$ 逐个分析即可求解．\n【详解】解：选项 A：$3a^2 - a^2 = 2a^2$，故选项 A 错误；\n选项 B：$(a+b)^2 = a^2 + 2ab + b^2$，故选项 B 错误；\n选项 C：$(-3ab^2)^2 = 9a^2b^4$，故选项 C 错误；\n选项 D：$a \\cdot a^{-1} = a \\cdot \\frac{1}{a} = 1 (a \\ne 0)$，故选项 D 正确．\n故选：D．",
+      "knowledge_points": [
+        "数与代数-整式的运算",
+        "数与代数-幂的运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "我国古代著作《四元玉鉴》记载“买椽多少”问题：“六贯二百一十钱，倩人去买几株椽．每株脚钱三文足，无钱准与一株椽．”其大意为：现请人代买一批椽，这批椽的价钱为 6210 文．如果每件椽的运费是 3 文，那么少拿一株椽后，剩下的椽的运费恰好等于一株椽的价钱，试问 6210 文能买多少株椽？设这批椽的数量为 $x$ 株，则符合题意的方程是（ ）",
+      "options": [
+        "3(x-1) = \\frac{6210}{x}",
+        "\\frac{6210}{x-1} = 3",
+        "3x-1 = \\frac{6210}{x}",
+        "\\frac{6210}{x} = 3"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据“这批椽的价钱为 6210 文”、“每件椽的运费为 3 文，剩下的椽的运费恰好等于一株椽的价钱”列出方程解答．\n【详解】解：由题意得：$3(x-1) = \\frac{6210}{x}$，\n故选 A.",
+      "knowledge_points": [
+        "数与代数-分式方程及其应用",
+        "数与代数-列方程解应用题"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "如图，四边形 $ABCD$ 内接于 $\\odot O$，$AB=CD$，$A$ 为弧 $BD$ 中点，$\\angle BDC=60^\\circ$，则 $\\angle ADB$ 等于（ ）",
+      "options": [
+        "40^\\circ",
+        "50^\\circ",
+        "60^\\circ",
+        "70^\\circ"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据 $AB=CD$，$A$ 为弧 $BD$ 中点求出 $\\angle CBD=\\angle ADB=\\angle ABD$，再根据圆内接四边形的性质得到 $\\angle ABC+\\angle ADC=180^\\circ$，即可求出答案．\n【详解】∵ $A$ 为弧 $BD$ 中点，\n∴ $\\text{弧}AB = \\text{弧}AD$,\n∴ $\\angle ADB=\\angle ABD$，$\\text{弧}AB=\\text{弧}AD$，\n∵ $AB=CD$，\n∴ $\\angle CBD=\\angle ADB=\\angle ABD$，\n∵ 四边形 $ABCD$ 内接于 $\\odot O$，\n∴ $\\angle ABC+\\angle ADC=180^\\circ$，\n∴ $3\\angle ADB+60^\\circ=180^\\circ$，\n∴ $\\angle ADB=40^\\circ$，\n故选：A．",
+      "knowledge_points": [
+        "图形与几何-圆",
+        "图形与几何-圆周角定理",
+        "图形与几何-圆内接四边形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.09,
+        0.25,
+        0.18,
+        0.14
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "已知 $P_1(x_1, y_1), P_2(x_2, y_2)$ 是抛物线 $y=ax^2-2ax$ 上的点，下列命题正确的是（ ）",
+      "options": [
+        "若 $|x_1-1| > |x_2-1|$，则 $y_1 > y_2$",
+        "若 $|x_1-1| > |x_2-1|$，则 $y_1 < y_2$",
+        "若 $|x_1-1| = |x_2-1|$，则 $y_1 = y_2$",
+        "若 $y_1 = y_2$，则 $x_1 = x_2$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】分别讨论 $a>0$ 和 $a<0$ 的情况，画出图象根据图象的增减性分析 $x$ 与 $y$ 的关系．\n【详解】抛物线 $y=ax^2-2ax=a(x-1)^2-a$，对称轴为 $x=1$。\n当 $a>0$ 时，开口向上，距离对称轴越远，$y$ 值越大；\n当 $a<0$ 时，开口向下，距离对称轴越远，$y$ 值越小。\nA、B 选项都依赖于 $a$ 的符号，故错误。\n对于 C，若 $|x_1-1|=|x_2-1|$，说明两点关于对称轴对称，则 $y_1=y_2$，此结论与 $a$ 的符号无关，正确。\n对于 D，若 $y_1=y_2$，两点可能关于对称轴对称，即 $x_1$ 可能不等于 $x_2$（除非顶点），故错误。\n故选 C．",
+      "knowledge_points": [
+        "数与代数-二次函数",
+        "数与代数-函数的图象与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "计算：$|-8|=$ __________.",
+      "options": [],
+      "answer": "8",
+      "analysis": "【分析】根据绝对值的性质解答即可．\n【详解】$|-8|=8$．\n故答案为 8．",
+      "knowledge_points": [
+        "数与代数-绝对值"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "若从甲、乙、丙 3 位“爱心辅学”志愿者中随机选 1 位为学生在线辅导功课，则甲被选到的概率为________．",
+      "options": [],
+      "answer": "\\frac{1}{3}",
+      "analysis": "【分析】利用概率公式即可求得答案．\n【详解】解：从甲、乙、丙 3 位同学中随机选取 1 人进行在线辅导功课共有 3 种等可能结果，其中甲被选中的只有 1 种可能，\n故答案为：$\\frac{1}{3}$．",
+      "knowledge_points": [
+        "统计与概率-概率"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "一个扇形的圆心角是 $90^\\circ$，半径为 4，则这个扇形的面积为______．（结果保留 $\\pi$）",
+      "options": [],
+      "answer": "4\\pi",
+      "analysis": "【分析】根据扇形的面积公式 $S=\\frac{n\\pi r^2}{360}$ 进行计算即可求解．\n【详解】解：∵扇形的半径为 4，圆心角为 $90^\\circ$，\n∴扇形的面积是：$S=\\frac{90 \\times \\pi \\times 4^2}{360} = 4\\pi$．\n故答案为：$4\\pi$．",
+      "knowledge_points": [
+        "图形与几何-扇形面积"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "2020 年 6 月 9 日，我国全海深自主遥控潜水器“海斗一号”在马里亚纳海沟刷新了我国潜水器下潜深度的纪录，最大下潜深度达 10907 米．假设以马里亚纳海沟所在海域的海平面为基准，记为 0 米，高于马里亚纳海沟所在海域的海平面 100 米的某地的高度记为 $+100$ 米，根据题意，“海斗一号”下潜至最大深度 10907 米处，该处的高度可记为_________米．",
+      "options": [],
+      "answer": "-10907",
+      "analysis": "【分析】海平面以上的高度用正数表示，海平面以下的高度用负数表示．据此可求得答案．\n【详解】解：∵高于马里亚纳海沟所在海域的海平面 100 米的某地的高度记为 $+100$ 米，\n∴“海斗一号”下潜至最大深度 10907 米处，可记为 $-10907$，\n故答案为：$-10907$．",
+      "knowledge_points": [
+        "数与代数-正数和负数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "如图所示的六边形花环是用六个全等的直角三角形拼成的，则 $\\angle ABC$ 等于_______度．",
+      "options": [],
+      "answer": "30",
+      "analysis": "【分析】先证出内部的图形是正六边形，求出内部小正六边形的内角，即可得到 $\\angle ACB$ 的度数，根据直角三角形的两个锐角互余即可求解．\n【详解】解：由题意六边形花环是用六个全等的直角三角形拼成，\n可得 $BD=AC, BC=AF$，\n∴ $CD=CF$，\n同理可证小六边形其他的边也相等，即里面的小六边形也是正六边形，\n∴ $\\angle 1 = \\frac{1}{6}(6-2) \\times 180^\\circ = 120^\\circ$，\n∴ $\\angle 2 = 180^\\circ - 120^\\circ = 60^\\circ$，\n∴ $\\angle ABC = 30^\\circ$，\n故答案为：30．",
+      "knowledge_points": [
+        "图形与几何-多边形的内角和",
+        "图形与几何-直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.08,
+        0.08,
+        0.18,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "设 $A, B, C, D$ 是反比例函数 $y=\\frac{k}{x}$ 图象上的任意四点，现有以下结论：\n①四边形 $ABCD$ 可以是平行四边形；\n②四边形 $ABCD$ 可以是菱形；\n③四边形 $ABCD$ 不可能是矩形；\n④四边形 $ABCD$ 不可能是正方形．\n其中正确的是_______．（写出所有正确结论的序号）",
+      "options": [],
+      "answer": "①④",
+      "analysis": "【分析】利用反比例函数的对称性，画好图形，结合平行四边形，矩形，菱形，正方形的判定可以得到结论，特别是对②的判断可以利用反证法．\n【详解】解：如图，反比例函数 $y=\\frac{k}{x}$ 的图象关于原点成中心对称，\n∴ $OA=OC, OB=OD$,\n∴ 四边形 $ABCD$ 是平行四边形，故①正确，\n如图，若四边形 $ABCD$ 是菱形，\n则 $AC \\perp BD$,\n∴ $\\angle COD = 90^\\circ$，\n显然：$\\angle COD < 90^\\circ$，\n所以四边形 $ABCD$ 不可能是菱形，故②错误，\n如图，反比例函数 $y=\\frac{k}{x}$ 的图象关于直线 $y=x$ 成轴对称，\n当 $CD$ 垂直于对称轴时，\n∴ $OC=OD, OA=OB$,\n∵ $OA=OC$,\n∴ $OA=OB=OC=OD$,\n∴ $AC=BD$,\n∴ 四边形 $ABCD$ 是矩形，故③错误，\n∵ 四边形 $ABCD$ 不可能是菱形，\n∴ 四边形 $ABCD$ 不可能是正方形，故④正确，\n故答案为：①④．",
+      "knowledge_points": [
+        "数与代数-反比例函数的性质",
+        "图形与几何-特殊的平行四边形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "解不等式组：$\\begin{cases} 2x \\le 6-x \\quad \\text{①} \\\\ 3x+1 > 2(x-1) \\quad \\text{②} \\end{cases}$",
+      "options": [],
+      "answer": "-3 < x \\le 2",
+      "analysis": "【分析】分别求出各不等式的解集，再找到其公共解集即可求解．\n【详解】解：由①得 $2x+x \\le 6$，\n$3x \\le 6$，\n$x \\le 2$．\n由②得 $3x+1 > 2x-2$，\n$3x-2x > -2-1$，\n$x > -3$．\n∴原不等式组的解集是 $-3 < x \\le 2$．",
+      "knowledge_points": [
+        "数与代数-一元一次不等式组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "如图，点 $E, F$ 分别在菱形 $ABCD$ 的边 $BC, CD$ 上，且 $BE=DF$．\n求证：$\\angle BAE = \\angle DAF$．",
+      "options": [],
+      "answer": "详见解析",
+      "analysis": "【分析】根据菱形的性质可知 $AB=AD$，$\\angle B=\\angle D$，再结合已知条件 $BE=DF$ 即可证明 $\\triangle ABE \\cong \\triangle ADF$ 后即可求解．\n【详解】解：证明：∵四边形 $ABCD$ 是菱形，\n∴ $\\angle B=\\angle D$， $AB=AD$．\n在 $\\triangle ABE$ 和 $\\triangle ADF$ 中，\n$\\begin{cases} AB=AD \\\\ \\angle B=\\angle D \\\\ BE=DF \\end{cases}$\n∴ $\\triangle ABE \\cong \\triangle ADF(SAS)$，\n∴ $\\angle BAE = \\angle DAF$．",
+      "knowledge_points": [
+        "图形与几何-菱形的性质",
+        "图形与几何-全等三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        12,
+        0.05,
+        0.18,
+        0.26,
+        0.16
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "先化简，再求值：$(1-\\frac{1}{x+2}) \\div \\frac{x^2-1}{x+2}$，其中 $x=\\sqrt{2}+1$．",
+      "options": [],
+      "answer": "\\frac{\\sqrt{2}}{2}",
+      "analysis": "【分析】根据分式的运算法则即可求出答案．\n【详解】原式 $= \\frac{x+2-1}{x+2} \\cdot \\frac{x+2}{(x+1)(x-1)}$\n$= \\frac{1}{x-1}$；\n当 $x=\\sqrt{2}+1$ 时，原式 $= \\frac{1}{\\sqrt{2}+1-1} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$.",
+      "knowledge_points": [
+        "数与代数-分式的化简求值",
+        "数与代数-二次根式"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "某公司经营甲、乙两种特产，其中甲特产每吨成本价为 10 万元，销售价为 10.5 万元；乙特产每吨成本价为 1 万元，销售价为 1.2 万元．由于受有关条件限制，该公司每月这两种特产的销售量之和都是 100 吨，且甲特产的销售量都不超过 20 吨．\n（1）若该公司某月销售甲、乙两种特产的总成本为 235 万元，问这个月该公司分别销售甲、乙两种特产各多少吨？\n（2）求该公司一个月销售这两种特产所能获得的最大总利润．",
+      "options": [],
+      "answer": "（1）甲特产 15 吨，乙特产 85 吨；（2）26 万元",
+      "analysis": "【分析】\n（1）设这个月该公司销售甲特产 $x$ 吨，则销售乙特产 $(100-x)$ 吨，根据题意列方程解答；\n（2）设一个月销售甲特产 $m$ 吨，则销售乙特产 $(100-m)$ 吨，且 $0 \\le m \\le 20$，根据题意列函数关系式 $w = (10.5-10)m + (1.2-1)(100-m) = 0.3m+20$，再根据函数的性质解答.\n【详解】解：（1）设这个月该公司销售甲特产 $x$ 吨，则销售乙特产 $(100-x)$ 吨，\n依题意，得 $10x + 1(100-x) = 235$，\n解得 $x=15$，则 $100-x=85$，\n经检验 $x=15$ 符合题意，\n所以，这个月该公司销售甲特产 15 吨，乙特产 85 吨；\n（2）设一个月销售甲特产 $m$ 吨，则销售乙特产 $(100-m)$ 吨，且 $0 \\le m \\le 20$，\n公司获得的总利润 $w = (10.5-10)m + (1.2-1)(100-m) = 0.3m+20$，\n因为 $0.3 > 0$，所以 $w$ 随着 $m$ 的增大而增大，\n又因为 $0 \\le m \\le 20$，\n所以当 $m=20$ 时，公司获得的总利润的最大值为 26 万元，\n故该公司一个月销售这两种特产能获得的最大总利润为 26 万元.",
+      "knowledge_points": [
+        "数与代数-一元一次方程的应用",
+        "数与代数-一次函数的应用"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，$AB$ 与 $\\odot O$ 相切于点 $B$，$AO$ 交 $\\odot O$ 于点 $C$，$AO$ 的延长线交 $\\odot O$ 于点 $D$，$E$ 是弧 $BCD$ 上不与 $B, D$ 重合的点，$\\sin A = \\frac{1}{2}$．\n（1）求 $\\angle BED$ 的大小；\n（2）若 $\\odot O$ 的半径为 3，点 $F$ 在 $AB$ 的延长线上，且 $BF=3\\sqrt{3}$，求证：$DF$ 与 $\\odot O$ 相切．",
+      "options": [],
+      "answer": "（1）$60^\\circ$；（2）详见解析",
+      "analysis": "【分析】\n(1)连接 OB，在 Rt$\\triangle AOB$ 中由 $\\sin A = \\frac{1}{2}$ 求出 $\\angle A=30^\\circ$，进而求出 $\\angle AOB=60^\\circ$，$\\angle BOD=120^\\circ$，再由同弧所对的圆周角等于圆心角的一半可以求出 $\\angle BED$ 的值；\n(2)连接 OF，在 Rt$\\triangle OBF$ 中，由 $\\tan \\angle BOF = \\frac{BF}{OB} = \\sqrt{3}$ 可以求出 $\\angle BOF=60^\\circ$，进而得到 $\\angle FOD=60^\\circ$，再证明 $\\triangle FOB \\cong \\triangle FOD$，得到 $\\angle ODF=\\angle OBF=90^\\circ$．\n【详解】解：(1)连接 $OB$，\n∵ $AB$ 与 $\\odot O$ 相切于点 $B$，\n∴ $OB \\perp AB$，\n∵ $\\sin A = \\frac{1}{2}$，∴ $\\angle A = 30^\\circ$，\n∴ $\\angle AOB = 60^\\circ$，则 $\\angle BOD = 120^\\circ$．\n由同弧所对的圆周角等于圆心角的一半可知：\n$\\angle BED = \\frac{1}{2} \\angle BOD = 60^\\circ$．\n故答案为：$60^\\circ$．\n(2)连接 $OF$，\n由(1)得 $OB \\perp AB$，$\\angle BOD = 120^\\circ$，\n∵ $OB=3$，$BF=3\\sqrt{3}$，∴ $\\tan \\angle BOF = \\frac{BF}{OB} = \\sqrt{3}$，\n∴ $\\angle BOF = 60^\\circ$，∴ $\\angle DOF = 60^\\circ$．\n在 $\\triangle BOF$ 与 $\\triangle DOF$ 中，\n$\\begin{cases} OB=OD \\\\ \\angle BOF=\\angle DOF \\\\ OF=OF \\end{cases}$\n∴ $\\triangle BOF \\cong \\triangle DOF(SAS)$，\n∴ $\\angle ODF = \\angle OBF = 90^\\circ$．\n又点 $D$ 在 $\\odot O$ 上，故 $DF$ 与 $\\odot O$ 相切．",
+      "knowledge_points": [
+        "图形与几何-圆的切线",
+        "图形与几何-圆周角",
+        "图形与几何-解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        14,
+        0.09,
+        0.28,
+        0.23,
+        0.18
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "为贯彻落实党中央关于全面建成小康社会的战略部署，某贫困地区的广大党员干部深入农村积极开展“精准扶贫”工作．经过多年的精心帮扶，截至 2019 年底，按照农民人均年纯收入 3218 元的脱贫标准，该地区只剩少量家庭尚未脱贫．现从这些尚未脱贫的家庭中随机抽取 50 户，统计其 2019 年的家庭人均年纯收入，得到如下图所示的条形图．\n（1）如果该地区尚未脱贫的家庭共有 1000 户，试估计其中家庭人均年纯收入低于 2000 元（不含 2000 元）的户数；\n（2）估计 2019 年该地区尚未脱贫的家庭人均年纯收入的平均值；\n（3）2020 年初，由于新冠疫情，农民收入受到严重影响，上半年当地农民家庭人均月纯收入的最低值变化情况如下面的折线图所示．为确保当地农民在 2020 年全面脱贫，当地政府积极筹集资金，引进某科研机构的扶贫专项项目．据预测，随着该项目的实施，当地农民自 2020 年 6 月开始，以后每月家庭人均月纯收入都将比上一个月增加 170 元．\n已知 2020 年农村脱贫标准为农民人均年纯收入 4000 元，试根据以上信息预测该地区所有贫困家庭能否在今年实现全面脱贫．",
+      "options": [],
+      "answer": "（1）120；（2）2.4 千元；（3）可以预测该地区所有贫困家庭能在今年实现全面脱贫",
+      "analysis": "【分析】\n（1）用 1000 乘以样本中家庭人均年纯收入低于 2000 元（不含 2000 元）的频率即可；\n（2）利用加权平均数进行计算；\n（3）求出当地农民 2020 年家庭人均年纯收入与 4000 进行大小比较即可.\n【详解】解：（1）依题意，可估计该地区尚未脱贫的 1000 户家庭中，家庭人均年纯收入低于 2000 元的户数为 $1000 \\times \\frac{6}{50} = 120$．\n（2）依题意，可估计该地区尚未脱贫的家庭 2019 年家庭人均年纯收入的平均值为\n$\\frac{1}{50} \\times (1.5 \\times 6 + 2.0 \\times 8 + 2.2 \\times 10 + 2.5 \\times 12 + 3.0 \\times 9 + 3.2 \\times 5) = 2.4$（千元）．\n（3）依题意，2020 年该地区农民家庭人均月纯收入的最低值如下：\n由表可知当地农民 2020 年家庭人均年纯收入不低于\n$500 + 300 + 150 + 200 + 300 + 450 + 620 + 790 + 960 + 1130 + 1300 + 1470 > 960+1130+1300+1470 > 4000$．\n所以可以预测该地区所有贫困家庭能在今年实现全面脱贫．",
+      "knowledge_points": [
+        "统计与概率-频数与频率",
+        "统计与概率-加权平均数",
+        "统计与概率-数据分析"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        15,
+        0.61,
+        0.11,
+        0.41,
+        0.24
+      ],
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "如图，$C$ 为线段 $AB$ 外一点．\n（1）求作四边形 $ABCD$，使得 $CD // AB$，且 $CD = 2AB$；（要求：尺规作图，不写作法，保留作图痕迹）\n（2）在（1）的四边形 $ABCD$ 中，$AC, BD$ 相交于点 $P$，$AB, CD$ 的中点分别为 $M, N$，求证：$M, P, N$ 三点在同一条直线上．",
+      "options": [],
+      "answer": "（1）详见解析；（2）详见解析",
+      "analysis": "【分析】\n（1）按要求进行尺规作图即可；\n(2)通过证明角度之间的大小关系，得到 $\\angle CPN + \\angle CPM = 180^\\circ$，即可说明 $M, P, N$ 三点在同一条直线上．\n【详解】解：（1）如图所示，则四边形 $ABCD$ 就是所求作的四边形．\n（2）∵ $AB // CD$，∴ $\\angle ABP = \\angle CDP$，$\\angle BAP = \\angle DCP$，\n∴ $\\triangle ABP \\sim \\triangle CDP$，∴ $\\frac{AB}{CD} = \\frac{AP}{CP}$．\n∵ $M, N$ 分别为 $AB, CD$ 的中点，\n∴ $AB = 2AM$， $CD = 2CN$，∴ $\\frac{AM}{CN} = \\frac{AP}{CP}$．\n连接 $MP, NP$，又∵ $\\angle BAP = \\angle DCP$，\n∴ $\\triangle APM \\sim \\triangle CPN$，∴ $\\angle APM = \\angle CPN$，\n∵ 点 $P$ 在 $AC$ 上 ∴ $\\angle APM + \\angle CPM = 180^\\circ$，∴ $\\angle CPN + \\angle CPM = 180^\\circ$，\n∴ $M, P, N$ 三点在同一条直线上．",
+      "knowledge_points": [
+        "图形与几何-尺规作图",
+        "图形与几何-相似三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        17,
+        0.2,
+        0.1,
+        0.29,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "如图，$\\triangle ADE$ 由 $\\triangle ABC$ 绕点 $A$ 按逆时针方向旋转 $90^\\circ$ 得到，且点 $B$ 的对应点 $D$ 恰好落在 $BC$ 的延长线上，$AD, EC$ 相交于点 $P$．\n（1）求 $\\angle BDE$ 的度数；\n（2）$F$ 是 $EC$ 延长线上的点，且 $\\angle CDF = \\angle DAC$．\n①判断 $DF$ 和 $PF$ 的数量关系，并证明；\n②求证：$\\frac{EP}{PF} = \\frac{PC}{CF}$．",
+      "options": [],
+      "answer": "（1）$90^\\circ$；（2）①$DF=PF$，证明详见解析；②详见解析",
+      "analysis": "【分析】\n（1）根据旋转的性质，得出 $\\triangle ABC \\cong \\triangle ADE$，进而得出 $\\angle B = \\angle ADE = \\angle ADB$，求出结果；\n（2）①由旋转的性质得出 $AC=AE$，$\\angle CAE=90^\\circ$，进而得出 $\\angle ACE = \\angle AEC = 45^\\circ$，再根据已知条件得出 $\\angle ADB + \\angle CDF = \\angle ACE + \\angle CAD$，最后得出结论即可；\n②过点 $P$ 作 $PH // ED$ 交 $DF$ 于点 $H$，得出 $\\triangle HPF \\cong \\triangle CDF$，由全等得出 $HF=CF$， $DH=PC$，最后得出结果．\n【详解】解：（1）由旋转的性质可知，$AB=AD$，$\\angle BAD=90^\\circ$，$\\triangle ABC \\cong \\triangle ADE$，\n∴ $\\angle B = \\angle ADE$，\n在 Rt$\\triangle ABD$ 中，$\\angle B = \\angle ADB = 45^\\circ$，\n∴ $\\angle ADE = \\angle B = 45^\\circ$，\n∴ $\\angle BDE = \\angle ADB + \\angle ADE = 90^\\circ$．\n（2）① $DF=PF$．\n证明：由旋转的性质可知，$AC=AE$，$\\angle CAE=90^\\circ$，\n在 Rt$\\triangle ACE$ 中，$\\angle ACE = \\angle AEC = 45^\\circ$，\n∵ $\\angle CDF = \\angle CAD$，$\\angle ACE = \\angle ADB = 45^\\circ$，\n∴ $\\angle ADB + \\angle CDF = \\angle ACE + \\angle CAD$，\n即 $\\angle FPD = \\angle FDP$，\n∴ $DF=PF$．\n②过点 $P$ 作 $PH // ED$ 交 $DF$ 于点 $H$，\n∴ $\\angle HPF = \\angle DEP$，$\\frac{EP}{PF} = \\frac{DH}{HF}$，\n∵ $\\angle DPF = \\angle ADE + \\angle DEP = 45^\\circ + \\angle DEP$，$\\angle DPF = \\angle ACE + \\angle DAC = 45^\\circ + \\angle DAC$，\n∴ $\\angle DEP = \\angle DAC$，\n又∵ $\\angle CDF = \\angle DAC$，\n∴ $\\angle DEP = \\angle CDF$，\n∴ $\\angle HPF = \\angle CDF$．\n又∵ $FD=FP$，$\\angle F = \\angle F$\n∴ $\\triangle HPF \\cong \\triangle CDF$，\n∴ $HF=CF$，\n∴ $DH=PC$，\n又∵ $\\frac{EP}{PF} = \\frac{DH}{HF}$，\n∴ $\\frac{EP}{PF} = \\frac{PC}{CF}$．",
+      "knowledge_points": [
+        "图形与几何-旋转",
+        "图形与几何-全等三角形的判定与性质",
+        "图形与几何-平行线分线段成比例"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        18,
+        0.31,
+        0.1,
+        0.29,
+        0.16
+      ],
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "已知直线 $l_1: y=-2x+10$ 交 $y$ 轴于点 $A$，交 $x$ 轴于点 $B$，二次函数的图象过 $A, B$ 两点，交 $x$ 轴于另一点 $C, BC=4$，且对于该二次函数图象上的任意两点 $P_1(x_1, y_1), P_2(x_2, y_2)$，当 $x_1 > x_2 \\ge 5$ 时，总有 $y_1 > y_2$．\n（1）求二次函数的表达式；\n（2）若直线 $l_2: y=mx+n (n \\ne 10)$，求证：当 $m=-2$ 时，$l_2 // l_1$；\n（3）$E$ 为线段 $BC$ 上不与端点重合的点，直线 $l_3: y=-2x+q$ 过点 $C$ 且交直线 $AE$ 于点 $F$，求 $\\triangle ABE$ 与 $\\triangle CEF$ 面积之和的最小值．",
+      "options": [],
+      "answer": "（1）$y=2x^2-12x+10$；（2）详见解析；（3）$40\\sqrt{2}-40$",
+      "analysis": "【分析】\n（1）先根据坐标轴上点的坐标特征由一次函数的表达式求出 A，B 两点的坐标，再根据 BC=4，得出点 C 的坐标，最后利用待定系数法可求二次函数的表达式；\n（2）利用反证法证明即可；\n（3）先求出 q 的值，利用 $CF // AB$，得出 $\\triangle FCE \\sim \\triangle ABE$，设 $BE=t (0 < t < 4)$，然后用含 t 的式子表示出 $S_{\\triangle ABE} + S_{\\triangle FCE}$ 的面积，再利用二次函数的性质求解即可．\n【详解】解：（1）对于 $l_1: y=-2x+10$，\n当 $x=0$ 时，$y=10$，所以 $A(0,10)$；\n当 $y=0$ 时，$-2x+10=0$， $x=5$，所以 $B(5,0)$，\n又因为 $BC=4$，所以 $C(9,0)$ 或 $C(1,0)$，\n若抛物线过 $C(9,0)$，则当 $5 < x < 7$ 时，$y$ 随 $x$ 的增大而减少，不符合题意，舍去．\n若抛物线过 $C(1,0)$，则当 $x > 3$ 时，必有 $y$ 随 $x$ 的增大而增大，符合题意．\n故可设二次函数的表达式为 $y=ax^2+bx+10$，\n依题意，二次函数的图象过 $B(5,0), C(1,0)$ 两点，\n所以 $\\begin{cases} 25a+5b+10=0 \\\\ a+b+10=0 \\end{cases}$，解得 $\\begin{cases} a=2 \\\\ b=-12 \\end{cases}$\n所求二次函数的表达式为 $y=2x^2-12x+10$．\n（2）当 $m=-2$ 时，直线 $l_2: y=-2x+n (n \\ne 10)$ 与直线 $l_1: y=-2x+10$ 不重合，\n假设 $l_1$ 和 $l_2$ 不平行，则 $l_1$ 和 $l_2$ 必相交，设交点为 $P(x_0, y_0)$，\n由 $\\begin{cases} y_0=-2x_0+10 \\\\ y_0=-2x_0+n \\end{cases}$ 得 $-2x_0+10=-2x_0+n$，\n解得 $n=10$，与已知 $n \\ne 10$ 矛盾，所以 $l_1$ 与 $l_2$ 不相交，\n所以 $l_2 // l_1$．\n（3）如图，\n因为直线 $l_3: y=-2x+q$ 过 $C(1,0)$，所以 $q=2$，\n又因为直线 $l_1: y=-2x+10$，所以 $l_3 // l_1$，即 $CF // AB$，\n所以 $\\angle FCE = \\angle ABE$，$\\angle CFE = \\angle BAE$，\n所以 $\\triangle FCE \\sim \\triangle ABE$，所以 $\\frac{S_{\\triangle FCE}}{S_{\\triangle ABE}} = (\\frac{CE}{BE})^2$，\n设 $BE=t (0 < t < 4)$，则 $CE=4-t$，\n$S_{\\triangle ABE} = \\frac{1}{2} BE \\cdot OA = \\frac{1}{2} \\times t \\times 10 = 5t$，\n所以 $S_{\\triangle FCE} = (\\frac{CE}{BE})^2 \\times S_{\\triangle ABE} = \\frac{(4-t)^2}{t^2} \\times 5t = \\frac{5(4-t)^2}{t}$，\n所以 $S_{\\triangle ABE} + S_{\\triangle FCE} = \\frac{5(4-t)^2}{t} + 5t$\n$= 10t + \\frac{80}{t} - 40$\n$= 10(\\sqrt{t} - \\frac{2\\sqrt{2}}{\\sqrt{t}})^2 + 40\\sqrt{2} - 40$\n所以当 $t=2\\sqrt{2}$ 时，$S_{\\triangle ABE} + S_{\\triangle FCE}$ 的最小值为 $40\\sqrt{2}-40$．",
+      "knowledge_points": [
+        "数与代数-二次函数与几何综合",
+        "数与代数-待定系数法",
+        "图形与几何-相似三角形"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    }
+  ]
+}

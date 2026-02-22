@@ -1,0 +1,511 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "在实数 $\\sqrt{2}$，$\\frac{1}{2}$，0，$-1$ 中，最小的数是（ ）",
+      "options": [
+        "$-1$",
+        "0",
+        "$\\frac{1}{2}$",
+        "$\\sqrt{2}$"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据正数大于 0，0 大于负数，两个负数，绝对值大的反而小．\n【详解】解：在实数 $\\sqrt{2}$，$\\frac{1}{2}$，0，$-1$ 中，$\\sqrt{2}$，$\\frac{1}{2}$ 为正数大于 0，$-1$ 为负数小于 0，$\\therefore$ 最小的数是：$-1$．\n故选：A．\n【点睛】本题考查了实数比较大小，解题的关键是：根据正数大于 0，0 大于负数，两个负数，绝对值大的反而小，可以直接判断出来．",
+      "knowledge_points": [
+        "数与式-实数-实数的大小比较"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "如图所示的六角螺栓，其俯视图是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据从上面看到的图形即可得到答案．\n【详解】从上面看是一个正六边形，中间是一个圆，故选：A．\n【点睛】本题考查了简单组合体的三视图，从上边看得到的图形是俯视图．看得见部分的轮廓线要画成实线，看不见部分的轮廓线要画成虚线．",
+      "knowledge_points": [
+        "图形与几何-投影与视图-三视图"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.1,
+        0.55,
+        0.15,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "如图，某研究性学习小组为测量学校 A 与河对岸工厂 B 之间的距离，在学校附近选一点 C，利用测量仪器测得 $\\angle A=60^\\circ, \\angle C=90^\\circ, AC=2$km．据此，可求得学校与工厂之间的距离 AB 等于（ ）",
+      "options": [
+        "2km",
+        "3km",
+        "$2\\sqrt{3}$km",
+        "4km"
+      ],
+      "answer": "D",
+      "analysis": "【分析】解直角三角形，已知一条直角边和一个锐角，求斜边的长．\n【详解】$\\because \\angle A=60^\\circ, \\angle C=90^\\circ, AC=2$km\n$\\therefore \\cos A = \\frac{AC}{AB}$，$\\cos 60^\\circ = \\frac{1}{2}$\n$\\therefore AB = \\frac{AC}{\\cos A} = \\frac{2}{\\frac{1}{2}} = 4$km．\n故选 D．\n【点睛】本题考查解直角三角形应用，掌握特殊锐角三角函数的值是解题关键．",
+      "knowledge_points": [
+        "图形与几何-图形的变化-解直角三角形及其应用"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.08,
+        0.27,
+        0.2,
+        0.1
+      ],
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "下列运算正确的是（ ）",
+      "options": [
+        "$2a-a=2$",
+        "$(a-1)^2=a^2-1$",
+        "$a^6 \\div a^3 = a^2$",
+        "$(2a^3)^2 = 4a^6$"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据不同的运算法则或公式逐项加以计算，即可选出正确答案．\n【详解】解：A：$2a-a=(2-1)a=a$，故 A 错误；\nB：$(a-1)^2=a^2-2a+1$，故 B 错误；\nC：$a^6 \\div a^3 = a^{6-3} = a^3$，故 C 错误；\nD：$(2a^3)^2 = 2^2 (a^3)^2 = 4a^{3 \\times 2} = 4a^6$．\n故选：D\n【点睛】本题考查了整式的加减法法则、乘法公式、同底数幂的除法法则、积的乘方、幂的乘方等知识点，熟知上述各种不同的运算法则或公式，是解题的关键．",
+      "knowledge_points": [
+        "数与式-整式-整式的运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "某校为推荐一项作品参加“科技创新”比赛，对甲、乙、丙、丁四项候选作品进行量化评分，具体成绩（百分制）如表：\n作品 | 甲 | 乙 | 丙 | 丁\n---|---|---|---|---\n创新性 | 90 | 95 | 90 | 90\n实用性 | 90 | 90 | 95 | 85\n\n如果按照创新性占 60%，实用性占 40%计算总成绩，并根据总成绩择优推荐，那么应推荐的作品是（ ）",
+      "options": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "answer": "B",
+      "analysis": "【分析】利用加权平均数计算总成绩,比较判断即可\n【详解】根据题意,得:\n甲：$90\\times 60\\%+90\\times 40\\%=90$；\n乙：$95\\times 60\\%+90\\times 40\\%=93$；\n丙：$90\\times 60\\%+95\\times 40\\%=92$；\n丁：$90\\times 60\\%+85\\times 40\\%=88$；\n故选 B\n【点睛】本题考查了加权平均数的计算，熟练掌握加权平均数的计算方法是解题的关键．",
+      "knowledge_points": [
+        "统计与概率-数据的分析-平均数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "某市 2018 年底森林覆盖率为 63%．为贯彻落实“绿水青山就是金山银山”的发展理念，该市大力开展植树造林活动，2020 年底森林覆盖率达到 68%，如果这两年森林覆盖率的年平均增长率为 x，那么，符合题意的方程是（ ）",
+      "options": [
+        "$0.63(1+x)=0.68$",
+        "$0.63(1+x)^2=0.68$",
+        "$0.63(1+2x)=0.68$",
+        "$0.63(1+2x)^2=0.68$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】设年平均增长率为 x，根据 2020 年底森林覆盖率＝2018 年底森林覆盖率乘 $(1+x)^2$，据此即可列方程求解．\n【详解】解：设年平均增长率为 x，由题意得：\n$0.63(1+x)^2 = 0.68$，\n故选：B．\n【点睛】此题主要考查了一元二次方程的应用，关键是根据题意找到等式两边的平衡条件，列出方程即可．",
+      "knowledge_points": [
+        "方程与不等式-一元二次方程-一元二次方程的应用"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "如图，点 F 在正五边形 ABCDE 的内部，$\\triangle ABF$ 为等边三角形，则 $\\angle AFC$ 等于（ ）",
+      "options": [
+        "$108^\\circ$",
+        "$120^\\circ$",
+        "$126^\\circ$",
+        "$132^\\circ$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据多边形内角和公式可求出 $\\angle ABC$ 的度数，根据正五边形的性质可得 $AB=BC$，根据等边三角形的性质可得 $\\angle ABF=\\angle AFB=60^\\circ$，$AB=BF$，可得 $BF=BC$，根据角的和差关系可得出 $\\angle FBC$ 的度数，根据等腰三角形的性质可求出 $\\angle BFC$ 的度数，根据角的和差关系即可得答案．\n【详解】$\\because ABCDE$ 是正五边形，\n$\\therefore \\angle ABC=\\frac{(5-2)\\times 180^\\circ}{5}=108^\\circ$，$AB=BC$，\n$\\because \\triangle ABF$ 为等边三角形，\n$\\therefore \\angle ABF=\\angle AFB=60^\\circ$，$AB=BF$，\n$\\therefore BF=BC$，$\\angle FBC=\\angle ABC-\\angle ABF=48^\\circ$，\n$\\therefore \\angle BFC=\\frac{1}{2}(180^\\circ - \\angle FBC)=66^\\circ$，\n$\\therefore \\angle AFC = \\angle AFB + \\angle BFC = 126^\\circ$，\n故选：C．\n【点睛】本题考查多边形内角和、等腰三角形的性质、等边三角形的性质，熟练掌握多边形内角和公式是解题关键．",
+      "knowledge_points": [
+        "图形与几何-多边形-正多边形",
+        "图形与几何-三角形-等腰三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.08,
+        0.42,
+        0.22,
+        0.16
+      ],
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "如图，一次函数 $y=kx+b(k>0)$ 的图象过点 $(-1,0)$，则不等式 $k(x-1)+b>0$ 的解集是（ ）",
+      "options": [
+        "$x>-2$",
+        "$x>-1$",
+        "$x>0$",
+        "$x>1$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】先平移该一次函数图像，得到一次函数 $y=k(x-1)+b(k>0)$ 的图像，再由图像即可以判断出 $k(x-1)+b>0$ 的解集．\n【详解】解：如图所示，将直线 $y=kx+b(k>0)$ 向右平移 1 个单位得到 $y=k(x-1)+b(k>0)$，该图像经过原点，由图像可知，在 y 轴右侧，直线位于 x 轴上方，即 $y>0$，\n因此，当 $x>0$ 时，$k(x-1)+b>0$，\n故选：C．\n【点睛】本题综合考查了函数图像的平移和利用一次函数图像求对应一元一次不等式的解集等，解决本题的关键是牢记一次函数的图像与一元一次不等式之间的关系，能从图像中得到对应部分的解集，本题蕴含了数形结合的思想方法等．",
+      "knowledge_points": [
+        "函数-一次函数-一次函数与不等式"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.08,
+        0.24,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "如图，AB 为 $\\odot O$ 的直径，点 P 在 AB 的延长线上，PC, PD 与 $\\odot O$ 相切，切点分别为 C，D．若 $AB=6, PC=4$，则 $\\sin\\angle CAD$ 等于（ ）",
+      "options": [
+        "$\\frac{3}{5}$",
+        "$\\frac{2}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{5}$"
+      ],
+      "answer": "D",
+      "analysis": "【分析】连接 OC，CP，DP 是 $\\odot O$ 的切线，根据定理可知 $\\angle OCP=90^\\circ$，$\\angle CAP=\\angle PAD$，利用三角形的一个外角等于与其不相邻的两个内角的和可求 $\\angle CAD=\\angle COP$，在 Rt$\\triangle OCP$ 中求出 $\\sin\\angle COP$ 即可．\n【详解】解：连接 OC，\nCP，DP 是 $\\odot O$ 的切线，则 $\\angle OCP=90^\\circ$，$\\angle CAP=\\angle PAD$，\n$\\therefore \\angle CAD=2\\angle CAP$，\n$\\because OA=OC \\therefore \\angle OAC=\\angle ACO$，\n$\\therefore \\angle COP=2\\angle CAO$\n$\\therefore \\angle COP=\\angle CAD$\n$\\because AB=6 \\therefore OC=3$\n在 Rt$\\triangle COP$ 中，$OC=3, PC=4 \\therefore OP=5$．\n$\\therefore \\sin\\angle CAD=\\sin\\angle COP=\\frac{4}{5}$\n故选：D．\n【点睛】本题利用了切线的性质，锐角三角函数，三角形的外角与内角的关系求解．",
+      "knowledge_points": [
+        "图形与几何-圆-切线的性质",
+        "图形与几何-图形的变化-解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        6,
+        0.08,
+        0.47,
+        0.23,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "二次函数 $y=ax^2-2ax+c(a>0)$ 的图象过 $A(-3, y_1), B(-1, y_2), C(2, y_3), D(4, y_4)$ 四个点，下列说法一定正确的是（ ）",
+      "options": [
+        "若 $y_1y_2>0$，则 $y_3y_4>0$",
+        "若 $y_1y_4>0$，则 $y_2y_3>0$",
+        "若 $y_2y_4<0$，则 $y_1y_3<0$",
+        "若 $y_3y_4<0$，则 $y_1y_2<0$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】求出抛物线对称轴，根据抛物线的开口方向和增减性，根据横坐标的值，可判断出各点纵坐标值的大小关系，从而可以求解．\n【详解】解：$\\because$ 二次函数 $y=ax^2-2ax+c(a>0)$ 的对称轴为：$x=-\\frac{-2a}{2a}=1$，且开口向上，\n$\\therefore$ 距离对称轴越近，函数值越小，\n$\\therefore y_1 > y_4 > y_2 > y_3$，\nA，若 $y_1y_2>0$，则 $y_3y_4>0$ 不一定成立，故选项错误，不符合题意；\nB, 若 $y_1y_4>0$，则 $y_2y_3>0$ 不一定成立，故选项错误，不符合题意；\nC，若 $y_2y_4<0$，所以 $y_1>0, y_3<0$，则 $y_1y_3<0$ 一定成立，故选项正确，符合题意；\nD，若 $y_3y_4<0$，则 $y_1y_2<0$ 不一定成立，故选项错误，不符合题意；\n故选：C．\n【点睛】本题考查了二次函数的图象与性质及不等式，解题的关键是：根据二次函数的对称轴及开口方向，确定各点纵坐标值的大小关系，再进行分类讨论判断即可．",
+      "knowledge_points": [
+        "函数-二次函数-二次函数的图象与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "若反比例函数 $y=\\frac{k}{x}$ 的图象过点 $(1,1)$，则 k 的值等于_____．",
+      "options": [],
+      "answer": "1",
+      "analysis": "【分析】结合题意，将点 $(1,1)$ 代入到 $y=\\frac{k}{x}$，通过计算即可得到答案．\n【详解】$\\because$ 反比例函数 $y=\\frac{k}{x}$ 的图象过点 $(1,1)$\n$\\therefore 1=\\frac{k}{1}$，即 $k=1$\n故答案为：1．\n【点睛】本题考查了反比例函数的知识；解题的关键是熟练掌握反比例函数图像的性质，从而完成求解．",
+      "knowledge_points": [
+        "函数-反比例函数-反比例函数的系数k的几何意义"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "写出一个无理数 x，使得 $1<x<4$，则 x 可以是_____（只要写出一个满足条件的 x 即可）",
+      "options": [],
+      "answer": "答案不唯一（如 $\\sqrt{2}, \\pi$ 等）",
+      "analysis": "【分析】从无理数的三种形式：①开方开不尽的数，②无限不循环小数，③含有 $\\pi$ 的数，\n【详解】根据无理数的定义写一个无理数，满足 $1<x<4$ 即可；\n所以可以写：\n①开方开不尽的数：$\\sqrt{2}$，\n②无限不循环小数，1.010010001……，\n③含有 $\\pi$ 的数 $\\frac{\\pi}{2}$ 等．只要写出一个满足条件的 x 即可．\n故答案为：答案不唯一（如 $\\sqrt{2}, \\pi, 1.010010001\\cdots$ 等）\n【点睛】本题考查了无理数的定义，解答本题的关键掌握无理数的三种形式：①开方开不尽的数，②无限不循环小数，③含有 $\\pi$ 的数．",
+      "knowledge_points": [
+        "数与式-实数-无理数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "某校共有 1000 名学生．为了解学生的中长跑成绩分布情况，随机抽取 100 名学生的中长跑成绩，画出条形统计图，如图．根据所学的统计知识可估计该校中长跑成绩优秀的学生人数是_____．",
+      "options": [],
+      "answer": "270",
+      "analysis": "【分析】利用样本中的优秀率来估计整体中的优秀率，从而得出总体中的中长跑成绩优秀的学生人数．\n【详解】解：由图知：样本中优秀学生的比例为：$\\frac{27}{100}=27\\%$，\n$\\therefore$ 该校中长跑成绩优秀的学生人数是：$1000\\times 27\\%=270$（人）\n故答案是：270．\n【点睛】本题考查了利用样本估计总体的统计思想，解题的关键是：根据图中信息求出样本中优秀率作为总体中的优秀率，即可求出总体中优秀的人数．",
+      "knowledge_points": [
+        "统计与概率-数据的分析-用样本估计总体"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.08,
+        0.35,
+        0.25,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "如图，AD 是 $\\triangle ABC$ 的角平分线．若 $\\angle B=90^\\circ, BD=\\sqrt{3}$，则点 D 到 AC 的距离是_____．",
+      "options": [],
+      "answer": "$\\sqrt{3}$",
+      "analysis": "【分析】根据角平分线的性质，角平分线上的点到角的两边的距离相等，即可求得．\n【详解】如图，过 D 作 $DE \\perp AC$，则 D 到 AC 的距离为 DE\n$\\because AD$ 平分 $\\angle CAB$，$\\angle B=90^\\circ, BD=\\sqrt{3}$，\n$\\therefore DE=BD=\\sqrt{3}$\n$\\therefore$ 点 D 到 AC 的距离为 $\\sqrt{3}$．\n故答案为 $\\sqrt{3}$．\n【点睛】本题考查了角平分线的性质，点到直线的距离等知识，理解点到直线的距离的定义，熟知角平分线的性质是解题关键．",
+      "knowledge_points": [
+        "图形与几何-三角形-角平分线的性质"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.09,
+        0.77,
+        0.23,
+        0.14
+      ],
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "已知非零实数 x，y 满足 $y=\\frac{x}{x+1}$，则 $\\frac{x-y+3xy}{xy}$ 的值等于_____．",
+      "options": [],
+      "answer": "4",
+      "analysis": "【分析】由条件 $y=\\frac{x}{x+1}$ 变形得，x-y=xy，把此式代入所求式子中，化简即可求得其值．\n【详解】由 $y=\\frac{x}{x+1}$ 得：xy+y=x，即 x-y=xy\n$\\therefore \\frac{x-y+3xy}{xy} = \\frac{xy+3xy}{xy} = \\frac{4xy}{xy} = 4$\n故答案为：4\n【点睛】本题是求代数式的值，考查了整体代入法求代数式的值，关键是根据条件 $y=\\frac{x}{x+1}$，变形为 x-y=xy，然后整体代入．",
+      "knowledge_points": [
+        "数与式-分式-分式的求值"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "如图，在矩形 ABCD 中，$AB=4, AD=5$，点 E，F 分别是边 AB, BC 上的动点，点 E 不与 A，B 重合，且 $EF=AB$，G 是五边形 AEFCD 内满足 $GE=GF$ 且 $\\angle EGF=90^\\circ$ 的点．现给出以下结论：\n① $\\angle GEB$ 与 $\\angle GFB$ 一定互补；\n② 点 G 到边 AB, BC 的距离一定相等；\n③ 点 G 到边 AD, DC 的距离可能相等；\n④ 点 G 到边 AB 的距离的最大值为 $2\\sqrt{2}$．\n其中正确的是_____．（写出所有正确结论的序号）",
+      "options": [],
+      "answer": "①②④",
+      "analysis": "【分析】①利用四边形内角和为 $360^\\circ$ 即可求证；\n②过 G 作 $GM \\perp AB, GN \\perp BC$，证明 $\\triangle GME \\cong \\triangle GNF$ 即可得结论；\n③分别求出 G 到边 AD, DC 的距离的范围，再进行判断；\n④点 G 到边 AB 的距离的最大值为当 $GE \\perp AB$ 时，GE 即为所求．\n【详解】$\\because \\angle EGF=90^\\circ, GE=GF$\n$\\therefore \\angle GEF=45^\\circ$\n① $\\because$ 四边形 ABCD 是矩形\n$\\therefore \\angle B=90^\\circ$\n$\\because \\angle EGF=90^\\circ$，四边形内角和为 $360^\\circ$\n$\\therefore \\angle GEB+\\angle GFB=180^\\circ$\n$\\therefore$ ①正确．\n②如图：过 G 作 $GM \\perp AB, GN \\perp BC$\n$\\therefore \\angle GME=\\angle GNF=90^\\circ$\n$\\because \\angle GEB+\\angle GFB=180^\\circ$，$\\angle GEM+\\angle GEB=180^\\circ$\n$\\therefore \\angle GFN=\\angle GEM$\n又 $\\because GE=GF$\n$\\therefore \\triangle GME \\cong \\triangle GNF(AAS)$\n$\\therefore GM=GN$\n即点 G 到边 AB, BC 的距离一定相等\n$\\therefore$ ②正确．\n③如图：过 G 作 $GN \\perp AD, GM \\perp CD$\n$\\therefore NG < AB - \\frac{1}{2}EF = 2, GM < AD - \\frac{1}{2}EF = 3$\n$\\therefore NG \\ge AB - EF\\times \\sin 45^\\circ = 4 - 2\\sqrt{2}, GM \\ge AD - EF\\times \\sin 45^\\circ = 5 - 2\\sqrt{2}$\n$\\therefore 4-2\\sqrt{2} \\le NG < 2, 5-2\\sqrt{2} < GM < 3$\n而 $2 < 5-2\\sqrt{2}$\n所以点 G 到边 AD, DC 的距离不可能相等\n$\\therefore$ ③不正确．\n④如图：当 $GE \\perp AB$ 时，点 G 到边 AB 的距离的最大\n$GE = EF \\times \\sin 45^\\circ = 4 \\times \\frac{\\sqrt{2}}{2} = 2\\sqrt{2}$\n$\\therefore$ ④正确．\n综上所述：①②④正确．\n故答案为①②④．\n【点睛】本题考查了动点问题，四边形内角和为 $360^\\circ$，全等三角形的证明，点到直线的距离，锐角三角函数，矩形的性质，熟悉矩形的性质是解题的关键．",
+      "knowledge_points": [
+        "图形与几何-四边形-矩形",
+        "图形与几何-三角形-全等三角形",
+        "图形与几何-图形的运动-动点问题"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        11,
+        0.08,
+        0.35,
+        0.24,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "计算：$\\sqrt{12} + |\\sqrt{3}-3| - (\\frac{1}{3})^{-1}$．",
+      "options": [],
+      "answer": "$\\sqrt{3}$",
+      "analysis": "【分析】先化简二次根式，绝对值，负整式指数幂，然后计算即可得答案．\n【详解】原式 $= 2\\sqrt{3} + (3-\\sqrt{3}) - 3 = 2\\sqrt{3} + 3 - \\sqrt{3} - 3 = \\sqrt{3}$．\n【点睛】本小题考查二次根式的化简、绝对值的意义、负指数幂等基础知识，熟练掌握运算法则是解题关键．",
+      "knowledge_points": [
+        "数与式-实数-实数的运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "如图，在 $\\square ABC$ 中，D 是边 BC 上的点，$DE \\perp AC, DF \\perp AB$，垂足分别为 E，F，且 $DE=DF, CE=BF$．求证：$\\angle B = \\angle C$．",
+      "options": [],
+      "answer": "见解析",
+      "analysis": "【分析】由 $DE \\perp AC, DF \\perp AB$ 得出 $\\angle DEC = \\angle DFB = 90^\\circ$，由 SAS 证明 $\\triangle DEC \\cong \\triangle DFB$，得出对应角相等即可．\n【详解】证明：$\\because DE \\perp AC, DF \\perp AB$，\n$\\therefore \\angle DEC = \\angle DFB = 90^\\circ$．\n在 $\\triangle DEC$ 和 $\\triangle DFB$ 中，\n$\\begin{cases} DE=DF \\\\ \\angle DEC=\\angle DFB \\\\ CE=BF \\end{cases}$\n$\\therefore \\triangle DEC \\cong \\triangle DFB$，\n$\\therefore \\angle B = \\angle C$．\n【点睛】本小题考查垂线的性质、全等三角形的判定与性质、等基础知识，考查推理能力、空间观念与几何直观．",
+      "knowledge_points": [
+        "图形与几何-三角形-全等三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        14,
+        0.08,
+        0.35,
+        0.2,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "解不等式组：$\\begin{cases} x \\ge 3-2x \\quad ① \\\\ \\frac{x-1}{2} - \\frac{x-3}{6} < 1 \\quad ② \\end{cases}$",
+      "options": [],
+      "answer": "$1 \\le x < 3$",
+      "analysis": "【分析】分别求出不等式组中各不等式的解集，再取公共部分即可．\n【详解】解：解不等式 $x \\ge 3-2x$，\n$3x \\ge 3$，\n解得: $x \\ge 1$．\n解不等式 $\\frac{x-1}{2} - \\frac{x-3}{6} < 1$，\n$3x - 3 - x + 3 < 6$，\n解得：$x < 3$．\n所以原不等式组的解集是：$1 \\le x < 3$．\n【点睛】本题考查了解一元一次不等式组，解题的关键是：准确解出各个不等式的解集，再取公共部分即可．",
+      "knowledge_points": [
+        "方程与不等式-一元一次不等式(组)-解一元一次不等式组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "某公司经营某种农产品，零售一箱该农产品的利润是 70 元，批发一箱该农产品的利润是 40 元．\n（1）已知该公司某月卖出 100 箱这种农产品共获利润 4600 元，问：该公司当月零售、批发这种农产品的箱数分别是多少？\n（2）经营性质规定，该公司零售的数量不能多于总数量的 30%．现该公司要经营 1000 箱这种农产品，问：应如何规划零售和批发的数量，才能使总利润最大？最大总利润是多少？",
+      "options": [],
+      "answer": "（1）该公司当月零售农产品 20 箱，批发农产品 80 箱；（2）该公司应零售农产品 300 箱、批发农产品 700 箱才能使总利润最大，最大总利润是 49000 元",
+      "analysis": "【分析】（1）设该公司当月零售农产品 x 箱，批发农产品 y 箱，利用卖出 100 箱这种农产品共获利润 4600 元列方程组，然后解方程组即可；\n（2）设该公司零售农产品 m 箱，获得总利润 w 元，利用利润的意义得到 $w=70m+40(1000-m)=30m+40000$，再根据该公司零售的数量不能多于总数量的 30%可确定 m 的范围，然后根据一次函数的性质解决问题．\n【详解】解：（1）设该公司当月零售农产品 x 箱，批发农产品 y 箱．\n依题意，得 $\\begin{cases} 70x+40y=4600 \\\\ x+y=100 \\end{cases}$\n解得 $\\begin{cases} x=20 \\\\ y=80 \\end{cases}$\n所以该公司当月零售农产品 20 箱，批发农产品 80 箱．\n（2）设该公司零售农产品 m 箱，获得总利润 w 元．则批发农产品的数量为 $(1000-m)$ 箱，\n$\\because$ 该公司零售的数量不能多于总数量的 30%\n$\\therefore m \\le 300$\n依题意，得 $w=70m+40(1000-m)=30m+40000, m \\le 300$．\n因为 $30>0$，所以 w 随着 m 的增大而增大，\n所以 $m=300$ 时，取得最大值 49000 元，\n此时 $1000-m=700$．\n所以该公司应零售农产品 300 箱、批发农产品 700 箱才能使总利润最大，最大总利润是 49000 元．\n【点睛】本题考查了一次函数的应用：建立一次函数模型，利用一次函数的性质和自变量的取值范围解决最值问题；也考查了二元一次方程组．",
+      "knowledge_points": [
+        "方程与不等式-二元一次方程组-二元一次方程组的应用",
+        "函数-一次函数-一次函数的应用"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，在 Rt$\\triangle ABC$ 中，$\\angle ACB=90^\\circ$．线段 EF 是由线段 AB 平移得到的，点 F 在边 BC 上，$\\triangle EFD$ 是以 EF 为斜边的等腰直角三角形，且点 D 恰好在 AC 的延长线上．\n（1）求证：$\\angle ADE = \\angle DFC$；\n（2）求证：$CD=BF$．",
+      "options": [],
+      "answer": "（1）见解析；（2）见解析",
+      "analysis": "【分析】（1）通过两角和等于 $90^\\circ$，然后通过等量代换即可证明；\n（2）通过平移的性质，证明三角形全等，得到对应边相等，通过等量代换即可证明．\n【详解】证明：（1）在等腰直角三角形 EFD 中，$\\angle EDF=90^\\circ$，\n$\\therefore \\angle ADE + \\angle ADF = 90^\\circ$．\n$\\because \\angle ACB=90^\\circ$，\n$\\therefore \\angle DFC + \\angle ADF = \\angle ACB = 90^\\circ$，\n$\\therefore \\angle ADE = \\angle DFC$．\n（2）连接 AE．\n由平移的性质得 $AE // BF, AE=BF$．\n$\\therefore \\angle EAD = \\angle ACB = 90^\\circ$，\n$\\therefore \\angle DCF = 180^\\circ - \\angle ACB = 90^\\circ$，\n$\\therefore \\angle EAD = \\angle DCF$．\n$\\because \\triangle EDF$ 是等腰直角三角形，\n$\\therefore DE=DF$．\n由（1）得 $\\angle ADE = \\angle DFC$，\n$\\therefore \\triangle AED \\cong \\triangle CDF$，\n$\\therefore AE=CD$，$\\therefore CD=BF$．\n【点睛】本小题考查平移的性质、直角三角形和等腰三角形的性质、全等三角形的判定和性质，解题的关键是：正确添加辅助线、熟练掌握平移的性质和全等三角形的判定与性质．",
+      "knowledge_points": [
+        "图形与几何-图形的运动-平移",
+        "图形与几何-三角形-全等三角形",
+        "图形与几何-三角形-等腰直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        16,
+        0.08,
+        0.56,
+        0.35,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "如图，已知线段 $MN=a, AR \\perp AK$，垂足为 a．\n（1）求作四边形 ABCD，使得点 B，D 分别在射线 AK, AR 上，且 $AB=BC=a$，$\\angle ABC=60^\\circ$，$CD // AB$；（要求：尺规作图，不写作法，保留作图痕迹）\n（2）设 P，Q 分别为（1）中四边形 ABCD 的边 AB, CD 的中点，求证：直线 AD, BC, PQ 相交于同一点．",
+      "options": [],
+      "answer": "（1）作图见解析；（2）证明见解析",
+      "analysis": "【分析】（1）根据 $AB=a$，点 B 在射线 AK 上，过点 A 作 $AB=a$；根据等边三角形性质，得 $AB=BC=AC$，分别过点 A、B，a 为半径画圆弧，交点即为点 C；再根据等边三角形的性质作 CD，即可得到答案；\n（2）设直线 BC 与 AD 相交于点 S、直线 PQ 与 AD 相交于点 S'，根据平行线和相似三角形的性质，得 $\\frac{AD}{S'D} = \\frac{AD}{SD}$，从而得 $S'D=SD$，即可完成证明．\n【详解】（1）作图如下：\n（图略，见解析图）\n四边形 ABCD 是所求作的四边形；\n（2）设直线 BC 与 AD 相交于点 S，\n$\\because DC // AB$，\n$\\therefore \\triangle SBA \\sim \\triangle SCD$，\n$\\therefore \\frac{SA}{SD} = \\frac{AB}{DC}$\n设直线 PQ 与 AD 相交于点 S'，\n同理 $\\frac{S'A}{S'D} = \\frac{PA}{QD}$．\n$\\because$ P，Q 分别为 AB, CD 的中点，\n$\\therefore PA=\\frac{1}{2}AB, QD=\\frac{1}{2}DC$\n$\\therefore \\frac{PA}{QD} = \\frac{AB}{DC}$\n$\\therefore \\frac{S'A}{S'D} = \\frac{SA}{SD}$，\n$\\therefore \\frac{S'D+AD}{S'D} = \\frac{SD+AD}{SD}$，\n$\\therefore \\frac{AD}{S'D} = \\frac{AD}{SD}$，\n$\\therefore S'D=SD$，\n$\\therefore$ 点 S 与 S' 重合，即三条直线 AD, BC, PQ 相交于同一点．\n【点睛】本题考查了尺规作图、等边三角形、直角三角形、平行线、相似三角形等基础知识，解题的关键是熟练掌握推理能力、空间观念、化归与转化思想，从而完成求解．",
+      "knowledge_points": [
+        "图形与几何-图形的相似-相似三角形",
+        "图形与几何-尺规作图"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        17,
+        0.08,
+        0.69,
+        0.4,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "“田忌赛马”的故事闪烁着我国古代先贤的智慧光芒．该故事的大意是：齐王有上、中、下三匹马 $A_1, B_1, C_1$，田忌也有上、中、下三匹马 $A_2, B_2, C_2$，且这六匹马在比赛中的胜负可用不等式表示如下：$A_1 > A_2 > B_1 > B_2 > C_1 > C_2$（注：A>B 表示 A 马与 B 马比赛，A 马获胜）．一天，齐王找田忌赛马，约定：每匹马都出场比赛一局，共赛三局，胜两局者获得整场比赛的胜利．面对劣势，田忌事先了解到齐王三局比赛的“出马”顺序为上马、中马、下马，并采用孙膑的策略：分别用下马、上马、中马与齐王的上马、中马、下马比赛，即借助对阵（$C_2, A_2, B_2$）获得了整场比赛的胜利，创造了以弱胜强的经典案例．\n假设齐王事先不打探田忌的“出马”情况，试回答以下问题：\n（1）如果田忌事先只打探到齐王首局将出“上马”，他首局应出哪种马才可能获得整场比赛的胜利？并求其获胜的概率；\n（2）如果田忌事先无法打探到齐王各局的“出马”情况，他是否必败无疑？若是，请说明理由；若不是，请列出田忌获得整场比赛胜利的所有对阵情况，并求其获胜的概率．",
+      "options": [],
+      "answer": "（1）田忌首局应出“下马”才可能在整场比赛中获胜，$\\frac{1}{2}$；（2）不是，田忌获胜的概率为 $\\frac{1}{6}$",
+      "analysis": "【分析】（1）通过理解题意分析得出结论，通过列举法求出获胜的概率；\n（2）通过列举齐王的出马顺序和田忌获胜的对阵，求出概率．\n【详解】（1）田忌首局应出“下马”才可能在整场比赛中获胜．\n此时，比赛的所有可能对阵为：\n$(C_2, A_2, B_2), (C_2, B_2, A_2)$，\n$(C_2, A_2, B_2)$ 胜出情况：负、胜、胜（田忌胜）；\n$(C_2, B_2, A_2)$ 胜出情况：负、负、胜（田忌负）；\n$(C_2, B_2, A_2)$ 实际上对阵是：$A_1 vs C_2$ (齐王胜), $B_1 vs B_2$ (齐王胜), $C_1 vs A_2$ (田忌胜)，齐王胜．\n田忌首局出下马 $C_2$，剩下 $A_2, B_2$．\n对阵可以是 $(C_2, A_2, B_2)$ 或 $(C_2, B_2, A_2)$．\n对齐王 $(A_1, B_1, C_1)$．\n1. $C_2$ vs $A_1$ (负), $A_2$ vs $B_1$ (胜), $B_2$ vs $C_1$ (胜) -> 田忌胜．\n2. $C_2$ vs $A_1$ (负), $B_2$ vs $B_1$ (负), $A_2$ vs $C_1$ (胜) -> 田忌负．\n共两种对阵，获胜1种，概率 $P_1 = \\frac{1}{2}$．\n（2）不是．\n田忌获胜的所有对阵是：\n$(C_2, A_2, B_2)$ 对应齐王 $(A_1, B_1, C_1)$；\n$(C_2, A_2, B_2)$ 对应齐王 $(B_1, C_1, A_1)$；\n$(A_2, B_2, C_2)$ 对应齐王 $(B_1, C_1, A_1)$；\n... (解析中列举了6种情况)\n齐王的出马顺序有 $3! = 6$ 种，每种顺序下田忌有 6 种对阵，总共 36 种．\n但在题目设定中，通常指田忌固定一种策略，面对齐王随机策略，或者齐王固定，田忌随机．\n这里问题是“田忌获得整场比赛胜利的所有对阵情况，并求其获胜的概率”．\n解析指出：齐王有6种出马顺序，每种顺序下，田忌有1种对阵能赢（即孙膑策略的变种）。\n所有可能的对阵组合是 $6 \\times 6 = 36$ 种．\n田忌获胜的情况有 6 种．\n所以概率 $P_2 = \\frac{6}{36} = \\frac{1}{6}$．\n【点睛】本小题考查简单随机事件的概率等基础知识，考查推理能力、应用意识，考查统计与概率思想；通过列举所有对阵情况，求得概率是解题的关键．",
+      "knowledge_points": [
+        "统计与概率-概率-简单事件的概率"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "如图，在正方形 ABCD 中，E，F 为边 AB 上的两个三等分点，点 A 关于 DE 的对称点为 $A'$， $AA'$ 的延长线交 BC 于点 G．\n（1）求证：$DE // A'F$；\n（2）求 $\\angle GA'B$ 的大小；\n（3）求证：$A'C = 2A'B$．",
+      "options": [],
+      "answer": "（1）见解析；（2）$45^\\circ$；（3）见解析",
+      "analysis": "【分析】（1）设直线 DE 与 AA' 相交于点 T，证明 ET 是 $\\triangle AA'F$ 的中位线即可；\n（2）连接 FG，取 FG 的中点 O，连接 OA', OB，证明点 A', F, B, G 四点共圆即可；\n（3）设 $AB=3a$，则 $AD=BC=3a, AF=2a, AE=BF=a$，设 $A'F=k$，则 $AA'=3k$，根据勾股定理找到 k 与 a 的关系，根据 $\\triangle A'FB \\sim \\triangle A'GC$ 列比例求解即可．\n【详解】（1）设直线 DE 与 AA' 相交于点 T，\n$\\because$ 点 A 与 A' 关于 DE 对称，\n$\\therefore DE$ 垂直平分 AA'，即 $DE \\perp AA', AT=TA'$．\n$\\because$ E，F 为 AB 边上的两个三等分点，\n$\\therefore AE=EF$，\n$\\therefore ET$ 是 $\\triangle AA'F$ 的中位线，\n$\\therefore ET // A'F$，即 $DE // A'F$．\n（2）连接 FG，$\\because$ 四边形 ABCD 是正方形，\n$\\therefore AD=AB, \\angle DAB=\\angle ABG=90^\\circ, \\angle DAT+\\angle BAG=90^\\circ$，\n$\\because DE \\perp AA', \\therefore \\angle DTA=90^\\circ$，\n$\\therefore \\angle ADT+\\angle DAT=90^\\circ, \\therefore \\angle ADT=\\angle BAG$．\n$\\therefore \\triangle DAE \\cong \\triangle ABG$，\n$\\therefore AE=BG$，又 $AE=EF=FB$，\n$\\therefore FB=BG$，\n$\\therefore \\triangle FBG$ 是等腰直角三角形，\n$\\therefore \\angle GFB=45^\\circ$．\n$\\because DE // A'F$，\n$\\therefore A'F \\perp AA'$，\n$\\therefore \\angle FA'G=90^\\circ$．\n取 FG 的中点 O，连接 OA', OB，\n在 Rt$\\triangle A'FG$ 和 Rt$\\triangle BFG$ 中，\n$OA' = OF = OG = \\frac{1}{2}FG, OB = OF = OG = \\frac{1}{2}FG$，\n$\\therefore OA'=OF=OG=OB$，\n$\\therefore$ 点 A', F, B, G 都在以 FG 为直径的 $\\odot O$ 上，\n$\\therefore \\angle GA'B = \\angle GFB = 45^\\circ$．\n（3）设 $AB=3a$，则 $AD=BC=3a, AF=2a, AE=BF=a$．\n由（2）得 $BG=AE=a$，\n$\\therefore \\tan\\angle BAG = \\frac{BG}{AB} = \\frac{a}{3a} = \\frac{1}{3}$，即 $\\tan\\angle A'AF = \\frac{1}{3}, \\therefore \\frac{A'F}{AA'} = \\frac{1}{3}$．\n设 $A'F=k$，则 $AA'=3k$，在 Rt$\\triangle A'AF$ 中，由勾股定理，得 $AF=\\sqrt{AA'^2+A'F^2}=\\sqrt{10}k$，\n$\\therefore \\sqrt{10}k=2a, k=\\frac{\\sqrt{10}a}{5}, A'F=\\frac{\\sqrt{10}a}{5}$．\n在 Rt$\\triangle ABG$ 中，由勾股定理，得 $AG=\\sqrt{AB^2+BG^2}=\\sqrt{10}a$．\n又 $\\because AA'=3k=\\frac{3\\sqrt{10}a}{5}$，\n$\\therefore A'G = AG - AA' = \\sqrt{10}a - \\frac{3\\sqrt{10}a}{5} = \\frac{2\\sqrt{10}a}{5}$，\n$\\therefore \\frac{A'F}{A'G} = \\frac{1}{2}$．\n$\\because CG = BC - CB = 2a$，\n$\\therefore \\frac{BF}{CG} = \\frac{a}{2a} = \\frac{1}{2}$，\n$\\therefore \\frac{A'F}{A'G} = \\frac{BF}{CG} = \\frac{1}{2}$．\n由（2）知，$\\angle A'FB + \\angle A'GB = 180^\\circ$，\n又 $\\because \\angle A'GC + \\angle A'GB = 180^\\circ$，\n$\\therefore \\angle A'FB = \\angle A'GC$，\n$\\therefore \\triangle A'FB \\sim \\triangle A'GC$，\n$\\therefore \\frac{A'B}{A'C} = \\frac{BF}{CG} = \\frac{1}{2}$，\n$\\therefore A'C = 2A'B$．\n【点睛】本小题考查正方形的性质、轴对称的性质、多边形内角与外角的关系、全等三角形的判定与性质、相似三角形的判定与性质、平行线的判定与性质、三角形中位线定理、圆的基本概念与性质、解直角三角形等基础知识，考查推理能力、运算能力，考查空间观念与几何直观，考查化归与转化思想．",
+      "knowledge_points": [
+        "图形与几何-四边形-正方形",
+        "图形与几何-图形的相似-相似三角形",
+        "图形与几何-圆-点与圆的位置关系"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        22,
+        0.05,
+        0.05,
+        0.25,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "已知抛物线 $y=ax^2+bx+c$ 与 x 轴只有一个公共点．\n（1）若抛物线过点 P(0,1)，求 a+b 的最小值；\n（2）已知点 $P_1(-2,1), P_2(2,-1), P_3(2,1)$ 中恰有两点在抛物线上．\n① 求抛物线的解析式；\n② 设直线 $l: y=kx+1$ 与抛物线交于 M，N 两点，点 A 在直线 $y=-1$ 上，且 $\\angle MAN=90^\\circ$，过点 A 且与 x 轴垂直的直线分别交抛物线和 l 于点 B，C．求证：$\\triangle MAB$ 与 $\\triangle MBC$ 的面积相等．",
+      "options": [],
+      "answer": "（1）-1；（2）① $y=\\frac{1}{4}x^2$；② 见解析",
+      "analysis": "【分析】（1）先求得 c=1，根据抛物线 $y=ax^2+bx+c$ 与 x 轴只有一个公共点，转化为判别式 $\\Delta=0$，从而构造二次函数求解即可；\n（2）①根据抛物线 $y=ax^2+bx+c$ 与 x 轴只有一个公共点，得抛物线上的点只能落在 x 轴的同侧，据此判断即可；②证明 AB=BC 即可\n【详解】解：因为抛物线 $y=ax^2+bx+c$ 与 x 轴只有一个公共点，\n以方程 $ax^2+bx+c=0$ 有两个相等的实数根，\n所以 $\\Delta = b^2-4ac=0$，即 $b^2=4ac$．\n（1）因为抛物线过点 P(0,1)，所以 $c=1$，\n所以 $b^2=4a$，即 $a=\\frac{b^2}{4}$．\n所以 $a+b = \\frac{b^2}{4}+b = \\frac{1}{4}(b+2)^2-1$，\n当 $b=-2$ 时，$a+b$ 取到最小值 -1．\n（2）①因为抛物线 $y=ax^2+bx+c$ 与 x 轴只有一个公共点，\n所以抛物线上的点只能落在 x 轴的同侧．\n又点 $P_1(-2,1), P_2(2,-1), P_3(2,1)$ 中恰有两点在抛物线的图象上，\n所以只能是 $P_1(-2,1), P_3(2,1)$ 在抛物线的图象上，\n由对称性可得抛物线的对称轴为 $x=0$，所以 $b=0$，\n即 $ac=0$，因为 $a \\neq 0$，所以 $c=0$．\n又点 $P_1(-2,1)$ 在抛物线的图象上，所以 $4a=1, a=\\frac{1}{4}$，\n故抛物线的解析式为 $y=\\frac{1}{4}x^2$．\n②由题意设 $M(x_1, y_1), N(x_2, y_2), A(x_0, -1)$，则 $y_1=kx_1+1, y_2=kx_2+1$．\n记直线 $y=-1$ 为 m，分别过 M，N 作 $ME \\perp m, NF \\perp m$，垂足分别为 E，F，\n即 $\\angle MEA = \\angle AFN = 90^\\circ$，\n因为 $\\angle MAN=90^\\circ$，所以 $\\angle MAE + \\angle NAF = 90^\\circ$．\n又 $\\angle MAE + \\angle EMA = 90^\\circ$，所以 $\\angle EMA = \\angle NAF$，所以 $\\triangle AME \\sim \\triangle NAF$．\n所以 $\\frac{AE}{NF} = \\frac{ME}{AF}$，所以 $\\frac{x_0-x_1}{y_2+1} = \\frac{y_1+1}{x_2-x_0}$，即 $(y_1+1)(y_2+1)+(x_1-x_0)(x_2-x_0)=0$．\n所以 $(kx_1+2)(kx_2+2)+(x_1-x_0)(x_2-x_0)=0$，\n即 $(k^2+1)x_1x_2 + (2k-x_0)(x_1+x_2) + x_0^2+4 = 0$．①\n把 $y=kx+1$ 代入 $y=\\frac{1}{4}x^2$，得 $x^2-4kx-4=0$，\n解得 $x_1=2k-2\\sqrt{k^2+1}, x_2=2k+2\\sqrt{k^2+1}$，\n所以 $x_1+x_2=4k, x_1x_2=-4$．②\n将②代入①，得 $-4(k^2+1)+4k(2k-x_0)+x_0^2+4=0$，\n即 $(x_0-2k)^2=0$，解得 $x_0=2k$，即 $A(2k, -1)$．\n所以过点 A 且与 x 轴垂直的直线为 $x=2k$，\n将 $x=2k$ 代入 $y=\\frac{1}{4}x^2$，得 $y=k^2$，即 $B(2k, k^2)$，\n将 $x=2k$ 代入 $y=kx+1$，得 $y=2k^2+1$，\n即 $C(2k, 2k^2+1)$，\n所以 $AB=k^2+1, BC=k^2+1$，因此 $AB=BC$，\n所以 $\\triangle MAB$ 与 $\\triangle MBC$ 的面积相等．\n【点睛】本小题考查一次函数和二次函数的图象与性质、相似三角形的判定与性质、三角形面积等基础知识，突出运算能力、推理能力、空间观念与几何直观、创新意识，灵活运用函数与方程思想、数形结合思想及化归与转化思想求解是解题的关键．",
+      "knowledge_points": [
+        "函数-二次函数-二次函数的综合应用"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    }
+  ]
+}

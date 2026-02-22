@@ -20,7 +20,10 @@
 - **Master Schema**: `supabase/MASTER_SCHEMA.sql` is the source of truth.
 - **Smart Upload**: The upload flow is "One Image -> Auto-Crop -> N Mistakes".
 
-## 4. Environment Variables
+## 3. UI/UX Consistency & Regression Rules
+- **Dropdowns/Popovers**: Always explicitly set `bg-white` (or approriate theme background) and `shadow-xl`, `z-50` to prevent transparency issues where content bleeds through.
+- **Z-Index**: Ensure floating menus are always layered above list items and dates.
+- **Theme**: Stick to the "Soft Professional / Linear Light" system (Zinc/Slate colors).
 - `GOOGLE_GEMINI_API_KEY`: Required.
 - `NEXT_PUBLIC_SUPABASE_URL`: `http://127.0.0.1:54321` (Local-First).
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Locally generated key ($ npx supabase status).

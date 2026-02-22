@@ -13,8 +13,12 @@ import {
   DropdownMenu, 
   DropdownMenuContent, 
   DropdownMenuItem, 
-  DropdownMenuTrigger 
+  DropdownMenuTrigger,
+  DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu"
+import { toggleMistakeStatus } from "@/app/mistakes/actions"
+import { useTransition } from "react"
+import { useRouter } from "next/navigation"
 
 export interface MistakeCardProps { 
   m: any
@@ -47,6 +51,21 @@ export const MistakeCard = memo(({
   handleUpdateDate,
   isUpdatingDate
 }: MistakeCardProps) => {
+  const [isPending, startTransition] = useTransition()
+  const router = useRouter()
+
+  const handleToggleStatus = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const newStatus = m.status === 'corrected' ? 'active' : 'corrected'
+    startTransition(async () => {
+      try {
+        await toggleMistakeStatus(m.id, newStatus)
+        router.refresh()
+      } catch (error) {
+        console.error("Failed to toggle status", error)
+      }
+    })
+  }
   return (
     <Card 
       className={cn(
@@ -135,11 +154,29 @@ export const MistakeCard = memo(({
                   <MoreVertical className="w-3.5 h-3.5" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white border-zinc-200 min-w-[120px]">
+              <DropdownMenuContent align="end" className="bg-white shadow-xl z-50 border-zinc-200 min-w-[140px]">
+                <DropdownMenuItem 
+                  className="cursor-pointer flex items-center gap-2 mb-1"
+                  onClick={handleToggleStatus}
+                  disabled={isPending}
+                >
+                  {m.status === 'corrected' ? (
+                    <>
+                      <RefreshCw className="w-3.5 h-3.5 text-orange-500" />
+                      <span className="text-zinc-700">重置为待解决</span>
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                      <span className="text-zinc-700">标记为已订正</span>
+                    </>
+                  )}
+                </DropdownMenuItem>
+                <DropdownMenuSeparator className="bg-zinc-100" />
                 <DropdownMenuItem 
                   className="text-red-600 focus:text-red-700 focus:bg-red-50 cursor-pointer flex items-center gap-2"
                   onClick={(e) => { e.stopPropagation(); handleDelete(m.id); }}
-                  disabled={isDeleting === m.id}
+                  disabled={isDeleting === m.id || isPending}
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                   <span>{isDeleting === m.id ? "删除中..." : "删除记录"}</span>

@@ -13,8 +13,12 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu"
-import { MoreVertical } from "lucide-react"
+import { MoreVertical, RefreshCw as RefreshingCw } from "lucide-react"
+import { toggleMistakeStatus } from "@/app/mistakes/actions"
+import { useTransition } from "react"
+import { useRouter } from "next/navigation"
 
 interface MistakeListViewProps {
   m: any
@@ -47,6 +51,22 @@ export const MistakeListView = memo(({
   handleUpdateDate,
   isUpdatingDate
 }: MistakeListViewProps) => {
+  const [isPending, startTransition] = useTransition()
+  const router = useRouter()
+
+  const handleToggleStatus = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const newStatus = m.status === 'corrected' ? 'active' : 'corrected'
+    startTransition(async () => {
+      try {
+        await toggleMistakeStatus(m.id, newStatus)
+        router.refresh()
+      } catch (error) {
+        console.error("Failed to toggle status", error)
+      }
+    })
+  }
+
   return (
     <div
       className={cn(
@@ -194,11 +214,29 @@ export const MistakeListView = memo(({
                              <MoreVertical className="w-3.5 h-3.5" />
                         </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
+                    <DropdownMenuContent align="end" className="!bg-white shadow-2xl z-[100] border-zinc-200 min-w-[140px]">
+                        <DropdownMenuItem 
+                            className="cursor-pointer flex items-center gap-2 mb-1"
+                            onClick={handleToggleStatus}
+                            disabled={isPending}
+                        >
+                            {m.status === 'corrected' ? (
+                                <>
+                                    <RefreshingCw className="w-3.5 h-3.5 text-orange-500 mr-2" />
+                                    <span className="text-zinc-700">重置为待解决</span>
+                                </>
+                            ) : (
+                                <>
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 mr-2" />
+                                    <span className="text-zinc-700">标记为已订正</span>
+                                </>
+                            )}
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
                         <DropdownMenuItem 
                             className="text-red-600 focus:text-red-700 cursor-pointer"
                             onClick={(e) => { e.stopPropagation(); handleDelete(m.id); }}
-                            disabled={isDeleting === m.id}
+                            disabled={isDeleting === m.id || isPending}
                         >
                             <Trash2 className="w-3.5 h-3.5 mr-2" />
                             <span>删除记录</span>

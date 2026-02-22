@@ -410,19 +410,24 @@ export function MistakeRegionSelector({
                         {/* Delete Button (visible on hover or selected) */}
                         <button
                             className={cn(
-                                "absolute -top-3 -right-3 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center shadow-sm hover:scale-110 transition-transform z-40 group",
+                                "absolute -top-3 -right-3 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center shadow-sm hover:scale-110 transition-transform z-50 group",
                                 isSelected ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                             )}
+                            onMouseDown={(e) => {
+                                e.stopPropagation()
+                                e.preventDefault()
+                                handleDelete(region.id)
+                            }}
                             onClick={(e) => {
                                 e.stopPropagation()
-                                handleDelete(region.id)
+                                e.preventDefault()
                             }}
                         >
                             <X className="w-3 h-3" />
                         </button>
 
                         {/* Label Badge */}
-                        <div className="absolute top-1 left-1 bg-white/90 text-[10px] px-1.5 py-0.5 rounded shadow-sm text-zinc-700 font-bold pointer-events-none select-none">
+                        <div className="absolute top-1 left-1 bg-white/90 text-[10px] px-1.5 py-0.5 rounded shadow-sm text-zinc-700 font-bold pointer-events-none select-none z-40">
                            题目 {idx + 1}
                         </div>
                     </div>

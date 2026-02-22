@@ -55,9 +55,11 @@ export interface Question {
   knowledge_points: string[];
   difficulty: number; // 1-5
   is_reference: boolean;
-  meta_data: Record<string, unknown>;
-  embedding: number[] | null;
-  occurred_at: string; // 错题发生时间
+  error_type: ErrorType | null;
+  error_analysis: string | null;
+  answer: string | null;
+  analysis: string | null;
+  ai_model: string | null;
   created_at: string;
 }
 
@@ -68,6 +70,8 @@ export interface Mistake {
   user_id: string;
   error_type: ErrorType;
   error_analysis: string | null;
+  status: "active" | "resolved" | "archived" | "corrected";
+  primary_knowledge_point: string | null;
   created_at: string;
 }
 

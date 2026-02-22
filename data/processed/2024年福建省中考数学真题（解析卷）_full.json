@@ -1,0 +1,532 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "1. 下列实数中，无理数是（ ）",
+      "options": [
+        "-3",
+        "0",
+        "\\frac{2}{3}",
+        "\\sqrt{5}"
+      ],
+      "answer": "D",
+      "analysis": "【分析】无理数就是无限不循环小数，理解无理数的概念，一定要同时理解有理数的概念，有理数是整数与分数的统称．即有限小数和无限循环小数是有理数，而无限不循环小数是无理数，由此即可判定选择项．\n本题主要考查了无理数的定义，其中初中范围内学习的无理数有：$\\pi, 2\\pi$等；开方开不尽的数；以及像0.1010010001....等数．\n【详解】根据无理数的定义可得：无理数是$\\sqrt{5}$。\n故选：D．",
+      "knowledge_points": [
+        "实数",
+        "无理数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "2. 据《人民日报》3 月 12 日电，世界知识产权组织近日公布数据显示，2023 年，全球 PCT（《专利合作条约》）国际专利申请总量为 27.26 万件，中国申请量为 69610 件，是申请量最大的来源国．数据 69610 用科学记数法表示为（ ）",
+      "options": [
+        "6961 \\times 10",
+        "696.1 \\times 10^2",
+        "6.961 \\times 10^4",
+        "0.6961 \\times 10^5"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据科学记数法的定义解答，科学记数法的表示形式为$a \\times 10^n$的形式，其中$1 \\le |a| < 10$，n为整数，确定 n 的值时，要看把原数变成 a 时，小数点移动了多少位，n 的绝对值与小数点移动的位数相同．当原数绝对值$> 1$时，n 是正数；当原数的绝对值$< 1$时，n 是负数．\n本题考查了科学记数法，熟悉科学记数法概念是解题的关键．\n【详解】$69610 = 6.961 \\times 10^4$\n故选：C．",
+      "knowledge_points": [
+        "科学记数法"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "3. 如图是由长方体和圆柱组成的几何体，其俯视图是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C",
+      "analysis": "【分析】本题考查了简单组合体的三视图，根据从上边看得到的图形是俯视图，可得答案．\n【详解】解：这个立体图形的俯视图是一个圆形，圆形内部中间是一个矩形．\n故选：C．",
+      "knowledge_points": [
+        "几何体",
+        "三视图"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.08,
+        0.05,
+        0.15,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "4. 在同一平面内，将直尺、含$30^\\circ$角的三角尺和木工角尺（$CD \\perp DE$）按如图方式摆放，若$AB \\parallel CD$，则$\\angle 1$的大小为（ ）",
+      "options": [
+        "30^\\circ",
+        "45^\\circ",
+        "60^\\circ",
+        "75^\\circ"
+      ],
+      "answer": "A",
+      "analysis": "【分析】本题考查了平行线的性质，由$AB \\parallel CD$，可得$\\angle CDB = 60^\\circ$，即可求解．\n【详解】$\\because AB \\parallel CD$，\n$\\therefore \\angle CDB = 60^\\circ$，\n$\\because CD \\perp DE$，则$\\angle CDE = 90^\\circ$，\n$\\therefore \\angle 1 = 180^\\circ - \\angle CDB - \\angle CDE = 30^\\circ$，\n故选：A．",
+      "knowledge_points": [
+        "平行线的性质",
+        "角度计算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.1,
+        0.55,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "5. 下列运算正确的是（ ）",
+      "options": [
+        "a^3 \\cdot a^3 = a^9",
+        "a^4 \\div a^2 = a^2",
+        "(a^3)^2 = a^5",
+        "2a^2 - a^2 = 2"
+      ],
+      "answer": "B",
+      "analysis": "【分析】本题考查了同底数幂的乘法，同底数幂的除法，幂的乘方，合并同类项，解题的关键是掌握同底数幂的乘法，同底数幂的除法，幂的乘方，合并同类项运算法则．\n利用同底数幂的乘法，同底数幂的除法，幂的乘方，合并同类项计算后判断正误．\n【详解】解：$a^3 \\cdot a^3 = a^6$，A 选项错误；\n$a^4 \\div a^2 = a^2$，B 选项正确；\n$(a^3)^2 = a^6$，C 选项错误；\n$2a^2 - a^2 = a^2$，D 选项错误；\n故选：B．",
+      "knowledge_points": [
+        "整式的运算",
+        "幂的运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "6. 哥德巴赫提出“每个大于 2 偶数都可以表示为两个质数之和”的猜想，我国数学家陈景润在哥德巴赫猜想的研究中取得了世界领先的成果．在质数 2，3，5 中，随机选取两个不同的数，其和是偶数的概率是（ ）",
+      "options": [
+        "\\frac{1}{4}",
+        "\\frac{1}{3}",
+        "\\frac{1}{2}",
+        "\\frac{2}{3}"
+      ],
+      "answer": "B",
+      "analysis": "【分析】此题考查了树状图或列表法求概率，根据题意画出树状图，求和后利用概率公式计算即可．\n【详解】解：画树状图如下：(见解析图)\n由树状图可知，共有 6 种不同情况，和是偶数的共有 2 种情况，故和是偶数的概率是$\\frac{2}{6} = \\frac{1}{3}$，\n故选：B",
+      "knowledge_points": [
+        "概率",
+        "树状图法"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "7. 如图，已知点 A, B 在 $\\odot O$ 上，$\\angle AOB = 72^\\circ$，直线 MN 与 $\\odot O$ 相切，切点为 C，且 C 为 $\\widehat{AB}$ 的中点，则 $\\angle ACM$ 等于（ ）",
+      "options": [
+        "18^\\circ",
+        "30^\\circ",
+        "36^\\circ",
+        "72^\\circ"
+      ],
+      "answer": "A",
+      "analysis": "【分析】本题考查了切线的性质，三角形内角和以及等腰三角形的性质，根据 C 为 $\\widehat{AB}$ 的中点，三角形内角和可求出 $\\angle OCA = \\frac{1}{2} \\times (180^\\circ - 36^\\circ) = 72^\\circ$，再根据切线的性质即可求解．\n【详解】$\\because \\angle AOB = 72^\\circ$，C 为 $\\widehat{AB}$ 的中点，\n$\\therefore \\angle AOC = 36^\\circ$\n$\\because OA = OC$\n$\\therefore \\angle OCA = \\frac{1}{2} \\times (180^\\circ - 36^\\circ) = 72^\\circ$\n$\\because$直线 MN 与 $\\odot O$ 相切，\n$\\therefore \\angle OCM = 90^\\circ$，\n$\\therefore \\angle ACM = \\angle OCM - \\angle OCA = 18^\\circ$\n故选：A．",
+      "knowledge_points": [
+        "圆的性质",
+        "切线性质",
+        "等腰三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.1,
+        0.18,
+        0.25,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "8. 今年我国国民经济开局良好，市场销售稳定增长，社会消费增长较快，第一季度社会消费品零售总额 120327 亿元，比去年第一季度增长 4.7%，求去年第一季度社会消费品零售总额．若将去年第一季度社会消费品零售总额设为 x 亿元，则符合题意的方程是（ ）",
+      "options": [
+        "(1+4.7\\%)x=120327",
+        "(1-4.7\\%)x=120327",
+        "\\frac{x}{1+4.7\\%}=120327",
+        "\\frac{x}{1-4.7\\%}=120327"
+      ],
+      "answer": "A",
+      "analysis": "【分析】本题主要考查了列一元一次方程，解题的关键是理解题意，找出等量关系，根据今年第一季度社会消费品零售总额 120327 亿元，比去年第一季度增长 4.7%，列出方程即可．\n【详解】解：将去年第一季度社会消费品零售总额设为 x 亿元，根据题意得：\n$(1+4.7\\%)x=120327$，\n故选：A．",
+      "knowledge_points": [
+        "一元一次方程的应用"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "9. 小明用两个全等的等腰三角形设计了一个“蝴蝶”的平面图案．如图，其中 $\\triangle OAB$ 与 $\\triangle ODC$ 都是等腰三角形，且它们关于直线 l 对称，点 E，F 分别是底边 AB，CD 的中点，$OE \\perp OF$．下列推断错误的是（ ）",
+      "options": [
+        "OB \\perp OD",
+        "\\angle BOC = \\angle AOB",
+        "OE = OF",
+        "\\angle BOC + \\angle AOD = 180^\\circ"
+      ],
+      "answer": "B",
+      "analysis": "【分析】本题考查了对称的性质，等腰三角形的性质等；\nA.由对称的性质得$\\angle AOB = \\angle DOC$，由等腰三角形的性质得$\\angle BOE = \\frac{1}{2}\\angle AOB$，$\\angle DOF = \\frac{1}{2}\\angle DOC$，即可判断；\nB.$\\angle BOC$不一定等于$\\angle AOB$，即可判断；\nC.由对称的性质得$\\triangle OAB \\cong \\triangle ODC$，由全等三角形的性质即可判断；\nD.过O作$GM \\perp OH$，可得$\\angle GOD = \\angle BOH$，由对称性质得$\\angle BOH = \\angle COH$，同理可证$\\angle AOM = \\angle AOH$，即可判断；\n掌握性质是解题的关键．\n【详解】解：A. $OE \\perp OF$，$\\therefore \\angle BOE + \\angle BOF = 90^\\circ$，由对称得$\\angle AOB = \\angle DOC$，$\\because$ 点 E，F 分别是底边 AB，CD 的中点，$\\triangle OAB$ 与 $\\triangle ODC$ 都是等腰三角形，$\\therefore \\angle BOE = \\frac{1}{2}\\angle AOB, \\angle DOF = \\frac{1}{2}\\angle DOC$，$\\therefore \\angle BOF + \\angle DOF = 90^\\circ$，$\\therefore OB \\perp OD$，结论正确，故不符合题意；\nB. $\\angle BOC$ 不一定等于 $\\angle AOB$，结论错误，故符合题意；\nC. 由对称得 $\\triangle OAB \\cong \\triangle ODC$，$\\therefore OE = OF$，结论正确，故不符合题意；\nD. 过 O 作 $GM \\perp OH$，可得 $\\angle GOD + \\angle DOH = 90^\\circ$，$\\angle BOH + \\angle DOH = 90^\\circ$，$\\therefore \\angle GOD = \\angle BOH$，由对称得 $\\angle BOH = \\angle COH$，$\\therefore \\angle GOD = \\angle COH$，同理可证$\\angle AOM = \\angle AOH$，$\\therefore \\angle AOD + \\angle BOC = \\angle AOD + \\angle AOM + \\angle DOG = 180^\\circ$，结论正确，故不符合题意；\n故选：B．",
+      "knowledge_points": [
+        "轴对称",
+        "等腰三角形",
+        "全等三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.1,
+        0.35,
+        0.3,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "10. 已知二次函数 $y = x^2 - 2ax + a (a \\ne 0)$ 的图象经过 $A(\\frac{a}{2}, y_1)$， $B(3a, y_2)$ 两点，则下列判断正确的是（ ）",
+      "options": [
+        "可以找到一个实数 a，使得 y_1 > a",
+        "无论实数 a 取什么值，都有 y_1 > a",
+        "可以找到一个实数 a，使得 y_2 < 0",
+        "无论实数 a 取什么值，都有 y_2 < 0"
+      ],
+      "answer": "C",
+      "analysis": "【分析】本题考查二次函数的图象和性质，根据题意得到二次函数开口向上，且对称轴为 $x = -\\frac{-2a}{2} = a$，顶点坐标为 $(a, a-a^2)$，再分情况讨论，当 $a>0$ 时，当 $a<0$ 时，$y_1, y_2$ 的大小情况，即可解题．\n【详解】解：$\\because$ 二次函数解析式为 $y = x^2 - 2ax + a (a \\ne 0)$，\n$\\therefore$ 二次函数开口向上，且对称轴为 $x = -\\frac{-2a}{2} = a$，顶点坐标为 $(a, a-a^2)$，\n当 $a>0$ 时，$0 < \\frac{a}{2} < a$，$\\therefore y_1 > a - a^2$，当 $a<0$ 时，$a < \\frac{a}{2} < 0$，$\\therefore a-a^2 < y_1 < a$，故 A、B 错误，不符合题意；\n$\\because$ 当 $a>0$ 时，$0 < a < 2a < 3a$，由二次函数对称性可知，$y_2 > a > 0$，\n当 $a<0$ 时，$3a < 2a < a < 0$，由二次函数对称性可知，$y_2 > a$，不一定大于 0，故 C 正确符合题意；D 错误，不符合题意；\n故选：C．",
+      "knowledge_points": [
+        "二次函数"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "11. 因式分解：$x^2+x=$_____．",
+      "options": [],
+      "answer": "x(x+1)",
+      "analysis": "【分析】要将一个多项式分解因式的一般步骤是首先看各项有没有公因式，若有公因式，则把它提取出来，之后再观察是否是完全平方公式或平方差公式，若是就考虑用公式法继续分解因式．因此，直接提取公因式 x 即可．\n【详解】解：$x^2+x=x(x+1)$",
+      "knowledge_points": [
+        "因式分解"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "12. 不等式 $3x-2 < 1$ 的解集是______．",
+      "options": [],
+      "answer": "x < 1",
+      "analysis": "【分析】本题考查的是解一元一次不等式，通过移项，未知数系数化为 1，求解即可解．\n【详解】解：$3x-2 < 1$，\n$3x < 3$，\n$x < 1$，\n故答案为：$x < 1$．",
+      "knowledge_points": [
+        "一元一次不等式"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "13. 学校为了解学生的安全防范意识，随机抽取了 12 名学生进行相关知识测试，将测试成绩整理得到如图所示的条形统计图，则这 12 名学生测试成绩的中位数是______．（单位：分）",
+      "options": [],
+      "answer": "90",
+      "analysis": "【分析】本题考查了中位数的知识，解题的关键是了解中位数的求法，难度不大．根据中位数的定义（数据个数为偶数时，排序后，位于中间位置的数为中位数），结合图中的数据进行计算即可；\n【详解】解：$\\because$共有 12 个数，\n$\\therefore$中位数是第 6 和 7 个数 平均数，\n$\\therefore$中位数是 $(90+90) \\div 2 = 90$；\n故答案为：90．",
+      "knowledge_points": [
+        "统计图",
+        "中位数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        8,
+        0.1,
+        0.16,
+        0.28,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "14. 如图，正方形 ABCD 的面积为 4，点 E，F，G，H 分别为边 AB，BC，CD，AD 的中点，则四边形 EFGH 的面积为______．",
+      "options": [],
+      "answer": "2",
+      "analysis": "【分析】本题考查正方形性质，线段中点的性质，根据正方形性质和线段中点的性质得到 $HD = DG = 1$，进而得到 $S_{\\triangle DGH}$，同理可得 $S_{\\triangle AHE} = S_{\\triangle EFB} = S_{\\triangle CGF} = \\frac{1}{2}$，最后利用四边形 EFGH 的面积 = 正方形 ABCD 的面积 - 4 个小三角形面积求解，即可解题．\n【详解】解：$\\because$ 正方形 ABCD 的面积为 4，\n$\\therefore AB=BC=CD=AD=2$，$\\angle D=90^\\circ$，\n$\\because$ 点 E，F，G，H 分别为边 AB，BC，CD，AD 的中点，\n$\\therefore HD=DG=1$，\n$\\therefore S_{\\triangle DGH} = \\frac{1}{2} \\times 1 \\times 1 = \\frac{1}{2}$，\n同理可得 $S_{\\triangle AHE} = S_{\\triangle EFB} = S_{\\triangle CGF} = \\frac{1}{2}$，\n$\\therefore$ 四边形 EFGH 的面积为 $4 - \\frac{1}{2} - \\frac{1}{2} - \\frac{1}{2} - \\frac{1}{2} = 2$．\n故答案为：2．",
+      "knowledge_points": [
+        "正方形",
+        "中点",
+        "几何面积"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        8,
+        0.1,
+        0.6,
+        0.2,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "15. 如图，在平面直角坐标系 xOy 中，反比例函数 $y = \\frac{k}{x}$ 的图象与 $\\odot O$ 交于 A, B 两点，且点 A, B 都在第一象限．若 $A(1, 2)$，则点 B 的坐标为______．",
+      "options": [],
+      "answer": "(2, 1)",
+      "analysis": "【分析】本题考查了反比例函数的性质以及勾股定理，完全平方公式的应用，先根据 $A(1, 2)$ 得出 $k = 2$，设 $B(n, m)$，则 $nm = k = 2$，结合完全平方公式的变形与应用得出 $(m-1)(m-2)=0$，结合 $A(1, 2)$，则 $B(2, 1)$，即可作答．\n【详解】解：如图：连接 OA, OB，\n$\\because$ 反比例函数 $y = \\frac{k}{x}$ 的图象与 $\\odot O$ 交于 A, B 两点，且 $A(1, 2)$\n$\\therefore 2 = \\frac{k}{1}, k = 2$\n设 $B(n, m)$，则 $nm = k = 2$\n$\\because OB = OA = \\sqrt{2^2 + 1^2} = \\sqrt{5}$\n$\\therefore m^2 + n^2 = (\\sqrt{5})^2 = 5$\n则 $(m+n)^2 = m^2 + n^2 + 2mn = 5 + 4 = 9$\n$\\because$ 点 B 在第一象限\n$\\therefore m+n=3$\n把 $nm=k=2$ 代入得 $m + \\frac{2}{m} = 3, m^2 - 3m + 2 = (m-1)(m-2) = 0$\n$\\therefore m_1 = 1, m_2 = 2$\n经检验：$m_1=1, m_2=2$ 都是原方程的解\n$\\because A(1, 2)$\n$\\therefore B(2, 1)$\n故答案为：(2, 1)",
+      "knowledge_points": [
+        "反比例函数",
+        "勾股定理"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.1,
+        0.35,
+        0.3,
+        0.3
+      ],
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "16. 无动力帆船是借助风力前行．下图是帆船借助风力航行的平面示意图，已知帆船航行方向与风向所在直线的夹角 $\\angle PDA$ 为 $70^\\circ$，帆与航行方向的夹角 $\\angle PDQ$ 为 $30^\\circ$，风对帆的作用力 F 为 400N．根据物理知识，F 可以分解为两个力 $F_1$ 与 $F_2$，其中与帆平行的力 $F_1$ 不起作用，与帆垂直的力 $F_2$ 仅可以分解为两个力 $f_1$ 与 $f_2$，$f_1$ 与航行方向垂直，被舵的阻力抵消；$f_2$ 与航行方向一致，是真正推动帆船前行的动力．在物理学上常用线段的长度表示力的大小，据此，建立数学模型：$F = AD = 400$，则 $f_2 = CD =$______．（单位：N）（参考数据：$\\sin40^\\circ = 0.64, \\cos40^\\circ = 0.77$）",
+      "options": [],
+      "answer": "128",
+      "analysis": "【分析】此题考查了解直角三角形的应用，求出 $\\angle ADQ = 40^\\circ$，$\\angle 1 = \\angle PDQ = 30^\\circ$，由 $AB \\parallel QD$ 得到 $\\angle BAD = \\angle ADQ = 40^\\circ$，求出 $F_2 = BD = AD \\cdot \\sin \\angle BAD = 256$，求出 $\\angle BDC = 90^\\circ - \\angle 1 = 60^\\circ$ 在 Rt$\\triangle BCD$ 中，根据 $f_2 = CD = BD \\cdot \\cos \\angle BDC$ 即可求出答案．\n【详解】解：如图，\n$\\because$ 帆船航行方向与风向所在直线的夹角 $\\angle PDA$ 为 $70^\\circ$，帆与航行方向的夹角 $\\angle PDQ$ 为 $30^\\circ$，\n$\\therefore \\angle ADQ = \\angle PDA - \\angle PDQ = 70^\\circ - 30^\\circ = 40^\\circ$，$\\angle 1 = \\angle PDQ = 30^\\circ$，\n$\\because AB \\parallel QD$，\n$\\therefore \\angle BAD = \\angle ADQ = 40^\\circ$，\n在 Rt$\\triangle ABD$ 中，$F = AD = 400$，$\\angle ABD = 90^\\circ$，\n$\\therefore F_2 = BD = AD \\cdot \\sin \\angle BAD = 400 \\times \\sin 40^\\circ = 400 \\times 0.64 = 256$，\n由题意可知，$BD \\perp DQ$，\n$\\therefore \\angle BDC + \\angle 1 = 90^\\circ$，\n$\\therefore \\angle BDC = 90^\\circ - \\angle 1 = 60^\\circ$\n在 Rt$\\triangle BCD$ 中，$BD = 256, \\angle BCD = 90^\\circ$，\n$\\therefore f_2 = CD = BD \\cdot \\cos \\angle BDC = 256 \\times \\cos 60^\\circ = 256 \\times \\frac{1}{2} = 128$，\n故答案为：128",
+      "knowledge_points": [
+        "解直角三角形",
+        "物理模型"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        11,
+        0.1,
+        0.05,
+        0.25,
+        0.25
+      ],
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "17. 计算：$(-1)^0 + |-5| - \\sqrt{4}$．",
+      "options": [],
+      "answer": "4",
+      "analysis": "【分析】本题考查零指数幂、绝对值、算术平方根等基础知识，熟练掌握运算法则是解题的关键．根据零指数幂、绝对值、算术平方根分别计算即可；\n【详解】解：原式$= 1 + 5 - 2 = 4$．",
+      "knowledge_points": [
+        "实数运算",
+        "零指数幂",
+        "绝对值"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "18. 如图，在菱形 ABCD 中，点 E、F 分别在 BC、CD 边上，$\\angle AEB = \\angle AFD$，求证：$BE = DF$．",
+      "options": [],
+      "answer": "见解析",
+      "analysis": "【分析】本题考查菱形的性质、全等三角形的判定与性质，熟练掌握全等三角形的判定与性质是解答的关键．根据菱形的性质证得 $AB = AD$，$\\angle B = \\angle D$，再根据全等三角形的判定证明 $\\triangle ABE \\cong \\triangle ADF (AAS)$ 即可．\n【详解】证明：$\\because$ 四边形 ABCD 是菱形，\n$\\therefore AB = AD$，$\\angle B = \\angle D$，\n$\\because \\angle AEB = \\angle AFD$，\n$\\therefore \\triangle ABE \\cong \\triangle ADF (AAS)$，\n$\\therefore BE = DF$．",
+      "knowledge_points": [
+        "菱形",
+        "全等三角形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        12,
+        0.1,
+        0.35,
+        0.25,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "19. 解方程：$\\frac{3}{x+2} + 1 = \\frac{x}{x-2}$．",
+      "options": [],
+      "answer": "x=10",
+      "analysis": "【分析】本题考查解分式方程,掌握解分式方程的步骤和方法，将分式方程化为整式方程求解，即可解题．\n【详解】解：$\\frac{3}{x+2} + 1 = \\frac{x}{x-2}$，\n方程两边都乘 $(x+2)(x-2)$，得 $3(x-2) + (x+2)(x-2) = x(x+2)$．\n去括号得：$3x - 6 + x^2 - 4 = x^2 + 2x$，\n解得 $x = 10$．\n经检验，$x = 10$ 是原方程的根．",
+      "knowledge_points": [
+        "分式方程"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "20. 已知 A、B 两地都只有甲、乙两类普通高中学校．在一次普通高中学业水平考试中，A 地甲类学校有考生 3000 人，数学平均分为 90 分：乙类学校有考生 2000 人，数学平均分为 80 分．\n（1）求 A 地考生的数学平均分；\n（2）若 B 地甲类学校数学平均分为 94 分，乙类学校数学平均分为 82 分，据此，能否判断 B 地考生数学平均分一定比 A 地考生数学平均分高？若能，请给予证明：若不能，请举例说明．",
+      "options": [],
+      "answer": "（1）86；（2）不能，举例见解析",
+      "analysis": "【分析】本小题考查加权平均数等基础知识，（1）根据平均数的概念求解即可；（2）根据平均数的意义求解即可．\n【详解】（1）由题意，得 A 地考生的数学平均分为 $\\frac{1}{5000} \\times (90 \\times 3000 + 80 \\times 2000) = 86$．\n（2）不能．\n举例如下：如 B 地甲类学校有考生 1000 人，乙类学校有考生 3000 人，则 B 地考生的数学平均分为 $\\frac{1}{4000} \\times (94 \\times 1000 + 82 \\times 3000) = 85$．\n因为 $85 < 86$，所以不能判断 B 地考生数学平均分一定比 A 地考生数学平均分高．",
+      "knowledge_points": [
+        "加权平均数"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "21. 如图，已知二次函数 $y = x^2 + bx + c$ 的图象与 x 轴交于 A, B 两点，与 y 轴交于点 C，其中 $A(-2, 0), C(0, -2)$．\n（1）求二次函数的表达式；\n（2）若 P 是二次函数图象上的一点，且点 P 在第二象限，线段 PC 交 x 轴于点 D，$\\triangle PDB$ 的面积是 $\\triangle CDB$ 的面积的 2 倍，求点 P 的坐标．",
+      "options": [],
+      "answer": "（1）y = x^2 + x - 2；（2）(-3, 4)",
+      "analysis": "【分析】本小题考查二次函数表达式、二次函数的图象与性质二元一次方程组、一元二次方程、三角形面积等基础知识，考查运算能力、推理能力、几何直观等，考查数形结合思想、函数与方程思想、化归与转化思想等．\n（1）根据待定系数法求解即可；\n（2）设 $P(m, n)$，因为点 P 在第二象限，所以 $m < 0, n > 0$．依题意，得 $\\frac{S_{\\triangle PDB}}{S_{\\triangle CDB}} = 2$，即可得出 $\\frac{n}{CO} = 2$，求出 $n = 2CO = 4$，由 $m^2 + m - 2 = 4$，求出 m，即可求出点 P 坐标．\n【详解】（1）解：将 $A(-2, 0), C(0, -2)$ 代入 $y = x^2 + bx + c$，\n得 $\\begin{cases} 4 - 2b + c = 0 \\\\ c = -2 \\end{cases}$，\n解得 $\\begin{cases} b = 1 \\\\ c = -2 \\end{cases}$，\n所以，二次函数的表达式为 $y = x^2 + x - 2$．\n（2）解：设 $P(m, n)$，因为点 P 在第二象限，所以 $m < 0, n > 0$．\n依题意，得 $\\frac{S_{\\triangle PDB}}{S_{\\triangle CDB}} = 2$，即 $\\frac{\\frac{1}{2} BD \\cdot n}{\\frac{1}{2} BD \\cdot CO} = 2$，所以 $\\frac{n}{CO} = 2$．\n由已知，得 $CO = 2$，所以 $n = 2CO = 4$．\n由 $m^2 + m - 2 = 4$，\n解得 $m_1 = -3, m_2 = 2$（舍去），\n所以点 P 坐标为 $(-3, 4)$．",
+      "knowledge_points": [
+        "二次函数",
+        "待定系数法",
+        "三角形面积"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        14,
+        0.1,
+        0.05,
+        0.25,
+        0.25
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "22. 如图，已知直线 $l_1 \\parallel l_2$．\n（1）在 $l_1, l_2$ 所在的平面内求作直线 l，使得 $l \\parallel l_1 \\parallel l_2$，且 l 与 $l_1$ 间的距离恰好等于 l 与 $l_2$ 间的距离；（要求：尺规作图，不写作法，保留作图痕迹）\n（2）在（1）的条件下，若 $l_1$ 与 $l_2$ 间的距离为 2，点 A, B, C 分别在 $l, l_1, l_2$ 上，且 $\\triangle ABC$ 为等腰直角三角形，求 $\\triangle ABC$ 的面积．",
+      "options": [],
+      "answer": "（1）见解析；（2）1 或 2.5",
+      "analysis": "【分析】本题主要考查基本作图，平行线的性质，全等三角形的判定以及分类讨论思想：\n（1）先作出与 $l_1, l_2$ 垂直的垂线，再作出夹在 $l_1, l_2$ 间垂线段的垂直平分线即可；\n（2）分 $\\angle BAC = 90^\\circ, AB = AC$；$\\angle ABC = 90^\\circ, BA = BC$；$\\angle ACB = 90^\\circ, CA = CB$ 三种情况，结合三角形面积公式求解即可\n【详解】（1）如图，直线 l 就是所求作的直线．\n（2）①当 $\\angle BAC = 90^\\circ, AB = AC$ 时，\n$\\because l \\parallel l_1 \\parallel l_2$，直线 $l_1$ 与 $l_2$ 间的距离为 2，且 l 与 $l_1$ 间的距离等于 l 与 $l_2$ 间的距离，根据图形的对称性可知：$BC = 2$，\n$\\therefore AB = AC = \\sqrt{2}$，\n$\\therefore S_{\\triangle ABC} = \\frac{1}{2} AB \\cdot AC = 1$．\n②当 $\\angle ABC = 90^\\circ, BA = BC$ 时，\n分别过点 A, C 作直线 $l_1$ 的垂线，垂足为 M, N，\n$\\therefore \\angle AMB = \\angle BNC = 90^\\circ$．\n$\\because l \\parallel l_1 \\parallel l_2$，直线 $l_1$ 与 $l_2$ 间的距离为 2，且 l 与 $l_1$ 间的距离等于 l 与 $l_2$ 间的距离，\n$\\therefore CN = 2, AM = 1$．\n$\\because \\angle MAB + \\angle ABM = 90^\\circ, \\angle NBC + \\angle ABM = 90^\\circ$，\n$\\therefore \\angle MAB = \\angle NBC, \\therefore \\triangle AMB \\cong \\triangle BNC$，\n$\\therefore BM = CN = 2$．\n在 Rt$\\triangle ABM$ 中，由勾股定理得 $AB^2 = AM^2 + BM^2$，$\\therefore AB = \\sqrt{5}$．\n$\\therefore S_{\\triangle ABC} = \\frac{1}{2} AB \\cdot BC = \\frac{5}{2}$．\n③当 $\\angle ACB = 90^\\circ, CA = CB$ 时，同理可得，$S_{\\triangle ABC} = \\frac{5}{2}$．\n综上所述，$\\triangle ABC$ 的面积为 1 或 $\\frac{5}{2}$．",
+      "knowledge_points": [
+        "尺规作图",
+        "等腰直角三角形",
+        "分类讨论"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        15,
+        0.1,
+        0.35,
+        0.4,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "23. 已知实数 a, b, c, m, n 满足 $3m+n = \\frac{b}{a}, mn = \\frac{c}{a}$．\n（1）求证：$b^2 - 12ac$ 为非负数；\n（2）若 a, b, c 均为奇数，m, n 是否可以都为整数？说明你的理由．",
+      "options": [],
+      "answer": "（1）见解析；（2）不可能，理由见解析",
+      "analysis": "【分析】（1）根据题意得出 $b = a(3m+n), c = amn$，进而计算 $b^2 - 12ac$，根据非负数的性质，即可求解；\n（2）分情况讨论，① m, n 都为奇数；② m, n 为整数，且其中至少有一个为偶数．\n【详解】（1）证明：因为 $3m+n = \\frac{b}{a}, mn = \\frac{c}{a}$，\n所以 $b = a(3m+n), c = amn$．\n则 $b^2 - 12ac = [a(3m+n)]^2 - 12a^2mn = a^2(9m^2 + 6mn + n^2) - 12a^2mn = a^2(9m^2 - 6mn + n^2) = a^2(3m-n)^2$．\n因为 a, m, n 是实数，所以 $a^2(3m-n)^2 \\ge 0$，\n所以 $b^2 - 12ac$ 为非负数．\n（2）解：m, n 不可能都为整数．\n理由如下：若 m, n 都为整数，其可能情况有：① m, n 都为奇数；② m, n 为整数，且其中至少有一个为偶数．\n①当 m, n 都为奇数时，则 $3m+n$ 必为偶数．又 $3m+n = \\frac{b}{a}$，所以 $b = a(3m+n)$．因为 a 为奇数，所以 $a(3m+n)$ 必为偶数，这与 b 为奇数矛盾．\n②当 m, n 为整数，且其中至少有一个为偶数时，则 mn 必为偶数．又因为 $mn = \\frac{c}{a}$，所以 $c = amn$．因为 a 为奇数，所以 amn 必为偶数，这与 c 为奇数矛盾．\n综上所述，m, n 不可能都为整数．",
+      "knowledge_points": [
+        "代数式求值",
+        "奇偶性"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "24. 在手工制作课上，老师提供了如图 1 所示的矩形卡纸 ABCD，要求大家利用它制作一个底面为正方形的礼品盒．小明按照图 2 的方式裁剪（其中 $AE = FB$），恰好得到纸盒的展开图，并利用该展开图折成一个礼品盒，如图 3 所示．\n（1）直接写出 $\\frac{AD}{AB}$ 的值；\n（2）如果要求折成的礼品盒的两个相对的面上分别印有“吉祥”和“如意”，如图 4 所示，那么应选择的纸盒展开图图样是（ ）\nA. (图略) B. (图略) C. (图略) D. (图略)\n（3）\n| 卡纸型号 | 型号Ⅰ | 型号Ⅱ | 型号Ⅲ |\n| :--- | :--- | :--- | :--- |\n| 规格（单位：cm） | $30 \\times 40$ | $20 \\times 80$ | $80 \\times 80$ |\n| 单价（单位：元） | 3 | 5 | 20 |\n现以小明设计的纸盒展开图（图 2）为基本样式，适当调整 AE，EF 的比例，制作棱长为 10cm 的正方体礼品盒，如果要制作 27 个这样的礼品盒，请你合理选择上述卡纸（包括卡纸的型号及相应型号卡纸的张数），并在卡纸上画出设计示意图（包括一张卡纸可制作几个礼品盒，其展开图在卡纸上的分布情况），给出所用卡纸的总费用．\n（要求：①同一型号的卡纸如果需要不止一张，只要在一张卡纸上画出设计方案；②没有用到的卡纸，不要在该型号的卡纸上作任何设计；③所用卡纸的数量及总费用直接填在答题卡的表格上；④本题将综合考虑“利用卡纸的合理性”和“所用卡纸的总费用”给分，总费用最低的才能得满分；⑤试卷上的卡纸仅供作草稿用）",
+      "options": [],
+      "answer": "（1）2；（2）C；（3）见解析",
+      "analysis": "【分析】本题考查了几何体的展开与折叠，空间观念、推理能力、模型观念、创新意识等知识，掌握相关知识是解题的关键．\n（1）由折叠和题意可知，$GH = AE + FB, AH = DH$，四边形 EFNM 是正方形，得到 $EM = EF$，即 $AG = EF$，即可求解；\n（2）根据几何体的展开图即可求解；\n（3）由题意可得，每张型号Ⅲ卡纸可制作 10 个正方体，每张型号Ⅱ卡纸可制作 2 个正方体，每张型号Ⅰ卡纸可制作 1 个正方体，即可求解．\n【详解】（1）由折叠和题意可知，$GH = AE + FB, AH = DH$，\n$\\because$ 四边形 EFNM 是正方形，\n$\\therefore EM = EF$，即 $AG = EF$，\n$\\therefore GH + AG = AE + FB + EF$，即 $AH = AB$，\n$\\because AH = DH$，\n$\\therefore \\frac{AD}{AB} = \\frac{AH + DH}{AB} = 2$，\n（2）根据几何体的展开图可知，“吉”和“如”在对应面上，“祥”和“意”在对应面上，而对应面上的字中间相隔一个几何图形，且字体相反，\n$\\therefore$ C 选项符合题意，\n（3）根据（1）和题意可得：卡纸每格的边长为 5cm，则要制作一个边长为 10cm 的正方体的展开图形为(见解析图)。\n选择型号Ⅲ卡纸 2 张，型号Ⅱ卡纸 3 张，型号Ⅰ卡纸 1 张，则 $10 \\times 2 + 2 \\times 3 + 1 \\times 1 = 27$（个），\n所用卡纸总费用为：$20 \\times 2 + 5 \\times 3 + 3 \\times 1 = 58$（元）．",
+      "knowledge_points": [
+        "几何展开图",
+        "优化问题"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        18,
+        0.1,
+        0.6,
+        0.8,
+        0.25
+      ],
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "25. 如图，在 $\\triangle ABC$ 中，$\\angle BAC = 90^\\circ, AB = AC$，以 AB 为直径 $\\odot O$ 交 BC 于点 D，AE $\\perp$ OC，垂足为 E，BE 的延长线交 AD 于点 F．\n（1）求 $\\frac{OE}{AE}$ 的值；\n（2）求证：$\\triangle AEB \\sim \\triangle BEC$；\n（3）求证：AD 与 EF 互相平分．",
+      "options": [],
+      "answer": "（1）1/2；（2）见解析；（3）见解析",
+      "analysis": "【分析】（1）先证得 $AC = 2AO$，再在 Rt$\\triangle AOC$ 中，$\\tan \\angle AOC = \\frac{AC}{AO} = 2$．在 Rt$\\triangle AOE$ 中，$\\tan \\angle AOC = \\frac{AE}{OE}$，可得 $\\frac{AE}{OE} = 2$，再证得结果；\n（2）过点 B 作 $BM \\parallel AE$，交 EO 延长线于点 M，先证明 $\\triangle AOE \\cong \\triangle BOM$，可得 $AE = BM, OE = OM$，再证得 $\\angle BAE = \\angle CBE$，再由相似三角形的判定可得结论；\n（3）如图，连接 DE, DF，由（2）$\\triangle AEB \\sim \\triangle BEC$，可得 $\\frac{AE}{BE} = \\frac{AB}{BC} = \\frac{2AO}{2BD} = \\frac{AO}{BD}$，$\\angle EAO = \\angle EBD$，从而得出 $\\triangle AOE \\sim \\triangle BDE$，从而得出 $\\angle BED = \\angle AEO = 90^\\circ$，得出 $\\angle AFB = \\angle DEF$，再上平行线判定得出 $AF \\parallel DE$，再证得 $AE \\parallel FD$，从而得出四边形 AEDF 是平行四边形，最后由平行四边形的性质可得结果．",
+      "knowledge_points": [
+        "圆",
+        "相似三角形",
+        "平行四边形"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        22,
+        0.1,
+        0.75,
+        0.25,
+        0.2
+      ],
+      "images": []
+    }
+  ]
+}

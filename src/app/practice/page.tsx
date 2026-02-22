@@ -21,6 +21,8 @@ export default function PracticePage() {
   const [generating, setGenerating] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
 
+  const [fetchError, setFetchError] = useState<string | null>(null);
+
   // 1. 加载原题
   useEffect(() => {
     async function loadData() {
@@ -28,7 +30,11 @@ export default function PracticePage() {
       
       const { data, error } = await getQuestionAction(questionId);
         
-      if (data && !error) setOriginalQuestion(data);
+      if (error) {
+         setFetchError(error);
+      } else if (data) {
+         setOriginalQuestion(data);
+      }
       setLoading(false);
     }
     loadData();
@@ -76,6 +82,9 @@ export default function PracticePage() {
   }
 
   if (!originalQuestion) {
+    if (fetchError) {
+      return <div className="p-8 text-center text-red-500">获取题目详细信息失败: {fetchError}</div>;
+    }
     return <div className="p-8 text-center text-muted-foreground">未找到题目 ID</div>;
   }
 

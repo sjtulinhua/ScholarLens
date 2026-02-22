@@ -26,8 +26,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuLabel
 } from "@/components/ui/dropdown-menu";
-import { FileText, Clock, GraduationCap, ChevronRight, BookOpen, Database, Filter, BrainCircuit, X } from "lucide-react";
+import { FileText, Clock, GraduationCap, ChevronRight, BookOpen, Database, Filter, BrainCircuit, X, Plus, Check } from "lucide-react";
 import { LatexRenderer } from "@/components/ui/latex-renderer";
+import { addReferenceToMistakes } from "./actions";
+import { DifficultyDistribution } from "@/components/reference/DifficultyDistribution";
 
 interface ReferenceItem {
   id: string;
@@ -39,14 +41,22 @@ interface ReferenceItem {
   meta_data?: any;
   knowledge_points?: string[];
   images?: string[];
-  error_analysis?: string;
+  analysis?: string;
   question_type?: string;
 }
 
-export function ReferenceListView({ initialItems }: { initialItems: ReferenceItem[] }) {
+export function ReferenceListView({ 
+  initialItems, 
+  userMistakes 
+}: { 
+  initialItems: ReferenceItem[];
+  userMistakes: { difficulty: number }[];
+}) {
   const [selectedItem, setSelectedItem] = useState<ReferenceItem | null>(null);
   const [activeTab, setActiveTab] = useState("all");
   const [minDifficulty, setMinDifficulty] = useState(0);
+  const [isAdding, setIsAdding] = useState(false);
+  const [addedItems, setAddedItems] = useState<Set<string>>(new Set());
 
   // 1. 综合过滤：科目 + 难度
   const filteredItems = useMemo(() => {
@@ -86,6 +96,19 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
 
   const groupedKeys = Object.keys(groupedItems);
 
+  const handleAddToMistakes = async (id: string) => {
+    setIsAdding(true);
+    const result = await addReferenceToMistakes(id);
+    setIsAdding(false);
+    
+    if (result.error) {
+      alert(`添加失败: ${result.error}`);
+    } else {
+      setAddedItems(prev => new Set(prev).add(id));
+      // alert("该题目已加入您的错题本。"); // Silently succeed structurally, or visually obvious via button state change
+    }
+  };
+
   return (
     <div className="space-y-8 bg-white min-h-screen text-zinc-900 rounded-2xl p-8 border border-zinc-200/50 shadow-sm">
       <div className="flex items-center justify-between border-b border-zinc-100 pb-6">
@@ -94,10 +117,10 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
              <div className="w-8 h-8 rounded-lg bg-zinc-100 flex items-center justify-center text-zinc-600">
                <Database className="w-4 h-4" />
              </div>
-             基准参考库
+             往届真题库
            </h2>
            <p className="text-zinc-500 font-mono text-[10px] mt-2 uppercase tracking-wider pl-10">
-             Reference Knowledge Base / Vectorized
+             Past Exams / Vectorized Reference
            </p>
         </div>
         <div className="flex items-center gap-3">
@@ -136,6 +159,26 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
         </div>
       </div>
 
+      {/* Global Difficulty Legend */}
+      <div className="bg-zinc-50/50 border border-zinc-100 rounded-lg px-4 py-3 flex flex-wrap items-center gap-6">
+        <span className="text-xs font-bold text-zinc-700 uppercase tracking-widest font-mono hidden sm:block">
+          图例说明 / Legend
+        </span>
+        <div className="w-px h-4 bg-zinc-200 hidden sm:block" />
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-sm bg-emerald-400" />
+          <span className="text-xs font-medium text-zinc-600">基础题 (1-2星)</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-sm bg-blue-400" />
+          <span className="text-xs font-medium text-zinc-600">中档题 (3星)</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-sm bg-orange-500" />
+          <span className="text-xs font-medium text-zinc-600">压轴题 (4-5星)</span>
+        </div>
+      </div>
+
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
         <div className="overflow-x-auto pb-2 -mx-2 px-2 scrollbar-none">
           <TabsList className="w-full md:w-auto justify-start h-auto p-1 bg-zinc-50 border border-zinc-200 rounded-lg inline-flex min-w-full md:min-w-0">
@@ -166,17 +209,28 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between py-4 md:py-5 gap-4">
                      <div className="flex flex-col gap-1">
-                        <AccordionTrigger className="hover:no-underline py-0 text-base md:text-lg font-semibold text-zinc-800 group-hover:text-blue-600 transition-colors text-left">
-                          {source}
+                        <AccordionTrigger className="hover:no-underline py-0 text-base md:text-lg font-semibold text-zinc-800 group-hover:text-blue-600 transition-colors text-left flex-1 items-start">
+                          <div className="flex flex-col gap-1 w-full text-left">
+                            <span>{source}</span>
+                            <div className="text-[10px] text-zinc-400 font-mono uppercase tracking-wider flex items-center gap-2 mt-1">
+                               <span>{groupedItems[source].length} Questions</span>
+                               <span className="w-1 h-1 rounded-full bg-zinc-300" />
+                               <span>Updated {new Date(groupedItems[source][0]?.created_at).toLocaleDateString()}</span>
+                            </div>
+                          </div>
                         </AccordionTrigger>
-                        <div className="text-[10px] text-zinc-400 font-mono uppercase tracking-wider flex items-center gap-2">
-                           <span>{groupedItems[source].length} Questions</span>
-                           <span className="w-1 h-1 rounded-full bg-zinc-300" />
-                           <span>Updated {new Date().toLocaleDateString()}</span>
-                        </div>
                      </div>
-                     {/* Visual Indicator of items */}
-                     <div className="flex -space-x-1 pl-1 md:pl-0 md:mr-4">
+                     
+                     {/* Difficulty Profile Area */}
+                     <div className="hidden md:block w-64 shrink-0">
+                       <DifficultyDistribution 
+                         questions={groupedItems[source]} 
+                         userMistakes={userMistakes} 
+                       />
+                     </div>
+                     
+                     {/* Visual Indicator of items (Mobile mainly) */}
+                     <div className="flex -space-x-1 pl-1 md:pl-4 shrink-0 mt-4 md:mt-0 items-center">
                         {groupedItems[source].slice(0, 4).map((_, i) => (
                           <div key={i} className="w-6 h-6 rounded-full border-2 border-white bg-zinc-100 flex items-center justify-center text-[8px] text-zinc-400 ring-1 ring-zinc-200">
                              Q{i+1}
@@ -190,7 +244,13 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                      </div>
                   </div>
 
-                  <AccordionContent className="pt-2 pb-6">
+                  <AccordionContent className="pt-4 pb-6 border-t border-zinc-100 mt-4">
+                    <div className="md:hidden mb-6">
+                      <DifficultyDistribution 
+                         questions={groupedItems[source]} 
+                         userMistakes={userMistakes} 
+                       />
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {groupedItems[source].map((item) => (
                         <Card
@@ -274,8 +334,8 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                            AI Analysis
                          </h4>
                          <div className="bg-zinc-50 p-4 md:p-6 rounded-xl border border-zinc-100 text-sm leading-7 text-zinc-700">
-                            {selectedItem.error_analysis ? (
-                              <LatexRenderer content={selectedItem.error_analysis} />
+                            {selectedItem.analysis ? (
+                              <LatexRenderer content={selectedItem.analysis} />
                             ) : (
                               "No analysis available."
                             )}
@@ -319,8 +379,26 @@ export function ReferenceListView({ initialItems }: { initialItems: ReferenceIte
                       </div>
                    </div>
 
-                   <div className="mt-auto hidden md:block">
-                      <Button className="w-full bg-zinc-900 text-white hover:bg-zinc-800 shadow-sm transition-all" onClick={() => setSelectedItem(null)}>
+                   <div className="mt-auto hidden md:flex flex-col gap-2">
+                      <Button 
+                        variant={addedItems.has(selectedItem.id) ? "outline" : "default"}
+                        className={`w-full shadow-sm transition-all ${addedItems.has(selectedItem.id) ? "text-green-600 border-green-200 bg-green-50" : "bg-blue-600 text-white hover:bg-blue-700"}`} 
+                        onClick={() => !addedItems.has(selectedItem.id) && handleAddToMistakes(selectedItem.id)}
+                        disabled={isAdding || addedItems.has(selectedItem.id)}
+                      >
+                        {isAdding ? (
+                          "添加中..."
+                        ) : addedItems.has(selectedItem.id) ? (
+                          <>
+                            <Check className="w-4 h-4 mr-2" /> 已加入错题录
+                          </>
+                        ) : (
+                          <>
+                            <Plus className="w-4 h-4 mr-2" /> 快捷加入错题录
+                          </>
+                        )}
+                      </Button>
+                      <Button variant="ghost" className="w-full text-zinc-500 hover:text-zinc-900 transition-all" onClick={() => setSelectedItem(null)}>
                          Close Detail View
                       </Button>
                    </div>

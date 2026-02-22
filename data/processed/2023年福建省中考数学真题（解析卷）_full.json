@@ -1,0 +1,501 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "下列实数中，最大的数是（ ）",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": "D",
+      "analysis": "【分析】有理数比较大小的法则：正数大于负数，正数大于 0，两个负数中绝对值大的反而小，据此判断即可．\n【详解】解：正数大于 0，正数大于负数，且 $2>1$，所以 $2, 1, 0, -1$ 中最大的实数是 2．故选：D\n【点睛】本题主要考查了有理数比较大小，熟练掌握其方法是解题的关键．",
+      "knowledge_points": [
+        "数与代数-实数-实数的大小比较"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "下图是由一个长方体和一个圆柱组成的几何体，它的俯视图是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据从上面看得到的图形是俯视图即可解答．\n【详解】解：从上面看下边是一个矩形，矩形的上边是一个圆，故选：D．\n【点睛】本题考查了简单组合体的三视图，掌握从上面看得到的图形是俯视图是解答本题的关键．",
+      "knowledge_points": [
+        "图形与几何-投影与视图-三视图"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.09,
+        0.42,
+        0.15,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "若某三角形的三边长分别为 3，4，m，则 m 的值可以是（ ）",
+      "options": [
+        "1",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": "B",
+      "analysis": "【分析】根据三角形的三边关系求解即可．\n【详解】解：由题意，得 $4-3 < m < 4+3$，即 $1 < m < 7$，故 m 的值可选 5，故选：B．\n【点睛】本题考查了三角形的三边关系，熟练掌握三角形的三边关系是解答的关键．",
+      "knowledge_points": [
+        "图形与几何-三角形-三角形的三边关系"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "党的二十大报告指出，我国建成世界上规模最大的教育体系、社会保障体系、医疗卫生体系，教育普及水平实现历史性跨越，基本养老保险覆盖十亿四千万人，基本医疗保险参保率稳定在百分之九十五、将数据 1040000000 用科学记数法表示为（ ）",
+      "options": [
+        "104 × 10^7",
+        "10.4 × 10^8",
+        "1.04 × 10^9",
+        "0.104 × 10^{10}"
+      ],
+      "answer": "C",
+      "analysis": "【分析】科学记数法的表示形式为 $a \\times 10^n$ 的形式，其中 $1 \\le |a| < 10$，n 为整数．确定 n 的值时，要看把原数变成 a 时，小数点移动了多少位，n 的绝对值与小数点移动的位数相同．\n【详解】解：$1040000000 = 1.04 \\times 10^9$，故选：C．\n【点睛】此题主要考查了科学记数法的表示方法．",
+      "knowledge_points": [
+        "数与代数-实数-科学记数法"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "下列计算正确的是（ ）",
+      "options": [
+        "(a^2)^3 = a^6",
+        "a^6 ÷ a^2 = a^3",
+        "a^3 · a^4 = a^{12}",
+        "a^2 - a = a"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据幂的乘方法、同底数幂的除法法则、同底数幂的乘法以及合并同类项逐项判断即可．\n【详解】解：A．$(a^2)^3 = a^{2 \\times 3} = a^6$，故 A 选项计算正确，符合题意；\nB. $a^6 \\div a^2 = a^{6-2} = a^4$，故 B 选项计算错误，不合题意；\nC. $a^3 \\cdot a^4 = a^{3+4} = a^7$，故 C 选项计算错误，不合题意；\nD. $a^2$ 与 $-a$ 不是同类项，所以不能合并，故 D 选项计算错误，不合题意．故选：A．\n【点睛】本题主要考查同底数幂的乘除运算、幂的乘方运算以及整式的加减运算等知识点．",
+      "knowledge_points": [
+        "数与代数-整式的运算-幂的运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "根据福建省统计局数据，福建省 2020 年的地区生产总值为 43903.89 亿元，2022 年的地区生产总值为 53109.85 亿元．设这两年福建省地区生产总值的年平均增长率为 x，根据题意可列方程（ ）",
+      "options": [
+        "43903.89(1+x) = 53109.85",
+        "43903.89(1+x)^2 = 53109.85",
+        "43903.89x^2 = 53109.85",
+        "43903.89(1+x^2) = 53109.85"
+      ],
+      "answer": "B",
+      "analysis": "【分析】设这两年福建省地区生产总值的年平均增长率为 x，根据题意列出一元二次方程即可求解．\n【详解】设这两年福建省地区生产总值的年平均增长率为 x，根据题意可列方程 $43903.89(1+x)^2 = 53109.85$，故选：B．\n【点睛】本题考查了一元二次方程的应用，根据题意列出一元二次方程是解题的关键．",
+      "knowledge_points": [
+        "数与代数-方程与不等式-一元二次方程的应用"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "阅读以下作图步骤：\n①在 OA 和 OB 上分别截取 OC, OD，使 OC = OD；\n②分别以 C, D 为圆心，以大于 $\\frac{1}{2}CD$ 的长为半径作弧，两弧在 $\\angle AOB$ 内交于点 M；\n③作射线 OM，连接 CM, DM，如图所示．根据以上作图，一定可以推得的结论是（ ）",
+      "options": [
+        "∠1 = ∠2 且 CM = DM",
+        "∠1 = ∠3 且 OD = DM",
+        "∠1 = ∠2 且 OD = DM",
+        "∠2 = ∠3 且 CM = DM"
+      ],
+      "answer": "A",
+      "analysis": "【分析】由作图过程可得：$OD=OC, CM=DM$，再结合 $OM=OM$ 可得 $\\triangle COM \\cong \\triangle DOM (SSS)$，由全等三角形的性质可得 $\\angle 1 = \\angle 2$ 即可解答．\n【详解】解：由作图过程可得：$OD=OC, CM=DM$，∵$OM=OM$，∴$\\triangle COM \\cong \\triangle DOM (SSS)$．∴$\\angle 1 = \\angle 2$．∴A 选项符合题意；不能确定 $OC=CM$ 则 $\\angle 1 = \\angle 3$ 不一定成立，故 B 选项不符合题意；不能确定 $OD=DM$ 故 C 选项不符合题意；$OC \\parallel CM$ 不一定成立，则 $\\angle 2 = \\angle 3$ 不一定成立，故 D 选项不符合题意．故选 A．\n【点睛】本题主要考查了角平分线的尺规作图、全等三角形的判定与性质等知识点．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-三角形-全等三角形",
+        "图形与几何-尺规作图"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        3,
+        0.09,
+        0.66,
+        0.25,
+        0.18
+      ],
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "为贯彻落实教育部办公厅关于“保障学生每天校内、校外各 1 小时体育活动时间”的要求，学校要求学生每天坚持体育锻炼．小亮记录了自己一周内每天校外锻炼的时间（单位：分钟），并制作了如图所示的统计图．根据统计图，下列关于小亮该周每天校外锻炼时间的描述，正确的是（ ）",
+      "options": [
+        "平均数为 70 分钟",
+        "众数为 67 分钟",
+        "中位数为 67 分钟",
+        "方差为 0"
+      ],
+      "answer": "B",
+      "analysis": "【分析】分别求出平均数、众数、中位数、方差，即可进行判断．\n【详解】解：A．平均数为 $\\frac{65+67 \\times 2+70+75+79+88}{7} = 73$（分钟），故选项错误；B．在 7 个数据中，67 出现的次数最多，为 2 次，则众数为 67 分钟，故选项正确；C．7 个数据按照从小到大排列为：65, 67, 67, 70, 75, 79, 88，中位数是 70 分钟，故选项错误；D．方差不为 0，故选项错误．故选：B．\n【点睛】此题考查了平均数、众数、中位数、方差，熟练掌握各量的求解方法是解题的关键．",
+      "knowledge_points": [
+        "统计与概率-统计-数据的分析"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.09,
+        0.52,
+        0.36,
+        0.16
+      ],
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "如图，正方形四个顶点分别位于两个反比例函数 $y=\\frac{3}{x}$ 和 $y=\\frac{n}{x}$ 的图象的四个分支上，则实数 n 的值为（ ）",
+      "options": [
+        "-3",
+        "-\\frac{1}{3}",
+        "\\frac{1}{3}",
+        "3"
+      ],
+      "answer": "A",
+      "analysis": "【分析】如图所示，点 B 在 $y=\\frac{3}{x}$ 上，证明 $\\triangle AOC \\cong \\triangle OBD$，根据 k 的几何意义即可求解．\n【详解】解：如图所示，连接正方形 ABCD 对角线，过点 A, B 分别作 x 轴的垂线，垂足分别为 C, D，点 B 在 $y=\\frac{3}{x}$ 上，∵$OB=OA, \\angle AOB=\\angle BDO=\\angle ACO=90^\\circ$，∴$\\angle CAO=90^\\circ - \\angle AOC = \\angle BOD$．∴$\\triangle AOC \\cong \\triangle OBD$．∴$S_{\\triangle AOC} = S_{\\triangle OBD} = \\frac{3}{2} = |\\frac{n}{2}|$．∵A 点在第二象限，∴$n=-3$．故选：A．\n【点睛】本题考查了正方形性质，反比例函数的 k 的几何意义．",
+      "knowledge_points": [
+        "数与代数-函数-反比例函数",
+        "图形与几何-图形的性质-四边形-正方形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.09,
+        0.35,
+        0.2,
+        0.18
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "我国魏晋时期数学家刘徽在《九章算术注》中提到了著名的“割圆术”，即利用圆的内接正多边形逼近圆的方法来近似估算，指出“割之弥细，所失弥少．割之又割，以至于不可割，则与圆周合体，而无所失矣”．“割圆术”孕育了微积分思想，他用这种思想得到了圆周率 $\\pi$ 的近似值为 3.1416．如图，$\\odot O$ 的半径为 1，运用“割圆术”，以圆内接正六边形面积近似估计 $\\odot O$ 的面积，可得 $\\pi$ 的估计值为 $\\frac{3\\sqrt{3}}{2}$，若用圆内接正十二边形作近似估计，可得 $\\pi$ 的估计值为（ ）",
+      "options": [
+        "\\sqrt{3}",
+        "2\\sqrt{2}",
+        "3",
+        "2\\sqrt{3}"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据圆内接正多边形的性质可得 $\\angle AOB=30^\\circ$，根据 30 度的作对的直角边是斜边的一半可得 $BC=\\frac{1}{2}$，根据三角形的面积公式即可求得正十二边形的面积，即可求解．\n【详解】解：圆的内接正十二边形的面积可以看成 12 个全等的等腰三角形组成，故等腰三角形的顶角为 $360^\\circ \\div 12 = 30^\\circ$，设圆的半径为 1，如图为其中一个等腰三角形 OAB，过点 B 作 $BC \\perp OA$ 交 OA 于点 C，∵$\\angle AOB=30^\\circ$，∴$BC=\\frac{1}{2}OB=\\frac{1}{2}$，则 $S_{\\triangle OAB}=\\frac{1}{2} \\times 1 \\times \\frac{1}{2}=\\frac{1}{4}$，故正十二边形的面积为 $12S_{\\triangle OAB}=12 \\times \\frac{1}{4}=3$，圆的面积为 $\\pi \\times 1 \\times 1 = \\pi$，用圆内接正十二边形面积近似估计 $\\odot O$ 的面积可得 $\\pi=3$，故选：C．\n【点睛】本题考查了圆内接正多边形性质，30 度的直角边性质，三角形面积等．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-圆-正多边形与圆"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        6,
+        0.09,
+        0.38,
+        0.18,
+        0.14
+      ],
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "某仓库记账员为方便记账，将进货 10 件记作 +10，那么出货 5 件应记作 ______.",
+      "options": [],
+      "answer": "-5",
+      "analysis": "【分析】在一对具有相反意义的量中，先规定其中一个为正，则另一个就用负表示．\n【详解】解：∵“正”和“负”相对，∴进货 10 件记作 +10，那么出货 5 件应记作 -5．故答案为：-5．\n【点睛】本题主要考查了正数和负数，理解“正”和“负”的相对性是解题关键．",
+      "knowledge_points": [
+        "数与代数-实数-正数和负数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "如图，在 $\\Box ABCD$ 中，O 为 BD 的中点，EF 过点 O 且分别交 AB, CD 于点 E, F．若 AE=10，则 CF 的长为______.",
+      "options": [],
+      "answer": "10",
+      "analysis": "【分析】由平行四边形性质可得 $DC \\parallel AB, DC=AB$ 即 $\\angle OFD = \\angle OEB, \\angle ODF = \\angle EBO$，再结合 $OD=OB$ 可得 $\\triangle DOF \\cong \\triangle BOE (AAS)$ 可得 $DF=EB$，最后进一步说明 $FC=AE=10$ 即可解答．\n【详解】解：∵$\\Box ABCD$ 中，∴$DC \\parallel AB, DC=AB$，∴$\\angle OFD=\\angle OEB, \\angle ODF=\\angle EBO$，∵$OD=OB$，∴$\\triangle DOF \\cong \\triangle BOE (AAS)$，∴$DF=EB$，∴$DC-DF=AB-BE$，即 $FC=AE=10$．故答案为：10．\n【点睛】本题主要考查了平行四边形的性质、全等三角形的判定与性质．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-四边形-平行四边形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        7,
+        0.09,
+        0.62,
+        0.26,
+        0.11
+      ],
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "如图，在菱形 ABCD 中，AB=10，$\\angle B=60^\\circ$，则 AC 的长为______.",
+      "options": [],
+      "answer": "10",
+      "analysis": "【分析】由菱形 ABCD 中，$\\angle B=60^\\circ$，易证得 $\\triangle ABC$ 是等边三角形，根据等边三角形的性质即可得解．\n【详解】解：∵四边形 ABCD 是菱形，∴$AB=BC=10$，∵$\\angle B=60^\\circ$，∴$\\triangle ABC$ 是等边三角形，∴$AC=10$．故答案为：10．\n【点睛】本题考查了菱形的性质，等边三角形的判定与性质．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-四边形-菱形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        8,
+        0.09,
+        0.32,
+        0.2,
+        0.11
+      ],
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "某公司欲招聘一名职员．对甲、乙、丙三名应聘者进行了综合知识、工作经验、语言表达等三方面的测试，他们的各项成绩如下表所示：\n（表略）\n如果将每位应聘者的综合知识、工作经验、语言表达的成绩按 5:2:3 的比例计算其总成绩，并录用总成绩最高的应聘者，则被录用的是______.",
+      "options": [],
+      "answer": "乙",
+      "analysis": "【分析】分别计算甲、乙、丙三名应聘者的成绩的加权平均数，比较大小即可求解．\n【详解】解：$\\bar{x}_{甲} = 75 \\times \\frac{5}{10} + 80 \\times \\frac{2}{10} + 80 \\times \\frac{3}{10} = 77.5$，$\\bar{x}_{乙} = 85 \\times \\frac{5}{10} + 80 \\times \\frac{2}{10} + 70 \\times \\frac{3}{10} = 79.5$，$\\bar{x}_{丙} = 70 \\times \\frac{5}{10} + 78 \\times \\frac{2}{10} + 70 \\times \\frac{3}{10} = 71.6$，∵$71.6 < 77.5 < 79.5$，∴被录用的是乙，故答案为：乙．\n【点睛】本题考查了加权平均数．",
+      "knowledge_points": [
+        "统计与概率-统计-数据的分析-加权平均数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "已知 $\\frac{1}{a}+\\frac{2}{b}=1$，且 $a \\ne -b$，则 $\\frac{ab-a}{a+b}$ 的值为______.",
+      "options": [],
+      "answer": "1",
+      "analysis": "【分析】根据 $\\frac{1}{a}+\\frac{2}{b}=1$ 可得 $b+2a=ab$，即 $ab-a=b+a$，然后将 $ab-a=b+a$ 整体代入 $\\frac{ab-a}{a+b}$ 计算即可．\n【详解】解：∵$\\frac{1}{a}+\\frac{2}{b}=1$，∴$\\frac{b+2a}{ab}=1$，∴$b+2a=ab$，即 $ab-a=b+a$．∴$\\frac{ab-a}{a+b} = \\frac{a+b}{a+b} = 1$．\n【点睛】本题主要考查了分式的加减运算．",
+      "knowledge_points": [
+        "数与代数-整式的运算-分式"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "已知抛物线 $y=ax^2-2ax+b(a>0)$ 经过 $A(2n+3, y_1), B(n-1, y_2)$ 两点，若 A, B 分别位于抛物线对称轴的两侧，且 $y_1 < y_2$，则 n 的取值范围是______.",
+      "options": [],
+      "answer": "-1 < n < 0",
+      "analysis": "【分析】根据题意，可得抛物线对称轴为直线 x=1，开口向上，根据已知条件得出点 A 在对称轴的右侧，且 $y_1 < y_2$，进而得出不等式，解不等式即可求解．\n【详解】解：∵$y=ax^2-2ax+b, a>0$，∴抛物线的对称轴为直线 $x=-\\frac{-2a}{2a}=1$，开口向上，∵$A(2n+3, y_1), B(n-1, y_2)$ 分别位于抛物线对称轴的两侧，假设点 B 在对称轴的右侧，则 $n-1 > 1$，解得 $n > 2$，∴$2n+3-(n-1)=n+4 > 0$，∴A 点在 B 点的右侧，与假设矛盾，则点 A 在对称轴的右侧，∴$\\begin{cases} 2n+3 > 1 \\\\ n-1 < 1 \\end{cases}$，解得：$-1 < n < 2$。又∵$y_1 < y_2$，∴$|2n+3-1| < |1-(n-1)|$，∴$2n+2 < 2-n$。解得：$n < 0$。∴$-1 < n < 0$，故答案为：$-1 < n < 0$．\n【点睛】本题考查了二次函数的性质．",
+      "knowledge_points": [
+        "数与代数-函数-二次函数"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "计算：$\\sqrt{9}-2^0+|-1|$．",
+      "options": [],
+      "answer": "3",
+      "analysis": "【分析】根据算术平方根，绝对值，零指数幂，有理数的混合运算法则计算即可．\n【详解】解：原式$=3-1+1=3$．\n【点睛】本题考查了算术平方根，绝对值，零指数幂，有理数的混合运算．",
+      "knowledge_points": [
+        "数与代数-实数-实数的运算"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "解不等式组：$\\begin{cases} 2x+1 < 3, ① \\\\ \\frac{x}{2} + \\frac{1-3x}{4} \\le 1. ② \\end{cases}$",
+      "options": [],
+      "answer": "-3 ≤ x < 1",
+      "analysis": "【分析】分别求出每一个不等式的解集，根据口诀：同大取大、同小取小、大小小大中间找、大大小小找不到确定不等式组的解集．\n【详解】解：解不等式①，得 $x < 1$．解不等式②，得 $x \\ge -3$．所以原不等式组的解集为 $-3 \\le x < 1$．\n【点睛】本题考查了解一元一次不等式组．",
+      "knowledge_points": [
+        "数与代数-方程与不等式-一元一次不等式组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "如图，OA=OC, OB=OD, $\\angle AOD = \\angle COB$．求证：AB=CD．",
+      "options": [],
+      "answer": "见解析",
+      "analysis": "【分析】根据已知条件得出 $\\angle AOB = \\angle COD$，进而证明 $\\triangle AOB \\cong \\triangle COD$，根据全等三角形的性质即可得证．\n【详解】证明：∵$\\angle AOD = \\angle COB$，∴$\\angle AOD - \\angle BOD = \\angle COB - \\angle BOD$，即 $\\angle AOB = \\angle COD$．在 $\\triangle AOB$ 和 $\\triangle COD$ 中，$\\begin{cases} OA=OC, \\\\ \\angle AOB = \\angle COD, \\\\ OB=OD, \\end{cases}$ ∴$\\triangle AOB \\cong \\triangle COD$．∴$AB=CD$．\n【点睛】本小题考查等式的基本性质、全等三角形的判定与性质等基础知识．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-三角形-全等三角形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        11,
+        0.09,
+        0.51,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "先化简，再求值：$(1-\\frac{x+1}{x}) \\div \\frac{x^2-1}{x^2-x}$，其中 $x=\\sqrt{2}-1$．",
+      "options": [],
+      "answer": "$-\\frac{\\sqrt{2}}{2}$",
+      "analysis": "【分析】先根据分式的混合运算法则化简，然后再将 x 代入计算即可解答．\n【详解】解：$(1-\\frac{x+1}{x}) \\div \\frac{x^2-1}{x^2-x} = (\\frac{x}{x}-\\frac{x+1}{x}) \\cdot \\frac{x(x-1)}{(x+1)(x-1)} = \\frac{x-(x+1)}{x} \\cdot \\frac{x}{x+1} = -\\frac{1}{x+1}$．当 $x=\\sqrt{2}-1$ 时，原式 $=-\\frac{1}{\\sqrt{2}-1+1} = -\\frac{1}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2}$．\n【点睛】本题主要考查了分式的基本性质及其运算、分母有理化．",
+      "knowledge_points": [
+        "数与代数-整式的运算-分式"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，已知 $\\triangle ABC$ 内接于 $\\odot O$, CO 的延长线交 AB 于点 D，交 $\\odot O$ 于点 E，交 $\\odot O$ 的切线 AF 于点 F，且 $AF \\parallel BC$．\n(1) 求证：AO // BE；\n(2) 求证：AO 平分 $\\angle BAC$．",
+      "options": [],
+      "answer": "（1）见解析 （2）见解析",
+      "analysis": "【分析】（1）由切线的性质可得 $\\angle OAF=90^\\circ$，由圆周角定理可得 $\\angle CBE=90^\\circ$，即 $\\angle OAF=\\angle CBE=90^\\circ$，再根据平行线的性质可得 $\\angle BAF=\\angle ABC$，则根据角的和差可得 $\\angle OAB=\\angle ABE$，最后根据平行线的判定定理即可解答；\n（2）由圆周角定理可得 $\\angle ABE=\\angle ACE$，再由等腰三角形的性质可得 $\\angle ACE=\\angle OAC$，进而得到 $\\angle ABE=\\angle OAC$，再结合 $\\angle OAB=\\angle ABE$ 得到 $\\angle OAB=\\angle OAC$ 即可证明结论．\n【详解】（1）证明：∵AF 是 $\\odot O$ 的切线，∴$AF \\perp OA$，即 $\\angle OAF=90^\\circ$．∵CE 是 $\\odot O$ 的直径，∴$\\angle CBE=90^\\circ$．∴$\\angle OAF=\\angle CBE=90^\\circ$．∵$AF \\parallel BC$，∴$\\angle BAF=\\angle ABC$，∴$\\angle OAF-\\angle BAF=\\angle CBE-\\angle ABC$，即 $\\angle OAB=\\angle ABE$，∴$AO \\parallel BE$．\n（2）解：∵$\\angle ABE$ 与 $\\angle ACE$ 都是 AE 所对的圆周角，∴$\\angle ABE=\\angle ACE$．∵$OA=OC$，∴$\\angle ACE=\\angle OAC$，∴$\\angle ABE=\\angle OAC$．由（1）知 $\\angle OAB=\\angle ABE$，∴$\\angle OAB=\\angle OAC$，∴AO 平分 $\\angle BAC$．\n【点睛】本题主要考查角平分线、平行线的判定与性质、圆周角定理、切线的性质等知识点．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-圆-圆的切线",
+        "图形与几何-图形的性质-圆-圆周角"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        13,
+        0.07,
+        0.05,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "为促进消费，助力经济发展，某商场决定“让利酬宾”，于“五一”期间举办了抽奖促销活动．活动规定：凡在商场消费一定金额的顾客，均可获得一次抽奖机会．抽奖方案如下：从装有大小质地完全相同的 1 个红球及编号为①②③的 3 个黄球的袋中，随机摸出 1 个球，若摸得红球，则中奖，可获得奖品：若摸得黄球，则不中奖．同时，还允许未中奖的顾客将其摸得的球放回袋中，并再往袋中加入 1 个红球或黄球（它们的大小质地与袋中的 4 个球完全相同），然后从中随机摸出 1 个球，记下颜色后不放回，再从中随机摸出 1 个球，若摸得的两球的颜色相同，则该顾客可获得精美礼品一份．现已知某顾客获得抽奖机会．\n（1） 求该顾客首次摸球中奖的概率；\n（2） 假如该顾客首次摸球未中奖，为了有更大机会获得精美礼品，他应往袋中加入哪种颜色的球？说明你的理由",
+      "options": [],
+      "answer": "（1）1/4 （2）应往袋中加入黄球，见解析",
+      "analysis": "【分析】（1）直接由概率公式求解即可；\n（2）根据列表法分别求得加入黄球和红球的概率即可求解．\n【详解】解：（1）顾客首次摸球的所有可能结果为红，黄①，黄②，黄③，共 4 种等可能的结果．记“首次摸得红球”为事件 A，则事件 A 发生的结果只有 1 种，所以 $P(A)=\\frac{1}{4}$．\n（2）他应往袋中加入黄球．理由如下：记往袋中加入的球为“新”，摸得的两球所有可能的结果列表如下：\n（表略，共 20 种等可能结果）\n若往袋中加入的是红球，两球颜色相同的结果共有 8 种，此时该顾客获得精美礼品的概率 $P_1=\\frac{8}{20}=\\frac{2}{5}$；\n若往袋中加入的是黄球，两球颜色相同的结果共有 12 种，此时该顾客获得精美礼品的概率 $P_2=\\frac{12}{20}=\\frac{3}{5}$；\n因为 $\\frac{2}{5} < \\frac{3}{5}$，所以 $P_1 < P_2$，所以他应往袋中加入黄球．\n【点睛】本小题考查简单随机事件的概率等基础知识，考查统计与概率思想．",
+      "knowledge_points": [
+        "统计与概率-概率-列表法或树状图法"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "阅读下列材料，回答问题\n任务：测量一个扁平状的小水池的最大宽度，该水池东西走向的最大宽度 AB 远大于南北走向的最大宽度，如图 1．\n工具：一把皮尺（测量长度略小于 AB）和一台测角仪，如图 2．皮尺的功能是直接测量任意可到达的两点间的距离（这两点间的距离不大于皮尺的测量长度）；测角仪的功能是测量角的大小，即在任一点 O 处，对其视线可及的 P, Q 两点，可测得 $\\angle POQ$ 的大小，如图 3．\n小明利用皮尺测量，求出了小水池的最大宽度 AB，其测量及求解过程如下：\n测量过程：\n（ⅰ）在小水池外选点 C，如图 4，测得 $\\angle C = \\angle C$，BC = b，AC = a，CM = a/3，CN = b/3；\n（ⅱ）分别在 AC, BC 上测得 $CM = \\frac{a}{3}m, CN = \\frac{b}{3}m$；测得 $MN = c m$．求解过程：\n由测量知，AC=a, BC=b, $CM=\\frac{a}{3}, CN=\\frac{b}{3}$，\n$\\therefore \\frac{CM}{CA} = \\frac{CN}{CB} = \\frac{1}{3}$，又 $\\because$ ①______，\n$\\therefore \\triangle CMN \\sim \\triangle CAB$，$\\therefore \\frac{MN}{AB}=\\frac{1}{3}$．\n又 $\\because MN=c$，$\\therefore AB=$ ②______(m)．\n故小水池的最大宽度为______．\n\n(1) 补全小明求解过程中①②所缺的内容；\n(2) 小明求得 AB 用到的几何知识是______；\n(3) 小明仅利用皮尺，通过 5 次测量，求得 AB．请你同时利用皮尺和测角仪，通过测量长度、角度等几何量，并利用解直角三角形的知识求小水池的最大宽度 AB，写出你的测量及求解过程．",
+      "options": [],
+      "answer": "（1）①∠C=∠C；②3c （2）相似三角形的判定与性质 （3）见解析",
+      "analysis": "【分析】（1）根据相似三角形的判定和性质求解即可；\n（2）根据相似三角形的判定和性质进行回答即可；\n（3）测量过程：在小水池外选点 C，用测角仪在点 B 处测得 $\\angle ABC=\\alpha$，在点 A 处测得 $\\angle BAC=\\beta$；用皮尺测得 $BC=a$ m；求解过程：过点 C 作 $CD \\perp AB$，垂足为 D，根据锐角三角函数的定义推得 $BD=a \\cos \\alpha, CD=a \\sin \\alpha$，以及 $AD=\\frac{a \\sin \\alpha}{\\tan \\beta}$，根据 $AB=BD+AD$ 即可求得．\n【详解】（1）① $\\angle C = \\angle C$；② 3c；\n（2）相似三角形的判定与性质；\n（3）最大宽度为 $(a \\cos \\alpha + \\frac{a \\sin \\alpha}{\\tan \\beta}) m$，过程见解析。\n【点睛】本题考查了相似三角形的判定与性质，解直角三角形的实际应用．",
+      "knowledge_points": [
+        "图形与几何-图形的性质-相似三角形",
+        "图形与几何-图形的性质-解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        16,
+        0.24,
+        0.09,
+        0.7,
+        0.08
+      ],
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "已知抛物线 $y=ax^2+bx+3$ 交 x 轴于 $A(1,0), B(3,0)$ 两点，M 为抛物线的顶点，C, D 为抛物线上不与 A, B 重合的相异两点，记 AB 中点为 E，直线 AD, BC 的交点为 P．\n(1) 求抛物线的函数表达式；\n(2) 若 $C(4,3), D(m, -\\frac{3}{4})$，且 $m<2$，求证：C, D, E 三点共线；\n(3) 小明研究发现：无论 C, D 在抛物线上如何运动，只要 C, D, E 三点共线，$\\triangle AMP, \\triangle MEP, \\triangle ABP$ 中必存在面积为定值的三角形．请直接写出其中面积为定值的三角形及其面积，不必说明理由．",
+      "options": [],
+      "answer": "（1）$y=x^2-4x+3$ （2）见解析 （3）$\\triangle ABP$ 的面积为定值，其面积为 2",
+      "analysis": "【分析】（1）将 A(1,0), B(3,0) 代入 $y=ax^2+bx+3$，即可解得；\n（2）$A(1,0), B(3,0)$，AB 中点为 E，且 C(4,3)，可求出过 C, E 两点所在直线的一次函数表达式，验证点 D 是否在直线上；\n（3）$\\triangle ABP$ 的面积为定值，其面积为 2．分析略。\n【详解】（1）解：因为抛物线 $y=ax^2+bx+3$ 经过点 $A(1,0), B(3,0)$，所以 $\\begin{cases} a+b+3=0 \\\\ 9a+3b+3=0 \\end{cases}$，解得 $\\begin{cases} a=1 \\\\ b=-4 \\end{cases}$．所以抛物线的函数表达式为 $y=x^2-4x+3$．\n（2）证明：设直线 CE 对应的函数表达式为 $y=kx+n$，E(2,0), C(4,3) 代入得 $\\begin{cases} 4k+n=3 \\\\ 2k+n=0 \\end{cases}$，解得 $k=\\frac{3}{2}, n=-3$．直线 CE: $y=\\frac{3}{2}x-3$．点 D 在抛物线上，$D(m, -\\frac{3}{4})$，代入抛物线方程得 $m^2-4m+3=-\\frac{3}{4}$，解得 $m=\\frac{3}{2}$ 或 $m=\\frac{5}{2}$．因 $m<2$，故 $m=\\frac{3}{2}$．将 $x=\\frac{3}{2}$ 代入直线 CE 方程得 $y=\\frac{3}{2} \\times \\frac{3}{2}-3 = -\\frac{3}{4}$，与点 D 纵坐标相等，故 C, D, E 三点共线．\n（3）$\\triangle ABP$ 的面积为定值，其面积为 2．\n【点睛】本题考查一次函数和二次函数的图象与性质．",
+      "knowledge_points": [
+        "数与代数-函数-二次函数"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "如图 1，在 $\\triangle ABC$ 中，$\\angle BAC=90^\\circ, AB=AC$，D 是 AB 边上不与 A, B 重合的一个定点．$AO \\perp BC$ 于点 O，交 CD 于点 E．DF 是由线段 DC 绕点 D 顺时针旋转 $90^\\circ$ 得到的，FD, CA 的延长线相交于点 M．\n(1) 求证：$\\triangle ADE \\sim \\triangle FMC$；\n(2) 求 $\\angle ABF$ 的度数；\n(3) 若 N 是 AF 的中点，如图 2．求证：$ND=NO$．",
+      "options": [],
+      "answer": "（1）见解析 （2）135° （3）见解析",
+      "analysis": "【分析】（1）由旋转的性质可得 $\\angle DFC=45^\\circ$，再根据等腰三角形的性质可得 $\\angle BAO=\\frac{1}{2}\\angle BAC$，再证明 $\\angle BAO=\\angle DFC, \\angle EDA=\\angle M$，即可证明结论；\n（2）如图1：设 BC 与 DF 的交点为 I，先证明 $\\triangle BID \\sim \\triangle FIC$ 可得 $\\frac{BI}{FI}=\\frac{DI}{CI}$，再证明 $\\triangle BIF \\sim \\triangle DIC$ 可得 $\\angle IBF=\\angle IDC=90^\\circ$，最后运用角的和差即可解答；\n（3）如图2：延长 ON 交 DF 于点 T，连接 DT, DO，先证明 $\\triangle TNF \\cong \\triangle ONA$ 可得 $NT=NO, FT=AO$，再证明 $\\triangle BIF \\sim \\triangle DIC$ 可得 $\\angle DFT=\\angle DCO$；进而证明 $\\triangle DFT \\cong \\triangle DCO$ 即 $DT=DO$，再说明 $\\angle ODT=\\angle CDF=90^\\circ$ 则根据直角三角形斜边上的中线等于斜边的一半即可解答．\n【详解】（1）证明：由旋转性质知 $\\triangle DFC$ 为等腰直角三角形，$\\angle DFC=45^\\circ$．$\\triangle ABC$ 为等腰直角三角形，$AO \\perp BC$，则 AO 平分 $\\angle BAC$，$\\angle BAO=45^\\circ$．所以 $\\angle BAO=\\angle DFC$．又 $\\angle EDA + \\angle ADM = 90^\\circ, \\angle M + \\angle ADM = 90^\\circ$，所以 $\\angle EDA=\\angle M$．故 $\\triangle ADE \\sim \\triangle FMC$．\n（2）解：设 BC 与 DF 交于 I．$\\angle DBI=\\angle CFI=45^\\circ, \\angle BID=\\angle FIC$，所以 $\\triangle BID \\sim \\triangle FIC$．所以 $BI/FI = DI/CI$，即 $BI/DI = FI/CI$．又 $\\angle BIF=\\angle DIC$，所以 $\\triangle BIF \\sim \\triangle DIC$．所以 $\\angle IBF=\\angle IDC=90^\\circ$．所以 $\\angle ABF = \\angle ABC + \\angle IBF = 45^\\circ + 90^\\circ = 135^\\circ$．\n（3）证明：延长 ON 交 DF 于 T．连接 DT．$\\because N$ 为 AF 中点，$\\angle TNF=\\angle ONA, \\angle FTN=\\angle AON$ (平行线内错角，需先证 $FT \\parallel AO$)．实际上，由 $\\angle FBI=\\angle BOA=90^\\circ$，得 $BF \\parallel AO$，所以 $\\angle TFN=\\angle OAN$．又 $FN=AN, \\angle TNF=\\angle ONA$，所以 $\\triangle TNF \\cong \\triangle ONA$．所以 $FT=AO, TN=ON$．由（2）知 $\\triangle BIF \\sim \\triangle DIC$，得 $\\angle DFT=\\angle DCO$．又 $AO=CO$ (等腰直角三角形斜边中线)，所以 $FT=CO$．又 $DF=DC$，所以 $\\triangle DFT \\cong \\triangle DCO$．所以 $DT=DO, \\angle FDT=\\angle CDO$．所以 $\\angle ODT=\\angle ODF+\\angle FDT=\\angle ODF+\\angle CDO=\\angle CDF=90^\\circ$．在 Rt$\\triangle ODT$ 中，N 为 OT 中点，$DN=\\frac{1}{2}OT=NO$．\n【点睛】本题主要考查三角形内角和定理、平行线、全等三角形、相似三角形、旋转变换等．",
+      "knowledge_points": [
+        "图形与几何-图形的变换-旋转",
+        "图形与几何-图形的性质-相似三角形",
+        "图形与几何-图形的性质-全等三角形"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        21,
+        0.09,
+        0.7,
+        0.35,
+        0.2
+      ],
+      "images": []
+    }
+  ]
+}

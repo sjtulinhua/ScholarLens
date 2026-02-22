@@ -55,10 +55,18 @@ function cleanAndParseJSON(text: string): any {
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
   
-  // 1. 权限校验
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  // 1. 权限校验 (Local-First 模式下跳过)
+  const isLocalFirst = process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true';
+  let userId: string;
+  
+  if (isLocalFirst) {
+    userId = process.env.NEXT_PUBLIC_DEFAULT_USER_ID!;
+  } else {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    userId = user.id;
   }
 
   try {
@@ -152,7 +160,7 @@ export async function POST(req: NextRequest) {
 
       // 入库
       const { error } = await supabase.from("questions").insert({
-        user_id: user.id,
+        user_id: userId,
         subject: subject,
         content: q.content,
         difficulty: q.difficulty,

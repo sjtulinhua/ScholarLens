@@ -1,44 +1,57 @@
-"use server";
+'use server'
 
-import { createClient } from "@/lib/supabase/server";
+import { createClient, createAdminClient } from '@/lib/supabase/server'
 
-export async function uploadReferenceFile(formData: FormData) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+/**
+ * 将基准库中的任意题目一键加入当前用户的错题本
+ */
+export async function addReferenceToMistakes(questionId: string) {
+  try {
+    const isLocalFirst = process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true'
+    const supabase = isLocalFirst ? createAdminClient() : await createClient()
 
-  if (!user) {
-    return { error: "未登录" };
+    let userId: string
+
+    if (isLocalFirst) {
+      // 本地免登模式使用默认用户
+      userId = process.env.NEXT_PUBLIC_DEFAULT_USER_ID!
+    } else {
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) {
+        return { error: '请先登录' }
+      }
+      userId = user.id
+    }
+
+    // 1. 检查该错题是否已经在用户的错题本里
+    const { data: existing, error: checkError } = await supabase
+      .from('mistakes')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('question_id', questionId)
+      .single()
+
+    if (existing) {
+      return { error: '该题目已经在您的错题本中了' }
+    }
+
+    // 2. 插入新的一条 mistake 记录关联到该 question_id
+    const { error: insertError } = await supabase
+      .from('mistakes')
+      .insert({
+        user_id: userId,
+        question_id: questionId,
+        status: 'active'
+      })
+
+    if (insertError) {
+      console.error('Insert mistake error:', insertError)
+      return { error: '加入错题本失败，请稍后重试' }
+    }
+
+    return { success: true }
+  } catch (err: any) {
+    console.error('addReferenceToMistakes exception:', err)
+    return { error: err.message || '系统异常' }
   }
-
-  const file = formData.get("file") as File;
-  const description = formData.get("description") as string;
-
-  if (!file) {
-    return { error: "未检测到文件" };
-  }
-
-  if (file.size > 10 * 1024 * 1024) {
-    return { error: "文件大小不能超过 10MB" };
-  }
-
-  // 1. 上传到 Supabase Storage (reference-docs bucket)
-  // 注意：需要先去 Supabase 创建这个 bucket，或者复用 exam-images 但分目录
-  // 这里假设我们复用 exam-images 但放在 references 目录下
-  const path = `reference/${user.id}/${Date.now()}_${file.name}`;
-  
-  const { error: uploadError } = await supabase.storage
-    .from("exam-images") // 临时复用
-    .upload(path, file);
-
-  if (uploadError) {
-    console.error("Upload error:", uploadError);
-    return { error: "文件上传失败" };
-  }
-
-  // 2. 存入数据库记录 (TODO: 需要新建 reference_docs 表，或者先打 log)
-  // MVP 阶段暂时只存文件，后续配合 Vector DB 实现 RAG
-  // 这里即使没有表，上传成功也是第一步
-
-  // 模拟成功
-  return { success: true };
 }

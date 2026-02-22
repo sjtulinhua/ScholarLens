@@ -15,9 +15,11 @@ import {
   List as ListIcon, 
   Layers,
   Archive,
-  Filter
+  Filter,
+  Printer
 } from "lucide-react"
 import { deleteMistake, updateMistakeDate, bulkDeleteMistakes } from "@/app/mistakes/actions"
+import { getSmartRecommendations } from "@/app/mistakes/print/actions"
 import { cn } from "@/lib/utils"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import {
@@ -46,6 +48,7 @@ export function MistakeList({ mistakes }: MistakeListProps) {
   const [isSelectionMode, setIsSelectionMode] = useState(false)
   const [selectedIds, setSelectedIds] = useState<string[]>([])
   const [isBulkDeleting, setIsBulkDeleting] = useState(false)
+  const [isLoadingPrint, setIsLoadingPrint] = useState(false)
 
   // View Mode
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'grouped'>('grid')
@@ -153,6 +156,37 @@ export function MistakeList({ mistakes }: MistakeListProps) {
     }
   }
 
+  // 打印选中的错题
+  const handlePrintSelected = () => {
+    if (selectedIds.length === 0) return
+    // 从 mistakes 中找到对应的 question id
+    const questionIds = selectedIds
+      .map(mId => mistakes.find(m => m.id === mId))
+      .filter(Boolean)
+      .map((m: any) => m.question?.id)
+      .filter(Boolean)
+    if (questionIds.length === 0) return
+    window.open(`/mistakes/print?ids=${questionIds.join(',')}`, '_blank')
+  }
+
+  // 智能推荐复习卷
+  const handleSmartPrint = async () => {
+    setIsLoadingPrint(true)
+    try {
+      const result = await getSmartRecommendations(10)
+      if (result.data && result.data.length > 0) {
+        window.open(`/mistakes/print?ids=${result.data.join(',')}`, '_blank')
+      } else {
+        alert('没有可推荐的错题')
+      }
+    } catch (e) {
+      console.error('Smart print error:', e)
+      alert('生成推荐失败')
+    } finally {
+      setIsLoadingPrint(false)
+    }
+  }
+
   // Common props passed to all views
   // Note: We pass optimisticMistakes to views!
   const commonProps = {
@@ -173,24 +207,29 @@ export function MistakeList({ mistakes }: MistakeListProps) {
     <TooltipProvider delayDuration={300}>
       <div className="mb-6 flex flex-col md:flex-row justify-between gap-4 items-center bg-white p-2 rounded-2xl border border-primary/10 shadow-sm relative">
         
-        {/* Left Side: Stats or Filters */}
+        {/* Left Side: Stats */}
         <div className="flex items-center gap-2 px-2">
             <span className="text-sm font-bold text-muted-foreground">{optimisticMistakes.length} 题已收录</span>
-            <div className="h-4 w-[1px] bg-border mx-2" />
-            
-             {/* Placeholder for future filters */}
-            <Button variant="ghost" size="sm" className="h-8 text-xs text-muted-foreground" disabled>
-                <Filter className="w-3.5 h-3.5 mr-1.5" />
-                筛选
-            </Button>
-             <Button variant="ghost" size="sm" className="h-8 text-xs text-muted-foreground" disabled>
-                <Archive className="w-3.5 h-3.5 mr-1.5" />
-                归档
-            </Button>
         </div>
 
-        {/* Right Side: View Switcher & Actions */}
+        {/* Right Side: Actions */}
         <div className="flex items-center gap-3">
+             <Button 
+                variant="outline" 
+                size="sm" 
+                className="h-8 text-xs text-primary border-primary/30 hover:bg-primary/5 rounded-lg"
+                onClick={handleSmartPrint}
+                disabled={isLoadingPrint}
+             >
+                {isLoadingPrint ? (
+                  <RefreshCw className="w-3.5 h-3.5 mr-1.5 animate-spin" />
+                ) : (
+                  <Printer className="w-3.5 h-3.5 mr-1.5" />
+                )}
+                智能复习卷
+             </Button>
+
+             <div className="h-4 w-[1px] bg-border mx-1" />
             {/* View Switcher */}
             <div className="bg-zinc-100/80 p-1 rounded-lg border border-zinc-200/50 flex">
                 <ToggleGroup type="single" value={viewMode} onValueChange={handleViewModeChange}>
@@ -281,6 +320,16 @@ export function MistakeList({ mistakes }: MistakeListProps) {
             </div>
 
             <div className="flex gap-2">
+              <Button 
+                variant="secondary" 
+                size="sm" 
+                className="rounded-xl h-10 px-5 font-bold bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/20"
+                onClick={handlePrintSelected}
+                disabled={selectedIds.length === 0}
+              >
+                <Printer className="w-4 h-4 mr-2" />
+                生成复习卷
+              </Button>
               <Button 
                 variant="destructive" 
                 size="sm" 

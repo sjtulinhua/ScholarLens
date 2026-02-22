@@ -15,6 +15,8 @@ export function LatexRenderer({ content, className }: LatexRendererProps) {
   const safeContent = typeof content === 'string' ? content : JSON.stringify(content || '');
 
   const processedContent = safeContent
+    // 0. 处理字面量 \n 字符（AI 返回 JSON 时常见问题）
+    .replace(/\\n/g, '\n')
     // 1. 将 \[ \] 替换为 $$ $$
     .replace(/\\\[/g, '$$')
     .replace(/\\\]/g, '$$')
@@ -23,10 +25,10 @@ export function LatexRenderer({ content, className }: LatexRendererProps) {
     .replace(/\\\)/g, '$')
     // 3. 处理 Qwen 有时会产生的过度转义：比如 \\\\frac -> \frac
     .replace(/\\\\\\\\/g, '\\')
-    // 4. “强制拯救”：如果某一行包含明显的 LaTeX 指令（如 \Rightarrow, \frac）且没有任何 $ 符号，尝试给它包上 $
+    // 4. “强制拯救”：如果某一行包含明显的 LaTeX 指令且没有任何 $ 符号，尝试给它包上 $
     .split('\n')
     .map(line => {
-      const hasLatex = /\\(frac|sqrt|Rightarrow|triangle|angle|cdot|times|left|right|alpha|beta|theta)/.test(line);
+      const hasLatex = /\\(frac|sqrt|Rightarrow|triangle|angle|cdot|times|left|right|alpha|beta|theta|perp|parallel)/.test(line);
       const hasDelimiters = line.includes('$');
       if (hasLatex && !hasDelimiters) {
         return `$${line.trim()}$`;
@@ -36,7 +38,7 @@ export function LatexRenderer({ content, className }: LatexRendererProps) {
     .join('\n');
 
   return (
-    <div className={`prose prose-sm max-w-none dark:prose-invert ${className}`}>
+    <div className={`prose prose-sm max-w-none dark:prose-invert whitespace-pre-wrap ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkMath]}
         rehypePlugins={[
@@ -47,7 +49,7 @@ export function LatexRenderer({ content, className }: LatexRendererProps) {
           }]
         ]}
         components={{
-          p: ({children}) => <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>
+          p: ({children}) => <p className="mb-1 last:mb-0 leading-relaxed">{children}</p>
         }}
       >
         {processedContent}

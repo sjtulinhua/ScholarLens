@@ -96,3 +96,11 @@
 .shadow-premium {
   @apply shadow-[0_8px_30px_rgb(0,0,0,0.04)];
 }
+
+/* Print Optimizations for Eco-Friendly Exports */
+@media print {
+  .katex-display {
+    margin: 0.3em 0 !important;
+  }
+}
+

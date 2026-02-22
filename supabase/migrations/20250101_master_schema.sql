@@ -64,8 +64,13 @@ CREATE TABLE IF NOT EXISTS public.mistakes (
   question_id UUID NOT NULL REFERENCES public.questions(id) ON DELETE CASCADE,
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
   status TEXT DEFAULT 'active' CHECK (status IN ('active', 'resolved', 'archived', 'corrected')),
+  primary_knowledge_point TEXT,
+  deleted_at TIMESTAMPTZ DEFAULT NULL,
   created_at TIMESTAMPTZ DEFAULT now() NOT NULL
 );
+
+COMMENT ON COLUMN public.mistakes.primary_knowledge_point IS 'The core knowledge point that caused the mistake, extracted from error_analysis. Immutable once set.';
+COMMENT ON COLUMN public.mistakes.deleted_at IS 'Soft delete timestamp. If NULL, the record is active.';
 
 -- 1.6 练习记录表 (practice_records)
 CREATE TABLE IF NOT EXISTS public.practice_records (
@@ -93,9 +98,9 @@ CREATE TABLE IF NOT EXISTS public.knowledge_base (
 CREATE INDEX IF NOT EXISTS idx_exams_user_id ON public.exams(user_id);
 CREATE INDEX IF NOT EXISTS idx_questions_user_id ON public.questions(user_id);
 CREATE INDEX IF NOT EXISTS idx_questions_occurred_at ON public.questions(occurred_at DESC);
--- NOTE: Vector index omitted for local dev (pgvector index supports max 2000 dims; VECTOR(3072) is stored fine without an ANN index)
-
+CREATE INDEX IF NOT EXISTS idx_questions_embedding ON public.questions USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
 CREATE INDEX IF NOT EXISTS idx_mistakes_user_id ON public.mistakes(user_id);
+CREATE INDEX IF NOT EXISTS idx_mistakes_deleted_at ON public.mistakes(deleted_at);
 CREATE INDEX IF NOT EXISTS idx_knowledge_base_name ON public.knowledge_base(name);
 
 -- ============================================

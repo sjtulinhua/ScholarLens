@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { createClient, createAdminClient } from "@/lib/supabase/server";
-import { WeaknessRadar, type WeaknessData } from "@/components/dashboard/WeaknessRadar";
+import { TopWeaknessList, type WeaknessData } from "@/components/dashboard/TopWeaknessList";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileWarning, Database, BrainCircuit, Plus } from "lucide-react";
+import { FileWarning, Database, BrainCircuit, Plus, LayoutGrid } from "lucide-react";
 import { HistoryDialog } from "@/components/dashboard/HistoryDialog";
+import { WeaknessRadar } from "./WeaknessRadar";
 
 export async function DashboardMetrics() {
   // Local-First 模式下直接使用 Admin 客户端绕过 RLS
@@ -12,13 +13,13 @@ export async function DashboardMetrics() {
   const supabase = isLocalFirst ? createAdminClient() : await createClient();
 
   // 1. 并发获取数据
-  console.time('Dashboard Fetch');
   const [mistakesResult, recentQuestionsResult] = await Promise.all([
     supabase
       .from("mistakes")
       .select(`
         id,
         status,
+        primary_knowledge_point,
         question:questions (
           subject,
           knowledge_points
@@ -31,31 +32,39 @@ export async function DashboardMetrics() {
       .order("created_at", { ascending: false })
       .limit(10)
   ]);
-  console.timeEnd('Dashboard Fetch');
 
   const mistakes = mistakesResult.data;
   const recentQuestions = recentQuestionsResult.data;
 
 
-  // 2. 加工雷达图数据
+  // 2. 加工提分榜数据 (Single-Pass Aggregation)
   const kpMap: Record<string, { total: number; corrected: number }> = {};
+  let totalActiveMistakes = 0;
+  
   mistakes?.forEach((m: any) => {
-    if (m.question) {
-      m.question.knowledge_points.forEach((kp: string) => {
-        if (!kpMap[kp]) kpMap[kp] = { total: 0, corrected: 0 };
-        kpMap[kp].total += 1;
-        if (m.status === "corrected") kpMap[kp].corrected += 1;
-      });
+    // 统计全局遗留错题数
+    if (m.status === 'active') {
+      totalActiveMistakes++;
+    }
+
+    if (m.question?.knowledge_points && m.question.knowledge_points.length > 0) {
+      // 绝对固定分类：优先取错误专属的主分类 (primary_knowledge_point)，老数据降级取题目本身第一项
+      let primaryKp = m.primary_knowledge_point || m.question.knowledge_points[0].split(/[-_]/).pop()?.trim();
+      
+      if (primaryKp) {
+        if (!kpMap[primaryKp]) kpMap[primaryKp] = { total: 0, corrected: 0 };
+        kpMap[primaryKp].total += 1;
+        if (m.status === "corrected") kpMap[primaryKp].corrected += 1;
+      }
     }
   });
 
   const radarData: WeaknessData[] = Object.entries(kpMap)
     .map(([name, stats]) => ({
-      name: name.split(/[-_]/).pop()?.trim() || name, // Use improved formatter logic here too
-      mastery: stats.total > 0 ? (stats.corrected / stats.total) * 100 + 40 : 0,
+      name,
+      corrected: stats.corrected,
       total: stats.total
-    }))
-    .slice(0, 6);
+    }));
 
   // 计算总掌握率
   const totalCorrected = mistakes?.filter(m => m.status === "corrected").length || 0;
@@ -71,15 +80,20 @@ export async function DashboardMetrics() {
             <CardHeader className="flex flex-row items-center justify-between pb-2 border-b border-zinc-100 bg-zinc-50/50">
               <CardTitle className="flex items-center text-sm font-semibold text-zinc-600 uppercase tracking-widest font-mono">
                 <BrainCircuit className="mr-2 h-4 w-4 text-zinc-400" />
-                知识谱系 / Knowledge Graph
+                高频错点提分榜 / Top Weakness Leaderboard
               </CardTitle>
               <div className="text-[10px] text-zinc-400 font-mono border border-zinc-200 bg-white px-2 py-0.5 rounded uppercase">
                 Realtime
               </div>
             </CardHeader>
-            <CardContent className="flex-1 flex items-center justify-center pt-6">
-              <div className="w-full h-full p-2 md:p-4">
-                <WeaknessRadar data={radarData} />
+            <CardContent className="flex-1 flex flex-col pt-6">
+              <div className="w-full h-full px-2 md:px-4 flex-1 flex flex-col lg:flex-row gap-8">
+                <div className="flex-1 min-w-[300px]">
+                   <WeaknessRadar data={radarData.map(d => ({ ...d, mastery: Math.round((d.corrected / d.total) * 100) }))} />
+                </div>
+                <div className="flex-1">
+                   <TopWeaknessList data={radarData} totalGlobalMistakes={totalActiveMistakes} />
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -116,7 +130,7 @@ export async function DashboardMetrics() {
 
           {/* Action Row */}
           <div className="grid grid-cols-2 gap-4">
-            <Link href="/mistakes" className="group">
+            <Link href="/mistakes" className="group" prefetch={true}>
               <div className="aspect-square bg-white border border-zinc-200 hover:border-orange-200 hover:bg-orange-50 shadow-sm rounded-xl flex flex-col items-center justify-center text-center p-4 transition-all duration-200 group-hover:shadow-md cursor-pointer">
                 <div className="w-10 h-10 rounded-lg bg-orange-100 border border-orange-200 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                   <FileWarning className="w-5 h-5 text-orange-600" strokeWidth={1.5} />
@@ -125,13 +139,13 @@ export async function DashboardMetrics() {
                 <div className="text-[10px] text-zinc-400 mt-1 font-mono uppercase tracking-widest">Mistakes</div>
               </div>
             </Link>
-            <Link href="/reference" className="group">
+            <Link href="/reference" className="group" prefetch={true}>
               <div className="aspect-square bg-white border border-zinc-200 hover:border-blue-200 hover:bg-blue-50 shadow-sm rounded-xl flex flex-col items-center justify-center text-center p-4 transition-all duration-200 group-hover:shadow-md cursor-pointer">
                  <div className="w-10 h-10 rounded-lg bg-blue-100 border border-blue-200 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                   <Database className="w-5 h-5 text-blue-600" strokeWidth={1.5} />
                 </div>
-                <div className="text-sm font-semibold text-zinc-800">基准库</div>
-                <div className="text-[10px] text-zinc-400 mt-1 font-mono uppercase tracking-widest">Base DB</div>
+                <div className="text-sm font-semibold text-zinc-800">往届真题</div>
+                <div className="text-[10px] text-zinc-400 mt-1 font-mono uppercase tracking-widest">Past Exams</div>
               </div>
             </Link>
           </div>

@@ -1,0 +1,509 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "3 的相反数是（ ）",
+      "options": [
+        "A．-3",
+        "B．-\\frac{1}{3}",
+        "C．\\frac{1}{3}",
+        "D．3"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据相反数的定义即可求出 3 的相反数．\n【解答】解：3 的相反数是 -3\n故选 A．\n【点评】相反数的定义是：如果两个数只有符号不同，我们称其中一个数为另一个数的相反数，特别地，0 的相反数还是 0．",
+      "knowledge_points": [
+        "数与代数-实数-相反数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "如图，由四个正方体组成的几何体的左视图是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B",
+      "analysis": "【分析】直接利用三视图的画法，从左边观察，即可得出选项．\n【解答】解：图形的左视图为：B，\n故选 B．\n【点评】此题主要考查了三视图的画法，正确掌握三视图观察的角度是解题关键．",
+      "knowledge_points": [
+        "图形与几何-视图与投影-简单组合体的三视图"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.16,
+        0.52,
+        0.12,
+        0.08
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "用科学记数法表示 136 000，其结果是（ ）",
+      "options": [
+        "A．0.136\\times 10^6",
+        "B．1.36\\times 10^5",
+        "C．136\\times 10^3",
+        "D．136\\times 10^6"
+      ],
+      "answer": "B",
+      "analysis": "【分析】科学记数法的表示形式为 a\\times 10^n 的形式，其中 1\\le|a|<10，n 为整数．确定 n 的值时，要看把原数变成 a 时，小数点移动了多少位，n 的绝对值与小数点移动的位数相同．当原数绝对值\\ge 1 时，n 是非负数；当原数的绝对值<1 时，n 是负数．\n【解答】解：用科学记数法表示 136 000，其结果是 1.36\\times 10^5，\n故选：B．\n【点评】此题考查科学记数法的表示方法．科学记数法的表示形式为 a\\times 10^n 的形式，其中 1\\le|a|<10，n 为整数，表示时关键要正确确定 a 的值以及 n 的值．",
+      "knowledge_points": [
+        "数与代数-实数-科学记数法"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "化简 (2x)^2 的结果是（ ）",
+      "options": [
+        "A．x^4",
+        "B．2x^2",
+        "C．4x^2",
+        "D．4x"
+      ],
+      "answer": "C",
+      "analysis": "【分析】利用积的乘方法则：把每一个因式分别乘方，再把所得的幂相乘．\n【解答】解：(2x)^2=4x^2，\n故选：C．\n【点评】此题主要考查了积的乘方，关键是掌握计算法则．",
+      "knowledge_points": [
+        "数与代数-整式的运算-幂的运算"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "下列关于图形对称性的命题，正确的是（ ）",
+      "options": [
+        "A．圆既是轴对称图形，又是中心对称图形",
+        "B．正三角形既是轴对称图形，又是中心对称图形",
+        "C．线段是轴对称图形，但不是中心对称图形",
+        "D．菱形是中心对称图形，但不是轴对称图形"
+      ],
+      "answer": "A",
+      "analysis": "【分析】分析是否为真命题，需要分别分析各题设是否能推出结论，从而利用排除法得出答案．\n【解答】解：A、圆既是轴对称图形，又是中心对称图形，故 A 符合题意；\nB、正三角形既是轴对称图形，不是中心对称图形，故 B 不符合题意；\nC、线段是轴对称图形，是中心对称图形，故 C 不符合题意；\nD、菱形是中心对称图形，是轴对称图形，故 D 符合题意；\n故选：A．\n【点评】主要考查命题的真假判断，正确的命题叫真命题，错误的命题叫做假命题．判断命题的真假关键是要熟悉课本中的性质定理．",
+      "knowledge_points": [
+        "图形与几何-图形的变换-轴对称",
+        "图形与几何-图形的变换-中心对称",
+        "图形与几何-圆"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "不等式组：\\begin{cases} x-2 \\le 0 \\\\ x+3 > 0 \\end{cases} 的解集是（ ）",
+      "options": [
+        "A．-3 < x \\le 2",
+        "B．-3 \\le x < 2",
+        "C．x \\ge 2",
+        "D．x < -3"
+      ],
+      "answer": "A",
+      "analysis": "【分析】求出每个不等式的解集，再求出不等式组的解集，\n【解答】解：\n解不等式①得：x \\le 2，\n解不等式②得：x > -3，\n∴不等式组的解集为：-3 < x \\le 2，\n故选 A．\n【点评】本题考查了一元一次不等式组的解法：解一元一次不等式组时，一般先求出其中各不等式的解集，再求出这些解集的公共部分，解集的规律：同大取大；同小取小；大小小大中间找；大大小小找不到．",
+      "knowledge_points": [
+        "数与代数-方程与不等式-一元一次不等式组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "某校举行“汉字听写比赛”，5 个班级代表队的正确答题数如图．这 5 个正确答题数所组成的一组数据的中位数和众数分别是（ ）",
+      "options": [
+        "A．10，15",
+        "B．13，15",
+        "C．13，20",
+        "D．15，15"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据中位数和众数的定义分别进行解答即可．\n【解答】解：把这组数据从小到大排列：10、13、15、15、20，\n最中间的数是 15，\n则这组数据的中位数是 15；\n15 出现了 2 次，出现的次数最多，则众数是 15．\n故选：D．\n【点评】此题考查了中位数和众数，将一组数据从小到大（或从大到小）重新排列后，最中间的那个数（或最中间两个数的平均数）叫做这组数据的中位数；众数是一组数据中出现次数最多的数．",
+      "knowledge_points": [
+        "统计与概率-数据的分析-中位数",
+        "统计与概率-数据的分析-众数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        3,
+        0.15,
+        0.55,
+        0.3,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "如图，AB 是 \\odot O 的直径，C，D 是 \\odot O 上位于 AB 异侧的两点．下列四个角中，一定与 \\angle ACD 互余的角是（ ）",
+      "options": [
+        "A．\\angle ADC",
+        "B．\\angle ABD",
+        "C．\\angle BAC",
+        "D．\\angle BAD"
+      ],
+      "answer": "D",
+      "analysis": "【分析】由圆周角定理得出 \\angle ACB=\\angle ACD+\\angle BCD=90^\\circ，\\angle BCD=\\angle BAD，得出 \\angle ACD+\\angle BAD=90^\\circ，即可得出答案．\n【解答】解：连接 BC，如图所示：\n∵AB 是 \\odot O 的直径，\n∴\\angle ACB=\\angle ACD+\\angle BCD=90^\\circ，\n∵\\angle BCD=\\angle BAD，\n∴\\angle ACD+\\angle BAD=90^\\circ，\n故选：D．\n【点评】本题考查了圆周角定理；熟记圆周角定理是解决问题的关键．",
+      "knowledge_points": [
+        "图形与几何-圆-圆周角定理"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.15,
+        0.18,
+        0.16,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "若直线 y=kx+k+1 经过点 (m，n+3) 和 (m+1，2n-1)，且 0<k<2，则 n 的值可以是（ ）",
+      "options": [
+        "A．3",
+        "B．4",
+        "C．5",
+        "D．6"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据题意列方程组得到 k=n-4，由于 0<k<2，于是得到 0<n-4<2，即可得到结论．\n【解答】解：依题意得：\\begin{cases} n+3=km+k+1 \\\\ 2n-1=km+k+k+1 \\end{cases}，\n两式相减得：n-4=k，\n∴k=n-4，\n∵0<k<2，\n∴0<n-4<2，\n∴4<n<6，\n故选 C．\n【点评】考查了一次函数的图象与系数的关系，注重考察学生思维的严谨性，易错题，难度中等．",
+      "knowledge_points": [
+        "数与代数-函数-一次函数"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "如图，网格纸上正方形小格的边长为 1．图中线段 AB 和点 P 绕着同一个点做相同的旋转，分别得到线段 A'B' 和点 P'，则点 P' 所在的单位正方形区域是（ ）",
+      "options": [
+        "A．1 区",
+        "B．2 区",
+        "C．3 区",
+        "D．4 区"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据旋转的性质连接 AA'、BB'，分别作 AA'、BB' 的中垂线，两直线的交点即为旋转中心，从而得出线段 AB 和点 P 是绕着同一个该点逆时针旋转 90^\\circ，据此可得答案．\n【解答】解：如图，连接 AA'、BB'，分别作 AA'、BB' 的中垂线，两直线的交点即为旋转中心，\n由图可知，线段 AB 和点 P 绕着同一个该点逆时针旋转 90^\\circ，\n∴点 P 逆时针旋转 90^\\circ 后所得对应点 P' 落在 4 区，\n故选：D．\n【点评】本题主要考查旋转，熟练掌握旋转的性质得出图形的旋转中心及旋转方向是解题的关键．",
+      "knowledge_points": [
+        "图形与几何-图形的变换-旋转"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.15,
+        0.39,
+        0.22,
+        0.18
+      ],
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "计算 |-2|-3^0= \\_\\_\\_\\_\\_\\_ ．",
+      "options": [],
+      "answer": "1",
+      "analysis": "【分析】首先利用零指数幂的性质以及绝对值的性质分别化简得出答案．\n【解答】解：原式=2-1\n=1．\n故答案为：1．\n【点评】此题主要考查了实数运算，正确化简各数是解题关键．",
+      "knowledge_points": [
+        "数与代数-实数-实数的运算",
+        "数与代数-实数-零指数幂"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "如图，\\triangle ABC 中，D，E 分别是 AB，AC 的中点，连接 DE．若 DE=3，则线段 BC 的长等于 \\_\\_\\_\\_\\_\\_ ．",
+      "options": [],
+      "answer": "6",
+      "analysis": "【分析】直接根据三角形的中位线定理即可得出结论．\n【解答】解：∵\\triangle ABC 中，D，E 分别是 AB，AC 的中点，\n∴DE 是 \\triangle ABC 的中位线．\n∵DE=3，\n∴BC=2DE=6．\n故答案为：6．\n【点评】本题考查的是三角形中位线定理，熟知三角形的中位线平行于第三边，并且等于第三边的一半是解答此题的关键．",
+      "knowledge_points": [
+        "图形与几何-三角形-三角形中位线"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": true,
+      "figure_bbox": [
+        6,
+        0.15,
+        0.53,
+        0.14,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "一个箱子装有除颜色外都相同的 2 个白球，2 个黄球，1 个红球．现添加同种型号的 1 个球，使得从中随机抽取 1 个球，这三种颜色的球被抽到的概率都是 \\frac{1}{3}，那么添加的球是 \\_\\_\\_\\_\\_\\_ ．",
+      "options": [],
+      "answer": "红球",
+      "analysis": "【分析】根据已知条件即可得到结论．\n【解答】解：∵这三种颜色的球被抽到的概率都是 \\frac{1}{3}，\n∴这三种颜色的球的个数相等，\n∴添加的球是红球，\n故答案为：红球．\n【点评】本题考查了概率公式，熟练掌握概率的概念是解题的关键．",
+      "knowledge_points": [
+        "统计与概率-概率-简单事件的概率"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "已知 A，B，C 是数轴上的三个点，且 C 在 B 的右侧．点 A，B 表示的数分别是 1，3，如图所示．若 BC=2AB，则点 C 表示的数是 \\_\\_\\_\\_\\_\\_ ．",
+      "options": [],
+      "answer": "7",
+      "analysis": "【分析】先利用点 A、B 表示的数计算出 AB，再计算出 BC，然后计算点 C 到原点的距离即可得到 C 点表示的数．\n【解答】解：∵点 A，B 表示的数分别是 1，3，\n∴AB=3-1=2，\n∵BC=2AB=4，\n∴OC=OA+AB+BC=1+2+4=7，\n∴点 C 表示的数是 7．\n故答案为 7．\n【点评】本题考查了数轴：所有的有理数都可以用数轴上的点表示，但数轴上的点不都表示有理数．（一般取右方向为正方向，数轴上的点对应任意实数，包括无理数．）",
+      "knowledge_points": [
+        "数与代数-实数-数轴"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        7,
+        0.15,
+        0.42,
+        0.28,
+        0.05
+      ],
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "两个完全相同的正五边形都有一边在直线 l 上，且有一个公共顶点 O，其摆放方式如图所示，则 \\angle AOB 等于 \\_\\_\\_\\_\\_\\_ 度．",
+      "options": [],
+      "answer": "108",
+      "analysis": "【分析】根据多边形的内角和，可得 \\angle 1，\\angle 2，\\angle 3，\\angle 4，根据等腰三角形的内角和，可得 \\angle 7，根据角的和差，可得答案．\n【解答】解：如图，\n由正五边形的内角和，得 \\angle 1=\\angle 2=\\angle 3=\\angle 4=108^\\circ，\n\\angle 5=\\angle 6=180^\\circ - 108^\\circ=72^\\circ，\n\\angle 7=180^\\circ - 72^\\circ - 72^\\circ=36^\\circ．\n\\angle AOB=360^\\circ - 108^\\circ - 108^\\circ - 36^\\circ=108^\\circ，\n故答案为：108．\n【点评】本题考查了多边形的内角与外角，利用多边形的内角和得出每个内角是解题关键．",
+      "knowledge_points": [
+        "图形与几何-多边形-正多边形的内角和"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        8,
+        0.15,
+        0.08,
+        0.25,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "已知矩形 ABCD 的四个顶点均在反比例函数 y=\\frac{1}{x} 的图象上，且点 A 的横坐标是 2，则矩形 ABCD 的面积为 \\_\\_\\_\\_\\_\\_ ．",
+      "options": [],
+      "answer": "\\frac{15}{2}",
+      "analysis": "【分析】先根据点 A 在反比例函数 y=\\frac{1}{x} 的图象上，且点 A 的横坐标是 2，可得 A (2，\\frac{1}{2})，再根据 B(\\frac{1}{2}，2)，D(- \\frac{1}{2}，-2)，运用两点间距离公式求得 AB 和 AD 的长，即可得到矩形 ABCD 的面积．\n【解答】解：如图所示，根据点 A 在反比例函数 y=\\frac{1}{x} 的图象上，且点 A 的横坐标是 2，可得 A(2，\\frac{1}{2})，\n根据矩形和双曲线的对称性可得，B(\\frac{1}{2}，2)，D(- \\frac{1}{2}，-2)，\n由两点间距离公式可得，AB=\\sqrt{(2-\\frac{1}{2})^2+(\\frac{1}{2}-2)^2}=\\frac{3}{2}\\sqrt{2}，\nAD=\\sqrt{(2+\\frac{1}{2})^2+(\\frac{1}{2}+2)^2}=\\frac{5}{2}\\sqrt{2}，\n∴矩形 ABCD 的面积=AB\\times AD=\\frac{3}{2}\\sqrt{2}\\times \\frac{5}{2}\\sqrt{2}=\\frac{15}{2}，\n故答案为：\\frac{15}{2}．\n【点评】本题主要考查了反比例函数图象上点的坐标特征以及矩形的性质的综合应用，解决问题的关键是画出图形，依据两点间距离公式求得矩形的边长．",
+      "knowledge_points": [
+        "数与代数-函数-反比例函数"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "先化简，再求值：(1- \\frac{1}{a}) \\cdot \\frac{a}{a^2-1}，其中 a=\\sqrt{2}-1．",
+      "options": [],
+      "answer": "\\frac{\\sqrt{2}}{2}",
+      "analysis": "【分析】根据分式的运算法则即可求出答案．\n【解答】解：当 a=\\sqrt{2}-1 时\n原式=\\frac{a-1}{a} \\cdot \\frac{a}{(a+1)(a-1)}\n=\\frac{1}{a+1}\n=\\frac{1}{\\sqrt{2}-1+1}\n=\\frac{\\sqrt{2}}{2}\n【点评】本题考查分式的运算，解题的关键是熟练运用分式的运算法则，本题属于基础题型．",
+      "knowledge_points": [
+        "数与代数-式与方程-分式及其运算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "如图，点 B、E、C、F 在一条直线上，AB=DE，AC=DF，BE=CF．求证：\\angle A=\\angle D．",
+      "options": [],
+      "answer": "证明见解析",
+      "analysis": "【分析】证明 BC=EF，然后根据 SSS 即可证明 \\triangle ABC \\cong \\triangle DEF，然后根据全等三角形的对应角相等即可证得．\n【解答】证明：如图，∵BE=CF，\n∴BC=EF，\n在 \\triangle ABC 和 \\triangle DEF 中，\n\\begin{cases} AB=DE \\\\ AC=DF \\\\ BC=EF \\end{cases}\n∴\\triangle ABC \\cong \\triangle DEF(SSS)．\n∴\\angle A=\\angle D．\n【点评】本题考查了全等三角形的判定与性质，证明线段相等常用的方法是证明所在的三角形全等．",
+      "knowledge_points": [
+        "图形与几何-三角形-全等三角形"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        10,
+        0.15,
+        0.15,
+        0.18,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "如图，\\triangle ABC 中，\\angle BAC=90^\\circ，AD \\perp BC，垂足为 D．求作 \\angle ABC 的平分线，分别交 AD，AC 于 P，Q 两点；并证明 AP=AQ．（要求：尺规作图，保留作图痕迹，不写作法）",
+      "options": [],
+      "answer": "作图及证明见解析",
+      "analysis": "【分析】根据角平分线的性质作出 BQ 即可．先根据垂直的定义得出 \\angle ADB=90^\\circ，故 \\angle BPD+\\angle PBD=90^\\circ．再根据余角的定义得出 \\angle AQP+\\angle ABQ=90^\\circ，根据角平分线的性质得出 \\angle ABQ=\\angle PBD，再由 \\angle BPD=\\angle APQ 可知 \\angle APQ=\\angle AQP，据此可得出结论．\n【解答】解：BQ 就是所求的 \\angle ABC 的平分线，P、Q 就是所求作的点．\n证明：∵AD \\perp BC，\n∴\\angle ADB=90^\\circ，\n∴\\angle BPD+\\angle PBD=90^\\circ．\n∵\\angle BAC=90^\\circ，\n∴\\angle AQP+\\angle ABQ=90^\\circ．\n∵\\angle ABQ=\\angle PBD，\n∴\\angle BPD=\\angle AQP．\n∵\\angle BPD=\\angle APQ，\n∴\\angle APQ=\\angle AQP，\n∴AP=AQ．\n【点评】本题考查的是作图-基本作图，熟知角平分线的作法和性质是解答此题的关键．",
+      "knowledge_points": [
+        "图形与几何-尺规作图",
+        "图形与几何-三角形-角平分线"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        10,
+        0.15,
+        0.77,
+        0.24,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "我国古代数学著作《孙子算经》中有“鸡兔同笼”问题：“今有鸡兔同笼，上有三十五头，下有九十四足．问鸡兔各几何．”其大意是：“有若干只鸡和兔关在同一笼子里，它们一共有 35 个头，94 条腿．问笼中的鸡和兔各有多少只？”试用列方程（组）解应用题的方法求出问题的解．",
+      "options": [],
+      "answer": "鸡有 23 只，兔有 12 只",
+      "analysis": "【分析】设鸡有 x 只，兔有 y 只，根据等量关系：上有三十五头，下有九十四足，可分别得出方程，联立求解即可得出答案．\n【解答】解：设鸡有 x 只，兔有 y 只，鸡有一个头，两只脚，兔有 1 个头，四只脚，\n结合上有三十五头，下有九十四足可得：\\begin{cases} x+y=35 \\\\ 2x+4y=94 \\end{cases}，\n解得：\\begin{cases} x=23 \\\\ y=12 \\end{cases}．\n答：鸡有 23 只，兔有 12 只．\n【点评】此题考查了二元一次方程的知识，解答本题的关键是仔细审题，根据等量关系得出方程组，难度一般．",
+      "knowledge_points": [
+        "数与代数-式与方程-二元一次方程组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，四边形 ABCD 内接于 \\odot O，AB 是 \\odot O 的直径，点 P 在 CA 的延长线上，\\angle CAD=45^\\circ．\n（I）若 AB=4，求 \\widehat{CD} 的长；\n（II）若 \\widehat{BC}=\\widehat{AD}，AD=AP，求证：PD 是 \\odot O 的切线．",
+      "options": [],
+      "answer": "（I）π；（II）证明见解析",
+      "analysis": "【分析】（I）连接 OC，OD，由圆周角定理得到 \\angle COD=2\\angle CAD，\\angle CAD=45^\\circ，于是得到 \\angle COD=90^\\circ，根据弧长公式即可得到结论；\n（II）由已知条件得到 \\angle BOC=\\angle AOD，由圆周角定理得到 \\angle AOD=45^\\circ，根据等腰三角形的性质得到 \\angle ODA=\\angle OAD，求得 \\angle ADP=\\frac{1}{2}\\angle CAD=22.5^\\circ，得到 \\angle ODP=\\angle ODA+\\angle ADP=90^\\circ，于是得到结论．\n【解答】解：（I）连接 OC，OD，\n∵\\angle COD=2\\angle CAD，\\angle CAD=45^\\circ，\n∴\\angle COD=90^\\circ，\n∵AB=4，\n∴OC=\\frac{1}{2}AB=2，\n∴\\widehat{CD} 的长=\\frac{90}{180}\\times \\pi \\times 2=\\pi；\n（II）∵\\widehat{BC}=\\widehat{AD}，\n∴\\angle BOC=\\angle AOD，\n∵\\angle COD=90^\\circ，\n∴\\angle AOD=45^\\circ，\n∵OA=OD，\n∴\\angle ODA=\\angle OAD，\n∵\\angle AOD+\\angle ODA+\\angle OAD=180^\\circ，\n∴\\angle ODA=67.5^\\circ，\n∵AD=AP，\n∴\\angle ADP=\\angle APD，\n∵\\angle CAD=\\angle ADP+\\angle APD，\\angle CAD=45^\\circ，\n∴\\angle ADP=\\frac{1}{2}\\angle CAD=22.5^\\circ，\n∴\\angle ODP=\\angle ODA+\\angle ADP=90^\\circ，\n∴PD 是 \\odot O 的切线．\n【点评】本题考查了切线的判定，圆内接四边形的性质，弧长的计算，正确的作出辅助线是解题的关键．",
+      "knowledge_points": [
+        "图形与几何-圆-切线的判定",
+        "图形与几何-圆-弧长"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        12,
+        0.15,
+        0.4,
+        0.2,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "小明在某次作业中得到如下结果：\n\\sin^2 7^\\circ + \\sin^2 83^\\circ \\approx 0.12^2 + 0.99^2 = 0.9945，\n\\sin^2 22^\\circ + \\sin^2 68^\\circ \\approx 0.37^2 + 0.93^2 = 1.0018，\n\\sin^2 29^\\circ + \\sin^2 61^\\circ \\approx 0.48^2 + 0.87^2 = 0.9873，\n\\sin^2 37^\\circ + \\sin^2 53^\\circ \\approx 0.60^2 + 0.80^2 = 1.0000，\n\\sin^2 45^\\circ + \\sin^2 45^\\circ \\approx (\\frac{\\sqrt{2}}{2})^2 + (\\frac{\\sqrt{2}}{2})^2 = 1．\n据此，小明猜想：对于任意锐角 \\alpha，均有 \\sin^2 \\alpha + \\sin^2 (90^\\circ - \\alpha) = 1．\n（I）当 \\alpha=30^\\circ 时，验证 \\sin^2 \\alpha + \\sin^2 (90^\\circ - \\alpha) = 1 是否成立；\n（II）小明的猜想是否成立？若成立，请给予证明；若不成立，请举出一个反例．",
+      "options": [],
+      "answer": "（I）成立；（II）成立，证明见解析",
+      "analysis": "【分析】（1）将 \\alpha=30^\\circ 代入，根据三角函数值计算可得；\n（2）设 \\angle A=\\alpha，则 \\angle B=90^\\circ - \\alpha，根据正弦函数的定义及勾股定理即可验证．\n【解答】解：（1）当 \\alpha=30^\\circ 时，\n\\sin^2 \\alpha + \\sin^2 (90^\\circ - \\alpha)\n=\\sin^2 30^\\circ + \\sin^2 60^\\circ\n=(\\frac{1}{2})^2 + (\\frac{\\sqrt{3}}{2})^2\n=\\frac{1}{4} + \\frac{3}{4}\n=1；\n（2）小明的猜想成立，证明如下：\n如图，在 \\triangle ABC 中，\\angle C=90^\\circ，\n设 \\angle A=\\alpha，则 \\angle B=90^\\circ - \\alpha，\n∴\\sin^2 \\alpha + \\sin^2 (90^\\circ - \\alpha)\n=(\\frac{BC}{AB})^2 + (\\frac{AC}{AB})^2\n=\\frac{BC^2+AC^2}{AB^2}\n=\\frac{AB^2}{AB^2}\n=1．\n【点评】本题主要考查特殊锐角的三角函数值及正弦函数的定义，熟练掌握三角函数的定义及勾股定理是解题的关键．",
+      "knowledge_points": [
+        "图形与几何-三角形-锐角三角函数"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "自 2016 年国庆后，许多高校均投放了使用手机就可随用的共享单车．某运营商为提高其经营的 A 品牌共享单车的市场占有率，准备对收费作如下调整：一天中，同一个人第一次使用的车费按 0.5 元收取，每增加一次，当次车费就比上次车费减少 0.1 元，第 6 次开始，当次用车免费．具体收费标准如下：\n使用次数：0，1，2，3，4，5（含 5 次以上）\n累计车费：0，0.5，0.9，a，b，1.5\n同时，就此收费方案随机调查了某高校 100 名师生在一天中使用 A 品牌共享单车的意愿，得到如下数据：\n使用次数：0，1，2，3，4，5\n人数：5，15，10，30，25，15\n（I）写出 a，b 的值；\n（II）已知该校有 5000 名师生，且 A 品牌共享单车投放该校一天的费用为 5800 元．试估计：收费调整后，此运营商在该校投放 A 品牌共享单车能否获利？说明理由．",
+      "options": [],
+      "answer": "（I）a=1.2，b=1.4；（II）不能获利，理由见解析",
+      "analysis": "【分析】（I）根据收费调整情况列出算式计算即可求解；\n（II）先根据平均数的计算公式求出抽取的 100 名师生每人每天使用 A 品牌共享单车的平均车费，再根据用样本估计总体求出 5000 名师生一天使用共享单车的费用，再与 5800 比较大小即可求解．\n【解答】解：（I）a=0.9+0.3=1.2，b=1.2+0.2=1.4；\n（II）根据用车意愿调查结果，抽取的 100 名师生每人每天使用 A 品牌共享单车的平均车费为：\n\\frac{1}{100}\\times(0\\times 5+0.5\\times 15+0.9\\times 10+1.2\\times 30+1.4\\times 25+1.5\\times 15)=1.1（元），\n所以估计 5000 名师生一天使用共享单车的费用为：5000\\times 1.1=5500（元），\n因为 5500<5800，\n故收费调整后，此运营商在该校投放 A 品牌共享单车不能获利．\n【点评】考查了样本平均数，用样本估计总体，（II）中求得抽取的 100 名师生每人每天使用 A 品牌共享单车的平均车费是解题的关键．",
+      "knowledge_points": [
+        "统计与概率-统计-用样本估计总体"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "如图，矩形 ABCD 中，AB=6，AD=8，P，E 分别是线段 AC、BC 上的点，且四边形 PEFD 为矩形．\n（I）若 \\triangle PCD 是等腰三角形时，求 AP 的长；\n（II）若 AP=\\sqrt{2}，求 CF 的长．",
+      "options": [],
+      "answer": "（I）AP=4 或 5 或 \\frac{14}{5}；（II）\\frac{3\\sqrt{2}}{4}",
+      "analysis": "【分析】（I）先求出 AC，再分三种情况讨论计算即可得出结论；\n（II）方法 1、先判断出 OC=\\frac{1}{2}ED，OC=\\frac{1}{2}PF，进而得出 OC=OP=OF，即可得出 \\angle OCF=\\angle OFC，\\angle OCP=\\angle OPC，最后判断出 \\triangle ADP \\sim \\triangle CDF，得出比例式即可得出结论．\n方法 2、先判断出 \\angle CEF=\\angle FDC，得出点 E，C，F，D 四点共圆，再判断出点 P 也在此圆上，即可得出 \\angle DAP=\\angle DCF，此后同方法 1 即可得出结论．\n【解答】解：（I）在矩形 ABCD 中，AB=6，AD=8，\\angle ADC=90^\\circ，\n∴DC=AB=6，\n∴AC=\\sqrt{AD^2+DC^2}=10，\n要使 \\triangle PCD 是等腰三角形，\n①当 CP=CD 时，AP=AC-CP=10-6=4，\n②当 PD=PC 时，\\angle PDC=\\angle PCD，\n∵\\angle PCD+\\angle PAD=\\angle PDC+\\angle PDA=90^\\circ，\n∴\\angle PAD=\\angle PDA，\n∴PD=PA，\n∴PA=PC，\n∴AP=\\frac{1}{2}AC=5，\n③当 DP=DC 时，如图 1，过点 D 作 DQ \\perp AC 于 Q，则 PQ=CQ，\n∵S_{\\triangle ADC}=\\frac{1}{2}AD \\cdot DC=\\frac{1}{2}AC \\cdot DQ，\n∴DQ=\\frac{AD \\cdot DC}{AC}=\\frac{24}{5}，\n∴CQ=\\sqrt{DC^2-DQ^2}=\\frac{18}{5}，\n∴PC=2CQ=\\frac{36}{5}，\n∴AP=AC-PC=10-\\frac{36}{5}=\\frac{14}{5}；\n所以，若 \\triangle PCD 是等腰三角形时，AP=4 或 5 或 \\frac{14}{5}；\n（II）方法 1、如图 2，连接 PF，DE，记 PF 与 DE 的交点为 O，连接 OC，\n∵四边形 ABCD 和 PEFD 是矩形，\n∴\\angle ADC=\\angle PDF=90^\\circ，\n∴\\angle ADP+\\angle PDC=\\angle PDC+\\angle CDF，\n∴\\angle ADP=\\angle CDF，\n∵\\angle BCD=90^\\circ，OE=OD，\n∴OC=\\frac{1}{2}ED，\n在矩形 PEFD 中，PF=DE，\n∴OC=\\frac{1}{2}PF，\n∵OP=OF=\\frac{1}{2}PF，\n∴OC=OP=OF，\n∴\\angle OCF=\\angle OFC，\\angle OCP=\\angle OPC，\n∵\\angle OPC+\\angle OFC+\\angle PCF=180^\\circ，\n∴2\\angle OCP+2\\angle OCF=180^\\circ，\n∴\\angle PCF=90^\\circ，\n∴\\angle PCD+\\angle FCD=90^\\circ，\n在 Rt\\triangle ADC 中，\\angle PCD+\\angle PAD=90^\\circ，\n∴\\angle PAD=\\angle FCD，\n∴\\triangle ADP \\sim \\triangle CDF，\n∴\\frac{CF}{AP}=\\frac{CD}{AD}=\\frac{3}{4}，\n∵AP=\\sqrt{2}，\n∴CF=\\frac{3\\sqrt{2}}{4}．\n【点评】此题是四边形综合题，主要考查了矩形的性质，勾股定理，等腰三角形的性质，相似三角形的判定和性质，解（I）的关键是分三种情况讨论计算，解（II）的关键是判断出 \\triangle ADP \\sim \\triangle CDF，是一道中考常考题．",
+      "knowledge_points": [
+        "图形与几何-三角形-相似三角形",
+        "图形与几何-四边形-矩形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        16,
+        0.15,
+        0.15,
+        0.25,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "已知直线 y=2x+m 与抛物线 y=ax^2+ax+b 有一个公共点 M(1，0)，且 a<b．\n（I）求抛物线顶点 Q 的坐标（用含 a 的代数式表示）；\n（II）说明直线与抛物线有两个交点；\n（III）直线与抛物线的另一个交点记为 N．\n（i）若 -1\\le a\\le -\\frac{1}{2}，求线段 MN 长度的取值范围；\n（ii）求 \\triangle QMN 面积的最小值．",
+      "options": [],
+      "answer": "（I）Q(- \\frac{1}{2}，-\\frac{9a}{4})；（II）见解析；（III）（i）5\\sqrt{5} \\le MN \\le 7\\sqrt{5}；（ii）\\frac{27+9\\sqrt{2}}{4}",
+      "analysis": "【分析】（I）把 M 点坐标代入抛物线解析式可得到 b 与 a 的关系，可用 a 表示出抛物线解析式，化为顶点式可求得其顶点坐标；\n（II）由直线解析式可先求得 m 的值，联立直线与抛物线解析式，消去 y，可得到关于 x 的一元二次方程，再判断其判别式大于 0 即可；\n（III）（i）由（II）的方程，可求得 N 点坐标，利用勾股定理可求得 MN^2，利用二次函数性质可求得 MN 长度的取值范围；\n（ii）设抛物线对称轴交直线与点 E，则可求得 E 点坐标，利用 S_{\\triangle QMN}=S_{\\triangle QEN}+S_{\\triangle QEM} 可用 a 表示出 \\triangle QMN 的面积，再整理成关于 a 的一元二次方程，利用判别式可得其面积的取值范围，可求得答案．\n【解答】解：（I）∵抛物线 y=ax^2+ax+b 过点 M(1，0)，\n∴a+a+b=0，即 b=-2a，\n∴y=ax^2+ax+b=ax^2+ax-2a=a(x+\\frac{1}{2})^2-\\frac{9a}{4}，\n∴抛物线顶点 Q 的坐标为 (- \\frac{1}{2}，-\\frac{9a}{4})；\n（II）∵直线 y=2x+m 经过点 M(1，0)，\n∴0=2\\times 1+m，解得 m=-2，\n联立直线与抛物线解析式，消去 y 可得 ax^2+(a-2)x-2a+2=0 (*)\n∴\\Delta=(a-2)^2-4a(-2a+2)=9a^2-12a+4，\n由（I）知 b=-2a，且 a<b，\n∴a<0，b>0，\n∴\\Delta>0，\n∴方程 (*) 有两个不相等的实数根，\n∴直线与抛物线有两个交点；\n（III）联立直线与抛物线解析式，消去 y 可得 ax^2+(a-2)x-2a+2=0，即 x^2+(1-\\frac{2}{a})x-2+\\frac{2}{a}=0，\n∴(x-1)[x-(\\frac{2}{a}-2)]=0，解得 x=1 或 x=\\frac{2}{a}-2，\n∴N 点坐标为 (\\frac{2}{a}-2，\\frac{4}{a}-6)，\n（i）由勾股定理可得 MN^2=[(\\frac{2}{a}-2)-1]^2+(\\frac{4}{a}-6)^2=\\frac{20}{a^2}-\\frac{60}{a}+45=20(\\frac{1}{a}-\\frac{3}{2})^2，\n∵-1\\le a\\le -\\frac{1}{2}，\n∴-2\\le \\frac{1}{a} \\le -1，\n∴MN^2 随 \\frac{1}{a} 的增大而减小，\n∴当 \\frac{1}{a}=-2 时，MN^2 有最大值 245，则 MN 有最大值 7\\sqrt{5}，\n当 \\frac{1}{a}=-1 时，MN^2 有最小值 125，则 MN 有最小值 5\\sqrt{5}，\n∴线段 MN 长度的取值范围为 5\\sqrt{5} \\le MN \\le 7\\sqrt{5}；\n（ii）如图，设抛物线对称轴交直线与点 E，\n∵抛物线对称轴为 x=- \\frac{1}{2}，\n∴E(- \\frac{1}{2}，-3)，\n∵M(1，0)，N(\\frac{2}{a}-2，\\frac{4}{a}-6)，且 a<0，设 \\triangle QMN 的面积为 S，\n∴S=S_{\\triangle QEN}+S_{\\triangle QEM}=\\frac{1}{2}|(\\frac{2}{a}-2)-1| \\cdot |-\\frac{9a}{4}-(-3)|=\\frac{27}{4}-\\frac{3}{a}-\\frac{27a}{8}，\n∴27a^2+(8S-54)a+24=0 (*)，\n∵关于 a 的方程 (*) 有实数根，\n∴\\Delta=(8S-54)^2-4\\times 27\\times 24 \\ge 0，即 (8S-54)^2 \\ge (36\\sqrt{2})^2，\n∵a<0，\n∴S=\\frac{27}{4}-\\frac{3}{a}-\\frac{27a}{8} > \\frac{27}{4}，\n∴8S-54>0，\n∴8S-54 \\ge 36\\sqrt{2}，即 S \\ge \\frac{27+9\\sqrt{2}}{4}，\n当 S=\\frac{27+9\\sqrt{2}}{4} 时，由方程 (*) 可得 a=-\\frac{2\\sqrt{2}}{3} 满足题意，\n∴当 a=-\\frac{2\\sqrt{2}}{3}，b=\\frac{4\\sqrt{2}}{3} 时，\\triangle QMN 面积的最小值为 \\frac{27+9\\sqrt{2}}{4}．\n【点评】本题为二次函数的综合应用，涉及函数图象的交点、二次函数的性质、根的判别式、勾股定理、三角形的面积等知识．",
+      "knowledge_points": [
+        "数与代数-函数-二次函数",
+        "数与代数-函数-二次函数与一元二次方程"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        19,
+        0.15,
+        0.1,
+        0.25,
+        0.28
+      ],
+      "images": []
+    }
+  ]
+}

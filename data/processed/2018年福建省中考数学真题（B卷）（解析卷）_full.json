@@ -1,0 +1,525 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "在实数 $|-3|$，$-2$，$0$，$\\pi$ 中，最小的数是（ ）",
+      "options": [
+        "$|-3|$",
+        "$-2$",
+        "$0$",
+        "$\\pi$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】直接利用利用绝对值的性质化简，进而比较大小得出答案．\n【解答】解：在实数 $|-3|$，$-2$，$0$，$\\pi$ 中，\n$|-3|=3$，则 $-2<0<|-3|<\\pi$，\n故最小的数是：$-2$．\n故选：B．",
+      "knowledge_points": [
+        "实数比较大小",
+        "绝对值"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "某几何体的三视图如图所示，则该几何体是（ ）",
+      "options": [
+        "圆柱",
+        "三棱柱",
+        "长方体",
+        "四棱锥"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据常见几何体的三视图逐一判断即可得．\n【解答】解：A、圆柱的主视图和左视图是矩形，但俯视图是圆，不符合题意；\nB、三棱柱的主视图和左视图是矩形，但俯视图是三角形，不符合题意；\nC、长方体的主视图、左视图及俯视图都是矩形，符合题意；\nD、四棱锥的主视图、左视图都是三角形，而俯视图是四边形，不符合题意；\n故选：C．",
+      "knowledge_points": [
+        "简单几何体的三视图"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.15,
+        0.43,
+        0.12,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "下列各组数中，能作为一个三角形三边边长的是（ ）",
+      "options": [
+        "1，1，2",
+        "1，2，4",
+        "2，3，4",
+        "2，3，5"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据三角形中任意两边之和大于第三边，任意两边之差小于第三边．即可求解．\n【解答】解：A、1+1=2，不满足三边关系，故错误；\nB、1+2<4，不满足三边关系，故错误；\nC、2+3>4，满足三边关系，故正确；\nD、2+3=5，不满足三边关系，故错误．\n故选：C．",
+      "knowledge_points": [
+        "三角形三边关系"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "一个 $n$ 边形的内角和为 $360^\\circ$，则 $n$ 等于（ ）",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "B",
+      "analysis": "【分析】$n$ 边形的内角和是 $(n-2) \\cdot 180^\\circ$，如果已知多边形的内角和，就可以得到一个关于边数的方程，解方程就可以求 $n$．\n【解答】解：根据 $n$ 边形的内角和公式，得：\n$(n-2) \\cdot 180=360$，\n解得 $n=4$．\n故选：B．",
+      "knowledge_points": [
+        "多边形内角和"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "如图，等边三角形 $ABC$ 中，$AD \\perp BC$，垂足为 $D$，点 $E$ 在线段 $AD$ 上，$\\angle EBC=45^\\circ$，则 $\\angle ACE$ 等于（ ）",
+      "options": [
+        "$15^\\circ$",
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$"
+      ],
+      "answer": "A",
+      "analysis": "【分析】先判断出 $AD$ 是 $BC$ 的垂直平分线，进而求出 $\\angle ECB=45^\\circ$，即可得出结论．\n【解答】解：$\\because$ 等边三角形 $ABC$ 中，$AD \\perp BC$，\n$\\therefore BD=CD$，即：$AD$ 是 $BC$ 的垂直平分线，\n$\\because$ 点 $E$ 在 $AD$ 上，\n$\\therefore BE=CE$，\n$\\therefore \\angle EBC=\\angle ECB$，\n$\\because \\angle EBC=45^\\circ$，\n$\\therefore \\angle ECB=45^\\circ$，\n$\\because \\triangle ABC$ 是等边三角形，\n$\\therefore \\angle ACB=60^\\circ$，\n$\\therefore \\angle ACE=\\angle ACB - \\angle ECB=15^\\circ$，\n故选：A．",
+      "knowledge_points": [
+        "等边三角形的性质",
+        "线段垂直平分线的性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.15,
+        0.5,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "投掷两枚质地均匀的骰子，骰子的六个面上分别刻有 1 到 6 的点数，则下列事件为随机事件的是（ ）",
+      "options": [
+        "两枚骰子向上一面的点数之和大于 1",
+        "两枚骰子向上一面的点数之和等于 1",
+        "两枚骰子向上一面的点数之和大于 12",
+        "两枚骰子向上一面的点数之和等于 12"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据事先能肯定它一定会发生的事件称为必然事件，事先能肯定它一定不会发生的事件称为不可能事件，在一定条件下，可能发生也可能不发生的事件，称为随机事件进行分析即可．\n【解答】解：A、两枚骰子向上一面的点数之和大于 1，是必然事件，故此选项错误；\nB、两枚骰子向上一面的点数之和等于 1，是不可能事件，故此选项错误；\nC、两枚骰子向上一面的点数之和大于 12，是不可能事件，故此选项错误；\nD、两枚骰子向上一面的点数之和等于 12，是随机事件，故此选项正确；\n故选：D．",
+      "knowledge_points": [
+        "随机事件"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "已知 $m=\\sqrt{4}+\\sqrt{3}$，则以下对 $m$ 的估算正确的（ ）",
+      "options": [
+        "$2<m<3$",
+        "$3<m<4$",
+        "$4<m<5$",
+        "$5<m<6$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】直接化简二次根式，得出 $\\sqrt{3}$ 的取值范围，进而得出答案．\n【解答】解：$\\because m=\\sqrt{4}+\\sqrt{3}=2+\\sqrt{3}$，\n$1<\\sqrt{3}<2$，\n$\\therefore 3<m<4$，\n故选：B．",
+      "knowledge_points": [
+        "估算无理数的大小"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "我国古代数学著作《增删算法统宗》记载”绳索量竿”问题：“一条竿子一条索，索比竿子长一托．折回索子却量竿，却比竿子短一托“其大意为：现有一根竿和一条绳索，用绳索去量竿，绳索比竿长 5 尺；如果将绳索对半折后再去量竿，就比竿短 5 尺．设绳索长 $x$ 尺，竿长 $y$ 尺，则符合题意的方程组是（ ）",
+      "options": [
+        "$\\begin{cases} x=y+5 \\\\ \\frac{1}{2}x=y-5 \\end{cases}$",
+        "$\\begin{cases} x=y-5 \\\\ \\frac{1}{2}x=y+5 \\end{cases}$",
+        "$\\begin{cases} x=y+5 \\\\ 2x=y-5 \\end{cases}$",
+        "$\\begin{cases} x=y-5 \\\\ 2x=y+5 \\end{cases}$"
+      ],
+      "answer": "A",
+      "analysis": "【分析】设索长为 $x$ 尺，竿子长为 $y$ 尺，根据“索比竿子长一托，折回索子却量竿，却比竿子短一托”，即可得出关于 $x$、$y$ 的二元一次方程组．\n【解答】解：设索长为 $x$ 尺，竿子长为 $y$ 尺，\n根据题意得： $\\begin{cases} x=y+5 \\\\ \\frac{1}{2}x=y-5 \\end{cases}$．\n故选：A．",
+      "knowledge_points": [
+        "由实际问题抽象出二元一次方程组"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "如图，$AB$ 是 $\\odot O$ 的直径，$BC$ 与 $\\odot O$ 相切于点 $B$，$AC$ 交 $\\odot O$ 于点 $D$，若 $\\angle ACB=50^\\circ$，则 $\\angle BOD$ 等于（ ）",
+      "options": [
+        "$40^\\circ$",
+        "$50^\\circ$",
+        "$60^\\circ$",
+        "$80^\\circ$"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据切线的性质得到 $\\angle ABC=90^\\circ$，根据直角三角形的性质求出 $\\angle A$，根据圆周角定理计算即可．\n【解答】解：$\\because BC$ 是 $\\odot O$ 的切线，\n$\\therefore \\angle ABC=90^\\circ$，\n$\\therefore \\angle A=90^\\circ - \\angle ACB=40^\\circ$，\n由圆周角定理得，$\\angle BOD=2\\angle A=80^\\circ$，\n故选：D．",
+      "knowledge_points": [
+        "切线的性质",
+        "圆周角定理"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.15,
+        0.48,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "已知关于 $x$ 的一元二次方程 $(a+1)x^2+2bx+(a+1)=0$ 有两个相等的实数根，下列判断正确的是（ ）",
+      "options": [
+        "$1$ 一定不是关于 $x$ 的方程 $x^2+bx+a=0$ 的根",
+        "$0$ 一定不是关于 $x$ 的方程 $x^2+bx+a=0$ 的根",
+        "$1$ 和 $-1$ 都是关于 $x$ 的方程 $x^2+bx+a=0$ 的根",
+        "$1$ 和 $-1$ 不都是关于 $x$ 的方程 $x^2+bx+a=0$ 的根"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据方程有两个相等的实数根可得出 $b=a+1$ 或 $b=-(a+1)$，当 $b=a+1$ 时，$-1$ 是方程 $x^2+bx+a=0$ 的根；当 $b=-(a+1)$ 时，$1$ 是方程 $x^2+bx+a=0$ 的根．再结合 $a+1 \\ne -(a+1)$，可得出 $1$ 和 $-1$ 不都是关于 $x$ 的方程 $x^2+bx+a=0$ 的根．\n【解答】解：$\\because$ 关于 $x$ 的一元二次方程 $(a+1)x^2+2bx+(a+1)=0$ 有两个相等的实数根，\n$\\therefore \\Delta = (2b)^2 - 4(a+1)^2 = 0$，\n$\\therefore b=a+1$ 或 $b=-(a+1)$．\n当 $b=a+1$ 时，有 $a-b+1=0$，此时 $-1$ 是方程 $x^2+bx+a=0$ 的根；\n当 $b=-(a+1)$ 时，有 $a+b+1=0$，此时 $1$ 是方程 $x^2+bx+a=0$ 的根．\n$\\because a+1 \\ne 0$，\n$\\therefore a+1 \\ne -(a+1)$，\n$\\therefore 1$ 和 $-1$ 不都是关于 $x$ 的方程 $x^2+bx+a=0$ 的根．\n故选：D．",
+      "knowledge_points": [
+        "一元二次方程根的判别式",
+        "一元二次方程的解"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "计算：$(\\frac{\\sqrt{2}}{2})^0 - 1 = $ ______．",
+      "options": [],
+      "answer": "0",
+      "analysis": "【分析】根据零指数幂：$a^0=1$ ($a \\ne 0$) 进行计算即可．\n【解答】解：原式$=1-1=0$，\n故答案为：0．",
+      "knowledge_points": [
+        "零指数幂"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "某 8 种食品所含的热量值分别为：120，134，120，119，126，120，118，124，则这组数据的众数为 ______．",
+      "options": [],
+      "answer": "120",
+      "analysis": "【分析】根据众数的定义：一组数据中出现次数最多的数据即为众数．\n【解答】解：$\\because$ 这组数据中 120 出现次数最多，有 3 次，\n$\\therefore$ 这组数据的众数为 120，\n故答案为：120．",
+      "knowledge_points": [
+        "众数"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "如图，$\\text{Rt}\\triangle ABC$ 中，$\\angle ACB=90^\\circ$，$AB=6$，$D$ 是 $AB$ 的中点，则 $CD=$ ______．",
+      "options": [],
+      "answer": "3",
+      "analysis": "【分析】根据直角三角形斜边上的中线等于斜边的一半解答．\n【解答】解：$\\because \\angle ACB=90^\\circ$，$D$ 为 $AB$ 的中点，\n$\\therefore CD=\\frac{1}{2}AB=\\frac{1}{2} \\times 6 = 3$．\n故答案为：3．",
+      "knowledge_points": [
+        "直角三角形斜边上的中线"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        6,
+        0.15,
+        0.2,
+        0.15,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "不等式组 $\\begin{cases} 3x+1>x+3 \\\\ x-2>0 \\end{cases}$ 的解集为 ______．",
+      "options": [],
+      "answer": "$x>2$",
+      "analysis": "【分析】先求出每个不等式的解集，再求出不等式组的解集即可．\n【解答】解：\n$\\because$ 解不等式①得：$x>1$，\n解不等式②得：$x>2$，\n$\\therefore$ 不等式组的解集为 $x>2$，\n故答案为：$x>2$．",
+      "knowledge_points": [
+        "解一元一次不等式组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "把两个同样大小的含 $45^\\circ$ 角的三角尺按如图所示的方式放置，其中一个三角尺的锐角顶点与另一个的直角顶点重合于点 $A$，且另三个锐角顶点 $B$，$C$，$D$ 在同一直线上．若 $AB=\\sqrt{2}$，则 $CD=$ ______．",
+      "options": [],
+      "answer": "$\\sqrt{3}-1$",
+      "analysis": "【分析】先利用等腰直角三角形的性质求出 $BC=2$，$BF=AF=1$，再利用勾股定理求出 $DF$，即可得出结论．\n【解答】解：如图，过点 $A$ 作 $AF \\perp BC$ 于 $F$，\n在 $\\text{Rt}\\triangle ABC$ 中，$\\angle B=45^\\circ$，\n$\\therefore BC=\\sqrt{2}AB=2$，$BF=AF=\\frac{\\sqrt{2}}{2}AB=1$，\n$\\because$ 两个同样大小的含 $45^\\circ$ 角的三角尺，\n$\\therefore AD=BC=2$，\n在 $\\text{Rt}\\triangle ADF$ 中，根据勾股定理得，$DF=\\sqrt{AD^2-AF^2}=\\sqrt{3}$\n$\\therefore CD=BF+DF-BC=1+\\sqrt{3}-2=\\sqrt{3}-1$，\n故答案为：$\\sqrt{3}-1$．",
+      "knowledge_points": [
+        "勾股定理",
+        "等腰直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        7,
+        0.15,
+        0.08,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "如图，直线 $y=x+m$ 与双曲线 $y=\\frac{3}{x}$ 相交于 $A$，$B$ 两点，$BC \\parallel x$ 轴，$AC \\parallel y$ 轴，则 $\\triangle ABC$ 面积的最小值为 ______．",
+      "options": [],
+      "answer": "6",
+      "analysis": "【分析】根据双曲线 $y=\\frac{3}{x}$ 过 $A$，$B$ 两点，可设 $A(a, \\frac{3}{a})$，$B(b, \\frac{3}{b})$，则 $C(a, \\frac{3}{b})$．将 $y=x+m$ 代入 $y=\\frac{3}{x}$，整理得 $x^2+mx-3=0$，由于直线 $y=x+m$ 与双曲线 $y=\\frac{3}{x}$ 相交于 $A$，$B$ 两点，所以 $a$、$b$ 是方程 $x^2+mx-3=0$ 的两个根，根据根与系数的关系得出 $a+b=-m$，$ab=-3$，那么 $(a-b)^2=(a+b)^2-4ab=m^2+12$．再根据三角形的面积公式得出 $S_{\\triangle ABC}=\\frac{1}{2}AC \\cdot BC=\\frac{1}{2}m^2+6$，利用二次函数的性质即可求出当 $m=0$ 时，$\\triangle ABC$ 的面积有最小值 6．\n【解答】解：设 $A(a, \\frac{3}{a})$，$B(b, \\frac{3}{b})$，则 $C(a, \\frac{3}{b})$．\n将 $y=x+m$ 代入 $y=\\frac{3}{x}$，得 $x+m=\\frac{3}{x}$，\n整理，得 $x^2+mx-3=0$，\n则 $a+b=-m$，$ab=-3$，\n$\\therefore (a-b)^2=(a+b)^2-4ab=m^2+12$．\n$\\because S_{\\triangle ABC}=\\frac{1}{2}AC \\cdot BC$\n$=\\frac{1}{2}(\\frac{3}{a}-\\frac{3}{b})(a-b)$\n$=\\frac{1}{2} \\cdot \\frac{3(b-a)}{ab} \\cdot (a-b)$\n$=\\frac{1}{2}(a-b)^2$\n$=\\frac{1}{2}(m^2+12)$\n$=\\frac{1}{2}m^2+6$，\n$\\therefore$ 当 $m=0$ 时，$\\triangle ABC$ 的面积有最小值 6．\n故答案为 6．",
+      "knowledge_points": [
+        "反比例函数与一次函数的交点问题",
+        "一元二次方程根与系数的关系",
+        "三角形的面积"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        7,
+        0.15,
+        0.65,
+        0.2,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "解方程组： $\\begin{cases} x+y=1 \\\\ 4x+y=10 \\end{cases}$．",
+      "options": [],
+      "answer": "$\\begin{cases} x=3 \\\\ y=-2 \\end{cases}$",
+      "analysis": "【分析】方程组利用加减消元法求出解即可．\n【解答】解： $\\begin{cases} x+y=1 \\text{①} \\\\ 4x+y=10 \\text{②} \\end{cases}$，\n②-①得：$3x=9$，\n解得：$x=3$，\n把 $x=3$ 代入①得：$y=-2$，\n则方程组的解为 $\\begin{cases} x=3 \\\\ y=-2 \\end{cases}$．",
+      "knowledge_points": [
+        "解二元一次方程组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "如图，$\\Box ABCD$ 的对角线 $AC$，$BD$ 相交于点 $O$，$EF$ 过点 $O$ 且与 $AD$，$BC$ 分别相交于点 $E$，$F$．求证：$OE=OF$．",
+      "options": [],
+      "answer": "证明见解析",
+      "analysis": "【分析】由四边形 $ABCD$ 是平行四边形，可得 $OA=OC$，$AD \\parallel BC$，继而可证得 $\\triangle AOE \\cong \\triangle COF$ (ASA)，则可证得结论．\n【解答】证明：$\\because$ 四边形 $ABCD$ 是平行四边形，\n$\\therefore OA=OC$，$AD \\parallel BC$，\n$\\therefore \\angle OAE=\\angle OCF$，\n在 $\\triangle OAE$ 和 $\\triangle OCF$ 中，\n$\\begin{cases} \\angle OAE=\\angle OCF \\\\ OA=OC \\\\ \\angle AOE=\\angle COF \\end{cases}$\n$\\therefore \\triangle AOE \\cong \\triangle COF$ (ASA)，\n$\\therefore OE=OF$．",
+      "knowledge_points": [
+        "平行四边形的性质",
+        "全等三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.15,
+        0.12,
+        0.25,
+        0.1
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "先化简，再求值：$(\\frac{2m+1}{m} - 1) \\div \\frac{m^2-1}{m}$，其中 $m=\\sqrt{3}+1$．",
+      "options": [],
+      "answer": "$\\frac{\\sqrt{3}}{3}$",
+      "analysis": "【分析】根据分式的减法和除法可以化简题目中的式子，然后将 $m$ 的值代入即可解答本题．\n【解答】解：$(\\frac{2m+1}{m} - 1) \\div \\frac{m^2-1}{m}$\n$= \\frac{2m+1-m}{m} \\cdot \\frac{m}{(m+1)(m-1)}$\n$= \\frac{m+1}{m} \\cdot \\frac{m}{(m+1)(m-1)}$\n$= \\frac{1}{m-1}$，\n当 $m=\\sqrt{3}+1$ 时，原式$= \\frac{1}{\\sqrt{3}+1-1} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$．",
+      "knowledge_points": [
+        "分式的化简求值"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "求证：相似三角形对应边上的中线之比等于相似比．\n要求：①根据给出的 $\\triangle ABC$ 及线段 $A'B'$，$\\angle A'$（$\\angle A'=\\angle A$），以线段 $A'B'$ 为一边，在给出的图形上用尺规作出 $\\triangle A'B'C'$，使得 $\\triangle A'B'C' \\sim \\triangle ABC$，不写作法，保留作图痕迹；\n②在已有的图形上画出一组对应中线，并据此写出已知、求证和证明过程．",
+      "options": [],
+      "answer": "见解析",
+      "analysis": "【分析】(1) 作 $\\angle A'B'C'=\\angle ABC$，即可得到 $\\triangle A'B'C'$；\n(2) 依据 $D$ 是 $AB$ 的中点，$D'$ 是 $A'B'$ 的中点，即可得到 $\\frac{A'D'}{AD} = \\frac{A'B'}{AB}$，根据 $\\triangle ABC \\sim \\triangle A'B'C'$，即可得到 $\\frac{A'B'}{AB} = \\frac{A'C'}{AC}$，$\\angle A'=\\angle A$，进而得出 $\\triangle A'C'D' \\sim \\triangle ACD$，可得 $\\frac{C'D'}{CD} = \\frac{A'C'}{AC} = k$．\n【解答】解：(1) 如图所示，$\\triangle A'B'C'$ 即为所求；\n(2) 已知，如图，$\\triangle ABC \\sim \\triangle A'B'C'$，$\\frac{A'B'}{AB} = \\frac{B'C'}{BC} = \\frac{A'C'}{AC} = k$，$D$ 是 $AB$ 的中点，$D'$ 是 $A'B'$ 的中点，\n求证：$\\frac{C'D'}{CD} = k$．\n证明：$\\because D$ 是 $AB$ 的中点，$D'$ 是 $A'B'$ 的中点，\n$\\therefore AD=\\frac{1}{2}AB$，$A'D'=\\frac{1}{2}A'B'$，\n$\\therefore \\frac{A'D'}{AD} = \\frac{A'B'}{AB}$，\n$\\because \\triangle ABC \\sim \\triangle A'B'C'$，\n$\\therefore \\frac{A'B'}{AB} = \\frac{A'C'}{AC}$，$\\angle A'=\\angle A$，\n$\\therefore \\frac{A'D'}{AD} = \\frac{A'C'}{AC}$，$\\angle A'=\\angle A$，\n$\\therefore \\triangle A'C'D' \\sim \\triangle ACD$，\n$\\therefore \\frac{C'D'}{CD} = \\frac{A'C'}{AC} = k$．",
+      "knowledge_points": [
+        "相似三角形的判定与性质",
+        "作图—复杂作图"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        10,
+        0.15,
+        0.1,
+        0.35,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，在 $\\text{Rt}\\triangle ABC$ 中，$\\angle C=90^\\circ$，$AB=10$，$AC=8$．线段 $AD$ 由线段 $AB$ 绕点 $A$ 按逆时针方向旋转 $90^\\circ$ 得到，$\\triangle EFG$ 由 $\\triangle ABC$ 沿 $CB$ 方向平移得到，且直线 $EF$ 过点 $D$．\n(1) 求 $\\angle BDF$ 的大小；\n(2) 求 $CG$ 的长．",
+      "options": [],
+      "answer": "(1) $45^\\circ$ (2) 12.5",
+      "analysis": "【分析】(1) 由旋转的性质得，$AD=AB=10$，$\\angle DAB=90^\\circ$，$\\therefore \\angle ABD=45^\\circ$，再由平移的性质即可得出结论；\n(2) 先判断出 $\\angle ADE=\\angle ACB$，进而得出 $\\triangle ADE \\sim \\triangle ACB$，得出比例式求出 $AE$，即可得出结论．\n【解答】解：(1) $\\because$ 线段 $AD$ 是由线段 $AB$ 绕点 $A$ 按逆时针方向旋转 $90^\\circ$ 得到，\n$\\therefore \\angle DAB=90^\\circ$，$AD=AB=10$，\n$\\therefore \\angle ABD=45^\\circ$，\n$\\because \\triangle EFG$ 是 $\\triangle ABC$ 沿 $CB$ 方向平移得到，\n$\\therefore AB \\parallel EF$，\n$\\therefore \\angle BDF=\\angle ABD=45^\\circ$；\n(2) 由平移的性质得，$AE \\parallel CG$，$AB \\parallel EF$，\n$\\therefore \\angle DEA=\\angle DFC=\\angle ABC$，$\\angle ADE+\\angle DAB=180^\\circ$，\n$\\because \\angle DAB=90^\\circ$，\n$\\therefore \\angle ADE=90^\\circ$，\n$\\because \\angle ACB=90^\\circ$，\n$\\therefore \\angle ADE=\\angle ACB$，\n$\\therefore \\triangle ADE \\sim \\triangle ACB$，\n$\\therefore \\frac{AD}{AC} = \\frac{AE}{AB}$，\n$\\because AB=8$ (注：应为 AC=8, AB=10, 但题目中 AB=10, AC=8. 解答中出现笔误，但计算正确) $AB=10$，\n$\\therefore AE=12.5$，\n由平移的性质得，$CG=AE=12.5$．",
+      "knowledge_points": [
+        "旋转的性质",
+        "平移的性质",
+        "相似三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        11,
+        0.15,
+        0.25,
+        0.15,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "甲、乙两家快递公司揽件员（揽收快件的员工）的日工资方案如下：\n甲公司为“基本工资+揽件提成”，其中基本工资为 70 元/日，每揽收一件提成 2 元；\n乙公司无基本工资，仅以揽件提成计算工资．若当日揽件数不超过 40，每件提成 4 元；若当日揽件数超过 40，超过部分每件多提成 2 元．\n如图是今年四月份甲公司揽件员人均揽件数和乙公司揽件员人均揽件数的条形统计图：\n(1) 现从今年四月份的 30 天中随机抽取 1 天，求这一天甲公司揽件员人均揽件数超过 40（不含 40）的概率；\n(2) 根据以上信息，以今年四月份的数据为依据，并将各公司揽件员的人均揽件数视为该公司各揽件员的揽件数，解决以下问题：\n①估计甲公司各揽件员的日平均件数；\n②小明拟到甲、乙两家公司中的一家应聘揽件员，如果仅从工资收入的角度考虑，请利用所学的统计知识帮他选择，并说明理由．",
+      "options": [],
+      "answer": "(1) $\\frac{2}{15}$ (2) ①39件 ②乙公司",
+      "analysis": "【分析】(1) 根据概率公式计算可得；\n(2) 分别根据平均数的定义及其意义解答可得．\n【解答】解：(1) 因为今年四月份甲公司揽件员人均揽件数超过 40 的有 4 天，\n所以甲公司揽件员人均揽件数超过 40（不含 40）的概率为 $\\frac{4}{30} = \\frac{2}{15}$；\n(2) ①甲公司各揽件员的日平均件数为 $\\frac{38 \\times 13 + 39 \\times 9 + 40 \\times 4 + 41 \\times 3 + 42 \\times 1}{30} = 39$ 件；\n②甲公司揽件员的日平均工资为 $70+39 \\times 2=148$ 元，\n乙公司揽件员的日平均工资为 $\\frac{38 \\times 7 + 39 \\times 7 + 40 \\times (8+5+3)] \\times 4 + (1 \\times 5 + 2 \\times 3) \\times 6}{30}$ (此式有误，应为分段计算)，\n正确计算乙公司日均工资：\n平均件数约为：$\\frac{40 \\times (13+7+4) + 38 \\times \\dots}{30}$，计算繁琐。这里直接计算总工资除以30天。\n根据题目解析中给出的计算：\n乙公司揽件员的日平均工资为\n$=[40 + \\frac{(-2) \\times 7 + (-1) \\times 7}{30}] \\times 4 + \\frac{1 \\times 5 + 2 \\times 3}{30} \\times 6 = 159.4$ 元，\n因为 $159.4>148$，\n所以仅从工资收入的角度考虑，小明应到乙公司应聘．",
+      "knowledge_points": [
+        "概率公式",
+        "加权平均数",
+        "统计量的选择"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        12,
+        0.15,
+        0.3,
+        0.4,
+        0.2
+      ],
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "空地上有一段长为 $a$ 米的旧墙 $MN$，某人利用旧墙和木栏围成一个矩形菜园 $ABCD$，已知木栏总长为 100 米．\n(1) 已知 $a=20$，矩形菜园的一边靠墙，另三边一共用了 100 米木栏，且围成的矩形菜园面积为 450 平方米．如图 1，求所利用旧墙 $AD$ 的长；\n(2) 已知 $0<\\alpha<50$，且空地足够大，如图 2．请你合理利用旧墙及所给木栏设计一个方案，使得所围成的矩形菜园 $ABCD$ 的面积最大，并求面积的最大值．",
+      "options": [],
+      "answer": "(1) 10米 (2) 见解析",
+      "analysis": "【分析】(1) 按题意设出 $AD$，表示 $AB$ 构成方程；\n(2) 根据旧墙长度 $a$ 和 $AD$ 长度表示矩形菜园长和宽，注意分类讨论 $s$ 与菜园边长之间的数量关系．\n【解答】解：(1) 设 $AD=x$ 米，则 $AB=\\frac{100-x}{2}$ 米，\n依题意得，$\\frac{x(100-x)}{2}=450$，\n解得 $x_1=10$，$x_2=90$，\n$\\because a=20$，且 $x \\le a$，\n$\\therefore x=90$ 舍去，\n$\\therefore$ 利用旧墙 $AD$ 的长为 10 米．\n(2) 设 $AD=x$ 米，矩形 $ABCD$ 的面积为 $S$ 平方米\n①如果按图一方案围成矩形菜园，依题意得：\n$S=\\frac{x(100-x)}{2}=-\\frac{1}{2}(x-50)^2+1250$，$0<x<a$，\n$\\because 0<\\alpha<50$，\n$\\therefore x<a<50$ 时，$S$ 随 $x$ 的增大而增大，\n当 $x=a$ 时，$S_{最大}=50a-\\frac{1}{3}a^2$ (注：应为 $50a-\\frac{1}{2}a^2$)\n②如按图 2 方案围成矩形菜园，依题意得\n$S=\\frac{x(100+a-2x)}{2}=-[x-(25-\\frac{a}{4})]^2+(25+\\frac{a}{4})^2$，$a \\le x<50+\\frac{a}{2}$，\n当 $a<25+\\frac{a}{4}<50$ 时，即 $0<a<\\frac{100}{3}$ 时，\n则 $x=25+\\frac{a}{4}$ 时，$S_{最大}=(25+\\frac{a}{4})^2=\\frac{10000+200a+a^2}{16}$，\n当 $25+\\frac{a}{4} \\le a$，即 $\\frac{100}{3} \\le a < 50$ 时，$S$ 随 $x$ 的增大而减小，\n$\\therefore x=a$ 时，$S_{最大}=\\frac{a(100+a-2a)}{2}=50a-\\frac{1}{2}a^2$．\n综合①②，当 $0<a<\\frac{100}{3}$ 时，\n$\\frac{10000+200a+a^2}{16} - (50a-\\frac{1}{2}a^2) = \\frac{(3a-100)^2}{16} > 0$，此时，按图 2 方案围成矩形菜园面积最大，最大面积为 $\\frac{10000+200a+a^2}{16}$ 平方米；\n当 $\\frac{100}{3} \\le a < 50$ 时，两种方案围成的矩形菜园面积最大值相等．\n$\\therefore$ 当 $0<a<\\frac{100}{3}$ 时，围成长和宽均为 $(25+\\frac{a}{4})$ 米的矩形菜园面积最大，最大面积为 $\\frac{10000+200a+a^2}{16}$ 平方米；\n当 $\\frac{100}{3} \\le a < 50$ 时，围成长为 $a$ 米，宽为 $(50-\\frac{a}{2})$ 米的矩形菜园面积最大，最大面积为 $(50a-\\frac{1}{2}a^2)$ 平方米．",
+      "knowledge_points": [
+        "一元二次方程的应用",
+        "二次函数的应用"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        13,
+        0.15,
+        0.52,
+        0.45,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "如图，$D$ 是 $\\triangle ABC$ 外接圆上的动点，且 $B$，$D$ 位于 $AC$ 的两侧，$DE \\perp AB$，垂足为 $E$，$DE$ 的延长线交此圆于点 $F$．$BG \\perp AD$，垂足为 $G$，$BG$ 交 $DE$ 于点 $H$，$DC$，$FB$ 的延长线交于点 $P$，且 $PC=PB$．\n(1) 求证：$BG \\parallel CD$；\n(2) 设 $\\triangle ABC$ 外接圆的圆心为 $O$，若 $AB=\\sqrt{3}DH$，$\\angle OHD=80^\\circ$，求 $\\angle BDE$ 的大小．",
+      "options": [],
+      "answer": "(1) 证明见解析 (2) $20^\\circ$ 或 $40^\\circ$",
+      "analysis": "【分析】(1) 根据等边对等角得：$\\angle PCB=\\angle PBC$，由四点共圆的性质得：$\\angle BAD+\\angle BCD=180^\\circ$，从而得：$\\angle BFD=\\angle PCB=\\angle PBC$，根据平行线的判定得：$BC \\parallel DF$，可得 $\\angle ABC=90^\\circ$，$AC$ 是 $\\odot O$ 的直径，从而得：$\\angle ADC=\\angle AGB=90^\\circ$，根据同位角相等可得结论；\n(2) 先证明四边形 $BCDH$ 是平行四边形，得 $BC=DH$，根据特殊的三角函数值得：$\\angle ACB=60^\\circ$，$\\angle BAC=30^\\circ$，所以 $DH=\\frac{1}{2}AC$，分两种情况：\n①当点 $O$ 在 $DE$ 的左侧时，如图 2，作辅助线，构建直角三角形，由同弧所对的圆周角相等和互余的性质得：$\\angle AMD=\\angle ABD$，则 $\\angle ADM=\\angle BDE$，并由 $DH=OD$，可得结论；\n②当点 $O$ 在 $DE$ 的右侧时，如图 3，同理作辅助线，同理有 $\\angle ADE=\\angle BDN=20^\\circ$，$\\angle ODH=20^\\circ$，得结论．\n【解答】(1) 证明：如图 1，$\\because PC=PB$，\n$\\therefore \\angle PCB=\\angle PBC$，\n$\\because$ 四边形 $ABCD$ 内接于圆，\n$\\therefore \\angle BAD+\\angle BCD=180^\\circ$，\n$\\because \\angle BCD+\\angle PCB=180^\\circ$，\n$\\therefore \\angle BAD=\\angle PCB$，\n$\\because \\angle BAD=\\angle BFD$，\n$\\therefore \\angle BFD=\\angle PCB=\\angle PBC$，\n$\\therefore BC \\parallel DF$，\n$\\because DE \\perp AB$，\n$\\therefore \\angle DEB=90^\\circ$，\n$\\therefore \\angle ABC=90^\\circ$，\n$\\therefore AC$ 是 $\\odot O$ 的直径，\n$\\therefore \\angle ADC=90^\\circ$，\n$\\because BG \\perp AD$，\n$\\therefore \\angle AGB=90^\\circ$，\n$\\therefore \\angle ADC=\\angle AGB$，\n$\\therefore BG \\parallel CD$；\n(2) 由 (1) 得：$BC \\parallel DF$，$BG \\parallel CD$，\n$\\therefore$ 四边形 $BCDH$ 是平行四边形，\n$\\therefore BC=DH$，\n在 $\\text{Rt}\\triangle ABC$ 中，$\\because AB=\\sqrt{3}DH$，\n$\\therefore \\tan \\angle ACB = \\frac{AB}{BC} = \\frac{\\sqrt{3}DH}{DH} = \\sqrt{3}$，\n$\\therefore \\angle ACB=60^\\circ$，$\\angle BAC=30^\\circ$，\n$\\therefore \\angle ADB=60^\\circ$，$BC=\\frac{1}{2}AC$，\n$\\therefore DH=\\frac{1}{2}AC$，\n①当点 $O$ 在 $DE$ 的左侧时，如图 2，作直径 $DM$，连接 $AM$、$OH$，则 $\\angle DAM=90^\\circ$，\n$\\therefore \\angle AMD+\\angle ADM=90^\\circ$\n$\\because DE \\perp AB$，\n$\\therefore \\angle BED=90^\\circ$，\n$\\therefore \\angle BDE+\\angle ABD=90^\\circ$，\n$\\because \\angle AMD=\\angle ABD$，\n$\\therefore \\angle ADM=\\angle BDE$，\n$\\because DH=\\frac{1}{2}AC=OD$，\n$\\therefore \\angle DOH=\\angle OHD=80^\\circ$，\n$\\therefore \\angle ODH=20^\\circ$\n$\\because \\angle AOB=60^\\circ$，\n$\\therefore \\angle ADM+\\angle BDE=40^\\circ$，\n$\\therefore \\angle BDE=\\angle ADM=20^\\circ$，\n②当点 $O$ 在 $DE$ 的右侧时，如图 3，作直径 $DN$，连接 $BN$，\n由①得：$\\angle ADE=\\angle BDN=20^\\circ$，$\\angle ODH=20^\\circ$，\n$\\therefore \\angle BDE=\\angle BDN+\\angle ODH=40^\\circ$，\n综上所述，$\\angle BDE$ 的度数为 $20^\\circ$ 或 $40^\\circ$．",
+      "knowledge_points": [
+        "圆的综合题",
+        "平行四边形的判定与性质",
+        "解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        15,
+        0.15,
+        0.33,
+        0.4,
+        0.15
+      ],
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "已知抛物线 $y=ax^2+bx+c$ 过点 $A(0, 2)$，且抛物线上任意不同两点 $M(x_1, y_1)$，$N(x_2, y_2)$ 都满足：当 $x_1<x_2<0$ 时，$(x_1-x_2)(y_1-y_2)>0$；当 $0<x_1<x_2$ 时，$(x_1-x_2)(y_1-y_2)<0$．以原点 $O$ 为圆心，$OA$ 为半径的圆与抛物线的另两个交点为 $B$，$C$，且 $B$ 在 $C$ 的左侧，$\\triangle ABC$ 有一个内角为 $60^\\circ$．\n(1) 求抛物线的解析式；\n(2) 若 $MN$ 与直线 $y=-2\\sqrt{3}x$ 平行，且 $M$，$N$ 位于直线 $BC$ 的两侧，$y_1>y_2$，解决以下问题：\n①求证：$BC$ 平分 $\\angle MBN$；\n②求 $\\triangle MBC$ 外心的纵坐标的取值范围．",
+      "options": [],
+      "answer": "(1) $y=-x^2+2$ (2) ①证明见解析 ② $-\\frac{3}{2} < y_0 \\le 0$",
+      "analysis": "【分析】(1) 由 $A$ 的坐标确定出 $c$ 的值，根据已知不等式判断出 $y_1-y_2<0$，可得出抛物线的增减性，确定出抛物线对称轴为 $y$ 轴，且开口向下，求出 $b$ 的值，如图 1 所示，可得三角形 $ABC$ 为等边三角形，确定出 $B$ 的坐标，代入抛物线解析式即可；\n(2) ①设出点 $M(x_1, -x_1^2+2)$，$N(x_2, -x_2^2+2)$，由 $MN$ 与已知直线平行，得到 $k$ 值相同，表示出直线 $MN$ 解析式，进而表示出 $ME$，$BE$，$NF$，$BF$，求出 $\\tan\\angle MBE$ 与 $\\tan\\angle NBF$ 的值相等，进而得到 $BC$ 为角平分线；\n②三角形的外心即为三条垂直平分线的交点，得到 $y$ 轴为 $BC$ 的垂直平分线，设 $P$ 为外心，利用勾股定理化简 $PB^2=PM^2$，确定出 $\\triangle MBC$ 外心的纵坐标的取值范围即可．\n【解答】解：(1) $\\because$ 抛物线过点 $A(0, 2)$，\n$\\therefore c=2$，\n当 $x_1<x_2<0$ 时，$x_1-x_2<0$，由 $(x_1-x_2)(y_1-y_2)>0$，得到 $y_1-y_2<0$，\n$\\therefore$ 当 $x<0$ 时，$y$ 随 $x$ 的增大而增大，\n同理当 $x>0$ 时，$y$ 随 $x$ 的增大而减小，\n$\\therefore$ 抛物线的对称轴为 $y$ 轴，且开口向下，即 $b=0$，\n$\\because$ 以 $O$ 为圆心，$OA$ 为半径的圆与抛物线交于另两点 $B$，$C$，如图 1 所示，\n$\\therefore \\triangle ABC$ 为等腰三角形，\n$\\because \\triangle ABC$ 中有一个角为 $60^\\circ$，\n$\\therefore \\triangle ABC$ 为等边三角形，且 $OC=OA=2$，\n设线段 $BC$ 与 $y$ 轴的交点为点 $D$，则有 $BD=CD$，且 $\\angle OBD=30^\\circ$，\n$\\therefore BD=OB \\cdot \\cos30^\\circ=\\sqrt{3}$，$OD=OB \\cdot \\sin30^\\circ=1$，\n$\\because B$ 在 $C$ 的左侧，\n$\\therefore B$ 的坐标为 $(-\\sqrt{3}, -1)$，\n$\\because B$ 点在抛物线上，且 $c=2$，$b=0$，\n$\\therefore 3a+2=-1$，\n解得：$a=-1$，\n则抛物线解析式为 $y=-x^2+2$；\n(2) ①由 (1) 知，点 $M(x_1, -x_1^2+2)$，$N(x_2, -x_2^2+2)$，\n$\\because MN$ 与直线 $y=-2\\sqrt{3}x$ 平行，\n$\\therefore$ 设直线 $MN$ 的解析式为 $y=-2\\sqrt{3}x+m$，则有 $-x_1^2+2=-2\\sqrt{3}x_1+m$，即 $m=-x_1^2+2\\sqrt{3}x_1+2$，\n$\\therefore$ 直线 $MN$ 解析式为 $y=-2\\sqrt{3}x-x_1^2+2\\sqrt{3}x_1+2$，\n把 $y=-2\\sqrt{3}x-x_1^2+2\\sqrt{3}x_1+2$ 代入 $y=-x^2+2$，解得：$x=x_1$ 或 $x=2\\sqrt{3}-x_1$，\n$\\therefore x_2=2\\sqrt{3}-x_1$，即 $y_2=-(2\\sqrt{3}-x_1)^2+2=-x_1^2+4\\sqrt{3}x_1-10$，\n作 $ME \\perp BC$，$NF \\perp BC$，垂足为 $E$，$F$，如图 2 所示，\n$\\because M$，$N$ 位于直线 $BC$ 的两侧，且 $y_1>y_2$，则 $y_2<-1<y_1 \\le 2$，且 $-\\sqrt{3}<x_1<x_2$，\n$\\therefore ME=y_1-(-1)=-x_1^2+3$，$BE=x_1-(-\\sqrt{3})=x_1+\\sqrt{3}$，$NF=-1-y_2=x_1^2-4\\sqrt{3}x_1+9$，$BF=x_2-(-\\sqrt{3})=3\\sqrt{3}-x_1$，\n在 $\\text{Rt}\\triangle BEM$ 中，$\\tan\\angle MBE = \\frac{ME}{BE} = \\frac{-x_1^2+3}{x_1+\\sqrt{3}}=\\sqrt{3}-x_1$，\n在 $\\text{Rt}\\triangle BFN$ 中，$\\tan\\angle NBF = \\frac{NF}{BF} = \\frac{x_1^2-4\\sqrt{3}x_1+9}{3\\sqrt{3}-x_1} = \\frac{(x_1-2\\sqrt{3})^2-3}{3\\sqrt{3}-x_1} = \\frac{(x_1-3\\sqrt{3})(x_1-\\sqrt{3})}{3\\sqrt{3}-x_1} = \\sqrt{3}-x_1$，\n$\\because \\tan\\angle MBE=\\tan\\angle NBF$，\n$\\therefore \\angle MBE=\\angle NBF$，\n则 $BC$ 平分 $\\angle MBN$；\n②$\\because y$ 轴为 $BC$ 的垂直平分线，\n$\\therefore$ 设 $\\triangle MBC$ 的外心为 $P(0, y_0)$，则 $PB=PM$，即 $PB^2=PM^2$，\n根据勾股定理得：$3+(y_0+1)^2=x_1^2+(y_0-y_1)^2$，\n$\\because x_1^2=2-y_1$，\n$\\therefore y_0^2+2y_0+4=(2-y_1)+(y_0-y_1)^2$，即 $y_0=\\frac{1}{2}y_1-1$，\n由①得：$-1<y_1 \\le 2$，\n$\\therefore -\\frac{3}{2} < y_0 \\le 0$，\n则 $\\triangle MBC$ 的外心的纵坐标的取值范围是 $-\\frac{3}{2} < y_0 \\le 0$．",
+      "knowledge_points": [
+        "二次函数综合题",
+        "勾股定理",
+        "三角形的外心"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        20,
+        0.15,
+        0.1,
+        0.25,
+        0.3
+      ],
+      "images": []
+    }
+  ]
+}

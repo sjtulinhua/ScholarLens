@@ -159,3 +159,27 @@ export async function bulkPermanentDeleteMistakes(mistakeIds: string[]) {
   revalidatePath('/mistakes/trash')
   return { success: true }
 }
+
+/**
+ * 切换错题状态 (标记为已订正/未解决)
+ * @param mistakeId mistakes 表的 ID
+ * @param newStatus 新状态 ('active' | 'corrected')
+ */
+export async function toggleMistakeStatus(mistakeId: string, newStatus: 'active' | 'corrected') {
+  const supabase = await createClient()
+  
+  const { error } = await supabase
+    .from('mistakes')
+    .update({ status: newStatus })
+    .eq('id', mistakeId)
+
+  if (error) {
+    console.error('Toggle mistake status error:', error)
+    throw new Error('切换状态失败')
+  }
+
+  // Refresh caching
+  revalidatePath('/mistakes')
+  revalidatePath('/')
+  return { success: true }
+}

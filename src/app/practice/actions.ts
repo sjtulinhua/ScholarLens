@@ -79,6 +79,7 @@ export async function createVariant(questionId: string) {
  * Server Action to fetch a question securely bypassing client-side RLS in local-first mode
  */
 export async function getQuestionAction(id: string) {
+  console.log('[getQuestionAction] Fetching question with ID:', id);
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("questions")
@@ -86,6 +87,7 @@ export async function getQuestionAction(id: string) {
     .eq("id", id)
     .single();
     
+  console.log('[getQuestionAction] Result:', { data: !!data, error });
   if (error) return { error: error.message };
   return { data };
 }

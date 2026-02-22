@@ -158,7 +158,8 @@ export async function processMistake(
               .insert({
                 user_id: user.id,
                 question_id: questionId,
-                status: "active"
+                status: "active",
+                primary_knowledge_point: item.primary_knowledge_point || (item.knowledge_points && item.knowledge_points.length > 0 ? item.knowledge_points[0].split(/[-_]/).pop()?.trim() : null)
               });
             
             if (mError) throw mError;

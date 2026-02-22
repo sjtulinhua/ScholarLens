@@ -22,6 +22,7 @@ export default async function MistakesPage({
   const params = await searchParams; // Next.js 15 Requirement: await searchParams
   const subject = typeof params.subject === 'string' ? params.subject : undefined;
   const status = typeof params.status === 'string' ? params.status : undefined;
+  const knowledgePoint = typeof params.knowledge_point === 'string' ? params.knowledge_point : undefined;
 
   const isLocalFirst = process.env.NEXT_PUBLIC_LOCAL_FIRST === 'true';
   const supabase = isLocalFirst ? createAdminClient() : await createClient();
@@ -61,16 +62,33 @@ export default async function MistakesPage({
     query = query.eq("question.subject", subject);
   }
 
+  // 知识点过滤（改为在下方内存中过滤，因为需要支持剥离子分类前缀的匹配）
+  // if (knowledgePoint) ...
+
   const { count: trashCount } = await supabase
     .from("mistakes")
     .select("id", { count: "exact", head: true })
     .not("deleted_at", "is", null);
 
-  const { data: mistakes, error } = await query;
+  let { data: mistakes, error } = await query;
   
   if (error) {
     console.error("Fetch mistakes error:", error);
     return <div className="p-8 text-center text-red-500">获取错题失败: {error.message}</div>;
+  }
+
+  // 3. 知识点近义词/后缀过滤 (在内存中进行，以支持 "代数-反比例函数" = "反比例函数")
+  if (knowledgePoint && mistakes) {
+    mistakes = mistakes.filter((m: any) => {
+      const q = Array.isArray(m.question) ? m.question[0] : m.question;
+      const kps = q?.knowledge_points;
+      if (!Array.isArray(kps)) return false;
+      
+      return kps.some((kp: any) => {
+        const cleanKp = typeof kp === 'string' ? (kp.split(/[-_]/).pop()?.trim() || kp) : '';
+        return cleanKp === knowledgePoint;
+      });
+    });
   }
 
   console.log(`Fetched ${mistakes?.length || 0} mistakes for user ${user.id}`);

@@ -1,0 +1,533 @@
+{
+  "questions": [
+    {
+      "original_id": "1",
+      "content": "$-11$ 的相反数是（ ）",
+      "options": [
+        "A. $-11$",
+        "B. $-\\frac{1}{11}$",
+        "C. $\\frac{1}{11}$",
+        "D. $11$"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据只有符号不同的两个数互为相反数进行解答即可得．\n【详解】解：$-11$ 的相反数是 $11$\n故选：D.",
+      "knowledge_points": [
+        "相反数"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "2",
+      "content": "如图所示的圆柱，其俯视图是（ ）",
+      "options": [
+        "A. 一个圆",
+        "B. 一个矩形",
+        "C. 一个矩形",
+        "D. 一个拱形"
+      ],
+      "answer": "A",
+      "analysis": "【分析】圆柱体的顶部是一圆，圆柱体的俯视图应为一个圆．\n【详解】∵圆柱体的顶部是一个圆\n∴圆柱体的俯视图应为一个圆\nA 选项是一个圆，是圆柱体的俯视图",
+      "knowledge_points": [
+        "几何体的三视图"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": true,
+      "figure_bbox": [
+        1,
+        0.17,
+        0.44,
+        0.1,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "3",
+      "content": "5G 应用在福建省全面铺开，助力千行百业迎“智”变，截止 2021 年底，全省 5G 终端用户达 1397.6 万户，数据 13 976 000 用科学记数法表示为（ ）",
+      "options": [
+        "A. $13976 \\times 10^3$",
+        "B. $1397.6 \\times 10^4$",
+        "C. $1.3976 \\times 10^7$",
+        "D. $0.13976 \\times 10^8$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】在科学记数法中，一个数被写成一个 1 与 10 之间的实数（尾数）与一个 10 的幂的积．\n【详解】C 选项 1.3976 是一个 1 与 10 之间的实数，且 10 的幂为 7，与题意相符合。\n故选：C．",
+      "knowledge_points": [
+        "科学记数法"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "4",
+      "content": "美术老师布置同学们设计窗花，下列作品为轴对称图形的是（ ）",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A",
+      "analysis": "【分析】根据如果一个图形沿一条直线折叠，直线两旁的部分能够互相重合，这个图形叫做轴对称图形，这条直线叫做对称轴进行分析即可．\n【详解】解：A、是轴对称图形，故此选项符合题意；\n故选：A．",
+      "knowledge_points": [
+        "轴对称图形"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": true,
+      "figure_bbox": [
+        2,
+        0.15,
+        0.61,
+        0.58,
+        0.19
+      ],
+      "images": []
+    },
+    {
+      "original_id": "5",
+      "content": "如图，数轴上的点 $P$ 表示下列四个无理数中的一个，这个无理数是（ ）",
+      "options": [
+        "A. $-\\sqrt{2}$",
+        "B. $\\sqrt{2}$",
+        "C. $\\sqrt{5}$",
+        "D. $\\pi$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】先根据数轴确定点 $P$ 对应数的大小，再结合选项进行判断即可．\n【详解】解：由数轴可得，点 $P$ 对应数在 1 与 2 之间，\nB. $1<\\sqrt{2}<2$，故此选项符合题意；\n故选：B",
+      "knowledge_points": [
+        "实数与数轴",
+        "无理数的估算"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        3,
+        0.15,
+        0.23,
+        0.3,
+        0.05
+      ],
+      "images": []
+    },
+    {
+      "original_id": "6",
+      "content": "不等式组 $\\begin{cases} x-1>0 \\\\ x-3 \\le 0 \\end{cases}$ 的解集是（ ）",
+      "options": [
+        "A. $x>1$",
+        "B. $1<x<3$",
+        "C. $1<x \\le 3$",
+        "D. $x \\le 3$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】分别求出每一个不等式的解集，根据口诀：同大取大；同小取小；大小小大中间找，大大小小找不到，确定不等式组的解集．\n【详解】解：由 $x-1>0$，得：$x>1$，由 $x-3 \\le 0$，得：$x \\le 3$，则不等式组的解集为 $1<x \\le 3$，\n故选：C．",
+      "knowledge_points": [
+        "解一元一次不等式组"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "7",
+      "content": "化简 $(3a^2)^2$ 的结果是（ ）",
+      "options": [
+        "A. $9a^2$",
+        "B. $6a^2$",
+        "C. $9a^4$",
+        "D. $3a^4$"
+      ],
+      "answer": "C",
+      "analysis": "【分析】根据幂的乘方和积的乘方进行计算即可．\n【详解】$(3a^2)^2 = 3^2 (a^2)^2 = 9a^4$，\n故选：C．",
+      "knowledge_points": [
+        "幂的乘方",
+        "积的乘方"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "8",
+      "content": "2021 年福建省的环境空气质量达标天数位居全国前列，下图是福建省 10 个地区环境空气质量综合指数统计图。\n综合指数越小，表示环境空气质量越好．依据综合指数，从图中可知环境空气质量最好的地区是（ ）",
+      "options": [
+        "A. $F_1$",
+        "B. $F_6$",
+        "C. $F_7$",
+        "D. $F_{10}$"
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据折线统计图，观察图中的各个数据，根据数据信息逐项判定即可．\n【详解】解：结合题意，综合指数越小，表示环境空气质量越好，根据福建省 10 个地区环境空气质量综合指数统计图可直观看到 $F_{10}$ 的综合指数最小，从而可知环境空气质量最好的地区就是 $F_{10}$ ，\n故选：D．",
+      "knowledge_points": [
+        "折线统计图"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": true,
+      "figure_bbox": [
+        4,
+        0.15,
+        0.36,
+        0.42,
+        0.17
+      ],
+      "images": []
+    },
+    {
+      "original_id": "9",
+      "content": "如图所示的衣架可以近似看成一个等腰三角形 $ABC$，其中 $AB=AC$，$\\angle ABC = 27^\\circ$，$BC=44\\text{cm}$，则高 $AD$ 约为（ ）（参考数据：$\\sin 27^\\circ \\approx 0.45$，$\\cos 27^\\circ \\approx 0.89$，$\\tan 27^\\circ \\approx 0.51$）",
+      "options": [
+        "A. 9.90cm",
+        "B. 11.22cm",
+        "C. 19.58cm",
+        "D. 22.44cm"
+      ],
+      "answer": "B",
+      "analysis": "【分析】根据等腰三角形的性质及 $BC=44\\text{cm}$，可得 $DC=\\frac{1}{2}BC=22\\text{cm}$，在 $\\text{Rt}\\triangle ADC$ 中，由 $AD=DC \\times \\tan 27^\\circ$ 求得 $AD$ 的长度．\n【详解】解：∵等腰三角形 $ABC$，$AB=AC$，$AD$ 为 $BC$ 边上的高，\n∴ $DC=\\frac{1}{2}BC=22\\text{cm}$．\n在 $\\text{Rt}\\triangle ADC$ 中，$AD=DC \\times \\tan 27^\\circ \\approx 22 \\times 0.51 = 11.22\\text{cm}$．\n故选：B．",
+      "knowledge_points": [
+        "等腰三角形的性质",
+        "解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        5,
+        0.17,
+        0.09,
+        0.3,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "10",
+      "content": "如图，现有一把直尺和一块三角尺，其中 $\\angle ABC=90^\\circ$，$\\angle CAB=60^\\circ$，$AB=8$，点 $A$ 对应直尺的刻度为 12. 将该三角尺沿着直尺边缘平移，使得 $\\triangle ABC$ 移动到 $\\triangle A'B'C'$，点 $A'$ 对应直尺的刻度为 0，则四边形 $ACC'A'$ 的面积是（ ）",
+      "options": [
+        "A. 96",
+        "B. $96\\sqrt{3}$",
+        "C. 192",
+        "D. $160\\sqrt{3}$"
+      ],
+      "answer": "B",
+      "analysis": "【分析】根据直尺与三角尺的夹角为 60°，根据四边形 $ACC'A'$ 的面积为 $AA' \\cdot AC \\sin 60^\\circ = 2AB \\sin 60^\\circ \\cdot AA'$，即可求解．\n【详解】解：依题意 $ACC'A'$ 为平行四边形，\n∵$\\angle ABC=90^\\circ$，$\\angle CAB=60^\\circ$，$AB=8$，$AA'=12$．\n∴ $AC=2AB=16$\n∴平行四边形 $ACC'A'$ 的面积$= AA' \\cdot AC \\sin 60^\\circ = 12 \\times 16 \\times \\frac{\\sqrt{3}}{2} = 96\\sqrt{3}$\n故选 B",
+      "knowledge_points": [
+        "解直角三角形",
+        "平移的性质",
+        "平行四边形面积"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        6,
+        0.15,
+        0.08,
+        0.2,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "11",
+      "content": "四边形的外角和等于_______.",
+      "options": [],
+      "answer": "360°",
+      "analysis": "【分析】n边形的外角和都等于 360°．\n【详解】解：n（n≥3）边形的外角和都等于 360°．",
+      "knowledge_points": [
+        "多边形的外角和"
+      ],
+      "subject": "math",
+      "difficulty": 1,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "12",
+      "content": "如图，在 $\\triangle ABC$ 中，$D, E$ 分别是 $AB, AC$ 的中点．若 $BC=12$，则 $DE$ 的长为_______．",
+      "options": [],
+      "answer": "6",
+      "analysis": "【分析】利用中位线的性质计算即可．\n【详解】∵$D, E$ 分别是 $AB, AC$ 的中点，\n∴$DE$ 是 $\\triangle ABC$ 的中位线，\n又 $BC=12$，\n∴$DE=\\frac{1}{2}BC=6$．",
+      "knowledge_points": [
+        "三角形中位线定理"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        6,
+        0.15,
+        0.75,
+        0.18,
+        0.11
+      ],
+      "images": []
+    },
+    {
+      "original_id": "13",
+      "content": "一个不透明的袋中装有 3 个红球和 2 个白球，这些球除颜色外无其他差别．现随机从袋中摸出一个球，这个球是红球的概率是_______．",
+      "options": [],
+      "answer": "$\\frac{3}{5}$",
+      "analysis": "【分析】先求出总的所有可能结果数及摸出的球是红球的所有可能数，再根据概率公式即可得出答案．\n【详解】解：根据题意可得：不透明的袋子里装有将 5 个球，其中 3 个红色的，\n任意摸出 1 个，摸到红球的概率是 $\\frac{3}{5}$．",
+      "knowledge_points": [
+        "概率公式"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "14",
+      "content": "已知反比例函数 $y=\\frac{k}{x}$ 的图象分别位于第二、第四象限，则实数 $k$ 的值可以是_______．（只需写出一个符合条件的实数）",
+      "options": [],
+      "answer": "-5（答案不唯一）",
+      "analysis": "【分析】根据反比例函数的图象分别位于第二、四象限可知 $k<0$，进而问题可求解．\n【详解】解：由反比例函数 $y=\\frac{k}{x}$ 的图象分别位于第二、第四象限可知 $k<0$，\n∴实数 $k$ 的值可以是-5；",
+      "knowledge_points": [
+        "反比例函数的图象与性质"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "15",
+      "content": "推理是数学的基本思维方式、若推理过程不严谨，则推理结果可能产生错误．\n例如，有人声称可以证明“任意一个实数都等于 0”，并证明如下：\n设任意一个实数为 $x$，令 $x=m$，\n等式两边都乘以 $x$，得 $x^2=mx$．①\n等式两边都减 $m^2$，得 $x^2-m^2=mx-m^2$．②\n等式两边分别分解因式，得 $(x+m)(x-m)=m(x-m)$．③\n等式两边都除以 $x-m$，得 $x+m=m$．④\n等式两边都减 $m$，得 $x=0$.⑤\n所以任意一个实数都等于 0.\n以上推理过程中，开始出现错误的那一步对应的序号是_______．",
+      "options": [],
+      "answer": "④",
+      "analysis": "【分析】根据等式的性质 2 即可得到结论．\n【详解】等式性质 2 为：等式两边同乘或除以同一个不为 0 的整式，等式不变，\n∴第④步等式两边都除以 $x-m$，得 $x+m=m$，前提必须为 $x-m \\neq 0$，因此错误；\n故答案为：④．",
+      "knowledge_points": [
+        "等式的性质",
+        "因式分解",
+        "分式有意义的条件"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "16",
+      "content": "已知抛物线 $y=x^2+2x-n$ 与 $x$ 轴交于 $A, B$ 两点，抛物线 $y=x^2-2x-n$ 与 $x$ 轴交于 $C, D$ 两点，其中 $n>0$，若 $AD=2BC$，则 $n$ 的值为_______．",
+      "options": [],
+      "answer": "8",
+      "analysis": "【分析】先求出抛物线与 $x$ 轴的交点坐标，用 $n$ 表示出 $AD$ 和 $BC$ 的长，根据 $AD=2BC$ 列方程求解。\n【详解】解：由 $x^2+2x-n=0$ 得 $x=-1 \\pm \\sqrt{1+n}$，由 $x^2-2x-n=0$ 得 $x=1 \\pm \\sqrt{1+n}$。\n抛物线 $y=x^2+2x-n$ 对称轴为 $x=-1$，交点为 $A(-1-\\sqrt{1+n}, 0), B(-1+\\sqrt{1+n}, 0)$。\n抛物线 $y=x^2-2x-n$ 对称轴为 $x=1$，交点为 $C(1-\\sqrt{1+n}, 0), D(1+\\sqrt{1+n}, 0)$。\n$AD = D_x - A_x = (1+\\sqrt{1+n}) - (-1-\\sqrt{1+n}) = 2 + 2\\sqrt{1+n}$。\n$BC = C_x - B_x = (1-\\sqrt{1+n}) - (-1+\\sqrt{1+n}) = 2 - 2\\sqrt{1+n}$ (当 $BC$ 长度存在时，需 $2 > 2\\sqrt{1+n}$ 不成立，此处需注意 $B, C$ 的相对位置。由图象知 $A, B$ 在左，$C, D$ 在右，且 $B$ 可能在 $C$ 左或右。但题目中 $n>0 \\implies \\sqrt{1+n}>1$，故 $B > 0, C < 0$ 不成立。实际上 $B = -1+\\sqrt{1+n}, C = 1-\\sqrt{1+n}$。若 $n$ 较大，$B$ 在 $C$ 右侧。题目未指定 $A,B,C,D$ 顺序，但通常从左到右或按交点顺序。根据对称性，$BC$ 距离应为两内侧点距离。)\n如果 $AD=2BC$，则 $AD^2 = 4BC^2$。或者直接利用距离公式。\n根据解析推导：$AD$ 是两外侧点距离，$BC$ 是两内侧点距离。设 $\\sqrt{1+n}=m$，则 $A=-1-m, D=1+m$，距离 $2m+2$。$B=-1+m, C=1-m$，距离 $|2-2m|$。\n$2m+2 = 2|2-2m| \\implies m+1 = |2-2m|$。\n若 $m>1$ (即 $n>0$)，则 $m+1 = 2m-2 \\implies m=3$。\n此时 $n = m^2-1 = 9-1=8$。",
+      "knowledge_points": [
+        "二次函数图象与 x 轴交点",
+        "一元二次方程根与系数关系"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "17",
+      "content": "计算：$\\sqrt{4} + |\\sqrt{3}-1| - 2022^0$．",
+      "options": [],
+      "answer": "$\\sqrt{3}$",
+      "analysis": "【分析】分别化简 $\\sqrt{4}$、$|\\sqrt{3}-1|$、$2022^0$，再进行加减运算即可．\n【详解】解：原式 $=2+\\sqrt{3}-1-1=\\sqrt{3}$．",
+      "knowledge_points": [
+        "实数的运算",
+        "二次根式",
+        "零指数幂"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "18",
+      "content": "如图，点 $B, F, C, E$ 在同一条直线上，$BF=EC, AB=DE, \\angle B=\\angle E$．求证：$\\angle A=\\angle D$．",
+      "options": [],
+      "answer": "见解析",
+      "analysis": "【分析】根据全等三角形的判定和性质即可得到结论．\n【详解】证明：∵$BF=EC$，\n∴$BF+CF=EC+CF$，即 $BC=EF$．\n在 $\\triangle ABC$ 和 $\\triangle DEF$ 中，\n$\\begin{cases} AB=DE \\\\ \\angle B=\\angle E \\\\ BC=EF \\end{cases}$，\n∴$\\triangle ABC \\cong \\triangle DEF$，\n∴$\\angle A=\\angle D$．",
+      "knowledge_points": [
+        "全等三角形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": true,
+      "figure_bbox": [
+        9,
+        0.16,
+        0.78,
+        0.18,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "19",
+      "content": "先化简，再求值：$(1+\\frac{1}{a}) \\div \\frac{a^2-1}{a}$，其中 $a=\\sqrt{2}+1$．",
+      "options": [],
+      "answer": "$\\frac{\\sqrt{2}}{2}$",
+      "analysis": "【分析】根据分式的混合运算法则化简，再将 $a$ 的值代入化简之后的式子即可求出答案．\n【详解】解：原式 $= \\frac{a+1}{a} \\cdot \\frac{a}{(a+1)(a-1)} = \\frac{1}{a-1}$．\n当 $a=\\sqrt{2}+1$ 时，原式 $= \\frac{1}{\\sqrt{2}+1-1} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$．",
+      "knowledge_points": [
+        "分式的化简求值"
+      ],
+      "subject": "math",
+      "difficulty": 2,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "20",
+      "content": "学校开展以“劳动创造美好生活”为主题的系列活动，同学们积极参与主题活动的规划、实施、组织和管理... 调查组设计了一份问卷... 制成如下条形统计图（活动前）和扇形统计图（活动后，A组 $0 \\le t < 1$, B组 $1 \\le t < 2$, C组 $2 \\le t < 3$, D组 $3 \\le t < 4$, E组 $4 \\le t < 5$, F组 $t \\ge 5$）。\n（1）判断活动前、后两次调查数据的中位数分别落在哪一组；\n（2）该校共有 2000 名学生，请根据活动后的调查结果，估计该校学生一周的课外劳动时间不小于 3h 的人数．",
+      "options": [],
+      "answer": "（1）C 组，D 组；（2）1400 人",
+      "analysis": "【分析】（1）根据中位数的定义求解即可；\n（2）该校学生一周的课外劳动时间不小于 3h 为 D、E、F 组，用该校总人数乘以所占百分比即可．\n【详解】（1）活动前，50 名同学，中位数是第 25 和 26 个数据的平均数，A(8)+B(14)=22，A+B+C(12)=34，故中位数在 C 组。\n活动后，A+B+C 组人数为 $50 \\times (6\\% + 8\\% + 16\\%) = 15$，D 组人数为 $50 \\times 30\\% = 15$，15+15=30，故中位数在 D 组。\n（2）不小于 3h 的比例为 $30\\% + 24\\% + 16\\% = 70\\%$，$2000 \\times 70\\% = 1400$（人）。",
+      "knowledge_points": [
+        "条形统计图",
+        "扇形统计图",
+        "中位数",
+        "用样本估计总体"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": true,
+      "figure_bbox": [
+        11,
+        0.18,
+        0.09,
+        0.58,
+        0.16
+      ],
+      "images": []
+    },
+    {
+      "original_id": "21",
+      "content": "如图，$\\triangle ABC$ 内接于 $\\odot O$， $AD \\parallel BC$ 交 $\\odot O$ 于点 $D$， $DF \\parallel AB$ 交 $BC$ 于点 $E$，交 $\\odot O$ 于点 $F$，连接 $AF, CF$．\n（1）求证：$AC=AF$；\n（2）若 $\\odot O$ 的半径为 3，$\\angle CAF=30^\\circ$，求 $\\widehat{AC}$ 的长（结果保留 $\\pi$）．",
+      "options": [],
+      "answer": "（1）见解析；（2）$\\frac{5\\pi}{2}$",
+      "analysis": "【分析】（1）先证明四边形 $ABED$ 是平行四边形，得 $\\angle B=\\angle D$，再证明 $\\angle AFC=\\angle ACF$ 即可得到结论；\n（2）连接 $OA, OC$，根据等腰三角形的性质求出 $\\angle AFC=75^\\circ$，由圆周角定理可得 $\\angle AEC=150^\\circ$（应为 $\\angle AOC$），最后由弧长公式可求出结论．\n【详解】（1）∵$AD \\parallel BC, DF \\parallel AB$，∴四边形 $ABED$ 是平行四边形，∴$\\angle B=\\angle D$。又 $\\angle AFC=\\angle B, \\angle ACF=\\angle D$，∴$\\angle AFC=\\angle ACF$，∴$AC=AF$。\n（2）$\\because \\angle CAF=30^\\circ, AC=AF, \\therefore \\angle AFC = (180^\\circ-30^\\circ)/2 = 75^\\circ$。$\\therefore \\angle AOC = 2\\angle AFC = 150^\\circ$。弧长 $l = \\frac{150 \\pi \\times 3}{180} = \\frac{5\\pi}{2}$。",
+      "knowledge_points": [
+        "圆周角定理",
+        "弧长公式",
+        "平行四边形的判定与性质"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        12,
+        0.16,
+        0.08,
+        0.16,
+        0.13
+      ],
+      "images": []
+    },
+    {
+      "original_id": "22",
+      "content": "在学校开展“劳动创造美好生活”主题系列活动中... 计划购买绿萝和吊兰两种绿植共 46 盆，且绿萝盆数不少于吊兰盆数的 2 倍．已知绿萝每盆 9 元，吊兰每盆 6 元．\n（1）采购组计划将预算经费 390 元全部用于购买绿萝和吊兰，问可购买绿萝和吊兰各多少盆？\n（2）规划组认为有比 390 元更省钱的购买方案，请求出购买两种绿植总费用的最小值．",
+      "options": [],
+      "answer": "（1）绿萝 38 盆，吊兰 8 盆；（2）369 元",
+      "analysis": "【分析】（1）设购买绿萝 $x$ 盆，吊兰 $y$ 盆，列方程组求解。\n（2）设费用为 $z$，建立一次函数，根据 $x \\ge 2y$ 确定范围求最小值。\n【详解】（1）$\\begin{cases} x+y=46 \\\\ 9x+6y=390 \\end{cases}$，解得 $\\begin{cases} x=38 \\\\ y=8 \\end{cases}$。符合 $38 \\ge 2 \\times 8$。\n（2）$z = 9x + 6y = 9(46-y) + 6y = 414 - 3y$。又 $x \\ge 2y \\implies 46-y \\ge 2y \\implies 3y \\le 46 \\implies y \\le 15.33$。因为 $y$ 为正整数，且需满足实际意义， $y$ 越大 $z$ 越小。取 $y=15$，此时 $x=31$。$z_{min} = 414 - 3 \\times 15 = 369$ 元。",
+      "knowledge_points": [
+        "二元一次方程组的应用",
+        "一元一次不等式的应用",
+        "一次函数的性质"
+      ],
+      "subject": "math",
+      "difficulty": 3,
+      "has_figure": false,
+      "figure_bbox": null,
+      "images": []
+    },
+    {
+      "original_id": "23",
+      "content": "如图，$BD$ 是矩形 $ABCD$ 的对角线．\n（1）求作 $\\odot A$，使得 $\\odot A$ 与 $BD$ 相切（要求：尺规作图，不写作法，保留作图痕迹）；\n（2）在（1）的条件下，设 $BD$ 与 $\\odot A$ 相切于点 $E$，$CF \\perp BD$，垂足为 $F$．若直线 $CF$ 与 $\\odot A$ 相切于点 $G$，求 $\\tan \\angle ADB$ 的值．",
+      "options": [],
+      "answer": "（1）见解析；（2）$\\frac{\\sqrt{5}-1}{2}$",
+      "analysis": "【分析】（1）作 $AE \\perp BD$ 于 $E$，以 $A$ 为圆心，$AE$ 为半径作圆。\n（2）证明 $\\triangle ABE \\cong \\triangle CDF$，利用切线性质和相似/三角函数求解。\n【详解】（2）设半径为 $r$，$AE=AG=r$。四边形 $AEFG$ 为正方形（三个角90度且邻边相等）。$EF=r$。$\\triangle ABE \\cong \\triangle CDF \\implies BE=DF$。在 $\\text{Rt}\\triangle ADE$ 中，$DE = DF+EF = BE+r$。由 $\\tan \\angle ADB = \\frac{AE}{DE} = \\frac{r}{DE}$，且 $\\tan \\angle ABD = \\frac{AD}{AB} = \\frac{DE}{AE}$... 实际上 $AE^2 = BE \\cdot DE$。利用相似或三角函数推导得 $\\tan^2 \\alpha + \\tan \\alpha - 1 = 0$，解得 $\\tan \\angle ADB = \\frac{\\sqrt{5}-1}{2}$。",
+      "knowledge_points": [
+        "尺规作图",
+        "切线的性质",
+        "矩形的性质",
+        "解直角三角形"
+      ],
+      "subject": "math",
+      "difficulty": 4,
+      "has_figure": true,
+      "figure_bbox": [
+        14,
+        0.16,
+        0.6,
+        0.11,
+        0.12
+      ],
+      "images": []
+    },
+    {
+      "original_id": "24",
+      "content": "已知 $\\triangle ABC \\cong \\triangle DEC, AB=AC, AB>BC$．\n（1）如图 1， $CB$ 平分 $\\angle ACD$，求证：四边形 $ABDC$ 是菱形；\n（2）如图 2，将（1）中的 $\\triangle CDE$ 绕点 $C$ 逆时针旋转（旋转角小于 $\\angle BAC$），$BC, DE$ 的延长线相交于点 $F$，用等式表示 $\\angle ACE$ 与 $\\angle EFC$ 之间的数量关系，并证明；\n（3）如图 3，将（1）中的 $\\triangle CDE$ 绕点 $C$ 顺时针旋转（旋转角小于 $\\angle ABC$），若 $\\angle BAD = \\angle BCD$，求 $\\angle ADB$ 的度数．",
+      "options": [],
+      "answer": "（1）见解析；（2）$\\angle ACE + \\angle EFC = 180^\\circ$；（3）$30^\\circ$",
+      "analysis": "【分析】（1）证明 $AB=BD=DC=AC$ 或利用平行四边形判定。\n（2）利用三角形全等和内角和性质推导。\n（3）构造全等三角形，利用角度关系计算。\n【详解】略。",
+      "knowledge_points": [
+        "全等三角形",
+        "菱形的判定",
+        "图形的旋转",
+        "几何变换综合"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        16,
+        0.16,
+        0.62,
+        0.7,
+        0.18
+      ],
+      "images": []
+    },
+    {
+      "original_id": "25",
+      "content": "在平面直角坐标系 $xOy$ 中，已知抛物线 $y=ax^2+bx$ 经过 $A(4, 0), B(1, 4)$ 两点．$P$ 是抛物线上一点，且在直线 $AB$ 的上方．\n（1）求抛物线的解析式；\n（2）若 $\\triangle OAB$ 面积是 $\\triangle PAB$ 面积的 2 倍，求点 $P$ 的坐标；\n（3）如图，$OP$ 交 $AB$ 于点 $C$， $PD \\parallel BO$ 交 $AB$ 于点 $D$．记 $\\triangle CDP, \\triangle CPB, \\triangle CBO$ 的面积分别为 $S_1, S_2, S_3$．判断 $\\frac{S_1}{S_2} + \\frac{S_2}{S_3}$ 是否存在最大值．若存在，求出最大值；若不存在，请说明理由．",
+      "options": [],
+      "answer": "（1）$y=-\\frac{4}{3}x^2+\\frac{16}{3}x$；（2）$(2, \\frac{16}{3})$ 或 $(3, 4)$；（3）存在，$\\frac{9}{8}$",
+      "analysis": "【分析】（1）待定系数法求解析式。\n（2）求出 $\\triangle OAB$ 面积，利用面积关系求 $P$ 点纵坐标或距离，进而求坐标。\n（3）利用相似三角形和面积比转化为线段比，构建二次函数求最值。\n【详解】（3）推导得 $\\frac{S_1}{S_2} + \\frac{S_2}{S_3} = -\\frac{1}{2}(m-\\frac{5}{2})^2 + \\frac{9}{8}$，最大值 $\\frac{9}{8}$。",
+      "knowledge_points": [
+        "二次函数综合",
+        "待定系数法",
+        "三角形面积",
+        "相似三角形"
+      ],
+      "subject": "math",
+      "difficulty": 5,
+      "has_figure": true,
+      "figure_bbox": [
+        19,
+        0.16,
+        0.1,
+        0.17,
+        0.13
+      ],
+      "images": []
+    }
+  ]
+}
