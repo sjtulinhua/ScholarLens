@@ -1,7 +1,7 @@
 import { createClient, createAdminClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Filter, BookOpen, Trash2, Trash, Plus } from "lucide-react";
+import { ChevronLeft, Filter, BookOpen, Trash2, Trash } from "lucide-react";
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { LatexRenderer } from "@/components/ui/latex-renderer";
 
 import { MistakesFilter } from "@/components/mistakes/MistakesFilter";
 import { MistakeList } from "@/components/mistakes/MistakeList";
+import { cn } from "@/lib/utils";
 
 /**
  * 错题本页面
@@ -107,34 +108,30 @@ export default async function MistakesPage({
         </div>
         <Suspense fallback={<Button variant="outline" size="sm" className="rounded-full opacity-50">Loading...</Button>}>
           <div className="flex items-center gap-2">
-            <Link href="/upload" prefetch={true}>
-              <Button size="sm" className="rounded-full bg-zinc-900 text-white hover:bg-zinc-800 h-9 px-4">
-                <Plus className="w-4 h-4 mr-1.5" />
-                错题录入
-              </Button>
-            </Link>
             <MistakesFilter />
             <Link href="/mistakes/trash">
                <Button 
-                variant={(trashCount || 0) > 0 ? "secondary" : "ghost"} 
+                variant="ghost" 
                 size="sm" 
-                className={(trashCount || 0) > 0 ? "text-red-600 bg-red-50 hover:bg-red-100" : "text-muted-foreground hover:text-zinc-900"}
+                className={cn(
+                  "rounded-full h-8 px-3 text-xs font-medium transition-all group", 
+                  (trashCount || 0) > 0 ? "text-red-500 hover:text-red-600 hover:bg-red-50" : "text-zinc-500 hover:text-zinc-900"
+                )}
                >
                   <div className="relative">
                     {(trashCount || 0) > 0 ? (
                         <>
-                            <Trash2 className="w-4 h-4 mr-1" />
-                            <span className="absolute -top-1 -right-0 flex h-2 w-2">
+                            <Trash2 className="w-3.5 h-3.5 mr-1" />
+                            <span className="absolute -top-1 -right-0 flex h-1.5 w-1.5">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
                             </span>
                         </>
                     ) : (
-                        <Trash className="w-4 h-4 mr-1" />
+                        <Trash className="w-3.5 h-3.5 mr-1 text-zinc-400 group-hover:text-zinc-600" />
                     )}
                   </div>
                   垃圾箱
-                  {(trashCount || 0) > 0 && <span className="ml-1 text-xs">({trashCount})</span>}
                </Button>
             </Link>
           </div>

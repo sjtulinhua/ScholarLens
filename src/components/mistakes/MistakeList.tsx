@@ -16,8 +16,11 @@ import {
   Layers,
   Archive,
   Filter,
-  Printer
+  Printer,
+  Plus,
+  ChevronRight
 } from "lucide-react"
+import Link from "next/link"
 import { deleteMistake, updateMistakeDate, bulkDeleteMistakes } from "@/app/mistakes/actions"
 import { getSmartRecommendations } from "@/app/mistakes/print/actions"
 import { cn } from "@/lib/utils"
@@ -297,6 +300,18 @@ export function MistakeList({ mistakes }: MistakeListProps) {
                 </>
             )}
             </Button>
+
+            <Link href="/upload" prefetch={true} className="flex-shrink-0">
+               <Button 
+                variant="default" 
+                size="sm" 
+                className="rounded-lg h-9 px-4 font-bold transition-all shadow-md bg-zinc-900 text-white hover:bg-zinc-800 hover:scale-[1.02] active:scale-[0.98] text-xs flex items-center"
+               >
+                 <Plus className="w-3.5 h-3.5 mr-1" />
+                 错题录入
+                 <ChevronRight className="w-3 h-3 ml-1 opacity-50" />
+               </Button>
+            </Link>
         </div>
       </div>
 
